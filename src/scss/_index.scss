@@ -1,0 +1,1024 @@
+//.main
+//========================================================================================================================================================
+.main {
+  // .main__container
+  &__container {
+    padding-top: 25px;
+  }
+  // .main__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // column-gap: 45px;
+    @include adaptiveValue("column-gap", 45, 15, 1060, 1000, 1);
+    @media (max-width: em(980)){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .main__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 75px;
+    span {
+      color: $black;
+      @extend %raleway-300;
+      font-size: rem(40);
+      line-height: math.div(48 , 40);
+      @media (max-width: em(1440)){
+        @include adaptiveValue("font-size", 40, 30, 1440, 1190, 1);
+        @include adaptiveValue("line-height", 48, 38, 1440, 1190, 1);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 30, 16, 768, 680, 1);
+        @include adaptiveValue("line-height", 38, 22, 768, 680, 1);
+      }
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      background-image: url(../img/main/city-top.png);
+      background-repeat: no-repeat;
+      // right: -25%;
+      right: -180px;
+      top: -30px;
+      width: 238px;
+      height: 150px;
+      @media (max-width: em(1440)){
+        background-size: contain;
+        @include adaptiveValue("width", 238, 190, 1440, 1190, 1);
+        @include adaptiveValue("height", 150, 120, 1440, 1190, 1);
+        @include adaptiveValue("right", -180, -50, 1440, 1190, 1);
+        @include adaptiveValue("top", -30, -20, 1440, 1190, 1);
+      }
+      @media (max-width: em(1190)){
+        @include adaptiveValue("width", 190, 152, 1190, 1060, 1);
+        @include adaptiveValue("height", 120, 96, 1190, 1060, 1);
+        @include adaptiveValue("right", -50, -30, 1190, 1060, 1);
+        @include adaptiveValue("top", -20, 15, 1190, 1060, 1);
+      }
+      @media (max-width: em(980)){
+        @include adaptiveValue("right", 290, 200, 980, 800, 1);
+      }
+      @media (max-width: em(800)){
+        @include adaptiveValue("width", 152, 118, 800, 680, 1);
+        @include adaptiveValue("height", 96, 74, 800, 680, 1);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("top", 15, -25, 768, 680, 1);
+        @include adaptiveValue("right", 200, 250, 768, 680, 1);
+      }
+      @media (max-width: em(620)){
+        @include adaptiveValue("right", 250, 100, 620, 480, 1);
+      }
+      @media (max-width: em(480)){
+        @include adaptiveValue("top", -25, -10, 480, 320, 1);
+        @include adaptiveValue("right", 100, -10, 480, 320, 1);
+        @include adaptiveValue("width", 118, 85, 480, 320, 1);
+        @include adaptiveValue("height", 74, 60, 480, 320, 1);
+      }
+    }
+    @media (max-width: em(980)){
+      display: grid;
+      grid-template-rows: repeat(2, 0.5fr);
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("padding-top", 75, 20, 768, 620, 1);
+    }
+  }
+  // .main__title
+  &__title-box {
+    position: relative;
+    @media (max-width: em(980)){
+      max-width: 540px;
+    }
+  }
+
+  &__title {
+    color: $black;
+    @extend %raleway-500;
+    font-size: rem(80);
+    line-height: math.div(96 , 80);
+    @media (max-width: em(1440)){
+      @include adaptiveValue("font-size", 80, 70, 1440, 1190, 1);
+      @include adaptiveValue("line-height", 96, 86, 1440, 1190, 1);
+    }
+    @media (max-width: em(1190)){
+      @include adaptiveValue("font-size", 70, 60, 1190, 1000, 1);
+      @include adaptiveValue("line-height", 86, 76, 1190, 1000, 1);
+    }
+    @media (max-width: em(1000)){
+      @include adaptiveValue("font-size", 70, 60, 1190, 768, 1);
+      @include adaptiveValue("line-height", 86, 76, 1190, 768, 1);
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("font-size", 60, 32, 768, 680, 1);
+      @include adaptiveValue("line-height", 76, 45, 768, 680, 1);
+    }
+  }
+  // .main__btn
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    @extend %btn;
+    padding: 20px 100px;
+    @media (max-width: em(1440)){
+      @include adaptiveValue("padding-left", 100, 80, 1440, 1190, 1);
+      @include adaptiveValue("padding-right", 100, 80, 1440, 1190, 1);
+    }
+    @media (max-width: em(1190)){
+      @include adaptiveValue("bottom", 20, 15, 1190, 1000, 1);
+      @include adaptiveValue("padding-left", 80, 60, 1190, 1000, 1);
+      @include adaptiveValue("padding-right", 80, 60, 1190, 1000, 1);
+      @include adaptiveValue("font-size", 20, 18, 1190, 1000, 1);
+      @include adaptiveValue("line-height", 25, 23, 1190, 1000, 1);
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("font-size", 18, 16, 768, 680, 1);
+      @include adaptiveValue("line-height", 23, 20, 768, 680, 1);
+      @include adaptiveValue("padding-left", 60, 33, 768, 680, 1);
+      @include adaptiveValue("padding-right", 60, 33, 768, 680, 1);
+      @include adaptiveValue("right", 0, 220, 768, 680, 1);
+      @include adaptiveValue("bottom", 15, 0, 768, 680, 1);
+      @include adaptiveValue("padding-top", 20, 12, 768, 680, 1);
+      @include adaptiveValue("padding-bottom", 20, 12, 768, 680, 1);
+    }
+    @media (max-width: em(680)){
+      @include adaptiveValue("right", 220, 210, 680, 570, 1);
+    }
+    @media (max-width: em(570)){
+      @include adaptiveValue("right", 210, 120, 570, 480, 1);
+      @include adaptiveValue("bottom", 0, 5, 570, 480, 1);
+    }
+    @media (max-width: em(480)){
+      @include adaptiveValue("right", 120, -5, 480, 320, 1);
+      @include adaptiveValue("font-size", 16, 12, 480, 320, 1);
+      @include adaptiveValue("line-height", 20, 15, 480, 320, 1);
+    }
+
+  }
+  // .main__box
+  &__box {
+    display: grid;
+    // position: relative;
+  } 
+  // .main__subtitle
+  &__subtitle {
+    @include adaptiveValue("margin-top", 63, 45, 1440, 1090, 1);
+    max-width: 327px;
+    @extend %mulish-600;
+    font-size: rem(18);
+    line-height: math.div(23 , 18);
+    @media (max-width: em(1060)){
+      @include adaptiveValue("max-width", 327, 320, 1060, 1000, 1);
+      @include adaptiveValue("font-size", 18, 16, 1060, 1000, 1);
+      @include adaptiveValue("line-height", 23, 18, 1060, 1000, 1);
+      @include adaptiveValue("margin-top", 45, 10, 1060, 1000, 1);
+    }
+    @media (max-width: em(480)){
+      @include adaptiveValue("font-size", 18, 14, 570, 480, 1);
+      @include adaptiveValue("line-height", 23, 18, 570, 480, 1);
+
+    }
+    @media (max-width: em(360)){
+      padding-top: 15px;
+      max-width: 180px;
+    }
+  }
+  // .main__img
+  &__img {
+    min-height: 250px;
+    position: relative;
+    img {
+      position: absolute;
+      width: 766px;
+      height: 308px;
+      top: -60px;
+      left: -75px;
+      z-index: -1;
+      @media (max-width: em(1440)){
+        @include adaptiveValue("width", 766, 612, 1440, 1190, 1);
+        @include adaptiveValue("height", 308, 246, 1440, 1190, 1);
+        @include adaptiveValue("top", -60, -20, 1440, 1190, 1);
+        @include adaptiveValue("left", -75, 0, 1440, 1190, 1);
+      }
+      @media (max-width: em(1190)){
+        @include adaptiveValue("width", 612, 459, 1190, 1090, 1);
+        @include adaptiveValue("height", 246, 184, 1190, 1090, 1);
+        @include adaptiveValue("left", 0, 50, 1190, 1090, 1);
+      }
+      @media (max-width: em(1090)){
+        @include adaptiveValue("width", 459, 368, 1090, 1060, 1);
+        @include adaptiveValue("height", 184, 148, 1090, 1060, 1);
+        @include adaptiveValue("left", 50, 120, 1090, 1060, 1);
+        @include adaptiveValue("top", -20, 0, 1090, 1060, 1);
+      }
+      @media (max-width: em(1060)){
+        @include adaptiveValue("left", 120, 30, 1060, 980, 1);
+        @include adaptiveValue("top", 0, 30, 1060, 980, 1);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("width", 368, 284, 768, 620, 1);
+        @include adaptiveValue("height", 148, 123, 768, 620, 1);
+      }
+      @media (max-width: em(620)){
+        @include adaptiveValue("left", 30, -100, 620, 480, 1);
+        @include adaptiveValue("top", 30, 120, 620, 480, 1);
+      }
+      @media (max-width: em(480)){
+        @include adaptiveValue("left", -100, -190, 480, 320, 1);
+      }
+    }
+    @media (max-width: em(570)){
+      min-height: 270px;
+    }
+    @media (max-width: em(360)){
+      min-height: 255px;
+    }
+  }
+  // .main__bg
+  &__bg {
+    // display: grid;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    @media (max-width: em(980)){
+      position: static;
+    }
+  }
+  // .main__bg-img
+  &__bg-img {
+    // object-fit: cover;
+    img {
+      @media (max-width: em(1440)){
+        justify-self: end;
+        @include adaptiveValue("width", 570, 456, 1440, 1190, 1);
+        @include adaptiveValue("height", 804, 644, 1440, 1190, 1);
+      }
+      @media (max-width: em(1190)){
+        @include adaptiveValue("width", 456, 410, 1190, 1090, 1);
+        @include adaptiveValue("height", 644, 579, 1190, 1090, 1);
+      }
+      @media (max-width: em(1090)){
+        @include adaptiveValue("width", 410, 328, 1090, 1000, 1);
+        @include adaptiveValue("height", 579, 463, 1090, 1000, 1);
+      }
+      @media (max-width: em(980)){
+        @include adaptiveValue("width", 328, 262, 1000, 840, 1);
+        @include adaptiveValue("height", 463, 370, 1000, 840, 1);
+      }
+    }
+    @media (max-width: em(1440)){
+      display: grid;
+    }
+    @media (max-width: em(980)){
+      position: absolute;
+      @include adaptiveValue("right", 0, -40, 980, 570, 1);
+    }
+    @media (max-width: em(570)){
+      bottom: -75px;
+      z-index: -1;
+      // @include adaptiveValue("right", 0, -25);
+    }
+  }
+  // .main__director
+  &__director {
+    color: $text;
+    max-width: 163px;
+    text-align: right;
+    bottom: 160px;
+    left: -50px;
+    position: absolute;
+    @media (max-width: em(1440)){
+      @include adaptiveValue("left", -50, -60, 1440, 1260, 1);
+      @include adaptiveValue("bottom", 160, 130, 1440, 1190, 1);
+    }
+    @media (max-width: em(1260)){
+      @include adaptiveValue("left", -60, -70, 1260, 1160, 1);
+      @include adaptiveValue("bottom", 130, 120, 1260, 1160, 1);
+    }
+    @media (max-width: em(1160)){
+      @include adaptiveValue("left", -70, -80, 1160, 1060, 1);
+      @include adaptiveValue("bottom", 120, 90, 1160, 1060, 1);
+    }
+    @media (max-width: em(1060)){
+      @include adaptiveValue("left", -80, -100, 1060, 980, 1);
+      @include adaptiveValue("bottom", 90, 80, 1060, 980, 1);
+    }
+    @media (max-width: em(980)){
+      @include adaptiveValue("left", 510, 420, 980, 840, 1);
+      @include adaptiveValue("bottom", 70, 50, 980, 840, 1);
+    }
+    @media (max-width: em(840)){
+      @include adaptiveValue("left", 420, 150, 840, 570, 1);
+    }
+    @media (max-width: em(610)){
+      bottom: 200px;
+      left: 200px;
+    }
+    @media (max-width: em(560)){
+      @include adaptiveValue("left", 220, 80, 560, 420, 1);
+    }
+    @media (max-width: em(420)){
+      @include adaptiveValue("left", 80, -20, 420, 380, 1);
+    }
+    p {
+      @extend %mulish-400;
+      font-size: rem(12);
+      line-height: math.div(15 , 12);
+      @media (max-width: em(1060)){
+        @include adaptiveValue("font-size", 12, 10, 1060, 980, 1);
+        @include adaptiveValue("line-height", 15, 13, 1060, 980, 1);
+      }
+    }
+    span {
+      @extend %mulish-500;
+      font-size: rem(16);
+      line-height: math.div(32 , 16);
+      @media (max-width: em(1060)){
+        @include adaptiveValue("font-size", 16, 14, 1060, 980, 1);
+        @include adaptiveValue("line-height", 32, 18, 1060, 980, 1);
+      }
+    }
+  }
+}
+
+//========================================================================================================================================================
+//.selection
+.selection {
+  &__container-fluid {
+    margin-bottom: 70px;
+    background: #E3E9F3;
+    @media (max-width: em(768)){
+      @include adaptiveValue("margin-bottom", 70, 40, 768, 480, 1);
+    }
+  }
+  // .selection__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: em(520)){
+      margin: 0;
+    }
+  }
+  // .selection__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    @media (max-width: em(1080)){
+      @include adaptiveValue("column-gap", 60, 20, 1080, 960, 1);
+    }
+    @media (max-width: em(720)){
+      // grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      @include adaptiveValue("row-gap", 20, 10, 520, 480, 1);
+    }
+    @media (max-width: em(422)){
+      align-items: flex-start;
+    }
+  }
+  // .selection__bg
+  &__bg {
+    padding-top: 30px;
+    position: relative;
+    width: 644px;
+    height: 718px;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 60px;
+      right: 20px;
+      @media (max-width: em(1080)){
+        transform: rotate(5.72deg);
+        top: 0;
+      }
+    }
+    @media (max-width: em(1280)){
+      padding-top: 0;
+    }
+    @media (max-width: em(1080)){
+      @include adaptiveValue("width", 644, 444, 1080, 880, 1);
+      @include adaptiveValue("height", 718, 488, 1080, 880, 1);
+    }
+    @media (max-width: em(880)){
+      @include adaptiveValue("width", 444, 384, 880, 768, 1);
+      @include adaptiveValue("height", 488, 418, 880, 768, 1);
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("width", 384, 254, 768, 520, 1);
+      @include adaptiveValue("height", 418, 282, 768, 520, 1);
+    }
+    @media (max-width: em(520)){
+
+      // @include adaptiveValue("width", 284, 200, 560, 320, 1);
+      // @include adaptiveValue("height", 282, 230, 560, 320, 1);
+    }
+  }
+
+
+  // .selection__content
+  &__content {
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+    padding-top: 120px;
+    padding-bottom: 70px;
+    @media (max-width: em(1280)){
+      justify-content: center;
+    }
+    @media (max-width: em(920)){
+      padding-top: 60px;
+      justify-content: flex-start;
+    }
+    @media (max-width: em(620)){
+      padding-top: 30px;
+      padding-bottom: 64px;
+    }
+    @media (max-width: em(520)){
+      padding-top: 0;
+      row-gap: 20px;
+      padding-bottom: 45px;
+    }
+  }
+  // .selection__title
+  &__title {
+    span {
+      white-space: nowrap;
+    }
+  }
+  // .selection__subtitle
+  &__subtitle {
+    color: $text;
+    max-width: 371px;
+    @extend %mulish-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    @media (max-width: em(1080)){
+      @include adaptiveValue("font-size", 18, 16, 1080, 920, 1);
+      @include adaptiveValue("line-height", 29, 26, 1080, 920, 1);
+    }
+    @media (max-width: em(980)){
+      max-width: 350px;
+    }
+    @media (max-width: em(880)){
+      @include adaptiveValue("font-size", 16, 14, 880, 768, 1);
+      @include adaptiveValue("line-height", 26, 22, 880, 768, 1);
+    }
+    @media (max-width: em(560)){
+      max-width: 300px;
+    }
+  }
+  // .selection__list
+  &__list {
+    color: $text;
+    @extend %mulish-400;
+    font-size: rem(14);
+    line-height: math.div(18 , 14);
+    @media (max-width: em(880)){
+      @include adaptiveValue("font-size", 14, 12, 880, 768, 1);
+      @include adaptiveValue("line-height", 22, 15, 880, 768, 1);
+    }
+  }
+  // .selection__item
+  &__item {
+    position: relative;
+    padding-left: 24px;
+    &::after{
+      content:'';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      border-radius: 50%;
+      background: rgba(7, 201, 38, 0.3);
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      width: 8px;
+      height: 8px;  
+      left: 4px;
+      top: 4px;
+      border-radius: 50%;
+      background: #07C926;
+    }
+  }
+
+  // .selection__btn
+  &__btn {
+    @extend %btn;
+    padding: 20px 100px;
+    @media (max-width: em(1080)){
+      @include adaptiveValue("padding-left", 100, 55, 1080, 768, 1);
+      @include adaptiveValue("padding-right", 100, 55, 1080, 768, 1);
+      @include adaptiveValue("padding-top", 20, 13, 1080, 768, 1);
+      @include adaptiveValue("padding-bottom", 20, 13, 1080, 768, 1);
+    }
+  }
+}
+//========================================================================================================================================================
+//.collection
+.collection {
+  // .collection__container
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    // display: flex;
+    // flex-direction: column;
+    @media (max-width: em(768)){
+      @include adaptiveValue("padding-top", 70, 40, 768, 480, 1);
+      @include adaptiveValue("padding-bottom", 70, 40, 768, 480, 1);
+    }
+  }
+  // .collection__title
+  &__title {
+    padding: 0;
+    padding-bottom: 8px;
+  }
+  // .collection__subtitle
+  &__subtitle {
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    @extend %mulish-500;
+    @media (max-width: em(480)){
+      @include adaptiveValue("font-size", 18, 14, 480, 420, 1);
+      @include adaptiveValue("line-height", 29, 22, 480, 420, 1);
+    }
+  }
+  // .collection__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 40px;
+    @media (max-width: em(1280)){
+      @include adaptiveValue("row-gap", 40, 20, 1280, 1180, 1);
+    }
+    @media (max-width: em(920)){
+      row-gap: 30px;
+    }
+    @media (max-width: em(480)){
+      @include adaptiveValue("padding-top", 40, 20, 480, 420, 1);
+    }
+  }
+  // .collection__top
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    @media (max-width: em(1280)){
+      @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
+    }
+    @media (max-width: em(920)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+  // .collection__item-box
+  // &__item-box {
+
+  // }
+  // .collection__item
+  &__item {
+    position: relative;
+    max-width: 570px;
+    @media (max-width: em(920)){
+      max-width: 100%;
+    }
+    @media (max-width: em(380)){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 16px;
+      // display: flex;
+
+    }
+  }
+  // .collection__item-ibg
+  &__item-ibg {
+    padding-bottom: percent(366, 570);
+    &::before{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
+      border-radius: 40px;
+      @media (max-width: em(920)){
+        background: linear-gradient(180deg, rgba(7, 36, 48, 0.5) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
+      }
+      @media (max-width: em(380)){
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.1) 74.73%);
+      }
+    }
+    img {
+      border-radius: 40px;
+      object-position: top;
+      @media (max-width: em(380)){
+        border-radius: 20px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
+    }
+    @media (max-width: em(920)){
+      padding-bottom: percent(366, 766);
+    }
+    @media (max-width: em(470)){
+      padding-bottom: percent(112, 118);
+    }
+    @media (max-width: em(380)){
+      padding-bottom: percent(152, 118);
+    }
+  }
+  // .collection__item-content
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+    @media (max-width: em(380)){
+      position: static;
+      flex-shrink: 0;
+    }
+  }
+  // .collection__item-title
+  &__item-title {
+    @extend %raleway-600;
+    font-size: rem(28);
+    line-height: math.div(39 , 28);
+    color: $white;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: em(1060)){
+      @include adaptiveValue("font-size", 28, 26, 1060, 920, 1);
+      @include adaptiveValue("line-height", 39, 37, 1060, 920, 1);
+    }
+    @media (max-width: em(1060)){
+      max-width: 220px;
+    }
+    @media (max-width: em(920)){
+      max-width: 100%;
+      @include adaptiveValue("font-size", 26, 20, 920, 520, 1);
+      @include adaptiveValue("line-height", 37, 31, 920, 520, 1);
+    }
+    @media (max-width: em(520)){
+
+    }
+    @media (max-width: em(380)){
+      @include adaptiveValue("font-size", 20, 18, 380, 360, 1);
+      @include adaptiveValue("line-height", 31, 25, 380, 360, 1);
+      text-shadow: none;
+      color: $text;
+    }
+  }
+  // .collection__item-info
+  &__item-info {
+    display: flex;
+    gap: 15px;
+    @extend %mulish-500;
+    color: $text;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    @media (max-width: em(960)){
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+    @media (max-width: em(920)){
+      flex-direction: row;
+    }
+    @media (max-width: em(520)){
+      flex-direction: column;
+    }
+    @media (max-width: em(420)){
+      @include adaptiveValue("font-size", 14, 12, 420, 380, 1);
+      @include adaptiveValue("line-height", 22, 19, 420, 380, 1);
+    }
+    @media (max-width: em(380)){
+      
+    }
+  }
+  // .collection__case
+  &__case {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background-color: $grey;
+    border-radius: 19px;
+    @media (max-width: em(380)){
+      padding: 0;
+      background-color: $white;
+    }
+  }
+  // .collection__case-icon
+  // &__case-icon {
+  // }
+  // .collection__case-info
+  // &__case-info {
+
+  // }
+  // .collection__cost
+  &__cost {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background-color: $grey;
+    border-radius: 19px;
+    @media (max-width: em(380)){
+      padding: 0;
+      background-color: $white;
+      // white-space: nowrap;
+    }
+  }
+  // .collection__cost-icon
+  // &__cost-icon {
+  // }
+  // .collection__cost-info
+  &__cost-info {
+    @media (max-width: em(380)){
+      // font-size: rem(11);
+      // line-height: math.div(19 , 11);
+    }
+  }
+  // .collection__btn
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // .collection__btn-link
+  &__btn-link {
+    padding: 10px 109px;
+    @extend %btn;
+    @media (max-width: em(960)){
+      padding: 10px 40px;
+      font-size: rem(14);
+      line-height: math.div(18 , 14);
+    }
+    @media (max-width: em(380)){
+      padding: 8px 52px;
+      border-radius: 18px;
+    }
+  }
+  // .collection__bottom
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    @media (max-width: em(1280)){
+      @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
+    }
+    @media (max-width: em(920)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    // .collection__item
+    .collection__item {
+      max-width: 366px;
+      // min-height: 486px;
+      @media (max-width: em(920)){
+        max-width: 100%;
+      }
+    }
+    //.collection__item-ibg
+    .collection__item-ibg {
+      width: 100%;
+      height: 100%;
+      padding-bottom: percent(486, 366);
+      @media (max-width: em(920)){
+        padding-bottom: percent(366, 766);
+      }
+      @media (max-width: em(470)){
+        padding-bottom: percent(112, 118);
+      }
+      @media (max-width: em(380)){
+        padding-bottom: percent(152, 118);
+      }
+    }
+    // .collection__item-title {
+
+    // }
+    //.collection__btn-link
+    .collection__btn-link {
+      padding: 10px 40px;
+      @media (max-width: em(380)){
+        padding: 8px 52px;
+        border-radius: 18px;
+      }
+    }
+    //.collection__item-info
+    .collection__item-info {
+      @media (max-width: em(1120)){
+        flex-direction: column;
+      }
+      @media (max-width: em(920)){
+        flex-direction: row;
+      }
+      @media (max-width: em(520)){
+        flex-direction: column;
+      }
+    }
+  }
+}
+//========================================================================================================================================================
+//.reason
+.reason {
+  
+  // .reason__container
+  // &__container {
+  //   // max-width: 100%;
+  // }
+  // .reason__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 140px;
+    @media (max-width: em(1360)){
+      @include adaptiveValue("column-gap", 140, 100, 1360, 1260, 1);
+    }
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 100px;
+    }
+    @media (max-width: em(960)){
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // .reason__item
+  // &__item {
+  // }
+  // .reason__title
+  &__title {
+    max-width: 570px;
+    padding-bottom: 25px;
+    @media (max-width: em(1280)){
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media (max-width: em(960)){
+      max-width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+  // .reason__subtitle
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  // .reason__subtitle-img
+  &__subtitle-img {
+    background-color: $white;
+    border-radius: 50%;
+    img {
+      @media (max-width: em(370)){
+        font-size: rem(12);
+        line-height: math.div(19 , 12);
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  // .reason__subtitle-text
+  &__subtitle-text {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $text;
+    max-width: 276px;
+    @media (max-width: em(370)){
+      max-width: 250px;
+    }
+    @media (max-width: em(355)){
+      max-width: 180px;
+    }
+  }
+  // .reason__list
+  &__list {
+    padding-top: 28px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    @media (max-width: em(960)){
+      padding-top: 30px;
+    }
+    @media (max-width: em(710)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
+  }
+  // .reason__list-item
+  &__list-item {
+    max-width: 440px;
+    position: relative;
+    padding-left: 12px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &::after{
+      content:'';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 4px;
+      left: -12px;
+      border-radius: 50%;
+      background: rgba(7, 201, 38, 0.3);
+    }
+    &::before{
+      content:'';
+      position: absolute;
+      width: 8px;
+      height: 8px;  
+      left: -8px;
+      top: 8px;
+      border-radius: 50%;
+      background: #07C926;
+    }
+    @media (max-width: em(960)){
+      max-width: 100%;
+    }
+    @media (max-width: em(830)){
+      max-width: 90%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+//.reason-container__fluid
+.reason {
+  &__container-fluid{
+    background-color: $bgBlock;
+    min-height: 800px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center -5%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    // @include adaptiveValue("background-size", 100%, 120%);
+    @media (max-width: em(1380)){
+      background-size: 120%;
+    }
+    @media (max-width: em(1260)){
+      background-size: 140%;
+    }
+    @media (max-width: em(1060)){
+      background-size: 170%;
+    }
+    @media (max-width: em(960)){
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-position: left -105%;
+    }
+    @media (max-width: em(870)){
+      background-position: left -55%;
+      background-size: 190%;
+    }
+    @media (max-width: em(820)){
+      background-position: left -175%;
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("margin-top", 70, 40, 768, 480, 1);
+      @include adaptiveValue("margin-bottom", 70, 35, 768, 480, 1);
+    }
+    @media (max-width: em(710)){
+      background-size: 170%;
+      background-position: 0% 210%;
+    }
+    @media (max-width: em(590)){
+      background-size: 180%;
+      background-position: 0% 100%;
+    }
+    @media (max-width: em(360)){
+      background-size: 160%;
+      background-position: 0% 100%;
+    }
+  }
+}
+
+

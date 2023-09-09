@@ -1,0 +1,156 @@
+// Цвета
+$white: #FFFFFF;
+$black: #000000;
+$text: #13465B;
+$yelow: #FFC95E;
+$bgBlock: #E3E9F3;
+$grey: #F5F7FA;
+
+%btn {
+  color: #263239;
+  @extend %mulish-800;
+  font-size: rem(20);
+  line-height: math.div(25 , 20);
+  background: linear-gradient(100.21deg, #FFC95E -41.54%, #FFC95E -22.64%, #FFDD99 -9.16%, #FFC95E 1.25%);
+  box-shadow: 0px 4px 4px rgba(255, 204, 102, 0.3), inset 6px 2px 18px #FFE4AE;
+  border-radius: 0px 35px 35px 35px;
+  @media (max-width: em(1190)){
+    @include adaptiveValue("font-size", 20, 18, 1190, 1000, 1);
+    @include adaptiveValue("line-height", 25, 23, 1190, 1000, 1);
+  }
+  @media (max-width: em(768)){
+    @include adaptiveValue("font-size", 18, 16, 768, 680, 1);
+    @include adaptiveValue("line-height", 23, 20, 768, 680, 1);
+  }
+  @media (max-width: em(480)){
+    @include adaptiveValue("font-size", 16, 14, 480, 360, 1);
+    @include adaptiveValue("line-height", 20, 18, 480, 320, 1);
+  }
+}
+
+
+.title {
+  @extend %raleway-600;
+  font-size: rem(56);
+  line-height: math.div(78 , 56);
+  color: $black;
+  text-transform: uppercase;
+  span {
+    @extend %raleway-400;
+    font-size: rem(32);
+    line-height: math.div(45 , 32);
+    @media (max-width: em(1440)){
+      @include adaptiveValue("font-size", 32, 30, 1440, 1190, 1);
+      @include adaptiveValue("line-height", 45, 38, 1440, 1190, 1);
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("font-size", 30, 16, 768, 680, 1);
+      @include adaptiveValue("line-height", 38, 22, 768, 680, 1);
+    }
+  }
+  @media (max-width: em(1280)){
+    padding: 45px 20px 25px;
+    order: -1;
+    @include adaptiveValue("font-size", 56, 46, 1280, 1080, 1);
+    @include adaptiveValue("line-height", 78, 68, 1280, 1080, 1);
+  }
+  @media (max-width: em(1080)){
+    @include adaptiveValue("font-size", 46, 36, 1080, 920, 1);
+    @include adaptiveValue("line-height", 68, 58, 1080, 920, 1);
+  }
+  @media (max-width: em(920)){
+    @include adaptiveValue("font-size", 36, 35, 920, 768, 1);
+    @include adaptiveValue("line-height", 58, 55, 920, 768, 1);
+  }
+  @media (max-width: em(768)){
+    @include adaptiveValue("font-size", 35, 24, 768, 680, 1);
+    @include adaptiveValue("line-height", 55, 29, 768, 680, 1);
+  }
+}
+
+.container-fluid {
+  max-width: 1590px;
+  border-radius: 80px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  @media (max-width:$tablet){
+    border-radius: 40px;
+  }
+}
+
+// скрытие для чекбокса, радио (для своих стилей)
+%checkbox-hidden,
+%radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+
+
+
+
+//Лекарство к Fancybox
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
+
+
+//Mulish
+//========================================================================================================================================================
+%mulish-400 {
+  font-family: 'Mulish-Regular', sans-serif;
+  font-weight: 400;
+}
+%mulish-500 {
+  font-family: 'Mulish-Medium', sans-serif;
+  font-weight: 500;
+}
+%mulish-600 {
+  font-family: 'Mulish-SemiBold', sans-serif;
+  font-weight: 600;
+}
+%mulish-700 {
+  font-family: 'Mulish-Bold', sans-serif;
+  font-weight: 700;
+}
+%mulish-800 {
+  font-family: 'Mulish-ExtraBold', sans-serif;
+  font-weight: 800;
+}
+
+//Raleway
+//========================================================================================================================================================
+%raleway-300 {
+  font-family: 'Raleway-Light', sans-serif;
+  font-weight: 300;
+}
+%raleway-400 {
+  font-family: 'Raleway-Regular', sans-serif;
+  font-weight: 400;
+}
+%raleway-500 {
+  font-family: 'Raleway-Medium', sans-serif;
+  font-weight: 500;
+}
+%raleway-600 {
+  font-family: 'Raleway-SemiBold', sans-serif;
+  font-weight: 600;
+}
+%raleway-700 {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-weight: 700;
+}
+
+//Roboto
+//========================================================================================================================================================
+%raleway-700 {
+  font-family: 'Roboto-Medium', sans-serif;
+  font-weight: 500;
+}
