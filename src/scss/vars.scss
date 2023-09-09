@@ -28,6 +28,28 @@ $grey: #F5F7FA;
   }
 }
 
+.btn {
+  color: #263239;
+  @extend %mulish-800;
+  font-size: rem(20);
+  line-height: math.div(25 , 20);
+  background: linear-gradient(100.21deg, #FFC95E -41.54%, #FFC95E -22.64%, #FFDD99 -9.16%, #FFC95E 1.25%);
+  box-shadow: 0px 4px 4px rgba(255, 204, 102, 0.3), inset 6px 2px 18px #FFE4AE;
+  border-radius: 0px 35px 35px 35px;
+  @media (max-width: em(1190)){
+    @include adaptiveValue("font-size", 20, 18, 1190, 1000, 1);
+    @include adaptiveValue("line-height", 25, 23, 1190, 1000, 1);
+  }
+  @media (max-width: em(768)){
+    @include adaptiveValue("font-size", 18, 16, 768, 680, 1);
+    @include adaptiveValue("line-height", 23, 20, 768, 680, 1);
+  }
+  @media (max-width: em(480)){
+    @include adaptiveValue("font-size", 16, 14, 480, 360, 1);
+    @include adaptiveValue("line-height", 20, 18, 480, 320, 1);
+  }
+}
+
 
 .title {
   @extend %raleway-600;
@@ -105,46 +127,46 @@ $grey: #F5F7FA;
 //Mulish
 //========================================================================================================================================================
 %mulish-400 {
-  font-family: 'Mulish-Regular', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 400;
 }
 %mulish-500 {
-  font-family: 'Mulish-Medium', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 500;
 }
 %mulish-600 {
-  font-family: 'Mulish-SemiBold', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 600;
 }
 %mulish-700 {
-  font-family: 'Mulish-Bold', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 700;
 }
 %mulish-800 {
-  font-family: 'Mulish-ExtraBold', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 800;
 }
 
 //Raleway
 //========================================================================================================================================================
 %raleway-300 {
-  font-family: 'Raleway-Light', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
 }
 %raleway-400 {
-  font-family: 'Raleway-Regular', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400;
 }
 %raleway-500 {
-  font-family: 'Raleway-Medium', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 500;
 }
 %raleway-600 {
-  font-family: 'Raleway-SemiBold', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
 %raleway-700 {
-  font-family: 'Raleway-Bold', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
 }
 

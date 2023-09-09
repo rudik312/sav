@@ -3,345 +3,114 @@
 .main {
   // .main__container
   &__container {
-    padding-top: 25px;
   }
-  // .main__wrapper
-  &__wrapper {
+  // .main__inner
+  &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 45px;
-    @include adaptiveValue("column-gap", 45, 15, 1060, 1000, 1);
-    @media (max-width: em(980)){
-      grid-template-columns: 1fr;
-    }
+    column-gap: 153px;
   }
-  // .main__content
-  &__content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-top: 75px;
-    span {
-      color: $black;
-      @extend %raleway-300;
-      font-size: rem(40);
-      line-height: math.div(48 , 40);
-      @media (max-width: em(1440)){
-        @include adaptiveValue("font-size", 40, 30, 1440, 1190, 1);
-        @include adaptiveValue("line-height", 48, 38, 1440, 1190, 1);
-      }
-      @media (max-width: em(768)){
-        @include adaptiveValue("font-size", 30, 16, 768, 680, 1);
-        @include adaptiveValue("line-height", 38, 22, 768, 680, 1);
-      }
+  // .main__item
+  &__item {
+    &:first-child{
+      padding-top: 144px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
     }
-    &::before{
-      content:'';
-      position: absolute;
-      background-image: url(../img/main/city-top.png);
-      background-repeat: no-repeat;
-      // right: -25%;
-      right: -180px;
-      top: -30px;
-      width: 238px;
-      height: 150px;
-      @media (max-width: em(1440)){
-        background-size: contain;
-        @include adaptiveValue("width", 238, 190, 1440, 1190, 1);
-        @include adaptiveValue("height", 150, 120, 1440, 1190, 1);
-        @include adaptiveValue("right", -180, -50, 1440, 1190, 1);
-        @include adaptiveValue("top", -30, -20, 1440, 1190, 1);
+    &:last-child{
+      position: relative;
+      padding-top: 25px;
+      @media (max-width:$mobile){
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
       }
-      @media (max-width: em(1190)){
-        @include adaptiveValue("width", 190, 152, 1190, 1060, 1);
-        @include adaptiveValue("height", 120, 96, 1190, 1060, 1);
-        @include adaptiveValue("right", -50, -30, 1190, 1060, 1);
-        @include adaptiveValue("top", -20, 15, 1190, 1060, 1);
-      }
-      @media (max-width: em(980)){
-        @include adaptiveValue("right", 290, 200, 980, 800, 1);
-      }
-      @media (max-width: em(800)){
-        @include adaptiveValue("width", 152, 118, 800, 680, 1);
-        @include adaptiveValue("height", 96, 74, 800, 680, 1);
-      }
-      @media (max-width: em(768)){
-        @include adaptiveValue("top", 15, -25, 768, 680, 1);
-        @include adaptiveValue("right", 200, 250, 768, 680, 1);
-      }
-      @media (max-width: em(620)){
-        @include adaptiveValue("right", 250, 100, 620, 480, 1);
-      }
-      @media (max-width: em(480)){
-        @include adaptiveValue("top", -25, -10, 480, 320, 1);
-        @include adaptiveValue("right", 100, -10, 480, 320, 1);
-        @include adaptiveValue("width", 118, 85, 480, 320, 1);
-        @include adaptiveValue("height", 74, 60, 480, 320, 1);
-      }
-    }
-    @media (max-width: em(980)){
-      display: grid;
-      grid-template-rows: repeat(2, 0.5fr);
-    }
-    @media (max-width: em(768)){
-      @include adaptiveValue("padding-top", 75, 20, 768, 620, 1);
     }
   }
   // .main__title
-  &__title-box {
-    position: relative;
-    @media (max-width: em(980)){
-      max-width: 540px;
-    }
-  }
-
   &__title {
     color: $black;
-    @extend %raleway-500;
-    font-size: rem(80);
-    line-height: math.div(96 , 80);
-    @media (max-width: em(1440)){
-      @include adaptiveValue("font-size", 80, 70, 1440, 1190, 1);
-      @include adaptiveValue("line-height", 96, 86, 1440, 1190, 1);
+    
+  }
+  // .main__title-box
+  &__title-box {
+    position: relative;
+    span {
+      @extend %raleway-300;
+      font-size: rem(40);
+      line-height: math.div(48, 40);
     }
-    @media (max-width: em(1190)){
-      @include adaptiveValue("font-size", 70, 60, 1190, 1000, 1);
-      @include adaptiveValue("line-height", 86, 76, 1190, 1000, 1);
+    h1 {
+      @extend %raleway-500;
+      font-size: rem(80);
+      line-height: math.div(96 , 80);
     }
-    @media (max-width: em(1000)){
-      @include adaptiveValue("font-size", 70, 60, 1190, 768, 1);
-      @include adaptiveValue("line-height", 86, 76, 1190, 768, 1);
-    }
-    @media (max-width: em(768)){
-      @include adaptiveValue("font-size", 60, 32, 768, 680, 1);
-      @include adaptiveValue("line-height", 76, 45, 768, 680, 1);
-    }
+  }
+  // .main__title-img
+  &__title-img {
+    position: absolute;
+    right: -170px;
+    top: -120px;
   }
   // .main__btn
   &__btn {
-    position: absolute;
-    right: 0;
-    bottom: 20px;
-    @extend %btn;
     padding: 20px 100px;
-    @media (max-width: em(1440)){
-      @include adaptiveValue("padding-left", 100, 80, 1440, 1190, 1);
-      @include adaptiveValue("padding-right", 100, 80, 1440, 1190, 1);
-    }
-    @media (max-width: em(1190)){
-      @include adaptiveValue("bottom", 20, 15, 1190, 1000, 1);
-      @include adaptiveValue("padding-left", 80, 60, 1190, 1000, 1);
-      @include adaptiveValue("padding-right", 80, 60, 1190, 1000, 1);
-      @include adaptiveValue("font-size", 20, 18, 1190, 1000, 1);
-      @include adaptiveValue("line-height", 25, 23, 1190, 1000, 1);
-    }
-    @media (max-width: em(768)){
-      @include adaptiveValue("font-size", 18, 16, 768, 680, 1);
-      @include adaptiveValue("line-height", 23, 20, 768, 680, 1);
-      @include adaptiveValue("padding-left", 60, 33, 768, 680, 1);
-      @include adaptiveValue("padding-right", 60, 33, 768, 680, 1);
-      @include adaptiveValue("right", 0, 220, 768, 680, 1);
-      @include adaptiveValue("bottom", 15, 0, 768, 680, 1);
-      @include adaptiveValue("padding-top", 20, 12, 768, 680, 1);
-      @include adaptiveValue("padding-bottom", 20, 12, 768, 680, 1);
-    }
-    @media (max-width: em(680)){
-      @include adaptiveValue("right", 220, 210, 680, 570, 1);
-    }
-    @media (max-width: em(570)){
-      @include adaptiveValue("right", 210, 120, 570, 480, 1);
-      @include adaptiveValue("bottom", 0, 5, 570, 480, 1);
-    }
-    @media (max-width: em(480)){
-      @include adaptiveValue("right", 120, -5, 480, 320, 1);
-      @include adaptiveValue("font-size", 16, 12, 480, 320, 1);
-      @include adaptiveValue("line-height", 20, 15, 480, 320, 1);
-    }
-
   }
-  // .main__box
-  &__box {
-    display: grid;
-    // position: relative;
-  } 
-  // .main__subtitle
-  &__subtitle {
-    @include adaptiveValue("margin-top", 63, 45, 1440, 1090, 1);
+  // .main__subtitle-box
+  &__subtitle-box {
+    min-height: 387px;
+    position: relative;
+  }
+  // .main__subtitle-text
+  &__subtitle-text {
+    padding-top: 20px;
+    position: absolute;
     max-width: 327px;
     @extend %mulish-600;
     font-size: rem(18);
-    line-height: math.div(23 , 18);
-    @media (max-width: em(1060)){
-      @include adaptiveValue("max-width", 327, 320, 1060, 1000, 1);
-      @include adaptiveValue("font-size", 18, 16, 1060, 1000, 1);
-      @include adaptiveValue("line-height", 23, 18, 1060, 1000, 1);
-      @include adaptiveValue("margin-top", 45, 10, 1060, 1000, 1);
-    }
-    @media (max-width: em(480)){
-      @include adaptiveValue("font-size", 18, 14, 570, 480, 1);
-      @include adaptiveValue("line-height", 23, 18, 570, 480, 1);
+    line-height: normal;
 
-    }
-    @media (max-width: em(360)){
-      padding-top: 15px;
-      max-width: 180px;
-    }
   }
-  // .main__img
-  &__img {
-    min-height: 250px;
-    position: relative;
-    img {
-      position: absolute;
-      width: 766px;
-      height: 308px;
-      top: -60px;
-      left: -75px;
-      z-index: -1;
-      @media (max-width: em(1440)){
-        @include adaptiveValue("width", 766, 612, 1440, 1190, 1);
-        @include adaptiveValue("height", 308, 246, 1440, 1190, 1);
-        @include adaptiveValue("top", -60, -20, 1440, 1190, 1);
-        @include adaptiveValue("left", -75, 0, 1440, 1190, 1);
-      }
-      @media (max-width: em(1190)){
-        @include adaptiveValue("width", 612, 459, 1190, 1090, 1);
-        @include adaptiveValue("height", 246, 184, 1190, 1090, 1);
-        @include adaptiveValue("left", 0, 50, 1190, 1090, 1);
-      }
-      @media (max-width: em(1090)){
-        @include adaptiveValue("width", 459, 368, 1090, 1060, 1);
-        @include adaptiveValue("height", 184, 148, 1090, 1060, 1);
-        @include adaptiveValue("left", 50, 120, 1090, 1060, 1);
-        @include adaptiveValue("top", -20, 0, 1090, 1060, 1);
-      }
-      @media (max-width: em(1060)){
-        @include adaptiveValue("left", 120, 30, 1060, 980, 1);
-        @include adaptiveValue("top", 0, 30, 1060, 980, 1);
-      }
-      @media (max-width: em(768)){
-        @include adaptiveValue("width", 368, 284, 768, 620, 1);
-        @include adaptiveValue("height", 148, 123, 768, 620, 1);
-      }
-      @media (max-width: em(620)){
-        @include adaptiveValue("left", 30, -100, 620, 480, 1);
-        @include adaptiveValue("top", 30, 120, 620, 480, 1);
-      }
-      @media (max-width: em(480)){
-        @include adaptiveValue("left", -100, -190, 480, 320, 1);
-      }
-    }
-    @media (max-width: em(570)){
-      min-height: 270px;
-    }
-    @media (max-width: em(360)){
-      min-height: 255px;
-    }
+  // .main__subtitle-img
+  &__subtitle-img {
+    position: absolute;
+    right: 0;
   }
   // .main__bg
   &__bg {
-    // display: grid;
-    display: flex;
-    position: relative;
-    align-items: flex-end;
-    @media (max-width: em(980)){
-      position: static;
-    }
-  }
-  // .main__bg-img
-  &__bg-img {
-    // object-fit: cover;
+    // max-width: 100%;
+    // display: block;
     img {
-      @media (max-width: em(1440)){
-        justify-self: end;
-        @include adaptiveValue("width", 570, 456, 1440, 1190, 1);
-        @include adaptiveValue("height", 804, 644, 1440, 1190, 1);
-      }
-      @media (max-width: em(1190)){
-        @include adaptiveValue("width", 456, 410, 1190, 1090, 1);
-        @include adaptiveValue("height", 644, 579, 1190, 1090, 1);
-      }
-      @media (max-width: em(1090)){
-        @include adaptiveValue("width", 410, 328, 1090, 1000, 1);
-        @include adaptiveValue("height", 579, 463, 1090, 1000, 1);
-      }
-      @media (max-width: em(980)){
-        @include adaptiveValue("width", 328, 262, 1000, 840, 1);
-        @include adaptiveValue("height", 463, 370, 1000, 840, 1);
-      }
-    }
-    @media (max-width: em(1440)){
-      display: grid;
-    }
-    @media (max-width: em(980)){
-      position: absolute;
-      @include adaptiveValue("right", 0, -40, 980, 570, 1);
-    }
-    @media (max-width: em(570)){
-      bottom: -75px;
-      z-index: -1;
-      // @include adaptiveValue("right", 0, -25);
+      // height: auto;
+      // width: 100%;
+      // object-fit: cover;
     }
   }
   // .main__director
   &__director {
-    color: $text;
+    position: absolute;
+    // bottom: 30%;
+    // right: 0;
+    left: 0;
+    display: grid;
+    row-gap: 5px;
     max-width: 163px;
     text-align: right;
-    bottom: 160px;
-    left: -50px;
-    position: absolute;
-    @media (max-width: em(1440)){
-      @include adaptiveValue("left", -50, -60, 1440, 1260, 1);
-      @include adaptiveValue("bottom", 160, 130, 1440, 1190, 1);
-    }
-    @media (max-width: em(1260)){
-      @include adaptiveValue("left", -60, -70, 1260, 1160, 1);
-      @include adaptiveValue("bottom", 130, 120, 1260, 1160, 1);
-    }
-    @media (max-width: em(1160)){
-      @include adaptiveValue("left", -70, -80, 1160, 1060, 1);
-      @include adaptiveValue("bottom", 120, 90, 1160, 1060, 1);
-    }
-    @media (max-width: em(1060)){
-      @include adaptiveValue("left", -80, -100, 1060, 980, 1);
-      @include adaptiveValue("bottom", 90, 80, 1060, 980, 1);
-    }
-    @media (max-width: em(980)){
-      @include adaptiveValue("left", 510, 420, 980, 840, 1);
-      @include adaptiveValue("bottom", 70, 50, 980, 840, 1);
-    }
-    @media (max-width: em(840)){
-      @include adaptiveValue("left", 420, 150, 840, 570, 1);
-    }
-    @media (max-width: em(610)){
-      bottom: 200px;
-      left: 200px;
-    }
-    @media (max-width: em(560)){
-      @include adaptiveValue("left", 220, 80, 560, 420, 1);
-    }
-    @media (max-width: em(420)){
-      @include adaptiveValue("left", 80, -20, 420, 380, 1);
-    }
-    p {
-      @extend %mulish-400;
-      font-size: rem(12);
-      line-height: math.div(15 , 12);
-      @media (max-width: em(1060)){
-        @include adaptiveValue("font-size", 12, 10, 1060, 980, 1);
-        @include adaptiveValue("line-height", 15, 13, 1060, 980, 1);
-      }
-    }
-    span {
-      @extend %mulish-500;
-      font-size: rem(16);
-      line-height: math.div(32 , 16);
-      @media (max-width: em(1060)){
-        @include adaptiveValue("font-size", 16, 14, 1060, 980, 1);
-        @include adaptiveValue("line-height", 32, 18, 1060, 980, 1);
-      }
-    }
+    color: $text;
+  }
+  // .main__director-place
+  &__director-place {
+    @extend %mulish-400;
+    font-size: rem(12);
+    line-height: normal;
+
+  }
+  // .main__director-name
+  &__director-name {
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: math.div(32 , 16);
   }
 }
 
