@@ -9,7 +9,7 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 150px;
+    @include adaptiveValue("column-gap", 150, 60, 1680, 1170, 1);
   }
   // .main__item
   &__item {
@@ -28,6 +28,7 @@
   }
   // .main__title-box
   &__title-box {
+    position: relative;
     h1 {
       
       @extend %raleway-500;
@@ -37,6 +38,9 @@
   }
   // .main__title-link
   &__title-btn {
+    position: absolute;
+    right: 0;
+    bottom: 18px;
     display: inline-flex;
     padding: 20px 100px;
 
@@ -70,6 +74,10 @@
     position: absolute;
     bottom: 24px;
     right: -160px;
+    img {
+      width: 237px;
+      height: 149px;
+    }
   }
 }
 .main-box {
