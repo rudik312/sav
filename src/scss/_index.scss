@@ -848,7 +848,8 @@
 
   // .risk__item-wrapper
   &__item-wrapper {
-    padding: 40px;
+
+    padding: 40px 80px 40px 40px;
     border-radius: 64px;
     background: #FFF;
   }
@@ -914,11 +915,12 @@
   }
   //risk-statistics__diagram
   &__diagram {
-
+    display: flex;
+    // border: 1px solid red;
   }
 
-  &__menu {
-    
+
+  &__analitic {
   }
 
 }
