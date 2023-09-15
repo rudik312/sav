@@ -5,46 +5,46 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Hong Kong', 'Macau', 'Japan', 'Switzerland', 'Spain', 'Singapore'],
+        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
         datasets: [{
             label: 'Life expectancy',
-            data: [84.308, 84.188, 84.118, 83.706, 83.5, 83.468],
+            data: [2.24, 2.21, 1.81, 1.80, 1.71, 1.70, 1.62, 1.59, 1.56, 1.39, 1.31, 1.22, 1.21, 1.19, 1.14, 1.08, 0.78, 0.75, 0.59, 0.57, 0.50, 0.34, 0.20, 0.16, 0.15],
             backgroundColor: [
-                'rgba(216, 27, 96, 0.6)',
-                'rgba(3, 169, 244, 0.6)',
-                'rgba(255, 152, 0, 0.6)',
-                'rgba(29, 233, 182, 0.6)',
-                'rgba(156, 39, 176, 0.6)',
-                'rgba(84, 110, 122, 0.6)'
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#EF3636',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#FFC95E',
+                '#07C926',
+                '#07C926',
+                '#07C926',
+                '#07C926',
             ],
-            borderColor: [
-                'rgba(216, 27, 96, 1)',
-                'rgba(3, 169, 244, 1)',
-                'rgba(255, 152, 0, 1)',
-                'rgba(29, 233, 182, 1)',
-                'rgba(156, 39, 176, 1)',
-                'rgba(84, 110, 122, 1)'
-            ],
-            borderWidth: 1
         }]
     },
     options: {
+      indexAxis: 'y',
+      plugins: {
         legend: {
-            display: false
-        },
-        title: {
-            display: true,
-            text: 'Life Expectancy by Country',
-            position: 'top',
-            fontSize: 16,
-            padding: 20
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    min: 75
-                }
-            }]
+            display: false // This hides all text in the legend and also the labels.
         }
     }
+    }
+
 });

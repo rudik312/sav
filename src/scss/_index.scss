@@ -829,7 +829,7 @@
 //.risk
 //========================================================================================================================================================
 .risk {
-  background-color: $bgBlock;
+  background-color: #F5F7FA;
   // .risk__container
   &__container {
     padding-top: 70px;
@@ -860,6 +860,9 @@
 .risk-statistics {
   // .risk-statistics__title-box
   &__title-box {
+    display: flex;  
+    flex-direction: column;
+    row-gap: 4px;
   }
   // .risk-statistics__title
   &__title {
@@ -878,6 +881,9 @@
   // .risk-statistics__map
   &__map {
     padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
   }
   // .risk-statistics__map-city
   &__map-city {
@@ -905,12 +911,20 @@
   //risk-statistics__list-city
   &__list-city {
     display: inline-flex;
+  }
+  //risk-statistics__diagram
+  &__diagram {
 
+  }
+
+  &__menu {
+    
   }
 
 }
 
 .risk-item {
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
@@ -931,11 +945,28 @@
   }
   // .risk-item__text
   &__text {
+    max-width: 468px;
+    @extend %mulish-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: $text;
   }
-  // .risk-item__btn
+  // .risk-item__box-btn
+  &__box-btn {
+
+  }
+  //risk-item__btn
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 40px;
+    text-transform: uppercase;
+    @extend %mulish-800;
+    font-size: rem(16);
+    line-height: 120%;
+    color: #263239;
   }
 }
-.btn {
-}
+
 
