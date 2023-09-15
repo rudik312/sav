@@ -78,6 +78,9 @@
       width: 237px;
       height: 149px;
     }
+    @media (max-width: em(1480)){
+      right: -60px;
+    }
   }
 }
 .main-box {
@@ -91,6 +94,9 @@
       width: 766px;
       height: 308px;
     }
+    @media (max-width: em(1480)){
+      right: 80px;
+    }
   }
   // .main-box__subtitle
   &__subtitle {
@@ -98,6 +104,9 @@
     top: 27px;
     left: 54px;
     max-width: 327px;
+    @media (max-width: em(1480)){
+      left: 10px;
+    }
   }
 }
 .main-bg {
@@ -112,6 +121,9 @@
     bottom: 174px;
     max-width: 163px;
     text-align: right;
+    @media (max-width: em(1480)){
+      left: -80px;
+    }
   }
   // .main-bg__founder-status
   &__founder-status {
@@ -672,6 +684,10 @@
   }
   // .reason__subtitle-img
   &__subtitle-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     background-color: $white;
     border-radius: 50%;
     img {
@@ -803,4 +819,5 @@
   }
 }
 
+//========================================================================================================================================================
 
