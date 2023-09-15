@@ -138,9 +138,10 @@
     line-height: math.div(32 , 16);
   }
 }
-
 //========================================================================================================================================================
+
 //.selection
+//========================================================================================================================================================
 .selection {
   &__container-fluid {
     margin-bottom: 70px;
@@ -322,7 +323,9 @@
   }
 }
 //========================================================================================================================================================
+
 //.collection
+//========================================================================================================================================================
 .collection {
   // .collection__container
   &__container {
@@ -635,7 +638,10 @@
   }
 }
 //========================================================================================================================================================
+
+
 //.reason
+//========================================================================================================================================================
 .reason {
   
   // .reason__container
@@ -818,6 +824,118 @@
     }
   }
 }
-
 //========================================================================================================================================================
+
+//.risk
+//========================================================================================================================================================
+.risk {
+  background-color: $bgBlock;
+  // .risk__container
+  &__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  // .risk__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+  }
+  // .risk__item
+  &__item {
+
+  }
+
+  // .risk__item-wrapper
+  &__item-wrapper {
+    padding: 40px;
+    border-radius: 64px;
+    background: #FFF;
+  }
+
+  // .risk__statistics
+  &__statistics {
+  }
+}
+.risk-statistics {
+  // .risk-statistics__title-box
+  &__title-box {
+  }
+  // .risk-statistics__title
+  &__title {
+    @extend %mulish-800;
+    font-size: rem(16);
+    line-height: 120%;
+    color: $black;
+  }
+  // .risk-statistics__subtitle
+  &__subtitle {
+    @extend %mulish-500;
+    font-size: rem(15);
+    line-height: 120%;
+    color: $black;
+  }
+  // .risk-statistics__map
+  &__map {
+    padding-top: 25px;
+  }
+  // .risk-statistics__map-city
+  &__map-city {
+  }
+  // .risk-statistics__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+  }
+  // .risk-statistics__list-item
+  &__list-item {
+    display: flex;
+    column-gap: 20px;
+    @extend %mulish-500;
+    font-size: rem(12);
+    line-height: 120%;
+  }
+
+  //risk-statistics__list-num
+  &__list-num {
+    min-width: 12px;
+    color: $text;
+  }
+  //risk-statistics__list-city
+  &__list-city {
+    display: inline-flex;
+
+  }
+
+}
+
+.risk-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  // .risk-item__title
+  &__title {
+    text-transform: uppercase;
+    span {
+      @extend %raleway-400;
+      font-size: rem(32);
+      line-height: math.div(45 , 32) !important;
+    }
+    h3 {
+      @extend %raleway-600;
+      font-size: rem(40);
+      line-height: math.div(56 , 40);
+
+    }
+  }
+  // .risk-item__text
+  &__text {
+  }
+  // .risk-item__btn
+  &__btn {
+  }
+}
+.btn {
+}
 
