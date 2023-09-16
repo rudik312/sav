@@ -852,7 +852,7 @@
   // .risk__item-wrapper
   &__item-wrapper {
 
-    padding: 40px 30px 40px 40px;
+    padding: 40px;
     border-radius: 64px;
     background: #FFF;
   }
@@ -933,9 +933,10 @@
   //risk-statistics__legend
   &__legend {
     padding-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 18px;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
     align-items: center;
   }
 
@@ -944,34 +945,51 @@
     display: flex;
     flex-direction: column;
     row-gap: 9px;
+      &:nth-child(1) {
+        .risk-statistics__legend-color {
+          width: 15px;
+          height: 15px;
+          border-radius: 4px;
+          background-color: #07C926;
+        }
+        .risk-statistics__legend-text {
+          max-width: 153px;
+        }
+      }
+      &:nth-child(2) {
+        .risk-statistics__legend-color {
+          width: 15px;
+          height: 15px;
+          border-radius: 4px;
+          background-color: #FFC95E;
+        }
+        .risk-statistics__legend-text {
+          max-width: 96px;
+        }
+      }
+      &:nth-child(3) {
+        .risk-statistics__legend-color {
+          width: 15px;
+          height: 15px;
+          border-radius: 4px;
+          background-color: #EF3636;
+        }
+        .risk-statistics__legend-text {
+          max-width: 108px;
+        }
+      }
   }
+  
   //risk-statistics__legend-color
   &__legend-color {
-    &:nth-child(1) {
-      width: 15px;
-      height: 15px;
-      border-radius: 4px;
-      background-color: #07C926;
-    }
-    &:nth-child(2) {
-      width: 15px;
-      height: 15px;
-      border-radius: 4px;
-      background-color: #FFC95E;
-    }
-    &:nth-child(3) {
-      width: 15px;
-      height: 15px;
-      border-radius: 4px;
-      background-color: #EF3636;
-    }
+
   }
   //risk-statistics__legend-text
   &__legend-text {  
     @extend %mulish-500;
     font-size: rem(10);
     line-height: 120%;
-
+    color: $black;
   }
 }
 
