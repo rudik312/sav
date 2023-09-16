@@ -1,7 +1,9 @@
 import Chart from 'chart.js/auto';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 // Vertical bar chart
 var ctx = document.getElementById('myChart').getContext('2d');
+
 var myChart = new Chart(ctx, {
     maintainAspectRatio: false,
     responsive: true,
@@ -46,13 +48,19 @@ var myChart = new Chart(ctx, {
             //Установка ширины полоски в пикселях
             barThickness: 13,
             // categoryPercentage: 0.5,
+            datalabels: {
+              color: '#13465B',
+              anchor: 'end',
+              align: 'end',
+              offset: 6
+            }
         }],
         
     },
+    plugins: [ChartDataLabels],
     options: {
       responsive: false,
       indexAxis: 'y',
-
       plugins: {
         legend: {
             display: false, // This hides all text in the legend and also the labels.

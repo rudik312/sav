@@ -71,6 +71,7 @@
 	},
 	"dependencies": {
 		"chart.js": "^4.4.0",
+		"chartjs-plugin-datalabels": "^2.2.0",
 		"simplebar": "latest"
 	}
 }
