@@ -52,22 +52,23 @@ var myChart = new Chart(ctx, {
     options: {
       responsive: false,
       indexAxis: 'y',
+
       plugins: {
         legend: {
             display: false, // This hides all text in the legend and also the labels.
         },
+        
         //убираем подсказки
         tooltip: false,
       },
       // скрываем сетку на фоне
       scales: {
-        
         x: {
           //отключаем ось X
           display: false,
           grid: {
           display: false,
-
+          
         },
         //Удалить надписи по оси x 
         ticks: {
@@ -75,9 +76,11 @@ var myChart = new Chart(ctx, {
         }
         },
         y: {
+          beginAtZero: true,
           grid: {
             display: false,
             drawTicks: false,
+            
           },
           ticks: {
             padding: -17
@@ -90,10 +93,9 @@ var myChart = new Chart(ctx, {
           bottom: 14,
           left: 0,
         },
-      
-    }
+    },
     
-  },
+  }
 
 });
 
