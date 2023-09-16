@@ -3,6 +3,8 @@ import Chart from 'chart.js/auto';
 // Vertical bar chart
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
+    maintainAspectRatio: false,
+    responsive: true,
     type: 'bar',
     data: {
         labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
@@ -48,6 +50,7 @@ var myChart = new Chart(ctx, {
         
     },
     options: {
+      responsive: false,
       indexAxis: 'y',
       plugins: {
         legend: {
@@ -58,6 +61,7 @@ var myChart = new Chart(ctx, {
       },
       // скрываем сетку на фоне
       scales: {
+        
         x: {
           //отключаем ось X
           display: false,
@@ -76,7 +80,7 @@ var myChart = new Chart(ctx, {
             drawTicks: false,
           },
           ticks: {
-            padding: -15
+            padding: -17
           }
         },
         
