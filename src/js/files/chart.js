@@ -1,5 +1,6 @@
 import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import ChartDeferred from 'chartjs-plugin-deferred';
 
 // Vertical bar chart
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -60,11 +61,17 @@ var myChart = new Chart(ctx, {
                 lineHeight: 1.2,
                 weight: 500
               }
+            },
+            // показываем анимацию только при видимости блока
+            deferred: {
+              xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+              yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+              delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
             }
         }],
         
     },
-    plugins: [ChartDataLabels],
+    plugins: [ChartDataLabels, ChartDeferred],
     options: {
       responsive: false,
       indexAxis: 'y',
@@ -110,10 +117,12 @@ var myChart = new Chart(ctx, {
         },
     },
     animation: {
-      duration: 5000,
-      delay: 2000
+      duration: 3000,
+      delay: 1000,
+      
     }
   }
 
 });
+
 
