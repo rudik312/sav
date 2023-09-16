@@ -52,7 +52,14 @@ var myChart = new Chart(ctx, {
               color: '#13465B',
               anchor: 'end',
               align: 'end',
-              offset: 6
+              offset: 4,
+              font: {
+                size: 12,
+                family: 'Mulish',
+                style: 'normal',
+                lineHeight: 1.2,
+                weight: 500
+              }
             }
         }],
         
@@ -102,7 +109,10 @@ var myChart = new Chart(ctx, {
           left: 0,
         },
     },
-    
+    animation: {
+      duration: 5000,
+      delay: 2000
+    }
   }
 
 });
