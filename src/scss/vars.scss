@@ -53,15 +53,18 @@ $grey: #F5F7FA;
 
 
 .title {
-  @extend %raleway-600;
-  font-size: rem(56);
-  line-height: math.div(78 , 56);
-  color: $black;
-  text-transform: uppercase;
+  h3 {
+    @extend %raleway-600;
+    font-size: rem(56);
+    line-height: math.div(78 , 56);
+    color: $black;
+    text-transform: uppercase;
+  }
   span {
     @extend %raleway-400;
     font-size: rem(32);
     line-height: math.div(45 , 32);
+    text-transform: uppercase;
     @media (max-width: em(1440)){
       @include adaptiveValue("font-size", 32, 30, 1440, 1190, 1);
       @include adaptiveValue("line-height", 45, 38, 1440, 1190, 1);
@@ -111,8 +114,6 @@ $grey: #F5F7FA;
   clip: rect(0 0 0 0);
   position: absolute;
 }
-
-
 
 
 
@@ -173,7 +174,7 @@ $grey: #F5F7FA;
 
 //Roboto
 //========================================================================================================================================================
-%raleway-700 {
-  font-family: 'Roboto-Medium', sans-serif;
+%roboto-500 {
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
