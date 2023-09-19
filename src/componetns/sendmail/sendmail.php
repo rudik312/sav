@@ -20,6 +20,16 @@
 	//Тело письма
 	$body = '<h1>Встречайте супер письмо!</h1>';
 
+
+	if(trim(!empty($_POST['name']))){
+		$body.='<p><strong>Имя:</strong> ' . $_POST['name'] . '</p>';
+	}
+	if(trim(!empty($_POST['email']))){
+		$body.='<p><strong>Телефон</strong> ' . $_POST['phone'] . '</p>';
+	}
+
+
+
 	//if(trim(!empty($_POST['name']))){
 		//$body.='';
 	//}	

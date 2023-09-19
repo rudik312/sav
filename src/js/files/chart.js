@@ -2,10 +2,13 @@ import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import ChartDeferred from 'chartjs-plugin-deferred';
 
-// Vertical bar chart
-var ctx = document.getElementById('myChart').getContext('2d');
 
-var myChart = new Chart(ctx, {
+
+
+// Vertical bar chart
+let ctx = document.getElementById('myChart').getContext('2d');
+
+let myChart = new Chart(ctx, {
     maintainAspectRatio: false,
     responsive: true,
     type: 'bar',

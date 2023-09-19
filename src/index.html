@@ -51,14 +51,14 @@
 				<!-- end main -->
 				<!-- start selection -->
 				<section class="selection">
-					<div class="selection__container-fluid container-fluid">
+					<div class="selection-container__fluid container-fluid">
 						<div class="selection__container">
 							<div class="selection__inner">
 								<div class="selection__bg">
 									<img src="@img/selection/banner-bg.png" alt="banner">
 								</div>
 								<div class="selection__content">
-									<div class="selection__title title" data-da=".container-fluid,1280.00">
+									<div class="selection__title title" data-da=".selection-container__fluid,1280.00">
 										<span>ПОЛУЧИТЕ ИНДИВИДУАЛЬНУЮ</span>
 										<h3>ПОДБОРКУ НЕДВИЖИМОСТИ</h3>
 									</div>
@@ -244,16 +244,16 @@
 								</div>
 								<div class="reason__item">
 									<ul class="reason__list">
-										<li class="reason__list-item">
+										<li class="reason__list-item item-dots">
 											Входит в топ-5 самых посещаемых городов мира - ваш объект будет максимально востребован у арендаторов
 										</li>
-										<li class="reason__list-item">
+										<li class="reason__list-item item-dots">
 											Лучшее место в мире для жизни экспатов согласно Expat Essential Index 2022 - соотношение ежегодного прироста населения к объемам строительства 3 к 1, что стимулирует рост стоимости недвижимости.
 										</li>
-										<li class="reason__list-item">
+										<li class="reason__list-item item-dots">
 											ОАЭ занимают 1-е место в мире по безопасности - вашей семье и инвестициям и ничего не угрожает.
 										</li>
-										<li class="reason__list-item">
+										<li class="reason__list-item item-dots">
 											Стабильный курс валюты и нейтральная внешняя политика.
 										</li>
 									</ul>
@@ -677,6 +677,130 @@
 					</div>
 				</section>
 				<!-- end best -->
+				<!-- start payment -->
+				<section class="payment">
+					<div class="payment__container">
+						<div class="payment__title-inner">
+							<div class="payment__title-box title">
+								<h3>РАССРОЧКА</h3>
+								<p>На весь срок строительства с комфортным планом платежей до 10-и лет </p>
+							</div>
+							<div class="payment__title-price">
+								<span>0%</span>
+								<p>ПЕРЕПЛАТ</p>
+							</div>
+							<div class="payment__decor">
+								<img src="@img/payment/payment-decor.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="payment-container__fluid container-fluid" style="background-image: url(../img/payment/payment-bg.png);">
+						<div class="payment__container">
+							<div class="payment__wrapper">
+								<div class="payment__context">
+									<p class="payment__context-text ">пример плана платежей</p>
+								</div>
+								<div class="payment__items">
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">1-й</p>
+											<span class="payment__item-percent">20%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">2-й</p>
+											<span class="payment__item-percent">10%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">3-й</p>
+											<span class="payment__item-percent">10%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">4-й</p>
+											<span class="payment__item-percent">10%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">5-й</p>
+											<span class="payment__item-percent">10%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">6-й</p>
+											<span class="payment__item-percent">10%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">7-й</p>
+											<span class="payment__item-percent">10%</span>
+										</div>
+									</div>
+									<div class="payment__item-box">
+										<div class="payment__item">
+											<p class="payment__item-num">8-й</p>
+											<span class="payment__item-percent">20%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment__inner">
+								<div class="payment__form  payment-form__wrapper">
+									<form data-ajax class="payment-form" method="POST" action="componetns/sendmail/sendmail.php">
+										<div class="payment-form__item-wrapper">
+											<div class="payment-form__item">
+												<input autocomplete="off" class="payment-form__input" data-required type="text" name="name" data-error="Error" placeholder="Имя">
+											</div>
+											<div class="payment-form__item">
+												<input autocomplete="off" class="payment-form__input" data-required type="text" name="phone" data-error="Error" placeholder="Телефон">
+											</div>
+										</div>
+										<div class="payment-form__action">
+											<button class="payment-form__btn btn" type="submit">СКАЧАТЬ ПОЛНЫЙ КАТАЛОГ</button>
+											<div class="payment-form__politics">
+												<p>Нажимая на кнопку вы соглашаетесь с условиями 
+													<a class="payment-form__politics-link" href="#">обработки данных</a> и 
+													<a class="payment-form__politics-link" href="#">политикой конфиденциальности</a>
+												</p>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="payment__content payment-content">
+									<div class="payment-content__title-box">
+										<span class="payment-content__subtitle">получите полный КАТАЛОГ</span>
+										<h3 class="payment-content__title">ЛУЧШИХ ПРОЕКТОВ ДУБАЯ
+											<span class="payment-content__title-info">Для жизни <br> и инвестиций</span>
+										</h3>
+									</div>
+									<ul class="payment-content__list">
+										<li class="payment-content__list-item item-dots">
+											<p>от 126 000 $</p>
+										</li>
+										<li class="payment-content__list-item item-dots">
+											<p>Апартаменты, виллы, таунхаусы и пентхаус</p>
+										</li>
+										<li class="payment-content__list-item item-dots">
+											<p>18 ведущих застройщиков ОАЭ</p>
+										</li>
+										<li class="payment-content__list-item item-dots">
+											<p>73 актуальных жилых комплексов</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+				<!-- end payment -->
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

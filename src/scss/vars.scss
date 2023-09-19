@@ -115,7 +115,30 @@ $grey: #F5F7FA;
   position: absolute;
 }
 
-
+.item-dots {
+  position: relative;
+  padding-left: 12px;
+  &::after{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: -12px;
+    border-radius: 50%;
+    background: rgba(7, 201, 38, 0.3);
+  }
+  &::before{
+    content:'';
+    position: absolute;
+    width: 8px;
+    height: 8px;  
+    left: -8px;
+    top: 8px;
+    border-radius: 50%;
+    background: #07C926;
+  }
+}
 
 //Лекарство к Fancybox
 @function max($numbers...) {
