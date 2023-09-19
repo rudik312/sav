@@ -1501,22 +1501,15 @@
   }
 }
 
-//.expert-form__message._form-error
-// .expert-form__message._form-error {
-//   outline: 2px solid #f00;
-// }
-//.expert-form__input._form-error
-// .expert-form__input._form-error {
-//   outline: 2px solid #f00;
-// }
-//.expert-form__input._form-focus
-// .expert-form__input:focus {
-//   outline: 2px solid $accent;
-// }
-//.expert-form__message:focus
-// .expert-form__message:focus {
-//   outline: 2px solid $accent;
-// }
+
+//.payment-form__input_form-error
+.payment-form__input._form-error {
+  outline: 2px solid #f00;
+}
+//.payment-form__input:focus
+.payment-form__input:focus {
+  outline: 2px solid $yelow;
+}
 
 .payment-content {
   display: flex;
