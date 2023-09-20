@@ -53,6 +53,7 @@
 	// .header_action
 	&__action {
 		display: flex;
+		justify-content: flex-end;
 		column-gap: 15px;
 		padding: 13px 0;
 		@media (max-width:$mobileSmall){
@@ -109,8 +110,9 @@
 	&__social-link + .header__social-link{
 		padding-left: 10px;
 	}
-	// .header__btn-lang
+	// .header__btn-lang-------------------------------кнопка EN
 	&__btn-lang {
+		display: none;
 		padding: 8px 13px;
 		border-radius: 18px;
 		border: 1px solid $yelow;
@@ -224,8 +226,9 @@
 	// &__social-link {
 
 	// }
-	// .menu__btn-lang
+	// .menu__btn-lang---------------------------кнопка EN
 	&__btn-lang {
+		display: none;
 		padding: 8px 13px;
 		border-radius: 18px;
 		border: 1px solid $yelow;

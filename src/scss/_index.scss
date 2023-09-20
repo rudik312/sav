@@ -1456,7 +1456,7 @@
   &__item { 
       &:last-child{
         .payment-form__input {
-          padding-left: 68px;
+          // padding-left: 68px;
         }
       } 
     
@@ -1588,6 +1588,7 @@
   // .faq__container
   &__container {
     padding-top: 70px;
+    padding-bottom: 70px;
   }
   // .faq__wrapper
   &__wrapper {
@@ -1755,6 +1756,8 @@
     }
   }
 }
+//========================================================================================================================================================
+
 
 
 
