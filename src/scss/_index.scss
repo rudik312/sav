@@ -34,6 +34,7 @@
       @extend %raleway-500;
       font-size: rem(80);
       line-height: math.div(96 , 80);
+      color: $black;
     }
   }
   // .main__title-link
@@ -67,6 +68,7 @@
       @extend %raleway-300;
       font-size: rem(40);
       line-height: math.div(48 , 40);
+      color: $black;
     }
   }
   // .main-wrapper__img
@@ -255,6 +257,7 @@
   }
   // .selection__title
   &__title {
+    padding: 45px 20px 25px;
     span {
       white-space: nowrap;
     }
@@ -987,11 +990,13 @@
       @extend %raleway-400;
       font-size: rem(32);
       line-height: math.div(45 , 32);
+      color: $black;
     }
     h3 {
       @extend %raleway-600;
       font-size: rem(40);
       line-height: math.div(56 , 40);
+      color: $black;
 
     }
   }
@@ -1758,6 +1763,129 @@
 }
 //========================================================================================================================================================
 
+//.district
+//========================================================================================================================================================
+
+.district {
+  // .district__container
+  &__container {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .district__title-inner
+  &__title-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .district__title-box
+  &__title-box {
+    color: $black;
+    h3 {
+      @extend %raleway-600;
+      font-size: rem(56);
+      line-height: math.div(78 , 56);
+      text-transform: uppercase;
+    }
+    span {
+      @extend %raleway-400;
+      font-size: rem(32);
+      line-height: math.div(45 , 32);
+      text-transform: uppercase;
+    }
+  }
+  // .district__action
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // .district__action-link
+  &__action-link {
+    padding: 10px 80px;
+    border-radius: 22px;
+    background: #FFF;
+    @extend %mulish-800;
+    font-size: rem(18);
+    line-height: 120%;
+    color: #263239;
+    @media (any-hover: hover){
+      transition: background-color 0.3s ease 0s;
+      &:hover{
+        background-color: $yelow;
+      }
+    }
+  }
+  // .district__inner
+  &__inner {
+  }
+  // .district__slider
+  &__slider {
+    height: 492px;
+  }
+  // .district__wrapper
+  &__wrapper {
+
+  }
+  // .district__slide
+  &__slide {
+    width: 468px !important;
+    padding-bottom: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 55px;
+    display: grid !important;
+    justify-items: center;
+    grid-template-rows: 1.4fr 1fr;
+    // display: flex !important;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+  }
+  // .district__slide-img
+  &__slide-img {
+  }
+  // .district__slide-text
+  &__slide-text {
+    display: grid;
+    align-items: end;
+    // margin: 0 auto;
+    @extend %raleway-600;
+    font-size: rem(40);
+    line-height: math.div(56 , 40);
+    color: $white;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+   // .district__slide-action
+  &__slide-action {
+    display: grid;
+    align-items: end;
+  }
+  // .district__slide-link
+  &__slide-link {
+    display: inline-flex;
+    padding: 10px 80px;
+    border-radius: 22px;
+    background: linear-gradient(100deg, #FFC95E -41.54%, #FFC95E -22.64%, #FD9 -9.16%, #FFC95E 1.25%);
+    box-shadow: 0px 4px 4px 0px rgba(255, 204, 102, 0.30), 6px 2px 18px 0px #FFE4AE inset;
+    color: #263239;
+    @extend %mulish-800;
+    font-size: rem(14);
+    line-height: 120%;
+  }
+}
+
+
+
+
+
+//========================================================================================================================================================
+
+
 
 
 //.telegram
@@ -1838,6 +1966,10 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
   // .telegram__btn-text
   &__btn-text {
@@ -1856,7 +1988,10 @@
     background-color: $white;
   }
 }
-.container-fluid {
-}
+//========================================================================================================================================================
+
+
+//========================================================================================================================================================
+
 
 

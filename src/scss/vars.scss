@@ -65,6 +65,7 @@ $grey: #F5F7FA;
     font-size: rem(32);
     line-height: math.div(45 , 32);
     text-transform: uppercase;
+    color: $black;
     @media (max-width: em(1440)){
       @include adaptiveValue("font-size", 32, 30, 1440, 1190, 1);
       @include adaptiveValue("line-height", 45, 38, 1440, 1190, 1);
@@ -75,7 +76,7 @@ $grey: #F5F7FA;
     }
   }
   @media (max-width: em(1280)){
-    padding: 45px 20px 25px;
+    // padding: 45px 20px 25px;
     order: -1;
     @include adaptiveValue("font-size", 56, 46, 1280, 1080, 1);
     @include adaptiveValue("line-height", 78, 68, 1280, 1080, 1);
