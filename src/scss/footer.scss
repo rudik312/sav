@@ -1,3 +1,108 @@
 //====================================================================================================
+.footer {
+  // .footer__container
+  &__container {
+    padding-top: 15px;
+  }
+  // .footer__inner
+  &__inner {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 35px;
+  }
+  // .footer__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mulish-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: $text;
+    &:nth-child(1) {
+      margin-right: 80px;
+    }
+    &:nth-child(2) {
+      margin-right: 85px;
+    }
+    &:nth-child(3) {
+      margin-right: 190px;
+    }
+  }
+  // .footer__logo
+  &__logo {
+  }
+  // .footer__wrapper-item
+  &__wrapper-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  // .footer__item-heading
+  &__item-heading {
+    @extend %raleway-600;
+    text-transform: uppercase;
+    font-size: rem(20);
+    line-height: math.div(28 , 20);
+    color: $black;
+  }
+  // .footer__item-contacts
+  &__item-contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+  // .footer__item-phone
+  &__item-phone {
+  }
+  // .footer__item-emeil
+  &__item-emeil {
+  }
+  // .footer__item-adress
+  &__item-adress {
+    address {
+      font-style: normal;
+    }
+  }
+  // .footer__item-shedule
+  &__item-shedule {
+  }
+  // .footer__copyright
+  &__copyright {
+    padding: 30px 0;
+    border-top: 1px solid #E3E9F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  // .footer__copyright-text
+  &__copyright-text {
+    @extend %mulish-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: $text;
+  }
+}
+.footer-menu {
+  // .footer-menu__box
+  &__box {
+  }
+  // .footer-menu__social
+  &__social {
+    display: flex;
+    column-gap: 20px;
+  }
+  // .footer-menu__social-link
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
 
 //====================================================================================================
