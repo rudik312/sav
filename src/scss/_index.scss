@@ -1763,13 +1763,20 @@
 }
 //========================================================================================================================================================
 
-//.district
+
 //========================================================================================================================================================
 
+
+//========================================================================================================================================================
+
+
+//.district
+//========================================================================================================================================================
 .district {
   // .district__container
   &__container {
     padding-top: 70px;
+    padding-bottom: 70px;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -1849,9 +1856,11 @@
   }
   // .district__slide-text
   &__slide-text {
+    max-width: 335px;
     display: grid;
     align-items: end;
     // margin: 0 auto;
+    text-align: center;
     @extend %raleway-600;
     font-size: rem(40);
     line-height: math.div(56 , 40);
@@ -1879,10 +1888,34 @@
   }
 }
 
+// .district__slider.swiper {
+//   overflow: visible !important;
+// }
+
+// .district__slide.swiper-slide-next {
+//   // opacity: 0.25 !important;
+  
+// }
+// .district__slide.swiper-slide-prev {
+//   // opacity: 0.25 !important;
+// }
+
+
+// .district__slide.swiper-slide-prev {
+//   visibility: hidden;
+// }
 
 
 
-
+.district__slide.swiper-slide.swiper-slide-duplicate-prev {
+  visibility: hidden !important;
+}
+.district__slide.swiper-slide.swiper-slide-duplicate-next {
+  visibility: hidden !important;
+}
+.district__slide.swiper-slide.swiper-slide-duplicate-active {
+  visibility: hidden !important;
+}
 //========================================================================================================================================================
 
 
@@ -1991,7 +2024,6 @@
 //========================================================================================================================================================
 
 
-//========================================================================================================================================================
 
 
 
