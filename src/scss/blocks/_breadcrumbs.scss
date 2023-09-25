@@ -1,4 +1,9 @@
 .breadcrumbs {
+  // .breadcrumbs__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   // .breadcrumbs__list
   &__list {
     display: flex;
@@ -44,10 +49,6 @@
   }
   // .breadcrumbs__link
   &__link {
-    position: relative;
-    &:not(:last-child) {
-
-    }
 
   }
 }
