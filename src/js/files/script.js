@@ -2,3 +2,59 @@
 import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
+
+
+//Slick slider initialize
+// $('.slider').slick({
+//   arrows:false, 
+//   dots: false, 
+//   infinite:true, 
+//   speed:1000,
+//   autoplay: false, autoplaySpeed: 3000, slidesToShow:1, slidesToScroll:1
+// });
+// //On click of slider-nav childern,
+// //Slick slider navigate to the respective index.
+// $('.slider-nav > div').click(function() {
+//     $('.slider').slick('slickGoTo',$(this).index());
+// })
+
+$('.slider-for-first').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  speed: 1000,
+  asNavFor: '.slider-nav-first'
+});
+$('.slider-nav-first').slick({
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  asNavFor: '.slider-for-first',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  arrows:false, 
+  speed: 1000,
+  infinite: true,
+
+});2
+$('.slider-for-last').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  speed: 1000,
+  asNavFor: '.slider-nav-last'
+});
+$('.slider-nav-last').slick({
+  slidesToShow: 3,
+  slidesToScroll: 2,
+  asNavFor: '.slider-for-last',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  arrows:false, 
+  speed: 1000,
+  infinite: true,
+
+});
