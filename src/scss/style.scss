@@ -147,3 +147,8 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "index";
+@import "area";
+
+
+//Подключение отдельных блоков
+@import "blocks/breadcrumbs"

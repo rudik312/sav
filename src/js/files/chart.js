@@ -3,129 +3,137 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 import ChartDeferred from 'chartjs-plugin-deferred';
 
 
+window.onload = function() {
 
 
-// Vertical bar chart
-let ctx = document.getElementById('myChart').getContext('2d');
 
-let myChart = new Chart(ctx, {
-    maintainAspectRatio: false,
-    responsive: true,
-    type: 'bar',
-    data: {
-        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
-        
-        datasets: [{
-            // label: 'status',
-            data: [
-              2.24, 2.21, 1.81, 1.80, 1.71, 1.70, 1.62, 1.59, 1.56, 1.39, 1.31, 1.22, 1.21, 1.19, 1.14, 1.08, 0.78, 0.75, 0.59, 0.57, 0.50, 0.34, 0.20, 0.16, 0.15
-            ],
-            backgroundColor: [
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#EF3636',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#FFC95E',
-                '#07C926',
-                '#07C926',
-                '#07C926',
-                '#07C926',
-            ],
-            
-            // barPercentage: 1.0,
-            //Установка ширины полоски в пикселях
-            barThickness: 13,
-            // categoryPercentage: 0.5,
-            datalabels: {
-              color: '#13465B',
-              anchor: 'end',
-              align: 'end',
-              offset: 4,
-              font: {
-                size: 12,
-                family: 'Mulish',
-                style: 'normal',
-                lineHeight: 1.2,
-                weight: 500
-              }
-            },
-            // показываем анимацию только при видимости блока
-            deferred: {
-              xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
-              yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-              delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
-            }
-        }],
-        
-    },
-    plugins: [ChartDataLabels, ChartDeferred],
-    options: {
-      responsive: false,
-      indexAxis: 'y',
-      plugins: {
-        legend: {
-            display: false, // This hides all text in the legend and also the labels.
-        },
-        
-        //убираем подсказки
-        tooltip: false,
-      },
-      // скрываем сетку на фоне
-      scales: {
-        x: {
-          //отключаем ось X
-          display: false,
-          grid: {
-          display: false,
+
+      // Vertical bar chart
+  let ctx = document.getElementById('myChart').getContext('2d');
+
+  let myChart = new Chart(ctx, {
+      maintainAspectRatio: false,
+      responsive: true,
+      type: 'bar',
+      data: {
+          labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
           
+          datasets: [{
+              // label: 'status',
+              data: [
+                2.24, 2.21, 1.81, 1.80, 1.71, 1.70, 1.62, 1.59, 1.56, 1.39, 1.31, 1.22, 1.21, 1.19, 1.14, 1.08, 0.78, 0.75, 0.59, 0.57, 0.50, 0.34, 0.20, 0.16, 0.15
+              ],
+              backgroundColor: [
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#EF3636',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#FFC95E',
+                  '#07C926',
+                  '#07C926',
+                  '#07C926',
+                  '#07C926',
+              ],
+              
+              // barPercentage: 1.0,
+              //Установка ширины полоски в пикселях
+              barThickness: 13,
+              // categoryPercentage: 0.5,
+              datalabels: {
+                color: '#13465B',
+                anchor: 'end',
+                align: 'end',
+                offset: 4,
+                font: {
+                  size: 12,
+                  family: 'Mulish',
+                  style: 'normal',
+                  lineHeight: 1.2,
+                  weight: 500
+                }
+              },
+              // показываем анимацию только при видимости блока
+              deferred: {
+                xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+                delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+              }
+          }],
+          
+      },
+      plugins: [ChartDataLabels, ChartDeferred],
+      options: {
+        responsive: false,
+        indexAxis: 'y',
+        plugins: {
+          legend: {
+              display: false, // This hides all text in the legend and also the labels.
+          },
+          
+          //убираем подсказки
+          tooltip: false,
         },
-        //Удалить надписи по оси x 
-        ticks: {
-          display: false,
-        }
-        },
-        y: {
-          beginAtZero: true,
-          grid: {
+        // скрываем сетку на фоне
+        scales: {
+          x: {
+            //отключаем ось X
             display: false,
-            drawTicks: false,
+            grid: {
+            display: false,
             
           },
+          //Удалить надписи по оси x 
           ticks: {
-            padding: -17
+            display: false,
           }
+          },
+          y: {
+            beginAtZero: true,
+            grid: {
+              display: false,
+              drawTicks: false,
+              
+            },
+            ticks: {
+              padding: -17
+            }
+          },
+          
         },
-        
+        layout: {
+          padding: {
+            bottom: 14,
+            left: 0,
+          },
       },
-      layout: {
-        padding: {
-          bottom: 14,
-          left: 0,
-        },
-    },
-    animation: {
-      duration: 3000,
-      delay: 1000,
-      
+      animation: {
+        duration: 3000,
+        delay: 1000,
+        
+      }
     }
-  }
 
-});
+  });
+  
 
 
+
+
+
+}
