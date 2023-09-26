@@ -1468,7 +1468,7 @@
   }
   // .payment-form__input
   &__input {
-    padding: 20px 87px 20px 20px;
+    padding: 18px 87px 18px 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -1499,7 +1499,6 @@
   }
   // .payment-form__politics
   &__politics {
-
     max-width: 362px;
     text-align: center;
     @extend %mulish-500;
@@ -1508,8 +1507,8 @@
   }
   // .payment-form__politics-link
   &__politics-link {
-    @extend %mulish-800;
-    color: rgb(71, 162, 248);
+    // @extend %mulish-800;
+    // color: rgb(71, 162, 248);
   }
 }
 

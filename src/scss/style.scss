@@ -147,8 +147,13 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "index";
+
 @import "area";
+@import "contacts";
 
 
 //Подключение отдельных блоков
-@import "blocks/breadcrumbs"
+//Хлебные крошки
+@import "blocks/breadcrumbs";
+//Блок Телеграм
+@import "blocks/telegram";

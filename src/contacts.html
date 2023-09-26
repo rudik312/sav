@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Контакты"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				@@include('html/blocks/_breadcrumbs.htm', {})
+				<!-- start contacts -->
+				<section class="contacts">
+					<div class="contacts__container contacts-container">
+						<div class="contacts__inner">
+							<div class="contacts__item contacts-item">
+								<div class="contacts-item__title">
+									<h3>Контакты</h3>
+								</div>
+								<div class="contacts-item__info">
+									<div class="contacts-item__phone">
+										<div class="contacts-item__phone-item">
+											<img class="contacts-item__phone-icon" src="@img/icons/contacts/phone-icon.svg" alt="phone">
+											<a class="contacts-item__phone-link" href="tel:+971333053355">+971 33 305 3355</a>
+										</div>
+										<div class="contacts-item__phone-item">
+											<img class="contacts-item__phone-icon" src="@img/icons/contacts/phone-icon.svg" alt="phone">
+											<a class="contacts-item__phone-link" href="tel:+971355053355">+971 35 505 3355</a>
+										</div>
+									</div>
+									<div class="contacts-item__email">
+										<div class="contacts-item__email-item">
+											<img class="contacts-item__email-icon" src="@img/icons/contacts/email-icon.svg" alt="email">
+											<a class="contacts-item__email-link" href="mailto:info@sav.ae">info@sav.ae</a>
+										</div>
+									</div>
+									<div class="contacts-item__times">
+										<img class="contacts-item__times-icon" src="@img/icons/contacts/time-icon.svg" alt="times>
+										<p class="contacts-item__times-text">Пн – Пт: 10:00 – 18:00</p>
+									</div>
+									<div class="contacts-item__adress">
+										<img class="contacts-item__adress-icon" src="@img/icons/contacts/map-icon.svg" alt="map">
+										<address class="contacts-item__adress-text">UAE, Dubai, Control Tower, office 0204</address>
+									</div>
+									<div class="contacts-item__social">
+										<ul class="contacts-item__social-list">
+											<li class="contacts-item__social-item">
+												<a class="contacts-item__social-link" href="#">
+													<img src="@img/social/instagram.svg" alt="instagram">
+												</a>
+											</li>
+											<li class="contacts-item__social-item">
+												<a class="contacts-item__social-link" href="#">
+													<img src="@img/social/telegram.svg" alt="telegram">
+												</a>
+											</li>
+											<li class="contacts-item__social-item">
+												<a class="contacts-item__social-link" href="#">
+													<img src="@img/social/whatsapp.svg" alt="whatsapp">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="contacts__item contacts-item">
+								<div class="contacts-item__form-title">
+									<h3>Напишите нам</h3>
+								</div>
+								<div class="contacts__form contacts-item__form-wrapper">
+									<form data-ajax class="contacts-form" method="#" action="#">
+										<div class="contacts-form__item-wrapper">
+											<div class="contacts-form__item">
+												<input autocomplete="off" class="contacts-form__input" data-required type="text" name="name" data-error placeholder="Имя">
+											</div>
+											<div class="contacts-form__item">
+												<input autocomplete="off" class="contacts-form__input" data-required type="tel" name="phone" data-error placeholder="+7(888) 888 88 88">
+											</div>
+											<div class="contacts-form__item">
+												<textarea autocomplete="off" class="contacts-form__message" data-required type="tel" name="message" data-error placeholder="Сообщение"></textarea>
+											</div>
+										</div>
+										<div class="contacts-form__action">
+											<button class="contacts-form__btn btn" type="submit">Отправить сообщение</button>
+											<div class="contacts-form__politics">
+												<p>Нажимая на кнопку вы соглашаетесь с условиями 
+													<a class="contacts-form__politics-link" href="#">обработки данных</a> и 
+													<a class="contacts-form__politics-link" href="#">политикой конфиденциальности</a>
+												</p>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end contacts -->
+				<!-- start telegram -->
+				@@include('html/blocks/_telegram.htm', {})
+				<!-- end telegram -->
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

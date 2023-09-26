@@ -105,9 +105,18 @@
   }
   // .footer-menu__social
   &__social {
+    
+  }
+  // .footer-menu__social-list 
+  &__social-list {
     display: flex;
     column-gap: 20px;
   }
+  // .footer-menu__social-list-item 
+  &__social-item {
+
+  }
+
   // .footer-menu__social-link
   &__social-link {
     display: flex;

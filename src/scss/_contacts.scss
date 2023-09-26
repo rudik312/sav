@@ -1,0 +1,234 @@
+//.contacts
+//========================================================================================================================================================
+.contacts {
+  // .contacts__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  // .contacts__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 256px;
+  }
+  // .contacts__item
+  &__item {
+    &:first-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    &:last-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .contacts__form
+  &__form {
+
+  }
+}
+
+.contacts-item {
+  // .contacts-item__title
+  &__title {
+    @extend %raleway-500;
+    font-size: rem(56);
+    line-height: math.div(67 , 56);
+    color: $black;
+  }
+  // .contacts-item__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: 120%;
+  }
+  // .contacts-item__phone
+  &__phone {
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  // .contacts-item__phone-item
+  &__phone-item {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+  }
+  // .contacts-item__phone-icon
+  &__phone-icon {
+
+  }
+  // .contacts-item__phone-link
+  &__phone-link {
+  }
+  // .contacts-item__email
+  &__email {
+    padding: 2px 0;
+  }
+  // .contacts-item__email-item
+  &__email-item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  // .contacts-item__email-icon
+  &__email-icon {
+
+  }
+  // .contacts-item__email-link
+  &__email-link {
+  }
+  // .contacts-item__adress
+  &__adress {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    address {
+      font-style: normal;
+    }
+  }
+  // .contacts-item__adress-icon
+  &__adress-icon {
+  }
+  // .contacts-item__adress-text
+  &__adress-text {
+  }
+
+  // .contacts-item__times
+  &__times {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  // .contacts-item__times-icon
+  &__times-icon {
+  }
+  // .contacts-item__times-text
+  &__times-text {
+  }
+
+  // .contacts-item__social
+  &__social {
+  }
+  // .contacts-item__social-list
+  &__social-list {
+    padding: 6px 0;
+    display: flex;
+    column-gap: 20px;
+  }
+  // .contacts-item__social-item
+  &__social-item {
+  }
+  // .contacts-item__social-link
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  // .contacts-item__form-wrapper
+  &__form-wrapper {
+  }
+  // .contacts-item__form-title
+  &__form-title {
+    @extend %raleway-500;
+    font-size: rem(40);
+    line-height: math.div(48 , 40);
+    color: $black;
+  }
+}
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  // .contacts-form__item-wrapper
+  &__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .contacts-form__item
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+  // .contacts-form__input
+  &__input {
+    width: 100%;
+    padding: 18px 87px 18px 20px;
+    border-radius: 58px;
+    background-color: $white;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $text;
+  }
+  // .contacts-form__message
+  &__message {
+    width: 100%;
+    min-height: 147px;
+    resize: none;
+    padding: 15px 90px 10px 20px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $text;
+    border-radius: 30px;
+    background-color: $white;
+    &:focus {
+      outline: 2px solid $yelow;
+    }
+    &._form-error {
+      outline: 2px solid #f00;
+    }
+  }
+  // .contacts-form__action
+  &__action {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .contacts-form__btn
+  &__btn {
+    padding: 10px 40px;
+    border-radius: 56px;
+  }
+  // .contacts-form__politics
+  &__politics {
+    margin: 0 auto;
+    max-width: 362px;
+    text-align: center;
+    @extend %mulish-500;
+    font-size: rem(12);
+    line-height: math.div(15 , 12);
+  }
+  // .contacts-form__politics-link
+  &__politics-link {
+    // @extend %mulish-800;
+    // color: rgb(71, 162, 248);
+  }
+}
+
+//.contacts-form__input_form-error
+.contacts-form__input._form-error {
+  outline: 2px solid #f00;
+}
+//.contacts-form__input:focus
+.contacts-form__input:focus {
+  outline: 2px solid $yelow;
+}
+.contacts-container {
+
+}
+
+//========================================================================================================================================================
