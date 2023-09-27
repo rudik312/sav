@@ -1,0 +1,105 @@
+//.content
+//========================================================================================================================================================
+.content {
+  // .content__container
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+// .content__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    
+  }
+  // .content__title
+  &__title {
+    @extend %raleway-600;
+    font-size: rem(56);
+    line-height: math.div(78 , 56);
+    text-transform: uppercase;
+    color: $black;
+  }
+  // .content__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+  // .content__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    row-gap: 15px;
+    max-width: 367px;
+  }
+}
+.content-item {
+  // .content-item__img-ibg
+  &__img-ibg {
+    border-radius: 32px;
+    overflow: hidden;
+    padding-bottom: percent(283,367);
+    img {
+      border-radius: 32px;
+    }
+  }
+
+  //content-item__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  // .content-item__title
+  &__title {
+    @extend %raleway-600;
+    font-size: rem(20);
+    line-height: 120%;
+    color: $black;
+  }
+  // .content-item__text
+  &__text {
+    height: 67px;
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $black;
+    overflow: hidden;
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-line-clamp: 3; /* Число отображаемых строк */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    
+  }
+  // .content-item__box
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .content-item__date
+  &__date {
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: math.div(26 , 16);
+    color: $text;
+  }
+  // .content-item__btn
+  &__btn {
+  }
+  // .content-item__btn-link
+  &__btn-link {
+    padding: 4px 48px;
+    border-radius: 16px;
+    background: #FFC95E;
+    @extend %mulish-700;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $white;
+
+  }
+}

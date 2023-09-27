@@ -58,7 +58,7 @@
   // .contacts-item__phone-item
   &__phone-item {
     display: flex;
-    column-gap: 5px;
+    column-gap: 7px;
     align-items: center;
   }
   // .contacts-item__phone-icon
@@ -76,7 +76,7 @@
   &__email-item {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 7px;
   }
   // .contacts-item__email-icon
   &__email-icon {
@@ -89,7 +89,7 @@
   &__adress {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 7px;
     address {
       font-style: normal;
     }
@@ -105,7 +105,7 @@
   &__times {
     display: flex;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 7px;
   }
   // .contacts-item__times-icon
   &__times-icon {
@@ -202,6 +202,10 @@
   &__btn {
     padding: 10px 40px;
     border-radius: 56px;
+    @extend %mulish-800;
+    font-size: rem(16);
+    line-height: 120%;
+    color: #263239;
   }
   // .contacts-form__politics
   &__politics {
