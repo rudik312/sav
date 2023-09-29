@@ -10,7 +10,8 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    @include adaptiveValue("column-gap", 150, 60, 1680, 1170, 1);
+    column-gap: 150px;
+    // @include adaptiveValue("column-gap", 150, 60, 1680, 1170, 1);
   }
   // .main__item
   &__item {
@@ -121,16 +122,15 @@
         @include adaptiveValue("height", 308, 232, 1520, 1000, 1);
       }
     }
+    @media (max-width: em(1420)){
+      right: -55px;
+    }
   }
   // .main-box__subtitle
   &__subtitle {
     position: absolute;
-    top: 27px;
-    left: 54px;
+    // top: 27px;
     max-width: 327px;
-    @media (max-width: em(1480)){
-      left: 10px;
-    }
   }
 }
 .main-bg {
@@ -162,6 +162,7 @@
     text-align: right;
     @media (max-width: em(1480)){
       left: -80px;
+      bottom: 130px;
     }
   }
   // .main-bg__founder-status
