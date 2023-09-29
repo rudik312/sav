@@ -19,6 +19,9 @@
       flex-direction: column;
       row-gap: 30px;
       padding-top: 144px;
+      @media (max-width: em(1520)){
+        @include adaptiveValue("row-gap", 30, 60, 1520, 1380, 1);
+      }
     }
     &:last-child{
       padding-top: 25px;
@@ -35,6 +38,9 @@
       font-size: rem(80);
       line-height: math.div(96 , 80);
       color: $black;
+      @media (max-width: em(1520)){
+        @include adaptiveValue("font-size", 80, 64, 1520, 1380, 1);
+      }
     }
   }
   // .main__title-link
@@ -44,7 +50,12 @@
     bottom: 18px;
     display: inline-flex;
     padding: 20px 100px;
-
+    @media (max-width: em(1520)){
+      @include adaptiveValue("font-size", 20, 18, 1520, 1380, 1);
+    }
+    @media (max-width: em(1460)){
+      padding: 15px 80px;
+    }
   }
   // .main__box
   &__box {
@@ -69,6 +80,10 @@
       font-size: rem(40);
       line-height: math.div(48 , 40);
       color: $black;
+      @media (max-width: em(1520)){
+        @include adaptiveValue("font-size", 40, 32, 1520, 1380, 1);
+        @include adaptiveValue("line-height", 48, 38, 1520, 1380, 1);
+      }
     }
   }
   // .main-wrapper__img
@@ -79,9 +94,13 @@
     img {
       width: 237px;
       height: 149px;
+      @media (max-width: em(1520)){
+        @include adaptiveValue("width", 237, 174, 1520, 1380, 1);
+        @include adaptiveValue("height", 149, 109, 1520, 1380, 1);
+      }
     }
-    @media (max-width: em(1480)){
-      right: -60px;
+    @media (max-width: em(1520)){
+      @include adaptiveValue("right", -160, -125, 1520, 1380, 1);
     }
   }
 }
@@ -95,9 +114,10 @@
     img {
       width: 766px;
       height: 308px;
-    }
-    @media (max-width: em(1480)){
-      right: 80px;
+      @media (max-width: em(1520)){
+        @include adaptiveValue("width", 766, 579, 1520, 1380, 1);
+        @include adaptiveValue("height", 308, 232, 1520, 1380, 1);
+      }
     }
   }
   // .main-box__subtitle
@@ -115,6 +135,9 @@
   position: relative;
   // .main-bg__img
   &__img {
+    img {
+      
+    }
   }
   // .main-bg__founder
   &__founder {
