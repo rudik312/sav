@@ -238,7 +238,7 @@
       column-gap: 0;
     }
     @media (max-width: em(680)){
-      display: flex;
+      // display: flex;
     }
   }
   // .selection__bg
@@ -265,10 +265,17 @@
       @media (max-width: em(720)){
         height: auto;
       }
+      @media (max-width: em(480)){
+        // height: auto;
+        // width: 100%;
+        // object-fit: cover;
+      }
     }
     @media (max-width: em(1180)){
       width: 468px;
       height: 520px;
+      max-width: 100%;
+      display: block;
     }
     @media (max-width: em(820)){
       zoom: 60%;
@@ -280,10 +287,14 @@
     }
     @media (max-width: em(560)){
       transform: rotate(9deg);
-      zoom: 50%;
+      zoom: 45%;
     }
     @media (max-width: em(490)){
-      zoom: 45%;
+      zoom: 40%;
+    }
+    @media (max-width: em(480)){
+      max-width: 100%;
+      display: block;
     }
   }
 
