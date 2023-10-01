@@ -265,7 +265,10 @@
       }
       @media (max-width: em(720)){
         height: auto;
-        // zoom: 70%;
+      }
+      @media (max-width: em(500)){
+        right: 40px;
+        top: 180px;
       }
     }
 
@@ -275,15 +278,9 @@
     @media (max-width: em(820)){
       zoom: 45%;
     }
-    @media (max-width: em(720)){
-      transform: rotate(-3deg);
-
-    }
-    @media (max-width: em(490)){
-      zoom: 40%;
-    }
-    @media (max-width: em(480)){
+    @media (max-width: em(500)){
       zoom: 30%;
+      transform: rotate(-3deg);
     }
   }
 
