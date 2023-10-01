@@ -222,77 +222,71 @@
   // }
   // .selection__container
   &__container {
-    display: flex;
-    flex-direction: column;
-    @media (max-width: em(520)){
-      margin: 0;
-    }
+    // display: flex;
+    // flex-direction: column;
+    // @media (max-width: em(520)){
+    //   margin: 0;
+    // }
   }
   // .selection__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
-    @media (max-width: em(1080)){
-      @include adaptiveValue("column-gap", 60, 20, 1080, 960, 1);
-    }
-    @media (max-width: em(720)){
-      // grid-template-columns: 1fr;
-      display: flex;
-      flex-direction: column;
-      justify-items: center;
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      @include adaptiveValue("row-gap", 20, 10, 520, 480, 1);
-    }
-    @media (max-width: em(422)){
-      align-items: flex-start;
+    grid-template-columns: 1fr 1.5fr;
+    // column-gap: 40px;
+    @include adaptiveValue("column-gap", 40, 20, 1360, 1280, 1);
+    @media (max-width: em(560)){
+      column-gap: 0;
     }
   }
   // .selection__bg
   &__bg {
     padding-top: 30px;
     position: relative;
+    // max-width: 100%;
+    // display: block;
     width: 644px;
     height: 718px;
     img {
       position: absolute;
-      width: 100%;
+      // width: 100%;
       height: 100%;
       top: 60px;
       right: 20px;
-      @media (max-width: em(1080)){
-        transform: rotate(5.72deg);
-        top: 0;
+
+      // height: auto;
+      width: 100%;
+      object-fit: cover;
+      @media (max-width: em(960)){
+        top: 30px;
+      }
+      @media (max-width: em(820)){
+        
+        // transform: rotate(17deg);
       }
     }
-    @media (max-width: em(1280)){
-      padding-top: 0;
+    @media (max-width: em(1180)){
+      width: 468px;
+      height: 520px;
     }
-    @media (max-width: em(1080)){
-      @include adaptiveValue("width", 644, 444, 1080, 880, 1);
-      @include adaptiveValue("height", 718, 488, 1080, 880, 1);
+    @media (max-width: em(820)){
+      // width: 396px;
+      // height: 491px;
+      zoom: 80%;
     }
-    @media (max-width: em(880)){
-      @include adaptiveValue("width", 444, 384, 880, 768, 1);
-      @include adaptiveValue("height", 488, 418, 880, 768, 1);
+    @media (max-width: em(720)){
+      zoom: 60%;
+      transform: rotate(-3deg);
     }
-    @media (max-width: em(768)){
-      @include adaptiveValue("width", 384, 254, 768, 520, 1);
-      @include adaptiveValue("height", 418, 282, 768, 520, 1);
-    }
-    @media (max-width: em(520)){
-
-      // @include adaptiveValue("width", 284, 200, 560, 320, 1);
-      // @include adaptiveValue("height", 282, 230, 560, 320, 1);
+    @media (max-width: em(560)){
+      transform: rotate(9deg);
+      zoom: 50%;
     }
   }
 
 
   // .selection__content
   &__content {
-    max-width: 570px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -300,11 +294,11 @@
     padding-top: 120px;
     padding-bottom: 70px;
     @media (max-width: em(1280)){
+      padding-top: 60px;
       justify-content: center;
     }
-    @media (max-width: em(920)){
-      padding-top: 60px;
-      justify-content: flex-start;
+    @media (max-width: em(980)){
+      // justify-content: flex-start;
     }
     @media (max-width: em(620)){
       padding-top: 30px;
@@ -314,13 +308,49 @@
       padding-top: 0;
       row-gap: 20px;
       padding-bottom: 45px;
+      justify-content: flex-end;
     }
   }
   // .selection__title
   &__title {
-    padding: 45px 20px 25px;
+    h3 {
+      @extend %raleway-600;
+      font-size: rem(56);
+      line-height: math.div(78 , 56);
+      color: $black;
+      text-transform: uppercase;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 56, 48, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 78, 67, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 48, 40, 1000, 980, 1);
+        @include adaptiveValue("line-height", 67, 56, 1000, 980, 1);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 40, 32, 768, 630, 1);
+        @include adaptiveValue("line-height", 56, 38, 768, 630, 1);
+      }
+    }
     span {
-      white-space: nowrap;
+      @extend %raleway-400;
+      font-size: rem(32);
+      line-height: math.div(45 , 32);
+      text-transform: uppercase;
+      color: $black;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 24, 20, 1000, 980, 1);
+        @include adaptiveValue("line-height", 33, 28, 1000, 980, 1);
+      }
+    }
+    @media (max-width: em(960)){
+      padding-top: 40px;
+      padding-left: 20px;
+      order: -1;
     }
   }
   // .selection__subtitle
@@ -385,11 +415,12 @@
   &__btn {
     @extend %btn;
     padding: 20px 100px;
-    @media (max-width: em(1080)){
-      @include adaptiveValue("padding-left", 100, 55, 1080, 768, 1);
-      @include adaptiveValue("padding-right", 100, 55, 1080, 768, 1);
-      @include adaptiveValue("padding-top", 20, 13, 1080, 768, 1);
-      @include adaptiveValue("padding-bottom", 20, 13, 1080, 768, 1);
+    @media (max-width: em(1380)){
+      padding: 15px 100px;
+    }
+    @media (max-width: em(620)){
+      padding: 13px 65px;
+      font-size: rem(14);
     }
   }
 }
