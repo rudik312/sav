@@ -273,12 +273,15 @@
       zoom: 80%;
     }
     @media (max-width: em(720)){
-      zoom: 55%;
+      zoom: 50%;
       transform: rotate(-3deg);
     }
     @media (max-width: em(560)){
       transform: rotate(9deg);
       zoom: 50%;
+    }
+    @media (max-width: em(490)){
+      zoom: 45%;
     }
   }
 
