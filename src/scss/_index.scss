@@ -264,6 +264,7 @@
       }
       @media (max-width: em(720)){
         height: auto;
+        // zoom: 70%;
       }
       @media (max-width: em(480)){
         // height: auto;
@@ -272,13 +273,14 @@
       }
     }
     @media (max-width: em(1180)){
-      width: 468px;
-      height: 520px;
-      max-width: 100%;
-      display: block;
+      // width: 468px;
+      // height: 520px;
+      // max-width: 100%;
+      // display: block;
+      zoom: 70%;
     }
     @media (max-width: em(820)){
-      zoom: 60%;
+      zoom: 50%;
     }
     @media (max-width: em(720)){
       transform: rotate(-3deg);
@@ -293,8 +295,7 @@
       zoom: 40%;
     }
     @media (max-width: em(480)){
-      max-width: 100%;
-      display: block;
+      zoom: 30%;
     }
   }
 
@@ -443,6 +444,9 @@
     @media (max-width: em(620)){
       padding: 13px 65px;
       font-size: rem(14);
+    }
+    @media (max-width: em(480)){
+      padding: 13px 55px;
     }
   }
 }
