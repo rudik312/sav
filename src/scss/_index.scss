@@ -237,6 +237,9 @@
     @media (max-width: em(768)){
       column-gap: 0;
     }
+    @media (max-width: em(680)){
+      display: flex;
+    }
   }
   // .selection__bg
   &__bg {
@@ -262,6 +265,10 @@
       @media (max-width: em(820)){
         
       }
+
+      @media (max-width: em(720)){
+        height: auto;
+      }
     }
     @media (max-width: em(1180)){
       width: 468px;
@@ -270,11 +277,14 @@
     @media (max-width: em(820)){
       // width: 396px;
       // height: 491px;
-      zoom: 80%;
+      zoom: 70%;
     }
     @media (max-width: em(720)){
       zoom: 60%;
       transform: rotate(-3deg);
+
+      max-width: 100%;
+      display: block;
     }
     @media (max-width: em(560)){
       transform: rotate(9deg);
@@ -335,7 +345,10 @@
         @include adaptiveValue("font-size", 40, 32, 768, 630, 1);
         @include adaptiveValue("line-height", 56, 38, 768, 630, 1);
       }
-
+      @media (max-width: em(520)){
+        font-size: rem(24);
+        line-height: math.div(28 , 24);
+      }
     }
     span {
       @extend %raleway-400;
