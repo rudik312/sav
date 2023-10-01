@@ -287,6 +287,9 @@
     @media (max-width: em(420)){
       zoom: 25%;
     }
+    @media (max-width: em(350)){
+      display: none;
+    }
   }
 
 
@@ -506,6 +509,7 @@
   &__subtitle {
     font-size: rem(18);
     line-height: math.div(29 , 18);
+    color: $text;
     @extend %mulish-500;
     @media (max-width: em(480)){
       @include adaptiveValue("font-size", 18, 14, 480, 420, 1);
@@ -521,11 +525,16 @@
     @media (max-width: em(1280)){
       @include adaptiveValue("row-gap", 40, 20, 1280, 1180, 1);
     }
-    @media (max-width: em(920)){
-      row-gap: 30px;
-    }
-    @media (max-width: em(480)){
-      @include adaptiveValue("padding-top", 40, 20, 480, 420, 1);
+    // @media (max-width: em(920)){
+    //   row-gap: 30px;
+    // }
+    // @media (max-width: em(480)){
+    //   @include adaptiveValue("padding-top", 40, 20, 480, 420, 1);
+    // }
+
+    @media (max-width: em(1000)){
+
+
     }
   }
   // .collection__top
@@ -536,7 +545,7 @@
     @media (max-width: em(1280)){
       @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
     }
-    @media (max-width: em(920)){
+    @media (max-width: em(1000)){
       display: flex;
       flex-direction: column;
       row-gap: 30px;
@@ -550,9 +559,18 @@
   &__item {
     position: relative;
     max-width: 570px;
-    @media (max-width: em(920)){
-      max-width: 100%;
+
+    @media (max-width: em(1000)){
+      // max-width: 100%;
+      max-width: 465px;
     }
+
+    @media (max-width: em(1000)){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 16px;
+    }
+
     @media (max-width: em(380)){
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -588,15 +606,23 @@
         transform: matrix(-1, 0, 0, 1, 0, 0);
       }
     }
-    @media (max-width: em(920)){
-      padding-bottom: percent(366, 766);
+
+    // @media (max-width: em(920)){
+    //   padding-bottom: percent(366, 766);
+    // }
+
+    @media (max-width: em(1000)){
+      padding-bottom: percent(200, 150);
     }
+
     @media (max-width: em(470)){
       padding-bottom: percent(112, 118);
     }
+
     @media (max-width: em(380)){
       padding-bottom: percent(152, 118);
     }
+
   }
   // .collection__item-content
   &__item-content {
@@ -608,6 +634,10 @@
     bottom: 25px;
     left: 25px;
     z-index: 2;
+
+    @media (max-width: em(1000)){
+      position: relative;
+    }
     @media (max-width: em(380)){
       position: static;
       flex-shrink: 0;
@@ -721,18 +751,25 @@
   }
   // .collection__btn-link
   &__btn-link {
+    border-radius: 22px;
     padding: 10px 109px;
     @extend %btn;
-    @media (max-width: em(960)){
-      padding: 10px 40px;
-      font-size: rem(14);
-      line-height: math.div(18 , 14);
+
+    @media (max-width: em(1000)){
+      padding: 12px 80px;
+      font-size: rem(16);
     }
+    
+    // @media (max-width: em(960)){
+    //   padding: 10px 40px;
+    // }
     @media (max-width: em(380)){
       padding: 8px 52px;
       border-radius: 18px;
     }
   }
+
+
   // .collection__bottom
   &__bottom {
     display: grid;
@@ -741,17 +778,16 @@
     @media (max-width: em(1280)){
       @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
     }
-    @media (max-width: em(920)){
+    @media (max-width: em(1000)){
       display: flex;
       flex-direction: column;
       row-gap: 30px;
     }
     // .collection__item
     .collection__item {
-      max-width: 366px;
-      // min-height: 486px;
+      // max-width: 366px;
       @media (max-width: em(920)){
-        max-width: 100%;
+        // max-width: 100%;
       }
     }
     //.collection__item-ibg
@@ -759,15 +795,22 @@
       width: 100%;
       height: 100%;
       padding-bottom: percent(486, 366);
-      @media (max-width: em(920)){
-        padding-bottom: percent(366, 766);
+
+      // @media (max-width: em(920)){
+      //   padding-bottom: percent(366, 766);
+      // }
+      @media (max-width: em(1000)){
+        padding-bottom: percent(200, 150);
       }
+
       @media (max-width: em(470)){
         padding-bottom: percent(112, 118);
       }
+
       @media (max-width: em(380)){
         padding-bottom: percent(152, 118);
       }
+
     }
     // .collection__item-title {
 
@@ -775,6 +818,10 @@
     //.collection__btn-link
     .collection__btn-link {
       padding: 10px 40px;
+      border-radius: 22px;
+      @media (max-width: em(1000)){
+        padding: 12px 80px;
+      }
       @media (max-width: em(380)){
         padding: 8px 52px;
         border-radius: 18px;
