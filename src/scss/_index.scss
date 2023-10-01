@@ -535,7 +535,7 @@
     @media (max-width: em(1000)){
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-
+      column-gap: 30px;
     }
   }
   // .collection__top
@@ -547,8 +547,12 @@
       @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
     }
     @media (max-width: em(1000)){
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
+      // row-gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
       row-gap: 30px;
     }
   }
@@ -789,8 +793,12 @@
       @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
     }
     @media (max-width: em(1000)){
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
+      // row-gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
       row-gap: 30px;
     }
     // .collection__item
