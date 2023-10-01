@@ -271,10 +271,9 @@
       height: 520px;
     }
     @media (max-width: em(820)){
-      zoom: 70%;
+      zoom: 60%;
     }
     @media (max-width: em(720)){
-      zoom: 60%;
       transform: rotate(-3deg);
       // max-width: 100%;
       // display: block;
