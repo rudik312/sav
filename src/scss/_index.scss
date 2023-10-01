@@ -533,7 +533,8 @@
     // }
 
     @media (max-width: em(1000)){
-
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
 
     }
   }
@@ -590,12 +591,19 @@
       height: 100%;
       background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
       border-radius: 40px;
-      @media (max-width: em(920)){
-        background: linear-gradient(180deg, rgba(7, 36, 48, 0.5) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
-      }
+      // @media (max-width: em(920)){
+      //   background: linear-gradient(180deg, rgba(7, 36, 48, 0.5) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
+      // }
+      
       @media (max-width: em(380)){
         border-radius: 20px;
         background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.1) 74.73%);
+      }
+    }
+    @media (max-width: em(1000)){
+      &::before{
+        content:'';
+        display: none;
       }
     }
     img {
@@ -636,7 +644,8 @@
     z-index: 2;
 
     @media (max-width: em(1000)){
-      position: relative;
+      position: static;
+      justify-content: flex-end;
     }
     @media (max-width: em(380)){
       position: static;
@@ -654,8 +663,9 @@
       @include adaptiveValue("font-size", 28, 26, 1060, 920, 1);
       @include adaptiveValue("line-height", 39, 37, 1060, 920, 1);
     }
-    @media (max-width: em(1060)){
-      max-width: 220px;
+    @media (max-width: em(1000)){
+      color: $text;
+      // max-width: 220px;
     }
     @media (max-width: em(920)){
       max-width: 100%;
@@ -759,7 +769,7 @@
       padding: 12px 80px;
       font-size: rem(16);
     }
-    
+
     // @media (max-width: em(960)){
     //   padding: 10px 40px;
     // }
