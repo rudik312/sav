@@ -536,6 +536,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 30px;
+
     }
   }
   // .collection__top
@@ -554,7 +555,16 @@
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
       row-gap: 30px;
+      & .collection__item {
+        &:first-child{
+          grid-row: 3 / 4;
+        }
+        &:nth-child(2) {
+          grid-row: 2 / 3;
+        }
+      }
     }
+
   }
   // .collection__item-box
   // &__item-box {
@@ -567,10 +577,10 @@
 
     @media (max-width: em(1000)){
       // max-width: 100%;
-      max-width: 465px;
     }
-
+    
     @media (max-width: em(1000)){
+      max-width: 465px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 16px;
@@ -668,17 +678,12 @@
       @include adaptiveValue("line-height", 39, 37, 1060, 920, 1);
     }
     @media (max-width: em(1000)){
+      max-width: 100%;
       color: $text;
+      text-shadow: none;
       // max-width: 220px;
     }
-    @media (max-width: em(920)){
-      max-width: 100%;
-      @include adaptiveValue("font-size", 26, 20, 920, 520, 1);
-      @include adaptiveValue("line-height", 37, 31, 920, 520, 1);
-    }
-    @media (max-width: em(520)){
 
-    }
     @media (max-width: em(380)){
       @include adaptiveValue("font-size", 20, 18, 380, 360, 1);
       @include adaptiveValue("line-height", 31, 25, 380, 360, 1);
