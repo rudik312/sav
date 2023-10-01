@@ -273,7 +273,7 @@
       zoom: 80%;
     }
     @media (max-width: em(720)){
-      zoom: 50%;
+      zoom: 60%;
       transform: rotate(-3deg);
     }
     @media (max-width: em(560)){
@@ -315,6 +315,8 @@
   }
   // .selection__title
   &__title {
+    display: flex;
+    flex-direction: column;
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
@@ -333,6 +335,7 @@
         @include adaptiveValue("font-size", 40, 32, 768, 630, 1);
         @include adaptiveValue("line-height", 56, 38, 768, 630, 1);
       }
+
     }
     span {
       @extend %raleway-400;
@@ -352,6 +355,7 @@
     @media (max-width: em(960)){
       padding-top: 40px;
       padding-left: 20px;
+      padding-right: 20px;
       order: -1;
     }
   }
