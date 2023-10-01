@@ -511,9 +511,25 @@
     line-height: math.div(29 , 18);
     color: $text;
     @extend %mulish-500;
+
+
+
     @media (max-width: em(480)){
       @include adaptiveValue("font-size", 18, 14, 480, 420, 1);
       @include adaptiveValue("line-height", 29, 22, 480, 420, 1);
+    }
+  }
+
+  &__subtitle-text {
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: $text;
+    @extend %mulish-500;
+    @media (max-width: em(1000)){
+      max-width: 333px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
   // .collection__wrapper
@@ -536,7 +552,9 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 30px;
-
+    }
+    @media (max-width: em(868)){
+      display: flex;
     }
   }
   // .collection__top
@@ -561,6 +579,9 @@
         }
         &:nth-child(2) {
           grid-row: 2 / 3;
+          h5 {
+            white-space: nowrap;
+          }
         }
       }
     }
@@ -659,7 +680,12 @@
 
     @media (max-width: em(1000)){
       position: static;
-      justify-content: flex-end;
+      // justify-content: flex-end;
+      // justify-content: center;
+
+      display: grid;
+      align-content: center;
+      row-gap: 10px;
     }
     @media (max-width: em(380)){
       position: static;
@@ -673,15 +699,14 @@
     line-height: math.div(39 , 28);
     color: $white;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    @media (max-width: em(1060)){
-      @include adaptiveValue("font-size", 28, 26, 1060, 920, 1);
-      @include adaptiveValue("line-height", 39, 37, 1060, 920, 1);
-    }
     @media (max-width: em(1000)){
+      font-size: rem(24);
+      line-height: math.div(33 , 24);
       max-width: 100%;
       color: $text;
       text-shadow: none;
       // max-width: 220px;
+    
     }
 
     @media (max-width: em(380)){
@@ -694,21 +719,23 @@
   // .collection__item-info
   &__item-info {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 12px;
     @extend %mulish-500;
     color: $text;
     font-size: rem(14);
     line-height: math.div(22 , 14);
     @media (max-width: em(960)){
       align-items: flex-start;
-      flex-direction: column;
+      // flex-direction: column;
+      
       gap: 10px;
     }
     @media (max-width: em(920)){
-      flex-direction: row;
+
     }
     @media (max-width: em(520)){
-      flex-direction: column;
+      // flex-direction: column;
     }
     @media (max-width: em(420)){
       @include adaptiveValue("font-size", 14, 12, 420, 380, 1);
@@ -856,7 +883,7 @@
         flex-direction: column;
       }
       @media (max-width: em(920)){
-        flex-direction: row;
+        // flex-direction: row;
       }
       @media (max-width: em(520)){
         flex-direction: column;
