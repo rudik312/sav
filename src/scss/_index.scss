@@ -660,6 +660,10 @@
     img {
       border-radius: 40px;
       object-position: top;
+      @media (max-width: em(868)){
+        object-position: center;
+      }
+
       @media (max-width: em(380)){
         border-radius: 20px;
         transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -676,6 +680,10 @@
 
     @media (max-width: em(868)){
       padding-bottom: percent(200, 282);
+    }
+
+    @media (max-width: em(550)){
+      padding-bottom: percent(152, 210);
     }
 
     @media (max-width: em(470)){
@@ -736,6 +744,11 @@
     
     }
 
+    @media (max-width: em(660)){
+      font-size: rem(18);
+      line-height: math.div(25 , 18);
+    }
+
     @media (max-width: em(380)){
       @include adaptiveValue("font-size", 20, 18, 380, 360, 1);
       @include adaptiveValue("line-height", 31, 25, 380, 360, 1);
@@ -755,12 +768,10 @@
     @media (max-width: em(960)){
       align-items: flex-start;
       // flex-direction: column;
-      
       gap: 10px;
     }
-    @media (max-width: em(920)){
 
-    }
+
     @media (max-width: em(520)){
       // flex-direction: column;
     }
@@ -780,8 +791,13 @@
     padding: 8px 16px;
     background-color: $grey;
     border-radius: 19px;
-    @media (max-width: em(380)){
+
+    @media (max-width: em(1000)){
       padding: 0;
+    }
+
+    @media (max-width: em(380)){
+      // padding: 0;
       background-color: $white;
     }
   }
@@ -800,6 +816,11 @@
     padding: 8px 16px;
     background-color: $grey;
     border-radius: 19px;
+
+    @media (max-width: em(1000)){
+      padding: 0;
+    }
+
     @media (max-width: em(380)){
       padding: 0;
       background-color: $white;
@@ -832,6 +853,11 @@
     @media (max-width: em(1000)){
       padding: 12px 80px;
       font-size: rem(16);
+      line-height: 120%;
+    }
+    @media (max-width: em(550)){
+      padding: 8px 50px;
+      font-size: rem(14);
     }
 
     // @media (max-width: em(960)){
@@ -870,6 +896,7 @@
       @media (max-width: em(920)){
         // max-width: 100%;
       }
+
     }
     //.collection__item-ibg
     .collection__item-ibg {
@@ -886,6 +913,10 @@
 
       @media (max-width: em(868)){
         padding-bottom: percent(200, 282);
+      }
+
+      @media (max-width: em(550)){
+        padding-bottom: percent(152, 210);
       }
 
       @media (max-width: em(470)){
@@ -906,6 +937,9 @@
       border-radius: 22px;
       @media (max-width: em(1000)){
         padding: 12px 80px;
+      }
+      @media (max-width: em(550)){
+        padding: 8px 50px;
       }
       @media (max-width: em(380)){
         padding: 8px 52px;
