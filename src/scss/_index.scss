@@ -629,7 +629,10 @@
     }
     @media (max-width: em(868)){
       max-width: 100%;
-      
+    }
+
+    @media (max-width: em(421)){
+      grid-template-columns: 1.2fr 1.5fr;
     }
 
     @media (max-width: em(380)){
@@ -669,13 +672,16 @@
     img {
       border-radius: 40px;
       object-position: top;
+      @media (max-width: em(1000)){
+        border-radius: 20px;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
       @media (max-width: em(868)){
         object-position: center;
       }
 
       @media (max-width: em(380)){
-        border-radius: 20px;
-        transform: matrix(-1, 0, 0, 1, 0, 0);
+        
       }
     }
 
