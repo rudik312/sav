@@ -585,7 +585,15 @@
         }
       }
     }
-
+    @media (max-width: em(868)){
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 20px;
+      & .collection__item {
+        &:first-child{
+          grid-row: 1 / 2;
+        }
+      }
+    }
   }
   // .collection__item-box
   // &__item-box {
