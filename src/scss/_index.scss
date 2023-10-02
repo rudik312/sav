@@ -464,8 +464,6 @@
   &__title {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    padding-bottom: 8px;
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
@@ -552,16 +550,21 @@
     // }
 
     @media (max-width: em(1000)){
+      padding-top: 20px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 30px;
     }
     @media (max-width: em(868)){
+      padding-top: 30px;
       display: flex;
       row-gap: 20px;
     }
     @media (max-width: em(550)){
       row-gap: 30px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 20px;
     }
   }
   // .collection__top
@@ -658,10 +661,10 @@
       //   background: linear-gradient(180deg, rgba(7, 36, 48, 0.5) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
       // }
       
-      @media (max-width: em(380)){
-        border-radius: 20px;
-        background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.1) 74.73%);
-      }
+      // @media (max-width: em(380)){
+        // border-radius: 20px;
+        // background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.1) 74.73%);
+      // }
     }
     @media (max-width: em(1000)){
       &::before{
@@ -764,12 +767,12 @@
       line-height: math.div(25 , 18);
     }
 
-    @media (max-width: em(380)){
-      @include adaptiveValue("font-size", 20, 18, 380, 360, 1);
-      @include adaptiveValue("line-height", 31, 25, 380, 360, 1);
-      text-shadow: none;
-      color: $text;
-    }
+    // @media (max-width: em(380)){
+    //   @include adaptiveValue("font-size", 20, 18, 380, 360, 1);
+    //   @include adaptiveValue("line-height", 31, 25, 380, 360, 1);
+    //   text-shadow: none;
+    //   color: $text;
+    // }
   }
   // .collection__item-info
   &__item-info {
@@ -786,7 +789,6 @@
       gap: 10px;
     }
 
-
     @media (max-width: em(520)){
       // flex-direction: column;
     }
@@ -798,8 +800,8 @@
 
 
     @media (max-width: em(420)){
-      @include adaptiveValue("font-size", 14, 12, 420, 380, 1);
-      @include adaptiveValue("line-height", 22, 19, 420, 380, 1);
+      // @include adaptiveValue("font-size", 14, 12, 420, 380, 1);
+      // @include adaptiveValue("line-height", 22, 19, 420, 380, 1);
     }
     @media (max-width: em(380)){
       
@@ -834,19 +836,14 @@
       background-color: $white;
     }
   }
-  .collection__case-icon
-  &__case-icon {
+  // .collection__case-icon
+  // &__case-icon {
     
-    @media (max-width: em(1000)){
-      width: 24px;
-      height: 24px;
-    }
-  }
-  .collection__case-info
-  &__case-info {
-    
-    
-  }
+  // }
+  // .collection__case-info
+  // &__case-info {
+
+  // }
   // .collection__cost
   &__cost {
     display: flex;
