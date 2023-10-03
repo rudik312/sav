@@ -1023,8 +1023,8 @@
   &__container-fluid{
     background-color: $bgBlock;
     min-height: 800px;
-    padding-top: 55px;
-    padding-bottom: 55px;
+    // padding-top: 55px;
+    // padding-bottom: 55px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center -5%;
@@ -1033,9 +1033,15 @@
     // @include adaptiveValue("background-size", 100%, 120%);
     @media (max-width: em(1380)){
       background-size: 120%;
+      // background-position: top;
     }
     @media (max-width: em(1260)){
       background-size: 140%;
+      background-position: top;
+      
+    }
+    @media (max-width: em(1190)){
+      background-position: center top -10%;
     }
     @media (max-width: em(1060)){
       background-size: 170%;
@@ -1077,10 +1083,15 @@
   // &__container {
   //   // max-width: 100%;
   // }
+  &__container {
+    padding-top: 55px;
+  }
   // .reason__inner
   &__inner {
+    // padding-top: 60px;
+    // padding-left: 60px;
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
     column-gap: 140px;
     @media (max-width: em(1360)){
       @include adaptiveValue("column-gap", 140, 100, 1360, 1260, 1);
@@ -1095,11 +1106,14 @@
     }
   }
   // .reason__item
-  // &__item {
-  //   width: 100%;
-  //   &:first-child{
-  //   }
-  // }
+  &__item {
+    &:first-child{
+      // max-width: 570px;
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
   // .reason__title
   &__title {
     display: flex;
