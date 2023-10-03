@@ -1041,6 +1041,7 @@
       
     }
     @media (max-width: em(1190)){
+      background-size: 150%;
       background-position: center top -10%;
     }
     @media (max-width: em(1060)){
@@ -1085,6 +1086,14 @@
   // }
   &__container {
     padding-top: 55px;
+    // padding-left: 45px;
+    @media (max-width: em(1260)){
+      padding-left: 45px;
+    }
+    @media (max-width: em(960)){
+      padding-top: 0;
+      padding-left: 20px;
+    }
   }
   // .reason__inner
   &__inner {
@@ -1149,17 +1158,21 @@
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
       @media (max-width: em(1000)){
-        @include adaptiveValue("font-size", 40, 40, 1000, 980, 1);
-        @include adaptiveValue("line-height", 56, 56, 1000, 980, 1);
+        @include adaptiveValue("font-size", 40, 36, 1000, 980, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 980, 1);
       }
       @media (max-width: em(768)){
-        @include adaptiveValue("font-size", 40, 32, 768, 630, 1);
-        @include adaptiveValue("line-height", 56, 38, 768, 630, 1);
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
       }
-      @media (max-width: em(520)){
-        font-size: rem(24);
-        line-height: math.div(28 , 24);
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
+      // @media (max-width: em(520)){
+      //   font-size: rem(24);
+      //   line-height: math.div(28 , 24);
+      // }
     }
     span {
       @extend %raleway-400;
@@ -1234,7 +1247,7 @@
     max-width: 440px;
     position: relative;
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     @media (max-width: em(960)){
       max-width: 100%;
