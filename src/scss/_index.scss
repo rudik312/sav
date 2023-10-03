@@ -1276,24 +1276,28 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
-    @media (max-width: em(1280)){
-      @include adaptiveValue("column-gap", 100, 30, 1280, 1190, 1);
+    // column-gap: 100px;
+    @include adaptiveValue("column-gap", 100, 30, 1360, 1180, 1);
+    @media (max-width: em(1180)){
     }
   }
   // .risk__item
   &__item {
-
+    max-width: 570px;
   }
 
   // .risk__item-wrapper
   &__item-wrapper {
+    // max-width: 510px;
     padding: 40px;
     border-radius: 64px;
     background: #FFF;
     @media (max-width: em(1190)){
       padding: 30px;
       border-radius: 40px;
+    }
+    @media (max-width: em(1090)){
+      width: 480px;
     }
   }
 
@@ -1367,12 +1371,19 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465B;
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;  
+    }
   }
 
   //risk-statistics__analitic
   &__analitic {
     position: absolute;
-    
+    @media (max-width: em(1090)){
+      width: 280px !important;
+    }
   }
   //risk-statistics__legend
   &__legend {
@@ -1445,6 +1456,9 @@
   row-gap: 30px;
   // .risk-item__title
   &__title {
+    
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
     span {
       @extend %raleway-400;
@@ -1464,18 +1478,19 @@
       }
     }
     h3 {
+      max-width: 570px;
       @extend %raleway-600;
       font-size: rem(40);
       line-height: math.div(56 , 40);
       color: $black;
       @media (max-width: em(1380)){
-        @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
-        @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
+        @include adaptiveValue("font-size", 40, 36, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 56, 50, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
-        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
-        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
-      }
+      // @media (max-width: em(1000)){
+      //   @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+      //   @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+      // }
       @media (max-width: em(768)){
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
@@ -1512,6 +1527,9 @@
     color: #263239;
     @media (max-width: em(1280)){
       padding: 20px 40px;
+    }
+    @media (max-width: em(1190)){
+      padding: 20px 25px;
     }
   }
 }

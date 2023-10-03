@@ -107,14 +107,19 @@ if (document.getElementById("myChart") !== null) {
                 },
                 y: {
                   beginAtZero: true,
+                  // stepSize: 5,
+                  // grace: 50,
                   grid: {
                     display: false,
                     drawTicks: false,
                     
                   },
                   ticks: {
-                    padding: -17
-                  }
+                    padding: -17,
+                  },
+                  // min: 0.01,
+                  // max: 30,
+                  
                 },
                 
               },
