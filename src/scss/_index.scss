@@ -432,15 +432,15 @@
     @extend %btn;
     padding: 20px 100px;
     @media (max-width: em(1380)){
-      padding: 15px 100px;
+      padding: 15px 80px;
     }
-    @media (max-width: em(620)){
-      padding: 13px 55px;
+    @media (max-width: em(550)){
+      padding: 8px 55px;
       font-size: rem(14);
     }
-    @media (max-width: em(480)){
-      padding: 13px 55px;
-    }
+    // @media (max-width: em(480)){
+    //   padding: 8px 55px;
+    // }
   }
 }
 //========================================================================================================================================================
@@ -1050,14 +1050,18 @@
     @media (max-width: em(960)){
       padding-top: 30px;
       padding-bottom: 30px;
-      background-position: left -105%;
+      // background-position: left -105%;
+      background-size: 100%;
+      background-position: 82% 140%;
     }
     @media (max-width: em(870)){
       background-position: left -55%;
       background-size: 190%;
     }
     @media (max-width: em(820)){
-      background-position: left -175%;
+      // background-position: left -175%;
+      background-size: 130%;
+      background-position: 12% 160%;
     }
     @media (max-width: em(768)){
       @include adaptiveValue("margin-top", 70, 40, 768, 480, 1);
@@ -1072,8 +1076,8 @@
       background-position: 0% 130%;
     }
     @media (max-width: em(360)){
-      background-size: 160%;
-      background-position: 0% 100%;
+      background-size: 190%;
+      background-position: 0% 120%;
     }
   }
 }
@@ -1158,8 +1162,8 @@
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
       @media (max-width: em(1000)){
-        @include adaptiveValue("font-size", 40, 36, 1000, 980, 1);
-        @include adaptiveValue("line-height", 56, 50, 1000, 980, 1);
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
       }
       @media (max-width: em(768)){
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
