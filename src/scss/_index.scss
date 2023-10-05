@@ -1488,9 +1488,13 @@
         font-size: rem(20);
         line-height: math.div(28 , 20);
       }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 20, 16, 768, 690, 1);
+      }
       @media (max-width: em(690)){
+        // width: 439px;
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
-        line-height: 120%;
+        line-height: math.div(28 , 16);
       }
     }
     h3 {
@@ -1506,27 +1510,15 @@
       @media (max-width: em(1320)){
         max-width: 510px;
       }
-      // @media (max-width: em(1000)){
-      //   @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
-      //   @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
-      // }
       @media (max-width: em(960)){
-        max-width: 100%;
+        max-width: 100% !important;
         font-size: rem(40);
         line-height: math.div(56 , 40);
-      }
-      @media (max-width: em(768)){
-        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
-        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
-      }
-      @media (max-width: em(690)){
-        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
-        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+        -webkit-box-ordinal-group: 1 !important;
       }
     }
     @media (max-width: em(960)){
       order: -1;
-      
     }
   }
   // .risk-item__text
