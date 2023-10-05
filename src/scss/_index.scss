@@ -1632,18 +1632,20 @@
   &__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
+    // column-gap: 40px;
+    @include adaptiveValue("column-gap", 40, 30);
   }
   // .best__center
   &__center {
     display: grid;
-    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   // .best__bottom
   &__bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
+    // column-gap: 40px;
+    @include adaptiveValue("column-gap", 40, 30);
     .best-item {
       min-height: 625px;
     }
@@ -1711,7 +1713,7 @@
   }
   // .best-item__wrapper
   &__wrapper {
-    display: flex;
+    // display: flex;
   }
   // .best-item__info
   &__info {

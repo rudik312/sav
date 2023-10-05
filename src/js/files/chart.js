@@ -11,6 +11,14 @@ import ChartDeferred from 'chartjs-plugin-deferred';
 
 if (document.getElementById("myChart") !== null) {
         // Vertical bar chart
+
+        //Заготовка для указания размеров (https://stackoverflow.com/questions/41953158/set-height-of-chart-in-chart-js)
+        // var canvas = document.getElementById(id);
+        // canvas.width = window.innerWidth;
+        // canvas.height = window.innerHeight / 2.5;  
+        // var ctx = canvas.getContext('2d');
+
+
         let ctx = document.getElementById('myChart').getContext('2d');
 
         let myChart = new Chart(ctx, {
@@ -80,6 +88,7 @@ if (document.getElementById("myChart") !== null) {
                 
             },
             plugins: [ChartDataLabels, ChartDeferred],
+            maintainAspectRatio: false,
             options: {
               responsive: false,
               indexAxis: 'y',
