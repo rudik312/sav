@@ -1305,10 +1305,20 @@
     @media (max-width: em(1090)){
       width: 480px;
     }
+    @media (max-width: em(520)){
+      padding: 20px;
+    }
+    @media (max-width: em(480)){
+      zoom: 80%;
+    }
+    @media (max-width: em(380)){
+      zoom: 70%;
+    }
   }
 
   // .risk__statistics
   &__statistics {
+
   }
 }
 .risk-statistics {
@@ -1377,10 +1387,11 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465B;
+
     canvas {
-      width: 100%;
-      height: 100%;
-      display: block;  
+      // width: 100%;
+      // height: 100%;
+      // display: block;  
     }
   }
 
@@ -1390,6 +1401,7 @@
     @media (max-width: em(1090)){
       width: 280px !important;
     }
+    
   }
   //risk-statistics__legend
   &__legend {
