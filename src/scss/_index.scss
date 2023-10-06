@@ -1666,7 +1666,7 @@
   &__content-text {
     padding: 18px 0;
     @extend %mulish-500;
-    font-size: rem(18);
+    // font-size: rem(18);
     line-height: math.div(29 , 18);
     color: $text;
     @include adaptiveValue("font-size", 18, 16, 1360, 1180, 1);
@@ -1996,12 +1996,41 @@
     row-gap: 10px;
     padding-top: 50px;
     max-width: 400px;
+    h3 {
+      @extend %raleway-600;
+      font-size: rem(56);
+      line-height: math.div(78 , 56);
+      text-transform: uppercase;
+      color: $black;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      }
+    }
     p {
       @extend %mulish-500;
-      font-size: rem(18);
+      // font-size: rem(18);
       line-height: math.div(29 , 18);
       color: $text;
-
+      @include adaptiveValue("font-size", 18, 16, 1360, 1180, 1);
+      @media (max-width:$mobile){
+        padding: 0;
+      }
+      @media (max-width:$mobileSmall){
+        @include adaptiveValue("font-size", 16, 14, 480, 420, 1); 
+      }
     }
   }
   //payment__title-price
@@ -2085,9 +2114,9 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     column-gap: 88px;
+    @include adaptiveValue("column-gap", 88, 55, 1380, 1160, 1);
     justify-items: center;
-    // display: flex;
-    // justify-content: space-between;
+
   }
 
   &__item-box {
@@ -2107,6 +2136,14 @@
         font-size: rem(12);
         line-height: math.div(19 , 12);
         color: #FFF;
+        @media (max-width: em(1180)){
+          top: -30px;
+          right: -70px;
+        }
+        @media (max-width: em(1060)){
+          top: -26px;
+          right: -65px;
+        }
       }
       &::before{
         content:'';
@@ -2118,6 +2155,14 @@
         height: 77px;
         left: 39px;
         top: -30px;
+        @media (max-width: em(1180)){
+          left: 30px;
+          top: -25px;
+        }
+        @media (max-width: em(1060)){
+          left: 25px;
+          top: -20px;
+        }
       }
     }
     &:first-child,
@@ -2274,6 +2319,17 @@
     font-size: rem(32);
     line-height: math.div(45 , 32);
     text-transform: uppercase;
+    @media (max-width: em(1380)){
+      @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
+      @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
+    }
+    @media (max-width: em(1000)){
+      @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
+      @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
+    }
+    @media (max-width: em(690)){
+      @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
+    }
   }
   // .payment-content__title
   &__title {
@@ -2281,7 +2337,22 @@
     font-size: rem(47);
     line-height: math.div(68 , 47);
     text-transform: uppercase;
-    
+    @media (max-width: em(1380)){
+      @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
+      @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
+    }
+    @media (max-width: em(1000)){
+      @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+      @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+    }
+    @media (max-width: em(768)){
+      @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+      @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+    }
+    @media (max-width: em(690)){
+      @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+      @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+    }
   }
   // .payment-content__title-info
   &__title-info {
