@@ -1972,21 +1972,27 @@
     padding-top: 42px;
     padding-bottom: 257px;
     margin-bottom: 70px;
+    @media (max-width: em(1180)){
+      border-radius: 40px;
+    }
   }
 }
 //.payment(top)
 .payment {
   // .payment__container
   &__container {
-    padding-top: 70px;
+    // padding-top: 70px;
   }
-  
+  //.payment__title-inner
   &__title-inner {
     padding-bottom: 35px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 420px;
+    @media (max-width: em(1180)){
+      padding-bottom: 28px;
+    }
   }
   // .payment__title-box
   &__title-box {
@@ -2041,7 +2047,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // flex-shrink: 0;
+    flex-shrink: 0;
     position: absolute;
     border-radius: 50%;
     bottom: -85px;
@@ -2050,27 +2056,45 @@
     @extend %mulish-500;
     color: $black;
     text-transform: uppercase;
+    @include adaptiveValue("width", 231, 175, 1380, 1160, 1);
+    @include adaptiveValue("height", 231, 175, 1380, 1160, 1);
     span {
-      font-size: rem(100);
-      // line-height: 120%;
+      // font-size: rem(100);
+      line-height: 120%;
+      @include adaptiveValue("font-size", 100, 64, 1380, 1160, 1);
     }
     p {
-      font-size: rem(24);
-      // line-height: math.div(38 , 24);
+      // font-size: rem(24);
+      line-height: math.div(38 , 24);
+      @include adaptiveValue("font-size", 24, 20, 1380, 1160, 1);
     }
+    // @media (max-width: em(1180)){
+    //   width: 175px;
+    //   height: 175px;
+    // } 
   }
   // .payment__decor
   &__decor {
     display: grid;
     justify-items: end;
     img {
-      width: 298px;
-      height: 186px;
+      // width: 298px;
+      // height: 186px;
+      @include adaptiveValue("width", 298, 193, 1380, 1160, 1);
+      @include adaptiveValue("height", 186, 120, 1380, 1160, 1);
+      // @media (max-width: em(1180)){
+      //   width: 193px;
+      //   height: 120px;
+      // }   
+    }
+    @media (max-width: em(1180)){
+      align-items: center;
     }
   }
   //payment__wrapper
   &__wrapper {
-    padding-bottom: 217px;
+    // padding-bottom: 217px;
+    @include adaptiveValue("padding-bottom", 217, 84, 1380, 1160, 1);
   }
   //payment__context
   &__context {
@@ -2184,7 +2208,7 @@
     border-radius: 60px;
     border: 1px solid #FFF;
     background-color: $yelow;
-    z-index: 5;
+    z-index: 4;
   }
   //payment__item-num
   &__item-num {
@@ -2214,22 +2238,29 @@
 .payment {
   // .payment__inner
   &__inner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 223px;
+    // display: grid;
+    // grid-template-columns: 1fr 1.5fr;
+    display: flex;
+    column-gap: 203px;
+    justify-content: space-between;
+    @include adaptiveValue("column-gap", 203, 171, 1380, 1260, 1);
   }
   // .payment__form
   &__form {
     max-width: 406px;
+    width: 100%;
   }
   // .payment__content
   &__content {
   }
 }
+//.payment-form
 .payment-form {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   row-gap: 27px;
+  //.payment-form__wrapper
   &__wrapper {
     padding: 43px 22px;
     background-color: $white;
@@ -2274,6 +2305,7 @@
   }
   // .payment-form__btn
   &__btn {
+    border-radius: 56px;
     width: 100%;
     padding: 20px 50px;
     @extend %mulish-800;
@@ -2308,6 +2340,7 @@
 .payment-content {
   display: flex;
   flex-direction: column;
+  // flex-shrink: 0;
   row-gap: 20px;
   // .payment-content__title-box
   &__title-box {
@@ -2334,8 +2367,8 @@
   // .payment-content__title
   &__title {
     @extend %raleway-600;
-    font-size: rem(47);
-    line-height: math.div(68 , 47);
+    font-size: rem(56);
+    line-height: math.div(78 , 56);
     text-transform: uppercase;
     @media (max-width: em(1380)){
       @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
@@ -2371,6 +2404,14 @@
     line-height: math.div(20 , 14);
     text-transform: uppercase;
     color: $white;
+    @media (max-width: em(1080)){
+      bottom: 8px;
+      left: 37%;
+    }
+    @media (max-width: em(1014)){
+      bottom: 60px;
+      left: 52%;
+    }
   }
   // .payment-content__list
   &__list {
