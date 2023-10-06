@@ -2162,7 +2162,8 @@
     justify-items: center;
     @media (max-width: em(980)){
       grid-template-columns: repeat(4, 1fr);
-
+      column-gap: 160px;
+      @include adaptiveValue("column-gap", 160, 60, 980, 768, 1);
       row-gap: 50px;
     }
   }
@@ -2191,6 +2192,11 @@
         @media (max-width: em(1060)){
           top: -26px;
           right: -65px;
+        }
+        @media (max-width: em(980)){
+          right: -124px;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
       &::before{
@@ -2248,24 +2254,23 @@
         grid-row: 2;
         grid-column: 1 / 2;
         &::after{
-        display: flex;
-        white-space: nowrap;
-        content:'6 месяцев';
-        position: absolute;
-        top: -33px;
-        right: -80px;
-        padding: 2px 4px;
-        border-radius: 16px;
-        background-color: #13465B;
-        // @extend %mulish-500;
-        font-family: 'Mulish', sans-serif;
-        font-weight: 500;
-        font-size: rem(12);
-        line-height: math.div(19 , 12);
-        color: #FFF;
-        top: -26px;
-        right: -65px;
-        }
+          display: flex;
+          white-space: nowrap;
+          content:'6 месяцев';
+          position: absolute;
+          padding: 2px 4px;
+          border-radius: 16px;
+          background-color: #13465B;
+          // @extend %mulish-500;
+          font-family: 'Mulish', sans-serif;
+          font-weight: 500;
+          font-size: rem(12);
+          line-height: math.div(19 , 12);
+          color: #FFF;
+          right: -124px;
+          top: 50%;
+          transform: translateY(-50%);
+          }
       }
     }
   }
@@ -2276,12 +2281,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 70px;
     height: 70px;
     border-radius: 60px;
     border: 1px solid #FFF;
     background-color: $yelow;
-    z-index: 4;
+    // z-index: 4;
+    @media (max-width: em(980)){
+      &::after{
+        content:'';
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        color: #ff1100;
+        bottom: 0;
+        right: 0;
+        z-index: 555;
+      }
+    }
   }
   //payment__item-num
   &__item-num {
