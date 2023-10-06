@@ -1996,6 +1996,10 @@
     @media (max-width: em(1180)){
       padding-bottom: 28px;
     }
+    @media (max-width: em(980)){
+      display: flex;
+      padding-bottom: 140px;
+    }
   }
   // .payment__title-box
   &__title-box {
@@ -2041,6 +2045,10 @@
         @include adaptiveValue("font-size", 16, 14, 480, 420, 1); 
       }
     }
+    @media (max-width: em(980)){
+      position: static;
+      max-width: 100%;
+    }
   }
   //payment__title-price
   &__title-price {
@@ -2071,10 +2079,9 @@
       line-height: math.div(38 , 24);
       @include adaptiveValue("font-size", 24, 20, 1380, 1160, 1);
     }
-    // @media (max-width: em(1180)){
-    //   width: 175px;
-    //   height: 175px;
-    // } 
+    @media (max-width: em(980)){
+      left: 0;
+    }
   }
   // .payment__decor
   &__decor {
@@ -2085,13 +2092,19 @@
       // height: 186px;
       @include adaptiveValue("width", 298, 193, 1380, 1160, 1);
       @include adaptiveValue("height", 186, 120, 1380, 1160, 1);
-      // @media (max-width: em(1180)){
-      //   width: 193px;
-      //   height: 120px;
-      // }   
+      @media (max-width: em(980)){
+        width: 250px;
+        height: 157px;
+      }   
     }
     @media (max-width: em(1180)){
       align-items: center;
+    }
+    @media (max-width: em(980)){
+      position: absolute;
+      // right: 20%;
+      right: 143px;
+      bottom: -50px;
     }
   }
   //payment__wrapper
@@ -2101,9 +2114,13 @@
   }
   //payment__context
   &__context {
+    // position: relative;
     display: flex;
     align-items: center;
     padding-bottom: 110px;
+    @media (max-width: em(980)){
+      padding-top: 100px;
+    }
   }
   //payment__context-text
   &__context-text {
