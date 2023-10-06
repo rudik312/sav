@@ -1979,9 +1979,12 @@
 }
 //.payment(top)
 .payment {
+  &:first-child{
+    padding-top: 70px;
+  }
   // .payment__container
   &__container {
-    // padding-top: 70px;
+    
   }
   //.payment__title-inner
   &__title-inner {
@@ -2408,7 +2411,7 @@
       bottom: 8px;
       left: 37%;
     }
-    @media (max-width: em(1014)){
+    @media (max-width: em(1015)){
       bottom: 60px;
       left: 52%;
     }
