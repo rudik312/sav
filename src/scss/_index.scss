@@ -2169,7 +2169,7 @@
   }
   //.payment__item-box
   &__item-box {
-    z-index: 0;
+    // z-index: 0;
     position: relative;
     &:not(:last-child) {
       &::after{
@@ -2195,9 +2195,10 @@
           right: -65px;
         }
         @media (max-width: em(980)){
-          right: -124px;
+          // right: -124px;
           top: 45%;
           transform: translateY(-45%);
+          @include adaptiveValue("right", -124, -100, 980, 768, 1);
         }
       }
 
@@ -2221,11 +2222,14 @@
         }
         @media (max-width: em(980)){
           background-image: none;
-          width: 250px;
+          width: 251px;
           height: 2px;
           background-color: #13465B;
           top: 47%;
           transform: translateY(-50%);
+        }
+        @media (max-width: em(790)){
+          width: 220px;
         }
       }
 
@@ -2244,6 +2248,24 @@
       //смещаем палку у 5
       &:nth-child(5) {
         @media (max-width: em(980)){
+          &::after{
+            display: flex;
+            white-space: nowrap;
+            content:'6 месяцев';
+            position: absolute;
+            top: -30px;
+            right: 0;
+            padding: 2px 4px;
+            border-radius: 16px;
+            background-color: #13465B;
+            // @extend %mulish-500;
+            font-family: 'Mulish', sans-serif;
+            font-weight: 500;
+            font-size: rem(12);
+            line-height: math.div(19 , 12);
+            color: #FFF;
+          }
+
           &::before{
             width: 100px;
             left: -85px;
@@ -2399,7 +2421,8 @@
           font-size: rem(12);
           line-height: math.div(19 , 12);
           color: #FFF;
-          right: -124px;
+          // right: -124px;
+          @include adaptiveValue("right", -124, -100, 980, 768, 1);
           top: 45%;
           transform: translateY(-45%);
           }
@@ -2483,6 +2506,7 @@
     column-gap: 203px;
     justify-content: space-between;
     @include adaptiveValue("column-gap", 203, 171, 1380, 1260, 1);
+    display: none;
   }
   // .payment__form
   &__form {
