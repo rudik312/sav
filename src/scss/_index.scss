@@ -2195,6 +2195,7 @@
     @media (max-width: em(580)){
       padding-top: 55px;
     }
+
   }
   //.payment__item-box
   &__item-box {
@@ -2234,6 +2235,9 @@
           // right: -85px;
           @include adaptiveValue("right", -80, -65, 740, 620, 1);
         }
+        @media (max-width: em(520)){
+          right: -50px;
+        }
       }
 
       &::before{
@@ -2267,6 +2271,9 @@
         }
         @media (max-width: em(740)){
           width: 170px;
+        }
+        @media (max-width: em(520)){
+          width: 150px;
         }
       }
 
@@ -2326,6 +2333,9 @@
           &::before{
             width: 220px;
             left: -85px;
+            @media (max-width: em(520)){
+              width: 190px;
+            }
           }
         }
       }
@@ -2336,6 +2346,9 @@
           &::before{
             width: 220px;
             left: -85px;
+            @media (max-width: em(520)){
+              width: 190px;
+            }
           }
         }
       }
@@ -2500,7 +2513,10 @@
             // right: -80px;
             @include adaptiveValue("right", -80, -65, 740, 620, 1);
           }
+          @media (max-width: em(520)){
+            right: -55px;
           }
+        }
       }
     }
   }
