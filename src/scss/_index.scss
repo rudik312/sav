@@ -2000,6 +2000,7 @@
       display: flex;
       padding-bottom: 140px;
     }
+
   }
   // .payment__title-box
   &__title-box {
@@ -2143,6 +2144,9 @@
     @media (max-width: em(768)){
       padding-bottom: 60px;
     }
+    @media (max-width: em(580)){
+      display: none;
+    }
   }
   //payment__context-text
   &__context-text {
@@ -2187,6 +2191,9 @@
       column-gap: 160px;
       @include adaptiveValue("column-gap", 160, 60, 980, 768, 1);
       row-gap: 50px;
+    }
+    @media (max-width: em(580)){
+      padding-top: 55px;
     }
   }
   //.payment__item-box
@@ -2271,6 +2278,9 @@
             top: 68px;
             transform: rotate(90deg);
             left: -14px;
+            @media (max-width: em(580)){
+              left: -16px;
+            }
           }
         }
       }
@@ -2297,6 +2307,9 @@
             @media (max-width: em(740)){
               content: '6 мес.';
               right: 12px;
+            }
+            @media (max-width: em(580)){
+              right: 8px;
             }
           }
 
@@ -2366,11 +2379,17 @@
       .payment__item {
         &::after{
           left: 66px;
-          transform: rotate(-45deg)
+          transform: rotate(-45deg);
+          @media (max-width: em(580)){
+            left: 60px;
+          }
         }
         &::before{
           left: 66px;
-          transform: rotate(45deg)
+          transform: rotate(45deg);
+          @media (max-width: em(580)){
+            left: 60px;
+          }
         }
       }
     }
@@ -2399,11 +2418,17 @@
       .payment__item {
         &::after{
           left: 66px;
-          transform: rotate(-45deg)
+          transform: rotate(-45deg);
+          @media (max-width: em(580)){
+            left: 60px;
+          }
         }
         &::before{
           left: 66px;
-          transform: rotate(45deg)
+          transform: rotate(45deg);
+          @media (max-width: em(580)){
+            left: 60px;
+          }
         }
       }
     }
@@ -2412,11 +2437,17 @@
       .payment__item {
         &::after{
           left: 66px;
-          transform: rotate(-45deg)
+          transform: rotate(-45deg);
+          @media (max-width: em(580)){
+            left: 60px;
+          }
         }
         &::before{
           left: 66px;
-          transform: rotate(45deg)
+          transform: rotate(45deg);
+          @media (max-width: em(580)){
+            left: 60px;
+          }
         }
       }
     }
@@ -2496,7 +2527,7 @@
         bottom: 56%;
         transform: translate(-45%);
         left: -12%;
-        transform: rotate(45deg)
+        transform: rotate(45deg);
       }
 
       &::before{
@@ -2513,7 +2544,10 @@
 
 
     }
-
+    @media (max-width: em(580)){
+      width: 64px;
+      height: 64px;
+    } 
 
   }
   //payment__item-num
@@ -2527,9 +2561,12 @@
   //payment__item-percent
   &__item-percent {
     @extend %mulish-800;
-    font-size: rem(24);
+    font-size: rem(20);
     line-height: 120%;
     color: $white;
+    @media (max-width: em(580)){
+      font-size: rem(18);
+    }
   }
 
   &__item-line {
