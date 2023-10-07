@@ -2293,6 +2293,13 @@
             @media (max-width: em(580)){
               left: -16px;
             }
+            @media (max-width: em(475)){
+              top: 28px;
+              // transform: translateY(-50%);
+              left: -120px;
+              transform: rotate(0deg);
+              width: 120px;
+            }
           }
         }
       }
@@ -2322,6 +2329,11 @@
             }
             @media (max-width: em(580)){
               right: 8px;
+            }
+            @media (max-width: em(475)){
+              top: 45%;
+              transform: translateY(-45%);
+              right: -70px;
             }
           }
 
@@ -2413,21 +2425,38 @@
       }
     }
 
+    //третий стрелка
+    &:nth-child(3) {
+      .payment__item  {}
+    }
 
-    //пятый
+    //четвертый стрелка
+    &:nth-child(4) {
+      .payment__item  {}
+    }
+
+    //пятый стрелка
     &:nth-child(5) {
       .payment__item {
         &::after{
           top: -5px;
           left: 49%;
           transform: translateX(-50%);
-          transform: rotate(-45deg)
+          transform: rotate(-45deg);
+          @media (max-width: em(475)){
+            top: 24px;
+            left: 61px;
+          }
         }
         &::before{
           top: -5px;
           left: 40%;
           transform: translateX(-40%);
-          transform: rotate(45deg)
+          transform: rotate(45deg);
+          @media (max-width: em(475)){
+            top: 30px;
+            left: 61px;
+          }
         }
       }
     }
@@ -2538,6 +2567,7 @@
         @media (max-width: em(475)){
           grid-row: 3;
           grid-column: 2 / 3;
+
         }
       }
     }
