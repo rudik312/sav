@@ -2195,7 +2195,12 @@
     @media (max-width: em(580)){
       padding-top: 55px;
     }
-
+    @media (max-width: em(475)){
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      column-gap: 64px;
+      row-gap: 37px;
+    }
   }
   //.payment__item-box
   &__item-box {
@@ -2387,6 +2392,7 @@
         }
       }
     }
+
     //последний
     &:last-child{
       .payment__item {
@@ -2465,7 +2471,7 @@
       }
     }
 
-
+    //расположение в сетке
     @media (max-width: em(980)){
       &:nth-child(4) {
         &::after{
@@ -2478,14 +2484,26 @@
         &::after{
           display: none;
         }
+        @media (max-width: em(475)){
+          grid-row: 2;
+          grid-column: 2 / 3;
+        }
       }
       &:nth-child(6) {
         grid-row: 2;
         grid-column: 3 / 4;
+        @media (max-width: em(475)){
+          grid-row: 2;
+          grid-column: 1 / 2;
+        }
       }
       &:nth-child(7) {
         grid-row: 2;
         grid-column: 2 / 3;
+        @media (max-width: em(475)){
+          grid-row: 3;
+          grid-column: 1 / 2;
+        }
       }
       &:nth-child(8) {
         grid-row: 2;
@@ -2517,8 +2535,40 @@
             right: -55px;
           }
         }
+        @media (max-width: em(475)){
+          grid-row: 3;
+          grid-column: 2 / 3;
+        }
       }
     }
+
+    @media (max-width: em(475)){
+      &:nth-child(1) {
+  
+      }
+      &:nth-child(2) {
+
+      }
+      &:nth-child(3) {
+
+      }
+      &:nth-child(4) {
+
+      }
+      &:nth-child(5) {
+
+      }
+      &:nth-child(6) {
+
+      }
+      &:nth-child(7) {
+
+      }
+      &:nth-child(8) {
+
+      }
+    }
+
   }
   //.payment__item
   &__item {
