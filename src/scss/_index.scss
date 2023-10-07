@@ -2228,6 +2228,10 @@
     &:last-child {
       .payment__item {
         background-color: #13465B;
+        &::after,
+        &::before {
+          display: none;
+        }
       }
     }
 
@@ -2289,6 +2293,7 @@
     border: 1px solid #FFF;
     background-color: $yelow;
     @media (max-width: em(980)){
+      
       &::after{
         content:'';
         position: absolute;
@@ -2300,6 +2305,7 @@
         left: -12%;
         transform: rotate(45deg)
       }
+
       &::before{
         content:'';
         position: absolute;
@@ -2311,7 +2317,11 @@
         left: -12%;
         transform: rotate(-45deg);
       }
+
+
     }
+
+
   }
   //payment__item-num
   &__item-num {
