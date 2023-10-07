@@ -2145,7 +2145,8 @@
       padding-bottom: 60px;
     }
     @media (max-width: em(580)){
-      display: none;
+      padding-top: 45px;
+      padding-bottom: 40px;
     }
   }
   //payment__context-text
@@ -2192,9 +2193,9 @@
       @include adaptiveValue("column-gap", 160, 60, 980, 768, 1);
       row-gap: 50px;
     }
-    @media (max-width: em(580)){
-      padding-top: 55px;
-    }
+    // @media (max-width: em(580)){
+    //   padding-top: 55px;
+    // }
     @media (max-width: em(475)){
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -2282,6 +2283,21 @@
         }
       }
 
+      //вертикальная палка у 3
+      &:nth-child(3) {
+        @media (max-width: em(475)){
+          &::before{
+            top: 80px;
+            left: -42px;
+            transform: rotate(90deg);
+          }
+          &::after{
+            top: 79px;
+            right: 9px;
+          }
+        }
+      }
+
       //вертикальная палка у 4
       &:nth-child(4) {
         @media (max-width: em(980)){
@@ -2353,6 +2369,12 @@
             @media (max-width: em(520)){
               width: 190px;
             }
+            @media (max-width: em(475)){
+              width: 98px;
+              top: 60px;
+              left: -19px;
+              transform: rotate(90deg);
+            }
           }
         }
       }
@@ -2365,6 +2387,12 @@
             left: -85px;
             @media (max-width: em(520)){
               width: 190px;
+            }
+          }
+          &::after{
+            @media (max-width: em(475)){
+              top: -23px;
+              right: 12px;
             }
           }
         }
@@ -2432,7 +2460,18 @@
 
     //четвертый стрелка
     &:nth-child(4) {
-      .payment__item  {}
+      .payment__item  {
+        @media (max-width: em(475)){
+          &::before{
+            top: -5px;
+            left: 30px;
+          }
+          &::after{
+            top: -5px;
+            left: 24px;
+          }
+        }
+      }
     }
 
     //пятый стрелка
@@ -2461,7 +2500,7 @@
       }
     }
 
-    //шестой
+    //шестой стрелка
     &:nth-child(6) {
       .payment__item {
         &::after{
@@ -2480,7 +2519,7 @@
         }
       }
     }
-    //седьмой
+    //седьмой стрелка
     &:nth-child(7) {
       .payment__item {
         &::after{
@@ -2489,12 +2528,20 @@
           @media (max-width: em(580)){
             left: 60px;
           }
+          @media (max-width: em(475)){
+            top: -5px;
+            left: 27px;
+          }
         }
         &::before{
           left: 66px;
           transform: rotate(45deg);
           @media (max-width: em(580)){
             left: 60px;
+          }
+          @media (max-width: em(475)){
+            top: -5px;
+            left: 21px;
           }
         }
       }
