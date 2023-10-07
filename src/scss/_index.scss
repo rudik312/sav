@@ -2228,6 +2228,8 @@
           transform: translateY(-50%);
         }
       }
+
+      //вертикальная палка у 4
       &:nth-child(4) {
         @media (max-width: em(980)){
           &::before{
@@ -2238,6 +2240,35 @@
           }
         }
       }
+
+      //смещаем палку у 5
+      &:nth-child(5) {
+        @media (max-width: em(980)){
+          &::before{
+            width: 100px;
+            left: -85px;
+          }
+        }
+      }
+
+      //смещаем палку у 6
+      &:nth-child(6) {
+        @media (max-width: em(980)){
+          &::before{
+            left: -85px;
+          }
+        }
+      }
+
+      //смещаем палку у 7
+      &:nth-child(7) {
+        @media (max-width: em(980)){
+          &::before{
+            left: -85px;
+          }
+        }
+      }
+
     }
 
     //добавляем палку последнему
@@ -2245,7 +2276,7 @@
       &::before{
         content:'';
         position: absolute;
-        width: 220px;
+        width: 190px;
         height: 2px;
         background-color: #13465B;
         top: 47%;
