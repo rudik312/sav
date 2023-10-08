@@ -2884,7 +2884,13 @@
       max-width: 335px;
     }
     @media (max-width: em(715)){
-      max-width: 310px;
+      max-width: 326px;
+    }
+    @media (max-width: em(700)){
+      // max-width: 317px;
+    }
+    @media (max-width: em(690)){
+      max-width: 320px;
     }
   }
   // .payment-content__subtitle
@@ -2921,8 +2927,8 @@
       @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
     }
     @media (max-width: em(768)){
-      @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
-      @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+      // @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+      // @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
     }
     @media (max-width: em(690)){
       @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
@@ -2968,14 +2974,18 @@
       left: 170px;
     }
     @media (max-width: em(735)){
-      bottom: 45px;
-      left: 160px;
+      bottom: 55px;
+      left: 170px;
     }
     @media (max-width: em(725)){
       // bottom: 40px;
       // left: 150px;
-      @include adaptiveValue("bottom", 40, 35, 725, 660, 1);
-      @include adaptiveValue("left", 160, 140, 725, 660, 1);
+      // @include adaptiveValue("bottom", 40, 35, 725, 660, 1);
+      // @include adaptiveValue("left", 160, 140, 725, 660, 1);
+    }
+    @media (max-width: em(690)){
+      bottom: 35px;
+      left: 150px;
     }
   }
   // .payment-content__list
