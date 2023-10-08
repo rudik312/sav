@@ -1981,8 +1981,8 @@
       background-size: auto;
     }
     @media (max-width: em(640)){
-      background-position: 12% 100%;
-      background-size: 220%;
+      background-position: 12% 100% !important;
+      background-size: 220% !important;
     }
   }
 }
