@@ -2203,7 +2203,7 @@
       row-gap: 37px;
     }
     @media (max-width: em(350)){
-      zoom: 95%;
+      // zoom: 95%;
     }
   }
   //.payment__item-box
@@ -2397,7 +2397,7 @@
               width: 190px;
             }
             @media (max-width: em(475)){
-              top: 18%;
+              top: 10px;
               width: 100px;
               left: -20px;
               transform: rotate(90deg);
