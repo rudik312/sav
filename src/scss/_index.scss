@@ -2875,6 +2875,9 @@
     @media (max-width: em(890)){
       max-width: 345px;
     }
+    @media (max-width: em(735)){
+      max-width: 315px;
+    }
   }
   // .payment-content__subtitle
   &__subtitle {
@@ -2943,13 +2946,19 @@
       left: 52%;
     }
     @media (max-width: em(968)){
-      padding: 5px 15px;
-      // bottom: 55px;
-      @include adaptiveValue("bottom", 55, 47, 968, 768, 1);
+      padding: 2px 15px;
+      // bottom: 47px;
+      @include adaptiveValue("bottom", 55, 50, 968, 768, 1);
       // left: 47px;
-      // left: 200px;
+      // left: 170px;
       @include adaptiveValue("left", 200, 170, 968, 768, 1);
     }
+    @media (max-width: em(768)){
+      // padding: 2px 15px;
+      bottom: 53px;
+      left: 170px;
+    }
+
   }
   // .payment-content__list
   &__list {
