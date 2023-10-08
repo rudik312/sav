@@ -2834,7 +2834,9 @@
     font-size: rem(16);
     line-height: math.div(26 , 16);
     color: $text;
-
+    @media (max-width: em(520)){
+      padding: 15px 87px 15px 20px
+    }
   }
   // .payment-form__action
   &__action {
@@ -2852,8 +2854,11 @@
     font-size: rem(14);
     line-height: 120%;
     color: #263239;
+    @media (max-width: em(520)){
+      padding: 15px 50px;
+    }
     @media (max-width: em(380)){
-      padding: 10px 30px;
+      padding: 15px 30px;
     }
   }
   // .payment-form__politics
@@ -3052,6 +3057,10 @@
     }
     &::before{
       top: 10px;
+    }
+    @media (max-width: em(420)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
     }
   }
 
