@@ -1971,9 +1971,12 @@
     background-color: $bgBlock;
     padding-top: 42px;
     padding-bottom: 257px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     @media (max-width: em(1180)){
       border-radius: 40px;
+    }
+    @media (max-width: em(968)){
+      margin-bottom: 30px;
     }
   }
 }
@@ -2771,6 +2774,9 @@
     padding: 43px 22px;
     background-color: $white;
     border-radius: 46px;
+    @media (max-width: em(968)){
+      max-width: 604px;
+    }
   }
   // .payment-form__item-wrapper
   &__item-wrapper {
@@ -2836,7 +2842,10 @@
   &__adaptive {
     //.payment-form__adaptive__container
     &__container {
-
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      padding-bottom: 65px;
     }
   }
 
