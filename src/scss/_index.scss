@@ -2968,7 +2968,10 @@
       left: 160px;
     }
     @media (max-width: em(725)){
-      bottom: 35px;
+      // bottom: 40px;
+      // left: 150px;
+      @include adaptiveValue("bottom", 40, 35, 725, 660, 1);
+      @include adaptiveValue("left", 160, 140, 725, 660, 1);
     }
   }
   // .payment-content__list
