@@ -2360,6 +2360,9 @@
               right: -70px !important;
               // @include adaptiveValue("right", -70, -55, 475, 360, 1);
             }
+            @media (max-width: em(390)){
+              right: -55px !important;
+            }
           }
 
           &::before{
