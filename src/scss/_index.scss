@@ -2348,10 +2348,11 @@
             color: #FFF;
             @media (max-width: em(740)){
               content: '6 мес.';
-              right: 12px;
+              // right: 12px;
+              @include adaptiveValue("right", 12, 8, 740, 580, 1);
             }
             @media (max-width: em(580)){
-              right: 8px;
+              // right: 8px;
             }
             @media (max-width: em(475)){
               top: 45%;
