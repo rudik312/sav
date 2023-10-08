@@ -2021,7 +2021,12 @@
       display: flex;
       padding-bottom: 140px;
     }
-
+    @media (max-width: em(520)){
+      padding-bottom: 90px;
+    }
+    @media (max-width: em(420)){
+      padding-bottom: 60px;
+    }
   }
   // .payment__title-box
   &__title-box {
@@ -2117,6 +2122,10 @@
       @include adaptiveValue("width", 175, 120, 768, 660, 1);
       @include adaptiveValue("height", 175, 120, 768, 660, 1);
       @include adaptiveValue("bottom", -85, -50, 768, 660, 1);
+    }
+    @media (max-width: em(420)){
+      width: 100px;
+      height: 100px;
     }
   }
   // .payment__decor
@@ -3068,9 +3077,15 @@
     color: $text;
     &::after{
       top: 6px;
+      @media (max-width: em(420)){
+        top: 3px;
+      }
     }
     &::before{
       top: 10px;
+      @media (max-width: em(420)){
+        top: 7px;
+      }
     }
     @media (max-width: em(420)){
       font-size: rem(14);
