@@ -2645,9 +2645,12 @@
             right: -55px;
           }
           @media (max-width: em(475)){
-            // right: 96px;
+            right: 96px !important;
             top: 28px;
-            @include adaptiveValue("right", 96, 80, 475, 360, 1);
+            // @include adaptiveValue("right", 96, 80, 475, 360, 1);
+          }
+          @media (max-width: em(380)){
+            right: 80px !important;
           }
         }
         @media (max-width: em(475)){
