@@ -2649,7 +2649,7 @@
             top: 28px;
             // @include adaptiveValue("right", 96, 80, 475, 360, 1);
           }
-          @media (max-width: em(380)){
+          @media (max-width: em(420)){
             right: 80px !important;
           }
         }
