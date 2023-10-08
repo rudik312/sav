@@ -2870,7 +2870,7 @@
   &__title-box {
     display: flex;
     flex-direction: column;
-    position: relative;
+    // position: relative;
     @media (max-width: em(968)){
       max-width: 382px;
     }
@@ -2907,6 +2907,7 @@
   }
   // .payment-content__title
   &__title {
+    position: relative;
     @extend %raleway-600;
     font-size: rem(56);
     line-height: math.div(78 , 56);
