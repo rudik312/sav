@@ -2348,17 +2348,17 @@
             color: #FFF;
             @media (max-width: em(740)){
               content: '6 мес.';
-              // right: 12px;
-              @include adaptiveValue("right", 12, 8, 740, 580, 1);
+              right: 12px;
+              // @include adaptiveValue("right", 12, 8, 740, 580, 1);
             }
             @media (max-width: em(580)){
-              // right: 8px;
+              right: 8px !important;
             }
             @media (max-width: em(475)){
               top: 45%;
-              transform: translateY(-45%);
-              // right: -70px;
-              @include adaptiveValue("right", -70, -55, 475, 360, 1);
+              // transform: translateY(-45%);
+              right: -70px !important;
+              // @include adaptiveValue("right", -70, -55, 475, 360, 1);
             }
           }
 
