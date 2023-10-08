@@ -2908,7 +2908,8 @@
       @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
     }
     @media (max-width: em(690)){
-      @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
+      font-size: rem(20);
+      // @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
     }
   }
   // .payment-content__title
@@ -2931,8 +2932,10 @@
       // @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
     }
     @media (max-width: em(690)){
-      @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
-      @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      font-size: rem(32);
+      line-height: math.div(38 , 32);
+      // @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+      // @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
     }
   }
   // .payment-content__title-info
