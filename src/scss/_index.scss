@@ -2868,6 +2868,8 @@
   row-gap: 20px;
   // .payment-content__title-box
   &__title-box {
+    display: flex;
+    flex-direction: column;
     position: relative;
     @media (max-width: em(968)){
       max-width: 382px;
@@ -2876,7 +2878,10 @@
       max-width: 345px;
     }
     @media (max-width: em(735)){
-      max-width: 315px;
+      max-width: 340px;
+    }
+    @media (max-width: em(725)){
+      max-width: 310px;
     }
   }
   // .payment-content__subtitle
@@ -2958,7 +2963,13 @@
       bottom: 53px;
       left: 170px;
     }
-
+    @media (max-width: em(735)){
+      bottom: 45px;
+      left: 160px;
+    }
+    @media (max-width: em(725)){
+      bottom: 35px;
+    }
   }
   // .payment-content__list
   &__list {
