@@ -2920,7 +2920,6 @@
 .payment-content {
   display: flex;
   flex-direction: column;
-  // flex-shrink: 0;
   row-gap: 20px;
   // .payment-content__title-box
   &__title-box {
@@ -3124,12 +3123,41 @@
       font-size: rem(32);
       line-height: math.div(45 , 32);
       text-transform: uppercase;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
+        @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
+      }
     }
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
       line-height: math.div(78 , 56);
       text-transform: uppercase;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      }
     }
   }
   // .faq__title-img
@@ -3137,6 +3165,13 @@
     img {
       width: 428px;
       height: 126px;
+      @media (max-width: em(1180)){
+        width: 288px;
+        height: 85px;
+      } 
+    }
+    @media (max-width: em(690)){
+      display: none;
     }
   }
   // .faq__inner
@@ -3147,10 +3182,19 @@
   padding: 48px 64px;
   background-color: $white;
   border-radius: 48px;
+  @media (max-width: em(1000)){
+    padding: 20px 40px;
+  }
+  @media (max-width: em(850)){
+    padding: 20px;
+  }
   // .faq-inner__spollers
   &__spollers {
     display: grid;
     gap: 32px;
+    @media (max-width: em(768)){
+      gap: 20px;
+    }
   }
   // .faq-inner__spollers-item
   &__spollers-item {
@@ -3207,10 +3251,22 @@
         }
       }
     }
+    @media (max-width: em(1180)){
+      font-size: rem(20);
+    }
+    @media (max-width: em(980)){
+      padding: 12px 60px 12px 0;
+      font-size: rem(18);
+      line-height: math.div(26 , 18);
+    }
+    @media (max-width: em(520)){
+      font-size: rem(16);
+      line-height: math.div(22 , 16);
+    }
   }
   // .faq-inner__spollers-body
   &__spollers-body {
-
+    padding-right: 60px;
   }
 }
 .spollers {
@@ -3267,6 +3323,9 @@
     color: #131A29;
     &:not(:last-child) {
       margin-bottom: 15px;
+    }
+    @media (max-width: em(520)){
+      font-size: rem(14);
     }
   }
 }
