@@ -1971,7 +1971,7 @@
     background-color: $bgBlock;
     padding-top: 42px;
     padding-bottom: 257px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     @media (max-width: em(1180)){
       border-radius: 40px;
     }
@@ -2746,7 +2746,9 @@
     column-gap: 203px;
     justify-content: space-between;
     @include adaptiveValue("column-gap", 203, 171, 1380, 1260, 1);
-    display: none;
+    @media (max-width: em(968)){
+      // flex-direction: column;
+    }
   }
   // .payment__form
   &__form {
@@ -2755,6 +2757,7 @@
   }
   // .payment__content
   &__content {
+
   }
 }
 //.payment-form
@@ -2829,6 +2832,15 @@
     // @extend %mulish-800;
     // color: rgb(71, 162, 248);
   }
+  //.payment-form__adaptive
+  &__adaptive {
+    //.payment-form__adaptive__container
+    &__container {
+
+    }
+  }
+
+  //
 }
 
 //.payment-form__input_form-error
@@ -2936,6 +2948,9 @@
     &::before{
       top: 10px;
     }
+  }
+  @media (max-width: em(968)){
+    max-width: 382px;
   }
 }
 //========================================================================================================================================================
