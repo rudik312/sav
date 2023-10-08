@@ -1980,13 +1980,28 @@
       background-position: 20% 100%;
       background-size: auto;
     }
-    
+    @media (max-width: em(640)){
+      background-position: 12% 100%;
+      background-size: 220%;
+    }
   }
 }
 //.payment(top)
 .payment {
   &:first-child{
     padding-top: 70px;
+    @media (max-width: em(1000)){
+      padding-top: 50px;
+    }
+    @media (max-width: em(768)){
+      padding-top: 60px;
+    }
+    @media (max-width: em(480)){
+      padding-top: 50px;
+    }
+    @media (max-width: em(420)){
+      padding-top: 35px;
+    }
   }
   // .payment__container
   &__container {
@@ -2051,6 +2066,9 @@
       @media (max-width:$mobileSmall){
         @include adaptiveValue("font-size", 16, 14, 480, 420, 1); 
       }
+    }
+    @media (max-width: em(1000)){
+      padding-top: 0;
     }
     @media (max-width: em(980)){
       position: static;
@@ -2117,7 +2135,11 @@
       @media (max-width: em(660)){
         width: 184px;
         height: 115px;
-      }   
+      }  
+      @media (max-width: em(360)){
+        width: 160px;
+        height: 95px;
+      } 
     }
     @media (max-width: em(1180)){
       align-items: center;
