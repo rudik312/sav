@@ -2869,6 +2869,12 @@
   // .payment-content__title-box
   &__title-box {
     position: relative;
+    @media (max-width: em(968)){
+      max-width: 382px;
+    }
+    @media (max-width: em(890)){
+      max-width: 345px;
+    }
   }
   // .payment-content__subtitle
   &__subtitle {
@@ -2966,12 +2972,7 @@
       top: 10px;
     }
   }
-  @media (max-width: em(968)){
-    max-width: 382px;
-  }
-  @media (max-width: em(890)){
-    max-width: 345px;
-  }
+
 }
 //========================================================================================================================================================
 
