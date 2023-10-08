@@ -2203,7 +2203,7 @@
       row-gap: 37px;
     }
     @media (max-width: em(350)){
-      // zoom: 95%;
+      zoom: 95%;
     }
   }
   //.payment__item-box
@@ -2366,12 +2366,12 @@
           }
 
           &::before{
-            width: 120px;
-            left: -85px;
+            width: 110px !important;
+            left: -60px !important;
           }
         }
       }
-
+      
       //смещаем палку у 6
       &:nth-child(6) {
         @media (max-width: em(980)){
@@ -2379,7 +2379,7 @@
             width: 220px;
             left: -85px;
             @media (max-width: em(520)){
-              width: 190px;
+              // width: 190px;
             }
             @media (max-width: em(475)){
               width: 98px;
