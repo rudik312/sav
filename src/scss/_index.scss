@@ -3475,7 +3475,7 @@
   &__wrapper {
     @media (max-width: em(950)){
       padding: 20px;
-      border-radius: 40px;
+      border-radius: 40px !important;
       background-color: #E3E9F3;
     }
   }
@@ -3617,6 +3617,7 @@
     color: #263239;
     @media (max-width: em(950)){
       border-radius: 35px;
+      font-size: rem(14);
       display: block;
       text-align: center;
     }
