@@ -211,11 +211,16 @@ function initSliders() {
 					// autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerView: 1.2,
+					spaceBetween: 40,
+					slidesPerView: 'auto',
+				},
+				920: {
+					slidesPerView: 1.06,
+					spaceBetween: 40,
 				},
 				999: {
-					slidesPerView: 1.2,
+					slidesPerView: 1.1,
 					spaceBetween: 40,
 				},
 				1060: {

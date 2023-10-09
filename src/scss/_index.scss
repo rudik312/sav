@@ -3396,6 +3396,17 @@
       line-height: math.div(45 , 32);
       text-transform: uppercase;
       color: $black;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
+        @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
+      }
     }
     h3 {
       @extend %raleway-600;
@@ -3403,6 +3414,24 @@
       line-height: math.div(78 , 56);
       text-transform: uppercase;
       color: $black;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      }
     }
   }
   // .cases__navigation
@@ -3433,6 +3462,12 @@
     // display: grid;
     // grid-template-columns: repeat(2, 1fr);
     // 
+    @media (max-width: em(950)){
+      width: auto !important;
+      // flex-shrink: 100 !important;
+      // width: fit-content !important;
+      background-image: none;
+    }
   }
 }
 //.cases-slide__box
@@ -3447,7 +3482,15 @@
         height: 381px;
         padding-top: 30px;
         padding-right: 26px;
+        @media (max-width: em(950)){
+
+        }
       }
+    }
+    @media (max-width: em(950)){
+      grid-template-columns: 0.5fr;
+      // display: flex;
+      // flex-direction: column;
     }
   }
 
@@ -3558,6 +3601,9 @@
     font-size: rem(20);
     line-height: 120%;
     color: #263239;
+    @media (max-width: em(950)){
+      border-radius: 35px;
+    }
   }
 }
 
