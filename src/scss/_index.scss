@@ -3544,6 +3544,9 @@
     column-gap: 10px;
     border-radius: 76px;
     background: $white;
+    @media (max-width: em(950)){
+      padding: 5px 10px 5px 5px;
+    }
   }
   // .cases-slide__user-avatar
   &__user-avatar {
@@ -3554,12 +3557,21 @@
     justify-content: center;
     object-fit: cover;
     overflow: hidden;
+    border-radius: 50%;
+    @media (max-width: em(950)){
+      
+      width: 30px;
+      height: 30px;
+    }
   }
   // .cases-slide__user-name
   &__user-name {
     @extend %raleway-600;
     font-size: rem(18);
     line-height: 120%;
+    @media (max-width: em(950)){
+      font-size: rem(14);
+    }
   }
   // .cases-slide__info
   &__info {
@@ -3581,6 +3593,9 @@
     font-size: rem(16);
     line-height: 120%;
     width: 100%;
+    @media (max-width: em(950)){
+      font-size: rem(14);
+    }
   }
   // .cases-slide__list-text
   &__list-text {
@@ -3664,9 +3679,12 @@
   &__list {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
     column-gap: 10px;
     row-gap: 5px;
+    @media (max-width: em(950)){
+      
+    }
   }
 
   //.cases-slide-inner__list-item
@@ -3681,6 +3699,9 @@
   &__slide-content {
     display: grid;
     justify-items: center;
+    @media (max-width: em(950)){
+      
+    }
   }
   //.cases-slide-inner__slide-title
   &__slide-title {
@@ -3688,13 +3709,20 @@
     font-size: rem(24);
     line-height: math.div(34 , 24);
     color: $white;
-    
+    @media (max-width: em(950)){
+      
+    }
     }
   //.cases-slide-inner
   &__slide-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 36px;
+    @media (max-width: em(950)){
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
   }
 
 }

@@ -207,12 +207,13 @@ function initSliders() {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 10,
+					slidesPerView: 'auto',
 					// autoHeight: true,
 				},
 				768: {
 					slidesPerView: 1.2,
-					spaceBetween: 40,
+					spaceBetween: 10,
 					slidesPerView: 'auto',
 				},
 				950: {

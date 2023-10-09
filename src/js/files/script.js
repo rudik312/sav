@@ -40,7 +40,9 @@ window.onload = function() {
       speed: 1000,
       infinite: true,
 
-    });2
+    });
+
+    
     $('.slider-for-last').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
