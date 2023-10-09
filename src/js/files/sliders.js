@@ -215,13 +215,29 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				999: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					slidesPerView: 1.2,
+					spaceBetween: 40,
+				},
+				1060: {
+					slidesPerView: 1.13,
+					spaceBetween: 40,
+				},
+				1100: {
+					slidesPerView: 1.19,
+					spaceBetween: 40,
+				},
+				1160: {
+					slidesPerView: 1.2,
+					spaceBetween: 40,
 				},
 				1268: {
 					slidesPerView: 1.2,
 					spaceBetween: 40,
 				},
+				1360: {
+					slidesPerView: 1.2,
+					spaceBetween: 40,
+				}
 			},
 			
 			// События
