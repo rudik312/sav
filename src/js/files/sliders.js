@@ -218,6 +218,7 @@ function initSliders() {
 				920: {
 					slidesPerView: 1.06,
 					spaceBetween: 40,
+					// slidesPerView: 'auto',
 				},
 				999: {
 					slidesPerView: 1.1,
