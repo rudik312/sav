@@ -3479,6 +3479,9 @@
       background-color: #E3E9F3;
       @media (max-width: em(950)){
         // max-width: 306px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
       }
     }
   }
@@ -3494,8 +3497,10 @@
         padding-top: 30px;
         padding-right: 26px;
         @media (max-width: em(950)){
+          padding-top: 0;
           // width: 312px;
           max-width: 100%;
+          height: auto;
         }
       }
     }
@@ -3503,6 +3508,7 @@
       // grid-template-columns: 0.5fr;
       display: flex;
       flex-direction: column;
+      row-gap: 18px;
     }
   }
 
@@ -3604,7 +3610,13 @@
       display: flex;
       justify-content: space-between;
       font-size: rem(14);
+      &:last-child{
+        .cases-slide__list-text {
+          max-width: 159px;
+        }
+      }
     }
+
   }
   // .cases-slide__list-text
   &__list-text {
