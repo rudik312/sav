@@ -3215,6 +3215,7 @@
       gap: 20px;
     }
     @media (max-width: em(520)){
+      border-radius: 48px;
       gap: 10px;
     }
   }
@@ -3257,6 +3258,9 @@
         height: 2px;
         width: 14px;
         transition: transform 0.5s ease 0s;
+        @media (max-width: em(520)){
+          width: 7px;
+        }
       }
       &::before {
         transform: translate(-75%, -50%) rotate(40deg);
@@ -3288,7 +3292,7 @@
   }
   // .faq-inner__spollers-body
   &__spollers-body {
-    padding-right: 60px;
+    // padding-right: 60px;
   }
 }
 .spollers {
@@ -3316,6 +3320,9 @@
   // .spollers-body__list
   &__list {
     padding-left: 25px;
+    @media (max-width: em(520)){
+      padding-left: 15px;
+    }
   }
   //spollers-body__list-title
   &__list-title {
@@ -3323,7 +3330,10 @@
     font-size: rem(16);
     line-height: math.div(26 , 16);
     color: #131A29;
-
+    @media (max-width: em(520)){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
+    }
   }
 
   // .spollers-body__list-item
@@ -3335,6 +3345,10 @@
     color: #131A29;
     &:not(:last-child) {
       margin-bottom: 10px;
+    }
+    @media (max-width: em(520)){
+      font-size: rem(14);
+      line-height: math.div(24 , 14);
     }
   }
   //spollers-body__text
