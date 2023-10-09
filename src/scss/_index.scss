@@ -3478,7 +3478,7 @@
       border-radius: 40px;
       background-color: #E3E9F3;
       @media (max-width: em(950)){
-        // width: 312px;
+        // max-width: 306px;
       }
     }
   }
@@ -3579,6 +3579,9 @@
   }
   // .cases-slide__info
   &__info {
+    @media (max-width: em(950)){
+      width: 100%;
+    }
   }
   // .cases-slide__list
   &__list {
@@ -3598,6 +3601,8 @@
     line-height: 120%;
     width: 100%;
     @media (max-width: em(950)){
+      display: flex;
+      justify-content: space-between;
       font-size: rem(14);
     }
   }
