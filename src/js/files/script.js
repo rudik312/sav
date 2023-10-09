@@ -27,7 +27,8 @@ window.onload = function() {
       arrows: false,
       fade: true,
       speed: 1000,
-      asNavFor: '.slider-nav-first'
+      asNavFor: '.slider-nav-first',
+
     });
     $('.slider-nav-first').slick({
       slidesToShow: 3,
@@ -39,17 +40,18 @@ window.onload = function() {
       arrows:false, 
       speed: 1000,
       infinite: true,
-
+      
     });
 
-    
+
     $('.slider-for-last').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       fade: true,
       speed: 1000,
-      asNavFor: '.slider-nav-last'
+      asNavFor: '.slider-nav-last',
+
     });
     $('.slider-nav-last').slick({
       slidesToShow: 3,
