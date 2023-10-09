@@ -3463,10 +3463,10 @@
     // grid-template-columns: repeat(2, 1fr);
     // 
     @media (max-width: em(950)){
+      background-image: none !important;
       width: auto !important;
       // flex-shrink: 100 !important;
       // width: fit-content !important;
-      background-image: none;
     }
   }
 }
