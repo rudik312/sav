@@ -14,7 +14,7 @@
     @media (max-width: em(960)){
       column-gap: 10px;
     }
-    @media (max-width: em(640)){
+    @media (max-width: em(760)){
       display: flex;
       flex-direction: column;
       row-gap: 15px;
@@ -40,10 +40,6 @@
       justify-content: center;
       align-items: flex-start;
       row-gap: 30px;
-
-    }
-    @media (max-width: em(640)){
-      
     }
   }
   // .telegram__bg
@@ -53,9 +49,7 @@
     padding-bottom: percent(580, 571);
     img {
       object-position: center;
-      // width: 571px;
-      // height: 580px;
-      @media (max-width: em(360)){
+      @media (max-width: em(350)){
         width: 278px;
         height: 282px;
       }
@@ -66,7 +60,7 @@
     @media (max-width: em(1000)){
       padding-bottom: percent(425, 418);
     }
-    @media (max-width: em(640)){
+    @media (max-width: em(760)){
       padding-bottom: percent(314, 309);
     }
     @media (max-width: em(360)){
@@ -125,7 +119,7 @@
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
-    @media (max-width: em(640)){
+    @media (max-width: em(760)){
       order: -1;
     }
   }
@@ -139,7 +133,7 @@
     @media (max-width: em(768)){
       max-width: 280px;
     }
-    @media (max-width: em(640)){
+    @media (max-width: em(760)){
       max-width: 100%;
     }
   }
@@ -151,7 +145,7 @@
     @media (max-width: em(1000)){
       padding: 10px 40px;
     }
-    @media (max-width: em(640)){
+    @media (max-width: em(760)){
       padding: 10px 60px;
     }
     @media (max-width: em(420)){
