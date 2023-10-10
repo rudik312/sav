@@ -3441,6 +3441,12 @@
     justify-content: flex-end;
     column-gap: 30px;
     margin-right: 0 !important;
+    @media (max-width: em(560)){
+      display: flex;
+      justify-content: center;
+      column-gap: 70px;
+      padding-top: 25px !important;
+    }
   }
   // .cases__inner
   &__inner {
@@ -3935,12 +3941,41 @@
       font-size: rem(56);
       line-height: math.div(78 , 56);
       text-transform: uppercase;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      }
     }
     span {
       @extend %raleway-400;
       font-size: rem(32);
       line-height: math.div(45 , 32);
       text-transform: uppercase;
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
+        @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
+      }
     }
   }
   // .district__action
@@ -3963,6 +3998,13 @@
       &:hover{
         background-color: $yelow;
       }
+    }
+    @media (max-width: em(768)){
+      padding: 10px 60px;
+    }
+    @media (max-width: em(460)){
+      padding: 10px 30px;
+      font-size: rem(14);
     }
   }
   // .district__inner
@@ -4005,6 +4047,9 @@
       z-index: -1;
       border-radius: 55px;
     }
+    @media (max-width: em(1000)){
+      max-width: 260px;
+    }
   }
   // .district__slide-img
   &__slide-img {
@@ -4021,6 +4066,10 @@
     color: $white;
     text-transform: uppercase;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width: em(1000)){
+      font-size: rem(24);
+      line-height: math.div(34 , 24);
+    }
   }
 
    // .district__slide-action
@@ -4039,6 +4088,9 @@
     @extend %mulish-800;
     font-size: rem(14);
     line-height: 120%;
+    @media (max-width: em(1000)){
+      padding: 10px 40px;
+    }
   }
 }
 

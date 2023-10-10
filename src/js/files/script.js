@@ -21,6 +21,7 @@ import { flsModules } from "./modules.js";
 window.onload = function() {
 
   $(function() {
+    // slide-1
     $('.slider-for-first').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -76,6 +77,8 @@ window.onload = function() {
       ]
     });
     
+
+    // slide-2
     $('.slider-for-second').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -134,7 +137,7 @@ window.onload = function() {
 
 
 
-
+    // slide-3
     $('.slider-for-last').slick({
       slidesToShow: 1,
       slidesToScroll: 1,

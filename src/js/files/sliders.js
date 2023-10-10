@@ -93,27 +93,31 @@ function initSliders() {
 			// },
 
 			// Брейкпоинты
-			/*
+			
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					spaceBetween: 20,
+					slidesPerView: 'auto',
+					// autoHeight: true,
 				},
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 20,
+					slidesPerView: 'auto',
 				},
 				992: {
 					slidesPerView: 3,
 					spaceBetween: 20,
+					slidesPerView: 'auto',
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+				1000: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+					slidesPerView: 'auto',
 				},
 			},
-			*/
+			
 			// События
 			on: {
 
