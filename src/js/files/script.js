@@ -42,6 +42,7 @@ window.onload = function() {
       arrows:false, 
       speed: 1000,
       infinite: true,
+      swipe: false,
       responsive: [
         {
           breakpoint: 950,
@@ -99,6 +100,7 @@ window.onload = function() {
       arrows:false, 
       speed: 1000,
       infinite: true,
+      swipe: false,
       responsive: [
         {
           breakpoint: 950,
@@ -158,6 +160,7 @@ window.onload = function() {
       arrows:false, 
       speed: 1000,
       infinite: true,
+      swipe: false,
       responsive: [
         {
           breakpoint: 950,
