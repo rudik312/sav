@@ -19,15 +19,19 @@
     font-size: rem(18);
     line-height: math.div(29 , 18);
     color: $text;
-    &:nth-child(1) {
-      margin-right: 80px;
-    }
-    &:nth-child(2) {
-      margin-right: 85px;
-    }
-    &:nth-child(3) {
-      margin-right: 190px;
-    }
+      &:not(:last-child) {
+        margin-right: auto;
+      }
+    
+    // &:nth-child(1) {
+    //   margin-right: 80px;
+    // }
+    // &:nth-child(2) {
+    //   margin-right: 85px;
+    // }
+    // &:nth-child(3) {
+    //   margin-right: 190px;
+    // }
   }
   // .footer__logo
   &__logo {
