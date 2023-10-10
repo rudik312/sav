@@ -24,6 +24,9 @@
           flex-direction: column;
           align-items: flex-start;
           row-gap: 16px;
+          @media (max-width: em(420)){
+            align-items: inherit;
+          }
         }
       }
     }
@@ -52,6 +55,10 @@
       object-position: center;
       // width: 571px;
       // height: 580px;
+      @media (max-width: em(360)){
+        width: 278px;
+        height: 282px;
+      }
     }
     // display: flex;
     // flex-direction: column;
@@ -61,6 +68,9 @@
     }
     @media (max-width: em(640)){
       padding-bottom: percent(314, 309);
+    }
+    @media (max-width: em(360)){
+      padding-bottom: percent(282, 278);
     }
   }
 
@@ -144,6 +154,10 @@
     @media (max-width: em(640)){
       padding: 10px 60px;
     }
+    @media (max-width: em(420)){
+      padding: 10px 40px;
+    }
+
   }
   // .telegram__btn-link
   &__btn-link {
@@ -153,6 +167,9 @@
     img {
       width: 45px;
       height: 45px;
+    }
+    @media (max-width: em(420)){
+      justify-content: center;
     }
   }
   // .telegram__btn-text
