@@ -219,31 +219,37 @@ function initSliders() {
 				950: {
 					slidesPerView: 1.06,
 					spaceBetween: 40,
-					// slidesPerView: 'auto',
+					slidesPerView: 'auto',
 				},
 				999: {
 					slidesPerView: 1.1,
 					spaceBetween: 40,
+					slidesPerView: 'auto',
 				},
 				1060: {
 					slidesPerView: 1.13,
 					spaceBetween: 40,
+					slidesPerView: 'auto',
 				},
 				1100: {
 					slidesPerView: 1.19,
 					spaceBetween: 40,
+					slidesPerView: 'auto',
 				},
 				1160: {
 					slidesPerView: 1.2,
 					spaceBetween: 40,
+					slidesPerView: 'auto',
 				},
 				1268: {
 					slidesPerView: 1.2,
 					spaceBetween: 40,
+					slidesPerView: 'auto',
 				},
 				1360: {
 					slidesPerView: 1.2,
 					spaceBetween: 40,
+					slidesPerView: 'auto',
 				}
 			},
 			
