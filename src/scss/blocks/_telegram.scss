@@ -10,6 +10,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
+    @include adaptiveValue("column-gap", 40, 70, 1380, 1000, 1);
+    @media (max-width: em(960)){
+      column-gap: 10px;
+    }
+    @media (max-width: em(640)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      .telegram__item {
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          row-gap: 16px;
+        }
+      }
+    }
+    
   }
   // .telegram__item
   &__item {
@@ -19,10 +37,15 @@
       justify-content: center;
       align-items: flex-start;
       row-gap: 30px;
+
+    }
+    @media (max-width: em(640)){
+      
     }
   }
   // .telegram__bg
   &__bg-ibg {
+    
     overflow: hidden;
     padding-bottom: percent(580, 571);
     img {
@@ -33,6 +56,12 @@
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
+    @media (max-width: em(1000)){
+      padding-bottom: percent(425, 418);
+    }
+    @media (max-width: em(640)){
+      padding-bottom: percent(314, 309);
+    }
   }
 
   &__content {
@@ -86,6 +115,9 @@
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
+    @media (max-width: em(640)){
+      order: -1;
+    }
   }
   // .telegram__subtitle
   &__subtitle {
@@ -94,6 +126,12 @@
     line-height: math.div(29 , 18);
     color: $text;
     @include adaptiveValue("font-size", 18, 16, 1360, 1000, 1);
+    @media (max-width: em(768)){
+      max-width: 280px;
+    }
+    @media (max-width: em(640)){
+      max-width: 100%;
+    }
   }
   // .telegram__btn
   &__btn {
@@ -102,6 +140,9 @@
     background: linear-gradient(137deg, #00AFE1 8.1%, #009BD3 94.96%);
     @media (max-width: em(1000)){
       padding: 10px 40px;
+    }
+    @media (max-width: em(640)){
+      padding: 10px 60px;
     }
   }
   // .telegram__btn-link
@@ -129,5 +170,8 @@
     margin-bottom: 70px;
     border-radius: 80px;
     background-color: $white;
+    @media (max-width: em(1000)){
+      border-radius: 40px;
+    }
   }
 }
