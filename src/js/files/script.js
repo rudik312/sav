@@ -27,6 +27,7 @@ window.onload = function() {
       arrows: false,
       fade: true,
       speed: 1000,
+      swipe: false,
       asNavFor: '.slider-nav-first',
 
     });
@@ -81,6 +82,7 @@ window.onload = function() {
       arrows: false,
       fade: true,
       speed: 1000,
+      swipe: false,
       asNavFor: '.slider-nav-second',
 
     });
@@ -139,6 +141,7 @@ window.onload = function() {
       arrows: false,
       fade: true,
       speed: 1000,
+      swipe: false,
       asNavFor: '.slider-nav-last',
 
     });
