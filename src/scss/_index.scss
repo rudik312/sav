@@ -3660,12 +3660,14 @@
   // .swiper-slide__btn
   &__btn {
     display: inline-flex;
-    padding: 16px 10px;
+    // padding: 16px 10px;
+    padding: 16px 30px;
     @extend %mulish-800;
     font-size: rem(20);
     line-height: 120%;
     color: #263239;
     @media (max-width: em(950)){
+      padding: 16px 10px;
       border-radius: 35px;
       font-size: rem(14);
       // display: block;
