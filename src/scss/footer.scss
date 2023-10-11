@@ -29,6 +29,12 @@
     @media (max-width: em(660)){
       @include adaptiveValue("column-gap", 115, 20, 660, 440, 1);
     }
+    @media (max-width: em(420)){
+      grid-template-columns: 1fr;
+      // display: flex;
+      // flex-direction: column;
+
+    }
   }
   //.footer__item-logo
   &__item-logo {
@@ -62,6 +68,7 @@
     // &:nth-child(3) {
     //   margin-right: 190px;
     // }
+  
   }
   // .footer__logo
   &__logo {
@@ -197,9 +204,13 @@
     //.footer-item__social
     &__social {
       grid-column: 2 / 3;
+      @media (max-width: em(420)){
+        grid-column: auto;
+      }
     }
     //.footer-item__time
     &__time {
+      display: grid;
       grid-row: 2;
       grid-column: 1 / 2;
     }
