@@ -85,6 +85,11 @@
     display: flex;
     align-items: center;
     column-gap: 20px;
+    @media (max-width: em(420)){
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 20px;
+    }
   }
   // .contacts-item__phone-item
   &__phone-item {
@@ -173,7 +178,7 @@
       padding: 30px 20px 30px;
       border-radius: 46px;
       background-color: $white;
-      max-width: 680px;
+      max-width: 560px;
       width: 100%;
       align-self: center;
     }
@@ -185,7 +190,24 @@
     line-height: math.div(48 , 40);
     color: $black;
     h3 {
-
+      @media (max-width: em(1380)){
+        @include adaptiveValue("font-size", 40, 40, 1380, 1000, 1);
+        @include adaptiveValue("line-height", 48, 48, 1380, 1000, 1);
+      }
+      @media (max-width: em(1000)){
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+        font-size: rem(40);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      }
     }
   }
 }
@@ -254,6 +276,9 @@
     font-size: rem(16);
     line-height: 120%;
     color: #263239;
+    @media (max-width: em(360)){
+      padding: 10px 20px;
+    }
   }
   // .contacts-form__politics
   &__politics {
