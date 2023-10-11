@@ -26,8 +26,8 @@
       column-gap: 115px;
       // column-gap: 90px;
     }
-    @media (max-width: em(520)){
-      @include adaptiveValue("column-gap", 115, 20, 520, 440, 1);
+    @media (max-width: em(660)){
+      @include adaptiveValue("column-gap", 115, 20, 660, 440, 1);
     }
   }
   //.footer__item-logo
@@ -90,6 +90,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+    @media (max-width: em(600)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
   }
   // .footer__item-phone
   &__item-phone {
@@ -102,6 +106,10 @@
     address {
       font-style: normal;
     }
+    @media (max-width: em(600)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
   }
   // .footer__item-shedule
   &__item-shedule {
@@ -109,6 +117,10 @@
     font-size: rem(18);
     line-height: math.div(29 , 18);
     color: $text;
+    @media (max-width: em(600)){
+      font-size: rem(14);
+      line-height: math.div(22 , 14);
+    }
   }
   // .footer__copyright
   &__copyright {
