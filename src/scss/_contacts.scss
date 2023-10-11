@@ -11,8 +11,13 @@
     display: grid;
     // grid-template-columns: repeat(2, 1fr);
     grid-template-columns: 1fr 1.5fr;
-    column-gap: 256px;
-
+    // column-gap: 256px;
+    @include adaptiveValue("column-gap", 256, 100, 1380, 1000, 1);
+    @media (max-width: em(1000)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+    }
   }
   // .contacts__item
   &__item {
@@ -26,7 +31,9 @@
       display: flex;
       flex-direction: column;
       row-gap: 20px;
-      // margin-right: 85px;
+      @media (max-width: em(1000)){
+        max-width: 100%;
+      }
     }
   }
   // .contacts__form
@@ -162,6 +169,14 @@
   }
   // .contacts-item__form-wrapper
   &__form-wrapper {
+    @media (max-width: em(1000)){
+      padding: 30px 20px 30px;
+      border-radius: 46px;
+      background-color: $white;
+      max-width: 680px;
+      width: 100%;
+      align-self: center;
+    }
   }
   // .contacts-item__form-title
   &__form-title {
@@ -169,6 +184,9 @@
     font-size: rem(40);
     line-height: math.div(48 , 40);
     color: $black;
+    h3 {
+
+    }
   }
 }
 .contacts-form {
@@ -196,6 +214,9 @@
     font-size: rem(16);
     line-height: math.div(26 , 16);
     color: $text;
+    @media (max-width: em(1000)){
+      background-color: $grey;
+    }
   }
   // .contacts-form__message
   &__message {
@@ -214,6 +235,9 @@
     }
     &._form-error {
       outline: 2px solid #f00;
+    }
+    @media (max-width: em(1000)){
+      background-color: $grey;
     }
   }
   // .contacts-form__action
