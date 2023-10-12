@@ -25,6 +25,12 @@
       top: 5px;
       right: 18px;
       transform: rotate(-45deg);
+      @media (max-width: em(420)){
+        top: 2px;
+        right: 10px;
+        height: 5px; 
+        width: 1px;     
+      }
     }
     &::before{
       content:'';
@@ -35,6 +41,12 @@
       top: 9px;
       right: 18px;
       transform: rotate(45deg);
+      @media (max-width: em(420)){
+        top: 5px;
+        right: 10px;
+        height: 5px;
+        width: 1px;
+      } 
     }
     &:last-child{
       font-size: rem(16);
@@ -44,8 +56,14 @@
       &::before {
         display: none;
       }
+      @media (max-width: em(420)){
+        font-size: rem(12);
+      }
     }
-    
+    @media (max-width: em(420)){
+      font-size: rem(10);
+      padding-right: 20px;
+    }
   }
   // .breadcrumbs__link
   &__link {
