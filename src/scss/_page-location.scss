@@ -96,7 +96,7 @@
     @extend %raleway-500;
     font-size: rem(48);
     line-height: math.div(58 , 48);
-
+    color: $black;
   }
   // .transport__items
   &__items {
@@ -134,6 +134,7 @@
   }
   // .transport__item-info
   &__item-info {
+    color: $black;
     span {
       @extend %raleway-400;
       font-size: rem(16);
@@ -151,3 +152,26 @@
   }
 }
 //========================================================================================================================================================
+
+.location-realty {
+  // .location-realty__container
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  // .location-realty__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .location-realty__title
+  &__title {
+    h3 {
+      @extend %raleway-500;
+      font-size: rem(48);
+      line-height: math.div(58 , 48);
+      color: $black;
+    }
+  }
+}

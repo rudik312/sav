@@ -1,0 +1,141 @@
+.realty {
+  // .realty__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  // .realty__item
+  &__item {
+    display: grid;
+    gap: 15px;
+    max-width: 367px;
+  }
+  // .realty__img-ibg
+  &__img-ibg {
+    overflow: hidden;
+    padding-bottom: percent(283, 367);
+    img {
+      object-position: top;
+    }
+  }
+  // .realty__item-box
+  &__item-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .realty__item-title
+  &__item-title {
+    @extend %raleway-600;
+    font-size: rem(24);
+    line-height: 120%;
+    color: $black;
+  }
+  // .realty__price
+  &__price {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    background-color: $yelow;
+    padding: 2px 8px;
+    border-radius: 16px;
+  }
+  // .realty__price-icon
+  &__price-icon {
+  }
+  // .realty__price-info
+  &__price-info {
+    @extend %mulish-700;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $white;
+  }
+  // .realty__price-text
+  &__price-text {
+  }
+  // .realty__deadline-info
+  &__deadline-info {
+
+  }
+  // .realty__deadline-text
+  &__deadline-text {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: 120%;
+    color: $black;
+  }
+  // .realty__info
+  &__info {
+  }
+}
+.realty-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 55px;
+  row-gap: 15px;
+  @extend %mulish-500;
+  font-size: rem(14);
+  line-height: math.div(22 , 14);
+  color: $text;
+  // .realty-info__type
+  &__type {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  // .realty-info__type-icon
+  &__type-icon {
+  }
+  // .realty-info__type-info
+  &__type-info {
+  }
+  // .realty-info__type-text
+  &__type-text {
+  }
+  // .realty-info__area
+  &__area {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  // .realty-info__area-icon
+  &__area-icon {
+  }
+  // .realty-info__area-info
+  &__area-info {
+  }
+  // .realty-info__area-text
+  &__area-text {
+  }
+  // .realty-info__builder
+  &__builder {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  // .realty-info__builder-icon
+  &__builder-icon {
+  }
+  // .realty-info__builder-info
+  &__builder-info {
+  }
+  // .realty-info__builder-text
+  &__builder-text {
+  }
+  // .realty-info__location
+  &__location {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  // .realty-info__location-icon
+  &__location-icon {
+  }
+  // .realty-info__location-info
+  &__location-info {
+  }
+  // .realty-info__location-text
+  &__location-text {
+  }
+}
