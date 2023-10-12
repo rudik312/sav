@@ -34,7 +34,6 @@
     padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
     @include adaptiveValue("gap", 40, 20, 1000, 860, 1);
     @media (max-width: em(670)){
       display: flex;

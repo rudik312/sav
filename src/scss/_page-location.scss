@@ -1,0 +1,87 @@
+
+//========================================================================================================================================================
+.location {
+  // .location__container
+  &__container {
+  }
+  // .location__inner
+  &__inner {
+  }
+  // .location__bg
+  &__bg {
+    min-height: 422px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/location/downtown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  // .location__title
+  &__title {
+    h3 {
+      @extend %raleway-500;
+      font-size: rem(64);
+      line-height: math.div(77 , 64);
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      color: $white;
+    }
+  }
+  // .location__info
+  &__info {
+  }
+  // .location__info-text
+  &__info-text {
+  }
+  // .location__action
+  &__action {
+  }
+  // .location__btn
+  &__btn {
+  }
+}
+
+//========================================================================================================================================================
+
+
+.transport {
+  // .transport__container
+  &__container {
+  }
+  // .transport__inner
+  &__inner {
+  }
+  // .transport__title
+  &__title {
+    @extend %raleway-500;
+    font-size: rem(48);
+    line-height: math.div(58 , 48);
+
+  }
+  // .transport__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+  // .transport__item
+  &__item {
+    max-width: 367px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: $white;
+    display: flex;
+  }
+  // .transport__item-img
+  &__item-img {
+  }
+  // .transport__item-info
+  &__item-info {
+  }
+  // .transport__item-title
+  &__item-title {
+  }
+}
+//========================================================================================================================================================
