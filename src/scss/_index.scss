@@ -192,6 +192,10 @@
         width: 430px;
         height: 173px;
       }
+      @media (max-width: em(590)){
+        width: 322px;
+        height: 140px;
+      }   
     }
     @media (max-width: em(1520)){
       right: -55px;
@@ -222,6 +226,9 @@
     position: absolute;
     // top: 27px;
     max-width: 327px;
+    @media (max-width: em(590)){
+      max-width: 211px;
+    }
   }
   @media (max-width: em(980)){
     min-height: 270px;
@@ -274,6 +281,10 @@
       top: -30px;
       right: -40px;
     }
+    @media (max-width: em(520)){
+      top: -5px;
+      right: -50px;
+    }
   }
   // .main-bg__founder
   &__founder {
@@ -307,6 +318,10 @@
     @media (max-width: em(690)){
       top: 80px;
       left: -175px;
+    }
+    @media (max-width: em(520)){
+      top: 100px;
+      left: -210px;
     }
   }
   // .main-bg__founder-status
