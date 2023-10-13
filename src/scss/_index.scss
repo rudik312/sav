@@ -263,6 +263,9 @@
     @media (max-width: em(580)){
       top: 180px;
     }
+    @media (max-width: em(470)){
+      top: 120px;
+    }
   }
   // .main-box__subtitle
   &__subtitle {
@@ -281,6 +284,9 @@
   }
   @media (max-width: em(690)){
     min-height: 380px;
+  }
+  @media (max-width: em(470)){
+    min-height: 300px;
   }
 }
 .main-bg {
@@ -333,7 +339,7 @@
       right: -50px;
     }
     @media (max-width: em(470)){
-      top: 75px;
+      top: 0;
     }
   }
   // .main-bg__founder
@@ -375,10 +381,13 @@
     }
     @media (max-width: em(470)){
       top: 100px;
-      left: -140px;
+      left: -160px;
     }
     @media (max-width: em(380)){
-      left: -180px;
+      top: 80px;
+    left: -180px;
+
+
     }
   }
   // .main-bg__founder-status
