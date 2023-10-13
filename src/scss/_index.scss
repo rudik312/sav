@@ -191,8 +191,8 @@
   // width: 100%;
   // display: block; 1180
   &__img {
-    display: flex;
-    justify-content: flex-end;
+    display: flex !important;
+    justify-content: flex-end !important;
     img {
       @media (max-width: em(1520)){
         // width: 490px;
@@ -216,6 +216,9 @@
         height: 440px;
         bottom: -40px;
       }
+    }
+    @media (max-width: em(980)){
+      // display: grid;
     }
   }
   // .main-bg__founder
@@ -258,6 +261,7 @@
     line-height: math.div(32 , 16);
   }
   @media (max-width: em(980)){
+    // display: grid;
     grid-column: 2 / 3 !important;
   }
 }
