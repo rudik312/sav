@@ -32,9 +32,6 @@
         object-position: center;
       }
     }
-    @media (max-width: em(768)){
-
-    }
   }
   // .realty__item-box
   &__item-box {
@@ -42,10 +39,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 4fr auto;
     row-gap: 15px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // column-gap: 15px;
   
   }
   // .realty__item-title
@@ -55,6 +48,9 @@
     line-height: 120%;
     color: $black;
     grid-column: 1 / 2;
+    @media (max-width: em(760)){
+      grid-column: span 2;
+    }
   }
   //.realty__item-name
   &__item-name {
@@ -70,6 +66,12 @@
     padding: 2px 8px;
     border-radius: 16px;
     grid-column: 2 / 3;
+    @media (max-width: em(760)){
+      grid-row: 6;
+      // grid-column: 1 / 2;
+      grid-column: span 2;
+      justify-self: start;
+    }
   }
   // .realty__price-icon
   &__price-icon {
@@ -102,9 +104,6 @@
     @media (max-width: em(520)){
       font-size: rem(10);
     }
-  }
-  // .realty__info
-  &__info {
   }
 }
 .realty-info {
