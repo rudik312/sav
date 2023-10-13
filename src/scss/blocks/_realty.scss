@@ -3,13 +3,24 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    // gap: 40px;
+    @include adaptiveValue("gap", 40, 30, 1380, 1180, 1);
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(570)){
+      display: flex;
+      flex-direction: column;
+    }
   }
   // .realty__item
   &__item {
     display: grid;
     gap: 15px;
     max-width: 367px;
+    @media (max-width: em(1180)){
+      max-width: 100%;
+    }
   }
   // .realty__img-ibg
   &__img-ibg {
@@ -17,6 +28,12 @@
     padding-bottom: percent(283, 367);
     img {
       object-position: top;
+      @media (max-width: em(768)){
+        object-position: center;
+      }
+    }
+    @media (max-width: em(768)){
+
     }
   }
   // .realty__item-box
@@ -24,6 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 10px;
   }
   // .realty__item-title
   &__item-title {
@@ -32,14 +50,26 @@
     line-height: 120%;
     color: $black;
   }
+  //.realty__item-name
+  &__item-name {
+
+  }
   // .realty__price
   &__price {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     column-gap: 10px;
     background-color: $yelow;
     padding: 2px 8px;
     border-radius: 16px;
+    @media (max-width: em(768)){
+      display: none;
+    }
+    @media (max-width: em(570)){
+      display: flex;
+    }
   }
   // .realty__price-icon
   &__price-icon {
@@ -64,6 +94,12 @@
     font-size: rem(14);
     line-height: 120%;
     color: $black;
+    @media (max-width: em(768)){
+      font-size: rem(12);
+    }
+    @media (max-width: em(520)){
+      font-size: rem(10);
+    }
   }
   // .realty__info
   &__info {
@@ -83,6 +119,7 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    
   }
   // .realty-info__type-icon
   &__type-icon {
@@ -98,6 +135,7 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    
   }
   // .realty-info__area-icon
   &__area-icon {
@@ -113,6 +151,7 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    
   }
   // .realty-info__builder-icon
   &__builder-icon {
@@ -128,6 +167,7 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+    
   }
   // .realty-info__location-icon
   &__location-icon {
@@ -137,5 +177,9 @@
   }
   // .realty-info__location-text
   &__location-text {
+  }
+
+  @media (max-width: em(1180)){
+    column-gap: 10px;
   }
 }
