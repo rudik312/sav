@@ -220,6 +220,9 @@
       left: -160px;
       top: 150px;
     }
+    @media (max-width: em(580)){
+      top: 180px;
+    }
   }
   // .main-box__subtitle
   &__subtitle {
@@ -281,7 +284,7 @@
       top: -30px;
       right: -40px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(580)){
       top: -5px;
       right: -50px;
     }
@@ -319,7 +322,7 @@
       top: 80px;
       left: -175px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(580)){
       top: 100px;
       left: -210px;
     }
