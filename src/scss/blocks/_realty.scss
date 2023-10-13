@@ -111,12 +111,13 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 55px;
   row-gap: 15px;
-  @extend %mulish-500;
-  font-size: rem(14);
-  line-height: math.div(22 , 14);
-  color: $text;
+
   // .realty-info__type
   &__type {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $text;
     display: flex;
     align-items: center;
     column-gap: 10px;
@@ -133,6 +134,10 @@
   }
   // .realty-info__area
   &__area {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $text;
     display: flex;
     align-items: center;
     column-gap: 10px;
@@ -149,6 +154,10 @@
   }
   // .realty-info__builder
   &__builder {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $text;
     display: flex;
     align-items: center;
     column-gap: 10px;
@@ -165,6 +174,10 @@
   }
   // .realty-info__location
   &__location {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(22 , 14);
+    color: $text;
     display: flex;
     align-items: center;
     column-gap: 10px;
