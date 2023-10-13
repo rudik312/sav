@@ -16,8 +16,9 @@
       // column-gap: 65px;
       @include adaptiveValue("column-gap", 120, 45, 1280, 1160, 1);
     }
-    @media (max-width: em(970)){
-      
+    @media (max-width: em(980)){
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr auto;
     }
   }
   // .main__item
@@ -30,7 +31,10 @@
       @media (max-width: em(1520)){
         @include adaptiveValue("row-gap", 30, 60, 1520, 1380, 1);
         @include adaptiveValue("padding-top", 144, 112, 1520, 1380, 1);
-
+      }
+      @media (max-width: em(980)){
+        display: grid;
+        row-gap: 20px;
       }
     }
     &:last-child{
@@ -39,10 +43,17 @@
         // padding-top: 140px;
         @include adaptiveValue("padding-top", 25, 140, 1520, 1180, 1);
       }
+      @media (max-width: em(980)){
+        display: none;
+      }
     }
+    
   }
   // .main__wrapper
   &__wrapper {
+    @media (max-width: em(980)){
+      max-width: 580px;
+    }
   }
   // .main__title-box
   &__title-box {
@@ -116,6 +127,9 @@
     @media (max-width: em(1520)){
       @include adaptiveValue("right", -160, -125, 1520, 1380, 1);
     }
+    @media (max-width: em(980)){
+
+    }
   }
 }
 .main-box {
@@ -139,6 +153,12 @@
     @media (max-width: em(1180)){
       right: 20px;
     }
+    @media (max-width: em(980)){
+      display: flex;
+      flex-direction: column;
+      max-width: 580px;
+      left: -50px;
+    }
   }
   // .main-box__subtitle
   &__subtitle {
@@ -146,14 +166,17 @@
     // top: 27px;
     max-width: 327px;
   }
+  @media (max-width: em(980)){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
 }
 .main-bg {
   position: relative;
   // .main-bg__img
-
   // width: 100%;
   // display: block; 1180
-
   &__img {
     display: flex;
     justify-content: flex-end;
@@ -198,6 +221,9 @@
     @media (max-width: em(1120)){
       bottom: 85px;
     }
+    @media (max-width: em(980)){
+      display: none;
+    }
   }
   // .main-bg__founder-status
   &__founder-status {
@@ -210,6 +236,9 @@
     @extend %mulish-500;
     font-size: rem(16);
     line-height: math.div(32 , 16);
+  }
+  @media (max-width: em(980)){
+    grid-column: 2 / 3;
   }
 }
 //========================================================================================================================================================
