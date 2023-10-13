@@ -4,6 +4,9 @@
   // .location__container
   &__container {
     padding-bottom: 50px;
+    @media (max-width: em(768)){
+      padding-bottom: 30px;
+    }
   }
   // .location__inner
   &__inner {
@@ -77,6 +80,7 @@
     @media (max-width: em(1240)){
       display: flex;
       justify-content: center;
+      padding-top: 10px;
     }
   }
   // .location__btn
@@ -99,6 +103,9 @@
   &__container {
     padding-top: 50px;
     padding-bottom: 50px;
+    @media (max-width: em(768)){
+      padding-top: 30px;
+    }
   }
   // .transport__inner
   &__inner {

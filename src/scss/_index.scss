@@ -176,13 +176,16 @@
   // .main-bg__founder
   &__founder {
     position: absolute;
-    left: -140px;
+    left: -100px;
     bottom: 174px;
     max-width: 163px;
     text-align: right;
     @media (max-width: em(1480)){
       left: -80px;
       bottom: 130px;
+    }
+    @media (max-width: em(1240)){
+      left: -50px;
     }
     @media (max-width: em(1120)){
       bottom: 85px;
