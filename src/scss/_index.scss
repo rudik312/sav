@@ -16,6 +16,9 @@
       // column-gap: 65px;
       @include adaptiveValue("column-gap", 120, 45, 1280, 1160, 1);
     }
+    @media (max-width: em(970)){
+      
+    }
   }
   // .main__item
   &__item {
@@ -186,6 +189,9 @@
     }
     @media (max-width: em(1240)){
       left: -50px;
+    }
+    @media (max-width: em(1130)){
+      left: -90px;
     }
     @media (max-width: em(1120)){
       bottom: 85px;
