@@ -191,8 +191,8 @@
   // width: 100%;
   // display: block; 1180
   &__img {
-    display: flex !important;
-    justify-content: flex-end !important;
+    display: flex;
+    justify-content: flex-end;
     img {
       @media (max-width: em(1520)){
         // width: 490px;
@@ -211,14 +211,16 @@
         @include adaptiveValue("height", 652, 532, 1180, 1000, 1);
       }
       @media (max-width: em(980)){
-        position: absolute;
+        // position: absolute;
         width: 338px;
         height: 440px;
-        bottom: -40px;
+        // bottom: -40px;
       }
     }
     @media (max-width: em(980)){
-      // display: grid;
+      position: absolute;
+      right: 0;
+      top: -100px;
     }
   }
   // .main-bg__founder
