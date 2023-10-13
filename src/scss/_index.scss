@@ -180,6 +180,10 @@
       left: -90px;
       top: 60px;
     }
+    @media (max-width: em(690)){
+      left: -160px;
+      top: 150px;
+    }
   }
   // .main-box__subtitle
   &__subtitle {
@@ -192,6 +196,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
+  }
+  @media (max-width: em(690)){
+    min-height: 380px;
   }
 }
 .main-bg {
@@ -264,6 +271,10 @@
     }
     @media (max-width: em(830)){
       top: 0;
+    }
+    @media (max-width: em(690)){
+      top: 80px;
+      left: -175px;
     }
   }
   // .main-bg__founder-status
