@@ -36,6 +36,9 @@
         display: grid;
         row-gap: 60px;
       }
+      @media (max-width: em(760)){
+        row-gap: 20px;
+      }
     }
     &:last-child{
       padding-top: 25px;
@@ -134,8 +137,8 @@
     @media (max-width: em(1520)){
       @include adaptiveValue("right", -160, -125, 1520, 1380, 1);
     }
-    @media (max-width: em(980)){
-
+    @media (max-width: em(760)){
+      right: -70px;
     }
   }
 }
@@ -172,6 +175,10 @@
     @media (max-width: em(830)){
       left: 30px;
       top: 40px;
+    }
+    @media (max-width: em(760)){
+      left: -90px;
+      top: 60px;
     }
   }
   // .main-box__subtitle
