@@ -179,6 +179,7 @@
     max-width: 327px;
   }
   @media (max-width: em(980)){
+    min-height: 270px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
@@ -213,7 +214,7 @@
         position: absolute;
         width: 338px;
         height: 440px;
-        bottom: -80px;
+        bottom: -40px;
       }
     }
   }
@@ -240,7 +241,8 @@
       bottom: 85px;
     }
     @media (max-width: em(980)){
-      display: none;
+      top: -40px;
+      left: -20px;
     }
   }
   // .main-bg__founder-status
