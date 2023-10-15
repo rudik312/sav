@@ -1,18 +1,30 @@
 <div id="popup-send" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content popup-content">
-			<div class="popup-content__top">
-				<div class="popup-content__title-send">Спасибо за заявку</div>
+			<div class="popup-content__top popup-send__top">
+				<!-- <div class="popup-content__title-send">Спасибо за заявку</div> -->
 				<button class="popup-content__close" data-close type="button"></button>
 			</div>
 			<div class="popup-content__body">
-				<form class="popup-content__form" action="#">
-          <div class="popup-content__info">
-            <p class="popup-content__text">
-              В течении дня с Вами свяжеться наш менеджер для уточнения
-            </p>
+				<div class="popup-send__img-ibg">
+					<img src="@img/popup/popup-send-tg.png" alt="popup-img">
+				</div>
+				<div class="popup-send__wrapper">
+					<div class="popup-send__title">
+						<span>Мы получили вашу заявку и скоро с вами свяжемся</span>
+					</div>
+					<div class="popup-send__info">
+						<p class="popup-send__text">
+							Подписывайтесь на наш телеграм канал, в котором мы публикуем новинки недвижимости в Дубае.
+						</p>
+					</div>
+					<div class="popup-send__btn">
+            <a class="popup-send__btn-link" href="#">
+              <img src="@img/popup/icon-telegram.svg" alt="icon-telegram">
+              <p class="popup-send__btn-text">ПОДПИСАТЬСЯ</p>
+            </a>
           </div>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
