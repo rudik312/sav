@@ -227,11 +227,13 @@ body::after {
 	}
 
 	&__politics {
+		@extend %mulish-500;
     max-width: 362px;
     text-align: center;
     @extend %mulish-500;
     font-size: rem(12);
     line-height: math.div(15 , 12);
+		color: #ACACAC;
 	}
 
 }
