@@ -1,10 +1,28 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
+<div id="popup" aria-hidden="false" class="popup">
 	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
+		<div class="popup__content popup-content">
+			<div class="popup-content__top">
+				<div class="popup-content__title">получите презентацию проекта</div>
+				<button class="popup-content__close" data-close type="button"></button>
+			</div>
+			<div class="popup-content__body">
+				<div class="popup-content__img-ibg">
+					<img src="@img/popup/popup-main.png" alt="">
+				</div>
+				<div class="popup-form__wrapper">
+					<form class="popup-content__form" data-popup-message="#popup-send" data-dev action="#">
+						<div class="popup-content__wrapper">
+							<div class="popup-content__item">
+								<input class="popup-content__input" id="name" type="text" name="name" autocomplete="off" data-required data-error placeholder="Имя">
+							</div>
+							<div class="popup-content__item">
+								<input class="popup-content__input" id="phone" type="tel" name="phone" autocomplete="off" data-error data-required placeholder="+7(888) 888 88 88">
+							</div>
+						</div>
+						<button type="submit" class="popup-content__btn btn">СКАЧАТЬ ПРЕЗЕНТАЦИЮ</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
