@@ -118,8 +118,8 @@ body::after {
 		height: 48px;
 		border-radius: 50%;
 		position: absolute;
-		top: 22px;
-		right: 20px;
+		top: 30px;
+    right: 40px;
 		background-color: #F5F7FA;
 		outline: none;
 		cursor: pointer;
@@ -160,10 +160,11 @@ body::after {
 		}
 	}
 
-
-
 	// .popup-content__form
 	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: 24px;
 		max-width: 360px;
 		width: 100%;
 	}
@@ -203,22 +204,8 @@ body::after {
     line-height: 120%;
     color: #263239;
 		border-radius: 56px !important;
-		margin-top: 24px;
 	}
-	// .popup-content__info -----------------------------------class for _popup-send.htm
-	&__info {
-		// @extend %segoe-r;
-		// margin: 0 auto;
-		// max-width: 264px;
-		// font-size: rem(14);
-		// line-height: math.div(21 , 14);
-		// text-align: center;
-		// color: #000000;
-	}
-	// .popup-content__text
-	&__text {
-		
-	}
+
 }
 //.
 .popup-form {
@@ -242,6 +229,9 @@ body::after {
 	}
 
 }
+
+//========================================================================================================================================================
+
 //.popup-send
 .popup-send {
 	//.popup-send__top
