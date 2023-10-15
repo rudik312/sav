@@ -112,21 +112,22 @@ body::after {
 	}
 	// .popup-content__close
 	&__close {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
 		position: absolute;
-		right: 17px;
-		top: 16px;
-		width: 16px;
-		height: 16px;
-		background-color: #ffffff;
+		top: 22px;
+		right: 20px;
+		background-color: #F5F7FA;
 		outline: none;
 		cursor: pointer;
 		&::before,
 		&::after {
 			content:'';
-			top: 2px;
-			right: 7px;
+			top: 18px;
+    	right: 22px;
 			position: absolute;
-			background-color: #A2A2A2;
+			background-color: #13465B;
 			width: 2px;
 			height: 13px;
 			
@@ -178,6 +179,12 @@ body::after {
 		background-color: #F5F7FA;
 		padding: 8px 87px 8px 20px;
 		color: #13465B;
+		&._form-error {
+			outline: 2px solid #f00;
+		}
+		&:focus {
+			outline: 2px solid #FFC95E;
+		}
 	}
 
 	// .popup-content__btn
@@ -207,13 +214,29 @@ body::after {
 		
 	}
 }
+//.
+.popup-form {
+	//.popup-form__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		row-gap: 30px;
+	}
 
-.popup-form__wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	&__politics {
+		margin: 0 auto;
+    max-width: 362px;
+    text-align: center;
+    @extend %mulish-500;
+    font-size: rem(12);
+    line-height: math.div(15 , 12);
+	}
+
 }
+
+
 
 
 
