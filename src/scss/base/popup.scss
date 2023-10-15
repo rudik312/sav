@@ -141,10 +141,11 @@ body::after {
 	}
 	// .popup-content__body
 	&__body {
-		padding: 25px 20px 20px 20px;
+		padding: 0 20px 20px 20px;
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
 		// display: flex;
 		// align-items: center;
 		// justify-content: center;
@@ -177,7 +178,7 @@ body::after {
 		line-height: math.div(26 , 16);
 		border-radius: 58px;
 		background-color: #F5F7FA;
-		padding: 8px 87px 8px 20px;
+		padding: 18px 87px 18px 20px;
 		color: #13465B;
 		&._form-error {
 			outline: 2px solid #f00;
@@ -220,13 +221,12 @@ body::after {
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
+		align-items: flex-start;
+		justify-content: center;
 		row-gap: 30px;
 	}
 
 	&__politics {
-		margin: 0 auto;
     max-width: 362px;
     text-align: center;
     @extend %mulish-500;
