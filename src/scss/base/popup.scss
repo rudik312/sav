@@ -87,8 +87,12 @@ body::after {
 	}
 	// .popup-content__wrapper
 	&__wrapper {
-		display: grid;
+		display: flex;
+    flex-direction: column;
 		gap: 24px;
+		@media (max-width:$mobile){
+			row-gap: 10px;
+		}
 	}
 	// .popup-content__top
 	&__top {
@@ -99,10 +103,17 @@ body::after {
 		@media (max-width: em(1180)){
 			padding-top: 70px;
 		}
+		@media (max-width: em(460)){
+			// padding-top: 50px;
+			padding-bottom: 15px;
+		}
+		@media (max-width: em(380)){
+			padding-right: 20px;
+			padding-left: 20px;
+		}
 	}
 	// .popup-content__title
 	&__title {
-
 		@extend %raleway-600;
 		font-size: rem(40);
 		line-height: math.div(56 , 40);
@@ -115,6 +126,9 @@ body::after {
 		}
 		@media (max-width: em(768)){
 			font-size: rem(20);
+		}
+		@media (max-width: em(380)){
+			text-align: left;
 		}
 	}
 
@@ -167,13 +181,19 @@ body::after {
 			display: flex;
 			flex-direction: column;
 			row-gap: 10px;
-
+		}
+		@media (max-width: em(380)){
+			padding: 0 20px 20px 20px;
+			// row-gap: 20px;
 		}
 	}
 	//.popup-content__bg
 	&__bg {
 		@media (max-width: em(1180)){
 			max-height: 300px;
+		}
+		@media (max-width: em(380)){
+			// max-height: 230px;
 		}
 	}
 
@@ -188,8 +208,8 @@ body::after {
 				object-position: top;
 			}
 		}
-		@media (max-width: em(1180)){
-
+		@media (max-width: em(380)){
+			// padding-bottom: percent(180, 234);
 		}
 	}
 
@@ -202,6 +222,9 @@ body::after {
 		row-gap: 24px;
 		@media (max-width: em(1180)){
 			max-width: 500px;
+		}
+		@media (max-width:$mobile){
+			row-gap: 10px;
 		}
 	}
 	// .popup-content__item
@@ -219,13 +242,16 @@ body::after {
 		line-height: math.div(26 , 16);
 		border-radius: 58px;
 		background-color: #F5F7FA;
-		padding: 18px 20px 18px 20px;
+		padding: 18px 20px;
 		color: #13465B;
 		&._form-error {
 			outline: 2px solid #f00;
 		}
 		&:focus {
 			outline: 2px solid #FFC95E;
+		}
+		@media (max-width:$mobile){
+			padding: 15px 20px;
 		}
 		@media (max-width: em(480)){
 			padding: 10px 20px;
@@ -246,8 +272,10 @@ body::after {
 			max-width: 100%;
 			padding: 20px;
 		}
+		@media (max-width:$mobile){
+			padding: 15px 20px;
+		}
 		@media (max-width: em(480)){
-			// padding: 10px 20px;
 			font-size: rem(12) !important;
 		}
 
