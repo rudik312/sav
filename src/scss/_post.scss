@@ -45,6 +45,10 @@
       padding: 20px;
       border-radius: 32px;
     }
+    @media (max-width: em(480)){
+      min-height: 247px;
+      background-position: 0 0;
+    }
   }
   // .article__title
   &__title {

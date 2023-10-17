@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Проекты"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<!-- start breadcrumbs -->
+				<section class="breadcrumbs-section breadcrumbs">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a  class="breadcrumbs__link" href="./">
+									Главная
+								</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a  class="breadcrumbs__link" href="./area.html">
+									Проекты
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- end breadcrumbs -->
+
+				<section class="projects">
+					<div class="projects__container">
+						<div class="projects__top">
+							<div class="projects__title">
+								<h3>Все проекты</h3>
+							</div>
+							<div class="projects__items">
+								<div class="projects__item">
+									<div class="projects__item-img">
+										<img src="@img/projects/1.svg" alt="projects-icon">
+									</div>
+									<div class="projects__item-info">
+										<p class="projects__item-text">Семейные комплексы</p>
+									</div>
+								</div>
+								<div class="projects__item">
+									<div class="projects__item-img">
+										<img src="@img/projects/2.svg" alt="projects-icon">
+									</div>
+									<div class="projects__item-info">
+										<p class="projects__item-text">Для инвестирования</p>
+									</div>
+								</div>
+								<div class="projects__item">
+									<div class="projects__item-img">
+										<img src="@img/projects/3.svg" alt="projects-icon">
+									</div>
+									<div class="projects__item-info">
+										<p class="projects__item-text">Виллы и таунхаусы</p>
+									</div>
+								</div>
+								<div class="projects__item">
+									<div class="projects__item-img">
+										<img src="@img/projects/4.svg" alt="projects-icon">
+									</div>
+									<div class="projects__item-info">
+										<p class="projects__item-text">Для сдачи в аренду</p>
+									</div>
+								</div>
+								<div class="projects__item">
+									<div class="projects__item-img">
+										<img src="@img/projects/5.svg" alt="projects-icon">
+									</div>
+									<div class="projects__item-info">
+										<p class="projects__item-text">Ультра-люкс</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="projects__inner">
+							<div class="projects__filters filter">
+								<div class="filter__price">
+									<h3 class="filter__price-title">Цена</h3>
+								</div>
+							</div>
+							<div class="projects__content"></div>
+						</div>
+					</div>
+				</section>
+
+				
+				<!-- start telegram -->
+				<!-- @@include('html/blocks/_telegram.htm', {}) -->
+				<!-- end telegram -->
+			</main>
+			@@include('html/_footer.htm',{})
+
+
+
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

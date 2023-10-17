@@ -1,0 +1,77 @@
+//========================================================================================================================================================
+.projects {
+  // .projects__container
+  &__container {
+    padding-top: 20px;
+  }
+  // .projects__top
+  &__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  // .projects__title
+  &__title {
+    @extend %raleway-700;
+    font-size: rem(56);
+    line-height: math.div(67 , 56);
+    color: $black;
+  }
+  // .projects__items
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+  }
+  // .projects__item
+  &__item {
+    padding: 6px 16px 6px 6px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    background-color: $white;
+    border-radius: 35px;
+  }
+  // .projects__item-img
+  &__item-img {
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: $text;
+  }
+  // .projects__item-info
+  &__item-info {
+  }
+  // .projects__item-text
+  &__item-text {
+    @extend %roboto-500;
+    font-size: rem(16);
+    line-height: 120%;
+  }
+  // .projects__inner
+  &__inner {
+  }
+  // .projects__filters
+  &__filters {
+    width: 245px;
+    margin-right: 40px;
+  }
+  // .projects__content
+  &__content {
+  }
+}
+.filter {
+  // .filter__price
+  &__price {
+  }
+  // .filter__price-title
+  &__price-title {
+  }
+}
