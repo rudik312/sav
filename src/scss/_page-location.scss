@@ -23,7 +23,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,10 +37,12 @@
       background: linear-gradient(180deg, rgba(7, 36, 48, 0.00) 26.66%, rgba(7, 36, 48, 0.60) 74.73%);
       border-radius: 30px;
       border-radius: 55px;
+      @media (max-width: em(768)){
+        border-radius: 40px;
+      }
     }
     @media (max-width: em(768)){
       border-radius: 40px;
-
     }
   }
   // .location__title
