@@ -46,6 +46,7 @@
 		"gulp-zip": "latest",
 		"html-webpack-plugin": "^5.5.3",
 		"inputmask": "latest",
+		"ion-rangeslider": "^2.3.1",
 		"lightgallery": "latest",
 		"load-plugins": "latest",
 		"mini-css-extract-plugin": "latest",

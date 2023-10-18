@@ -196,4 +196,10 @@ window.onload = function() {
       ]
     });
   });
+
+  //Работаем с rangeSlider
+
+  $(".filter-price__input").ionRangeSlider({
+    type: "double",
+  });
 }

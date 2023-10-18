@@ -6,6 +6,7 @@
   }
   // .projects__top
   &__top {
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     row-gap: 30px;
@@ -57,6 +58,7 @@
   }
   // .projects__inner
   &__inner {
+    padding-top: 20px;
   }
   // .projects__filters
   &__filters {
@@ -68,10 +70,42 @@
   }
 }
 .filter {
-  // .filter__price
-  &__price {
+  //.filter__item
+  &__item {
+    margin-bottom: 40px;
+  }
+  // .filter__title
+  &__title {
+    padding-bottom: 20px;
+    @extend %raleway-600;
+    font-size: rem(16);
+    line-height: math.div(22 , 16);
+    text-transform: uppercase;
+    color: $black;
   }
   // .filter__price-title
   &__price-title {
   }
+}
+
+//.filter-price
+.filter-price {
+  //.filter-price__label
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span {
+
+  }
+
+}
+
+.irs--flat .irs-line {
+  top: 8px;
+  height: 2px;
+  background-color: #FFC95E;
+  border-radius: 4px;
 }
