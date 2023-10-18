@@ -58,17 +58,24 @@
   }
   // .projects__inner
   &__inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
     padding-top: 20px;
   }
   // .projects__filters
   &__filters {
-    width: 245px;
     margin-right: 40px;
+    padding-right: 20px;
+    width: 245px;
+    border-right: 2px solid #fff;
   }
   // .projects__content
   &__content {
   }
 }
+//.filter
+//========================================================================================================================================================
+
 .filter {
   //.filter__item
   &__item {
@@ -174,4 +181,199 @@
 
 .irs--flat {
   height: 16px;
+}
+
+
+//========================================================================================================================================================
+
+//.filter-type
+.filter-type {
+  // .filter-type__form
+  &__form {
+  }
+  // .filter-type__label
+  &__label {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .filter-type__box
+  &__box {
+  }
+  // .filter-type__input
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-type__checkbox {
+      background-image: url(../img/projects/check-on.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  // .filter-type__checkbox
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -10px;
+    border-radius: 2px;
+    border: 1.5px solid #FFC95E;
+  }
+  // .filter-type__text
+  &__text {
+    margin-left: 30px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: 120%;
+    color: $text;
+  }
+}
+
+//.filter-bedroom
+.filter-bedroom {
+  // .filter-type__form
+  &__form {
+  }
+  // .filter-type__label
+  &__label {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .filter-type__box
+  &__box {
+  }
+  // .filter-type__input
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-bedroom__checkbox {
+      background-image: url(../img/projects/check-on.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  // .filter-type__checkbox
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -10px;
+    border-radius: 2px;
+    border: 1.5px solid #FFC95E;
+  }
+  // .filter-type__text
+  &__text {
+    margin-left: 30px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: 120%;
+    color: $text;
+  }
+}
+
+//.filter-location
+.filter-location {
+  // .filter-type__form
+  &__form {
+  }
+  // .filter-type__label
+  &__label {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .filter-type__box
+  &__box {
+  }
+  // .filter-type__input
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-location__checkbox {
+      background-image: url(../img/projects/check-on.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  // .filter-type__checkbox
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -10px;
+    border-radius: 2px;
+    border: 1.5px solid #FFC95E;
+  }
+  // .filter-type__text
+  &__text {
+    margin-left: 30px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: 120%;
+    color: $text;
+  }
+}
+
+//.filter-developer
+.filter-developer {
+  // .filter-type__form
+  &__form {
+  }
+  // .filter-type__label
+  &__label {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .filter-type__box
+  &__box {
+  }
+  // .filter-type__input
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-developer__checkbox {
+      background-image: url(../img/projects/check-on.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  // .filter-type__checkbox
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: -10px;
+    border-radius: 2px;
+    border: 1.5px solid #FFC95E;
+  }
+  // .filter-type__text
+  &__text {
+    margin-left: 30px;
+    @extend %mulish-500;
+    font-size: rem(16);
+    line-height: 120%;
+    color: $text;
+  }
+}
+
+//========================================================================================================================================================
+//.realty-items
+.realty-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+
+  .realty__item {
+    max-width: 100%;
+  }
 }
