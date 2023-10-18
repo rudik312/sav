@@ -93,8 +93,31 @@
   //.filter-price__label
   &__label {
     display: flex;
+    flex-direction: column;
+    padding-top: 9px;
+  }
+  //.filter-price__inner
+  &__inner {
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+  }
+  //.filter-price__from
+  &__from {
+    padding: 6px 12px;
+    border-radius: 35px;
+    background-color: #fff;
+    @extend %roboto-500;
+    font-size: rem(14);
+    line-height: 120%;
+  }
+  //.filter-price__to
+  &__to {
+    padding: 6px 12px;
+    border-radius: 35px;
+    background-color: #fff;
+    @extend %roboto-500;
+    font-size: rem(14);
+    line-height: 120%;
   }
 
   span {
@@ -108,4 +131,47 @@
   height: 2px;
   background-color: #FFC95E;
   border-radius: 4px;
+}
+
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-color: #FFC95E;
+  border-radius: 50%;
+  border: 3px solid #FFC95E;
+  background-color: #fff;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-from:before {
+  display: none;
+}
+
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+  display: none;
+}
+
+.irs--flat .irs-bar {
+  display: none;
+}
+
+.irs--flat .irs-min {
+  display: none;
+}
+
+.irs--flat .irs-max {
+  display: none;
+}
+
+.irs-from, .irs-to, .irs-single {
+  display: none;
+
+}
+
+.irs--flat {
+  height: 16px;
 }

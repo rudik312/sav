@@ -201,5 +201,15 @@ window.onload = function() {
 
   $(".filter-price__input").ionRangeSlider({
     type: "double",
+    step: 1000,
+    prettify_enabled: true,
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
+  },
   });
 }
