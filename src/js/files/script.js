@@ -199,7 +199,7 @@ window.onload = function() {
 
 
   //Работаем с rangeSlider
-  
+
   $(".filter-price__input").ionRangeSlider({
     type: "double",
     step: 1000,
@@ -213,4 +213,9 @@ window.onload = function() {
       $('.filter-price__to').text(data.to_pretty);
   },
   });
+
+  //Кнопка projects__filter-btn
+  // $('.projects__filter-btn').on('click', function() {
+  //   $('.projects__filters').slideToggle();
+  // });
 }
