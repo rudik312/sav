@@ -197,8 +197,9 @@ window.onload = function() {
     });
   });
 
-  //Работаем с rangeSlider
 
+  //Работаем с rangeSlider
+  
   $(".filter-price__input").ionRangeSlider({
     type: "double",
     step: 1000,
