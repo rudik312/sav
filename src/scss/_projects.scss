@@ -87,12 +87,13 @@
   }
   //.projects__filter-btn
   &__filter-btn {
+    padding: 10px;
+    border-radius: 35px;
+    background-color: #FFC95E;
     @extend %roboto-500;
     font-size: rem(14);
     display: none;
-    padding: 5px;
     @media (max-width: em(1240)){
-      border: none;
       display: inline-flex;
       align-items: center;
       column-gap: 5px;
@@ -105,16 +106,12 @@
     width: 245px;
     border-right: 2px solid #fff;
     @media (max-width: em(1240)){
-      // position: absolute;
       display: none;
-      top: 0;
-      right: 0;
-      max-width: 50%;
+      padding: 25px 20px 45px 20px;
+      border-radius: 30px;
       width: 100%;
       margin-right: 0;
-      padding-right: 0;
       border-right: none;
-      // z-index: 51;
       background-color: #fff;
     }
   }
@@ -148,7 +145,7 @@
   }
   //.filter__actions-btn
   &__actions-btn {
-    width: 100%;
+    // width: 100%;
     border-radius: 18px;
     padding: 8px 20px;
     font-size: rem(14);

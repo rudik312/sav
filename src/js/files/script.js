@@ -218,4 +218,7 @@ window.onload = function() {
   // $('.projects__filter-btn').on('click', function() {
   //   $('.projects__filters').slideToggle();
   // });
+
+
+
 }
