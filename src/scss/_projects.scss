@@ -91,7 +91,7 @@
     border-radius: 35px;
     background-color: #FFC95E;
     @extend %roboto-500;
-    font-size: rem(14);
+    font-size: rem(16);
     display: none;
     @media (max-width: em(1240)){
       display: inline-flex;

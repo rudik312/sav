@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	@@include('html/_head.htm',{
-	"title":"Проекты"
+	"title":"ЖК Проект Safa Two"
 	})
 	<body>
 		<div class="wrapper">
@@ -21,266 +21,125 @@
 									Проекты
 								</a>
 							</li>
+							<li class="breadcrumbs__item">
+								<a  class="breadcrumbs__link" href="./page-downtown.html.html">
+									Safa Two
+								</a>
+							</li>
 						</ul>
 					</div>
 				</section>
 				<!-- end breadcrumbs -->
-
-				<section class="projects">
-					<div class="projects__container">
-						<div class="projects__top">
-							<div class="projects__title">
-								<h3>Все проекты</h3>
-							</div>
-							<div class="projects__items">
-								<div class="projects__item">
-									<div class="projects__item-img">
-										<img src="@img/projects/1.svg" alt="projects-icon">
-									</div>
-									<div class="projects__item-info">
-										<p class="projects__item-text">Семейные комплексы</p>
-									</div>
+				<!-- start location -->
+				<section class="estate">
+					<div class="estate__container">
+						<div class="estate__inner">
+							<div class="estate__bg" style="background-image: url(../img/estate/bg.png);">
+								<div class="estate__title-box">
+									<h3 class="estate__title">Safa Two</h3>
+									<p class="estate__subtitle">Safa TWO – новый элитный жилой комплекс в районе Al Safa, предлагающий на выбор покупателям апартаменты формата — студии, 1 спальня, 2 спальни и 3 спальни.
+									</p>
 								</div>
-								<div class="projects__item">
-									<div class="projects__item-img">
-										<img src="@img/projects/2.svg" alt="projects-icon">
-									</div>
-									<div class="projects__item-info">
-										<p class="projects__item-text">Для инвестирования</p>
-									</div>
+								<div class="estate__actions">
+									<a class="estate__actions-link btn">Обратный звонок</a>
+									<a class="estate__actions-link">Получить презентацию</a>
 								</div>
-								<div class="projects__item">
-									<div class="projects__item-img">
-										<img src="@img/projects/3.svg" alt="projects-icon">
-									</div>
-									<div class="projects__item-info">
-										<p class="projects__item-text">Виллы и таунхаусы</p>
-									</div>
-								</div>
-								<div class="projects__item">
-									<div class="projects__item-img">
-										<img src="@img/projects/4.svg" alt="projects-icon">
-									</div>
-									<div class="projects__item-info">
-										<p class="projects__item-text">Для сдачи в аренду</p>
-									</div>
-								</div>
-								<div class="projects__item">
-									<div class="projects__item-img">
-										<img src="@img/projects/5.svg" alt="projects-icon">
-									</div>
-									<div class="projects__item-info">
-										<p class="projects__item-text">Ультра-люкс</p>
-									</div>
-								</div>
-								<button class="projects__filter-btn" data-popup="#popup-filters">
-									<img src="@img/projects/filter-icon.svg" alt="filter-icon">
-									<p>Фильтры</p>
-								</button>
 							</div>
 						</div>
-						<div class="projects__inner">
-							<form class="projects__filters filter" action="#">
-								<div class="filter__item filter-price">
-									<h3 class="filter__title">Цена</h3>
-									<div class="filter-price__wrapper">
-										<input class="filter-price__input" type="text"
-										data-min="100000"
-										data-max="5000000"
-										data-from="0"
-										data-to="5000000">
-										<label class="filter-price__label">
-											<span class="filter-price__inner">
-												<span class="filter-price__from"></span>
-												<span class="filter-price__to"></span>
-											</span>
-										</label>
+						<div class="estate__items">
+							
+						</div>
+					</div>
+				</section>
+				<!-- end location -->
+				<!-- start transport -->
+				<!-- <section class="transport">
+					<div class="transport__container">
+						<div class="transport__inner">
+							<div class="transport__title">
+								<h3>Транспортная доступность</h3>
+							</div>
+							<div class="transport__items">
+								<div class="transport__item">
+									<div class="transport__item-img">
+										<img src="@img/location/icons/1.svg" alt="transport-icon">
+									</div>
+									<div class="transport__item-info">
+										<span>13 МИНУТ</span>
+										<h4 class="transport__item-title">
+											SHEIKH ZAYED ROAD
+										</h4>
 									</div>
 								</div>
-
-								<div class="filter__item filter-type">
-									<h3 class="filter__title">тип недвижимости</h3>
-									<div class="filter-type__wrapper">
-										<label class="filter-type__label">
-											<div class="filter-type__box">
-												<input class="filter-type__input" type="checkbox">
-												<span class="filter-type__checkbox"></span>
-											</div>
-											<span class="filter-type__text">Апартаменты</span>
-										</label>
-										<label class="filter-type__label">
-											<div class="filter-type__box">
-												<input class="filter-type__input" type="checkbox">
-												<span class="filter-type__checkbox"></span>
-											</div>
-											<span class="filter-type__text">Виллы</span>
-										</label>
-										<label class="filter-type__label">
-											<div class="filter-type__box">
-												<input class="filter-type__input" type="checkbox">
-												<span class="filter-type__checkbox"></span>
-											</div>
-											<span class="filter-type__text">Таунхаусы</span>
-										</label>
+								<div class="transport__item">
+									<div class="transport__item-img">
+										<img src="@img/location/icons/2.svg" alt="transport-icon">
+									</div>
+									<div class="transport__item-info">
+										<span>30 МИНУТ</span>
+										<h4 class="transport__item-title">
+											BURJ AL ARAB
+										</h4>
 									</div>
 								</div>
-
-								<div class="filter__item filter-bedroom">
-									<h3 class="filter__title">Кол-во спален</h3>
-									<div class="filter-bedroom__wrapper">
-										<label class="filter-bedroom__label">
-											<div class="filter-bedroom__box">
-												<input class="filter-bedroom__input" type="checkbox">
-												<span class="filter-bedroom__checkbox"></span>
-											</div>
-											<span class="filter-bedroom__text">Студия</span>
-										</label>
-										<label class="filter-bedroom__label">
-											<div class="filter-bedroom__box">
-												<input class="filter-bedroom__input" type="checkbox">
-												<span class="filter-bedroom__checkbox"></span>
-											</div>
-											<span class="filter-bedroom__text">1 спальня</span>
-										</label>
-										<label class="filter-bedroom__label">
-											<div class="filter-bedroom__box">
-												<input class="filter-bedroom__input" type="checkbox">
-												<span class="filter-bedroom__checkbox"></span>
-											</div>
-											<span class="filter-bedroom__text">2 спальни</span>
-										</label>
-										<label class="filter-bedroom__label">
-											<div class="filter-bedroom__box">
-												<input class="filter-bedroom__input" type="checkbox">
-												<span class="filter-bedroom__checkbox"></span>
-											</div>
-											<span class="filter-bedroom__text">3 спальни</span>
-										</label>
-										<label class="filter-bedroom__label">
-											<div class="filter-bedroom__box">
-												<input class="filter-bedroom__input" type="checkbox">
-												<span class="filter-bedroom__checkbox"></span>
-											</div>
-											<span class="filter-bedroom__text">Более 3-х</span>
-										</label>
+								<div class="transport__item">
+									<div class="transport__item-img">
+										<img src="@img/location/icons/3.svg" alt="transport-icon">
+									</div>
+									<div class="transport__item-info">
+										<span>1 МИНУТА</span>
+										<h4 class="transport__item-title">
+											DUBAI MALL
+										</h4>
 									</div>
 								</div>
-
-								<div class="filter__item filter-location">
-									<h3 class="filter__title">Локация</h3>
-									<div class="filter-location__wrapper">
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">Al Ain Road</span>
-										</label>
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">Al Furjan</span>
-										</label>
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">Al Shamkha</span>
-										</label>
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">Arjan</span>
-										</label>
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">Bluewaters</span>
-										</label>
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">Business Bay</span>
-										</label>
-										<label class="filter-location__label">
-											<div class="filter-location__box">
-												<input class="filter-location__input" type="checkbox">
-												<span class="filter-location__checkbox"></span>
-											</div>
-											<span class="filter-location__text">City Walk</span>
-										</label>
+								<div class="transport__item">
+									<div class="transport__item-img">
+										<img src="@img/location/icons/4.svg" alt="transport-icon">
+									</div>
+									<div class="transport__item-info">
+										<span>40 МИНУТ</span>
+										<h4 class="transport__item-title">
+											THE PALM JUMEIRAH
+										</h4>
 									</div>
 								</div>
-
-								<div class="filter__item filter-developer">
-									<h3 class="filter__title">Застройщик</h3>
-									<div class="filter-developer__wrapper">
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Aldar</span>
-										</label>
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Aqua Properties</span>
-										</label>
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Binghatti</span>
-										</label>
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Condor developers</span>
-										</label>
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Damac</span>
-										</label>
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Deyaar</span>
-										</label>
-										<label class="filter-developer__label">
-											<div class="filter-developer__box">
-												<input class="filter-developer__input" type="checkbox">
-												<span class="filter-developer__checkbox"></span>
-											</div>
-											<span class="filter-developer__text">Driven</span>
-										</label>
+								<div class="transport__item">
+									<div class="transport__item-img">
+										<img src="@img/location/icons/5.svg" alt="transport-icon">
+									</div>
+									<div class="transport__item-info">
+										<span>35 МИНУТ</span>
+										<h4 class="transport__item-title">
+											AIN DUBAI
+										</h4>
 									</div>
 								</div>
-								<div class="filter__actions">
-									<button class="filter__actions-btn btn">Найти недвижимость</button>
+								<div class="transport__item">
+									<div class="transport__item-img">
+										<img src="@img/location/icons/6.svg" alt="transport-icon">
+									</div>
+									<div class="transport__item-info">
+										<span>18 МИНУТ</span>
+										<h4 class="transport__item-title">
+											DUBAI AIRPORT (DXB)
+										</h4>
+									</div>
 								</div>
-							</form>
+							</div>
+						</div>
+					</div>
+				</section> -->
+				<!-- end transport -->
+				<!-- start location-realty -->
+				<!-- <section class="location-realty">
+					<div class="location-realty__container">
+						<div class="location-realty__inner">
+							<div class="location-realty__title">
+								<h3>Недвижимость в районе Downtown Dubai</h3>
+							</div>
 							<div class="realty">
-								<div class="realty__items realty-items">
+								<div class="realty__items">
 									<div class="realty__item">
 										<div class="realty__img-ibg">
 											<img src="@img/realty/1.png" alt="realty">
@@ -297,11 +156,11 @@
 														<p class="realty__price-text">от $2 000 000</p>
 													</div>
 												</div>
-							
+
 												<div class="realty__deadline-info">
 													<p class="realty__deadline-text">Срок сдачи проекта: 1-й квартал 2027</p>
 												</div>
-							
+
 												<div class="realty-info__type">
 													<div class="realty-info__type-icon">
 														<img src="@img/realty/icons/icon-type.svg" alt="icon-type">
@@ -331,7 +190,7 @@
 														<img src="@img/realty/icons/icon-location.svg" alt="icon-location">
 													</div>
 													<div class="realty-info__location-info">
-														<p class="realty-info__location-text">Вилла</p>
+														<p class="realty-info__location-text">Bluewaters</p>
 													</div>
 												</div>
 										</div>
@@ -352,11 +211,11 @@
 														<p class="realty__price-text">от $2 000 000</p>
 													</div>
 												</div>
-							
+
 												<div class="realty__deadline-info">
 													<p class="realty__deadline-text">Срок сдачи проекта: 1-й квартал 2027</p>
 												</div>
-							
+
 												<div class="realty-info__type">
 													<div class="realty-info__type-icon">
 														<img src="@img/realty/icons/icon-type.svg" alt="icon-type">
@@ -386,7 +245,7 @@
 														<img src="@img/realty/icons/icon-location.svg" alt="icon-location">
 													</div>
 													<div class="realty-info__location-info">
-														<p class="realty-info__location-text">Вилла</p>
+														<p class="realty-info__location-text">Bluewaters</p>
 													</div>
 												</div>
 										</div>
@@ -407,11 +266,11 @@
 														<p class="realty__price-text">от $2 000 000</p>
 													</div>
 												</div>
-							
+
 												<div class="realty__deadline-info">
 													<p class="realty__deadline-text">Срок сдачи проекта: 1-й квартал 2027</p>
 												</div>
-							
+
 												<div class="realty-info__type">
 													<div class="realty-info__type-icon">
 														<img src="@img/realty/icons/icon-type.svg" alt="icon-type">
@@ -441,7 +300,7 @@
 														<img src="@img/realty/icons/icon-location.svg" alt="icon-location">
 													</div>
 													<div class="realty-info__location-info">
-														<p class="realty-info__location-text">Вилла</p>
+														<p class="realty-info__location-text">Bluewaters</p>
 													</div>
 												</div>
 										</div>
@@ -462,11 +321,11 @@
 														<p class="realty__price-text">от $2 000 000</p>
 													</div>
 												</div>
-							
+
 												<div class="realty__deadline-info">
 													<p class="realty__deadline-text">Срок сдачи проекта: 1-й квартал 2027</p>
 												</div>
-							
+
 												<div class="realty-info__type">
 													<div class="realty-info__type-icon">
 														<img src="@img/realty/icons/icon-type.svg" alt="icon-type">
@@ -496,7 +355,7 @@
 														<img src="@img/realty/icons/icon-location.svg" alt="icon-location">
 													</div>
 													<div class="realty-info__location-info">
-														<p class="realty-info__location-text">Вилла</p>
+														<p class="realty-info__location-text">Bluewaters</p>
 													</div>
 												</div>
 										</div>
@@ -517,11 +376,11 @@
 														<p class="realty__price-text">от $2 000 000</p>
 													</div>
 												</div>
-							
+
 												<div class="realty__deadline-info">
 													<p class="realty__deadline-text">Срок сдачи проекта: 1-й квартал 2027</p>
 												</div>
-							
+
 												<div class="realty-info__type">
 													<div class="realty-info__type-icon">
 														<img src="@img/realty/icons/icon-type.svg" alt="icon-type">
@@ -551,7 +410,7 @@
 														<img src="@img/realty/icons/icon-location.svg" alt="icon-location">
 													</div>
 													<div class="realty-info__location-info">
-														<p class="realty-info__location-text">Вилла</p>
+														<p class="realty-info__location-text">Bluewaters</p>
 													</div>
 												</div>
 										</div>
@@ -572,11 +431,11 @@
 														<p class="realty__price-text">от $2 000 000</p>
 													</div>
 												</div>
-							
+
 												<div class="realty__deadline-info">
 													<p class="realty__deadline-text">Срок сдачи проекта: 1-й квартал 2027</p>
 												</div>
-							
+
 												<div class="realty-info__type">
 													<div class="realty-info__type-icon">
 														<img src="@img/realty/icons/icon-type.svg" alt="icon-type">
@@ -606,28 +465,25 @@
 														<img src="@img/realty/icons/icon-location.svg" alt="icon-location">
 													</div>
 													<div class="realty-info__location-info">
-														<p class="realty-info__location-text">Вилла</p>
+														<p class="realty-info__location-text">ВиллBluewaters</p>
 													</div>
 												</div>
 										</div>
 									</div>
+
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-
-				
+				</section> -->
+				<!-- end location-realty -->
 				<!-- start telegram -->
-				@@include('html/blocks/_telegram.htm', {})
+				<!-- @@include('html/blocks/_telegram.htm', {}) -->
 				<!-- end telegram -->
 			</main>
-			@@include('html/_footer.htm',{})
-
-
-
+			<!-- @@include('html/_footer.htm',{}) -->
 		</div>
-		@@include('html/_popup-filters.htm',{})
+		@@include('html/_popup.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

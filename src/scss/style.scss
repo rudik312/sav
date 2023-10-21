@@ -163,16 +163,21 @@ body {
 //стили страниц районов
 @import "page-location";
 
+//стили страниц ЖК проект
+@import "estate";
+
 
 //ситили страниц post
 @import "post";
 
-
 //Подключение отдельных блоков
 //Хлебные крошки
 @import "blocks/breadcrumbs";
+
 //Блок Телеграм
 @import "blocks/telegram";
+
+
 
 
 

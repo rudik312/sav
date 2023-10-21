@@ -1,0 +1,307 @@
+
+//========================================================================================================================================================
+.estate {
+  // .estate__container
+  &__container {
+    padding-bottom: 50px;
+    @media (max-width: em(768)){
+      padding-bottom: 30px;
+    }
+  }
+  // .estate__inner
+  &__inner {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  // .estate__bg
+  &__bg {
+      padding: 60px;
+      position: relative;
+      min-height: 422px;
+      border-radius: 55px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 25px;
+      justify-content: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    &::before{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(7, 36, 48, 0.00) 26.66%, rgba(7, 36, 48, 0.60) 74.73%);
+      border-radius: 30px;
+      border-radius: 55px;
+      @media (max-width: em(768)){
+        border-radius: 40px;
+      }
+    }
+    @media (max-width: em(768)){
+      border-radius: 40px;
+    }
+  }
+  // .estate__title-box
+  &__title-box {
+    z-index: 1;
+  }
+  // .estate__title
+  &__title {
+    @extend %raleway-500;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    color: $white;
+    @include adaptiveValue("font-size", 50, 32, 1380, 380, 1);
+    @include adaptiveValue("line-height", 60, 38, 1380, 380, 1);
+    @media (max-width: em(380)){
+      font-size: rem(28);
+    }
+  }
+  // .estate__subtitle
+  &__subtitle {
+    padding-top: 4px;
+    max-width: 794px;
+    @extend %mulish-500;
+    font-size: rem(18);
+    line-height: math.div(22 , 18);
+    color: $white;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  //.estate__actions
+  &__actions {
+    display: flex;
+    column-gap: 15px;
+    z-index: 1;
+    .estate__actions-link {
+      &:last-child{
+        background-color: #fff;
+      }
+    }
+  }
+  
+  //.estate__actions-link
+  &__actions-link{
+    display: inline-flex;
+    border-radius: 56px;
+    padding: 14px 40px;
+    @extend %mulish-800;
+    font-size: rem(16);
+  }
+
+  // .estate__items
+  &__items {
+
+  }
+
+}
+
+//========================================================================================================================================================
+
+
+.transport {
+  // .transport__container
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media (max-width: em(768)){
+      padding-top: 30px;
+    }
+  }
+  // .transport__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    @media (max-width: em(768)){
+      row-gap: 40px;
+    }
+  }
+  // .transport__title
+  &__title {
+    h3 {
+      @extend %raleway-500;
+      font-size: rem(48);
+      line-height: math.div(58 , 48);
+      color: $black;
+      @include adaptiveValue("font-size", 48, 24, 1380, 380, 1);
+      @include adaptiveValue("line-height", 58, 29, 1380, 380, 1);
+      @media (max-width: em(380)){
+        font-size: rem(20);
+      }
+    }
+  }
+  // .transport__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 40px;
+    @media (max-width: em(1240)){
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+    @media (max-width: em(1000)){
+      row-gap: 30px;
+      column-gap: 30px;
+    }
+    @media (max-width: em(620)){
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: center;
+    }
+  }
+  // .transport__item
+  &__item {
+    max-width: 367px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    @media (max-width: em(1240)){
+      max-width: 507px;
+      // justify-self: center;
+    }
+    @media (max-width: em(680)){
+      padding: 10px;
+    }
+    @media (max-width: em(620)){
+      max-width: 480px;
+    }
+    &:nth-child(2){
+      .transport__item-img {
+        img {
+          width: 22px;
+          height: 48px;
+          @media (max-width: em(680)){
+            width: 16px;
+            height: 36px;
+          }
+        }
+      }
+    }
+    &:nth-child(3){
+      .transport__item-img {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+    &:nth-child(4){
+      .transport__item-img {
+        img {
+          width: 40px;
+          height: 33px;
+          @media (max-width: em(680)){
+            width: 30px;
+            height: 26px;
+          }
+        }
+      }
+    }
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 30px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  // .transport__item-img
+  &__item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: $yelow;
+    filter: drop-shadow(-1px -1px 12px rgba(0, 0, 0, 0.05)) drop-shadow(1px 1px 12px rgba(0, 0, 0, 0.05));
+    img {
+      width: 30px;
+      height: 30px;
+      @media (max-width: em(680)){
+        width: 22px;
+        height: 22px;
+      }
+    }
+    @media (max-width: em(680)){
+      width: 48px;
+      height: 48px;
+    } 
+  }
+  // .transport__item-info
+  &__item-info {
+    color: $black;
+    span {
+      @extend %raleway-400;
+      font-size: rem(16);
+      line-height: math.div(22 , 16);
+      text-transform: uppercase;
+      font-variant-numeric: lining-nums proportional-nums;
+      @include adaptiveValue("font-size", 16, 14, 1380, 380, 1);
+      @include adaptiveValue("line-height", 22, 20, 1380, 380, 1);
+    }
+  }
+  // .transport__item-title
+  &__item-title {
+    @extend %raleway-600;
+    // font-size: rem(24);
+    // line-height: math.div(34 , 24);
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 24, 18, 1380, 768, 1);
+    @include adaptiveValue("line-height", 34, 28, 1380, 768, 1);
+    @media (max-width: em(660)){
+      font-size: rem(16);
+      line-height: math.div(20 , 16);
+    }
+  }
+}
+//========================================================================================================================================================
+
+.location-realty {
+  // .location-realty__container
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+  // .location-realty__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    @media (max-width: em(768)){
+      row-gap: 40px;
+    }
+  }
+  // .location-realty__title
+  &__title {
+    h3 {
+      @extend %raleway-500;
+      // font-size: rem(48);
+      // line-height: math.div(58 , 48);
+      color: $black;
+      @include adaptiveValue("font-size", 48, 24, 1380, 380, 1);
+      @include adaptiveValue("line-height", 58, 29, 1380, 380, 1);
+      @media (max-width: em(380)){
+        font-size: rem(20);
+      }
+    }
+  }
+}
+
+
+// .realty -----> check the file common.scss

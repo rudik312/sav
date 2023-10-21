@@ -53,13 +53,18 @@ body::after {
 	transition: transform 0.3s ease 0s;
 	background-color: #FFFFFF;
 	box-shadow: 0px 0px 30px rgba(189, 180, 180, 0.2);
-	border-radius: 6px;
+	// border-radius: 6px;
 	.lock & {
 		visibility: visible;
 	}
 
 }
 
+#popup-filters {
+	@media (max-width: em(380)){
+		padding: 0;
+	}
+}
 //=======================================================================================================
 .popup {
 	// .popup__content
@@ -77,6 +82,7 @@ body::after {
 	// flex-direction: column;
 	// align-items: center;
 	// position: relative;
+	border-radius: 10px;
 	width: 100%;
 	background: #F5F7FA;
 	@media (max-width: em(1240)){
@@ -177,11 +183,11 @@ body::after {
 		width: 100%;
 		// display: grid;
 		// grid-template-columns: repeat(2, 1fr);
-		column-gap: 20px;
+		// column-gap: 20px;
 		@media (max-width: em(1180)){
-			display: flex;
-			flex-direction: column;
-			row-gap: 10px;
+			// display: flex;
+			// flex-direction: column;
+			// row-gap: 10px;
 		}
 		@media (max-width: em(380)){
 			padding: 0 20px 20px 20px;
@@ -235,75 +241,7 @@ body::after {
 			}
 		}
 	}
-	// .popup-filters__form
-	// &__form {
-	// 	max-width: 360px;
-	// 	width: 100%;
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	row-gap: 24px;
-	// 	@media (max-width: em(1180)){
-	// 		max-width: 500px;
-	// 	}
-	// 	@media (max-width:$mobile){
-	// 		row-gap: 10px;
-	// 	}
-	// }
 
-	// .popup-filters__item
-	// &__item {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	font-size: rem(12);
-	// 	line-height: math.div(16 , 12);
-		
-	// }
-
-	// .popup-filters__input
-	// &__input {
-	// 	@extend %mulish-500;
-	// 	font-size: rem(16);
-	// 	line-height: math.div(26 , 16);
-	// 	border-radius: 58px;
-	// 	background-color: #F5F7FA;
-	// 	padding: 18px 20px;
-	// 	color: #13465B;
-	// 	&._form-error {
-	// 		outline: 2px solid #f00;
-	// 	}
-	// 	&:focus {
-	// 		outline: 2px solid #FFC95E;
-	// 	}
-	// 	@media (max-width:$mobile){
-	// 		padding: 15px 20px;
-	// 	}
-	// 	@media (max-width: em(480)){
-	// 		padding: 10px 20px;
-	// 	}
-	// }
-
-	// .popup-content__btn
-	// &__btn {
-	// 	padding: 20px 40px;
-	// 	width: 100%;
-	// 	max-width: 360px;
-	// 	@extend %mulish-800;
-  //   font-size: rem(14) !important;
-  //   line-height: 120%;
-  //   color: #263239;
-	// 	border-radius: 56px !important;
-	// 	@media (max-width: em(1180)){
-	// 		max-width: 100%;
-	// 		padding: 20px;
-	// 	}
-	// 	@media (max-width:$mobile){
-	// 		padding: 15px 20px;
-	// 	}
-	// 	@media (max-width: em(480)){
-	// 		font-size: rem(12) !important;
-	// 	}
-
-	// }
 
 }
 
