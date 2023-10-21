@@ -197,6 +197,24 @@ window.onload = function() {
     });
   });
 
+  //Слайдер страницы estate
+
+  $('.exterior__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.exterior__nav'
+    });
+    $('.exterior__nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.exterior__slider',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+    });
+
 
   //Работаем с rangeSlider
 

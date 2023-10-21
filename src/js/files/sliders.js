@@ -395,6 +395,8 @@ function initSliders() {
 
 	// galleryTop[0].params.control = galleryThumbs;
 	// galleryThumbs[1].params.control = galleryTop;
+
+
 }
 
 
