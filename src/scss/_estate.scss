@@ -11,9 +11,10 @@
   // .estate__inner
   &__inner {
     padding-top: 20px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 40px;
   }
   // .estate__bg
   &__bg {
@@ -89,15 +90,43 @@
   //.estate__actions-link
   &__actions-link{
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 56px;
     padding: 14px 40px;
     @extend %mulish-800;
     font-size: rem(16);
+    @media (any-hover: hover){
+      &:hover{
+        cursor: pointer;
+      }
+    }
   }
 
   // .estate__items
   &__items {
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 40px;
+  }
+  // .estate__item
+  &__item {
+    padding: 10px 15px;
+    border-left: 1px solid #13465B;
+  }
+  //.estate__item-value
+  &__item-value {
+    @extend %mulish-700;
+    font-size: rem(32);
+    line-height: math.div(52 , 32);
+    color: $black;
+  }
+  //.estate__item-text
+  &__item-text {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: math.div(23 , 14);
+    color: $text;
   }
 
 }
