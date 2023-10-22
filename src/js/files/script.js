@@ -195,7 +195,7 @@ window.onload = function() {
   });
 
   //Слайдер страницы estate
-
+  //exterior
   $('.exterior__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -215,6 +215,9 @@ window.onload = function() {
     speed: 1000,
     // infinite: true,
     swipe: false,
+
+    // centerMode: true,
+    // centerPadding: '110px',
     });
 
 

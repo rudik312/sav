@@ -271,6 +271,8 @@
 .exterior {
   // .exterior__container
   &__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   // .exterior__inner
   &__inner {
@@ -303,6 +305,7 @@
   // .exterior__slider
   &__slider {
     position: relative;
+    
   }
   // .exterior__slide
   &__slide {
@@ -318,19 +321,39 @@
   }
   // .exterior__nav
   &__nav {
+    min-width: 0;
     // margin-top: 30px;
+    .slick-list.draggable {
+      height: 180px;
+    }
+    .slick-track {
+      display: flex;
+      align-items: flex-start;
+    }
   }
   // .exterior__thumbs-slide
   &__nav-slide {
-    // padding: 0px 20px;
+    
     border-radius: 32px;
     overflow: hidden;
     height: 180px;
+    width: 100%;
+    width: 265px !important;
     img {
       // display: block;
-      max-width: 100%;
+      width: 265px;
+      // width: 100%;
+      // max-width: 100%;
       height: 180px;
       object-fit: cover;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 40px;
     }
   }
 }
@@ -342,7 +365,7 @@
     position: absolute;
     top: 50%; // выравнивание по вертикали
     transform: translateY(-50%);
-    margin: -15px 0 0 0; // корректировка вертикального выравнивания
+    // margin: -15px 0 0 0; // корректировка вертикального выравнивания
     z-index: 2; // стрелки сверху картинок
     font-size: 0; // убираем надпись на дефолтной стрелке
     width: 50px;
