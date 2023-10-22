@@ -286,9 +286,15 @@
     color: $black;
     text-transform: uppercase;
   }
-
+  //.exterior__slider-box
   &__slider-box {
-    
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  //.exterior__slider-nav
+  &__slider-nav {
+    height: 50px;
   }
   // .exterior__wrapper
   &__wrapper {
@@ -296,35 +302,118 @@
   }
   // .exterior__slider
   &__slider {
+    position: relative;
   }
   // .exterior__slide
   &__slide {
     overflow: hidden;
     border-radius: 55px;
+    height: 600px;
     img {
+      display: block;
       width: 100%;
-      height: 600px;
       object-fit: cover;
     }
 
   }
   // .exterior__nav
   &__nav {
-
+    // margin-top: 30px;
   }
   // .exterior__thumbs-slide
   &__nav-slide {
+    // padding: 0px 20px;
     border-radius: 32px;
     overflow: hidden;
+    height: 180px;
     img {
-      width: 100%;
+      // display: block;
+      max-width: 100%;
       height: 180px;
       object-fit: cover;
     }
   }
+}
 
+.exterior__slider  {
+  .slick-prev.slick-arrow,
+  .slick-next.slick-arrow {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; // выравнивание по вертикали
+    transform: translateY(-50%);
+    margin: -15px 0 0 0; // корректировка вертикального выравнивания
+    z-index: 2; // стрелки сверху картинок
+    font-size: 0; // убираем надпись на дефолтной стрелке
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+  }
+  .slick-prev.slick-arrow {
+    left: 54px;
+    background-image: url(../img/estate/arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+    background-size: 11px 19px;
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        background-color: $yelow;
+      }
+    }
+  }
+  .slick-next.slick-arrow {
+    right: 54px;
+    background-image: url(../img/estate/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    background-size: 11px 19px;
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        background-color: $yelow;
+      }
+    }
+  }
 
 }
+
+// .exterior-button-prev, 
+// .exterior-button-next {
+//   position: absolute;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: $yelow;
+//   z-index: 10;
+// }
+
+// .exterior-button-prev {
+//   top: 0;
+//   left: 0;
+// }
+
+// .exterior-button-next {
+//   top: 0;
+//   right: 0;
+// }
+
+// .exterior-button-prev.swiper-button-disabled {
+//   background-color: #fff;
+// } 
+
+// .exterior-button-next.swiper-button-disabled {
+//   background-color: #fff;
+// } 
+
+
+// .exterior__nav .swiper-wrapper {
+//   // transform: none !important;
+  
+// }
 
 
 //========================================================================================================================================================

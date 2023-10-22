@@ -136,9 +136,6 @@ window.onload = function() {
       ]
     });
 
-
-
-
     // slide-3
     $('.slider-for-last').slick({
       slidesToShow: 1,
@@ -199,26 +196,26 @@ window.onload = function() {
 
   //Слайдер страницы estate
 
-  // $('.exterior__slider').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   fade: true,
-  //   speed: 1000,
-  //   swipe: false,
-  //   asNavFor: '.exterior__nav'
-  //   });
-  //   $('.exterior__nav').slick({
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   asNavFor: '.exterior__slider',
-  //   centerMode: false,
-  //   focusOnSelect: true,
-  //   arrows:false, 
-  //   speed: 1000,
-  //   // infinite: true,
-  //   swipe: false,
-  //   });
+  $('.exterior__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    speed: 1000,
+    swipe: false,
+    asNavFor: '.exterior__nav'
+    });
+    $('.exterior__nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.exterior__slider',
+    centerMode: false,
+    focusOnSelect: true,
+    arrows:false, 
+    speed: 1000,
+    // infinite: true,
+    swipe: false,
+    });
 
 
   //Работаем с rangeSlider

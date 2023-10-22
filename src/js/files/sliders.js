@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Controller, EffectFade} from 'swiper/modules';
+import { Navigation, Controller, EffectFade, Autoplay, Thumbs} from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -264,230 +264,67 @@ function initSliders() {
 		});
 	}
 
-
-
-	// //.cases-slide-inner__slider gallery-top
-	// // Проверяем, есть ли слайдер на стронице
-	// if (document.querySelector('.gallery-top')) { // Указываем скласс нужного слайдера
-	// 	// Создаем слайдер
-	// 	var galleryTop = new Swiper('.gallery-top', { // Указываем скласс нужного слайдера
-	// 		// Подключаем модули слайдера
-	// 		// для конкретного случая
-	// 		modules: [Navigation, Controller],
-	// 		// updateOnWindowResize: true,
-	// 		// observer: true,
-	// 		// observeParents: true,
-
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 10,
-	// 		// autoHeight: true,
-	// 		speed: 800,
-	// 		loopedSlides: 3,
-	// 		// mousewheel: {
-	// 		// 	forceToAxis: true,
-	// 		// 	sensitivity: 1,
-	// 		// 	releaseOnEdges: true,
-	// 		// },
-	// 		// Кнопки "влево/вправо"
-	// 		// navigation: {
-	// 		// 	prevEl: '.swiper-button-prev',
-	// 		// 	nextEl: '.swiper-button-next',
-	// 		// },
-	// 		controller: {
-	// 			control: galleryThumbs,
-	// 			// by: 'container',
-				
-	// 		},
-			
-			
-	// 		// grabCursor: true, // менять иконку курсора
-
-	// 		//touchRatio: 0,
-	// 		//simulateTouch: false,
-	// 		// loop: true,
-	// 		//preloadImages: false,
-	// 		// lazy: true,
-
-			
-	// 		// Эффекты
-	// 		// effect: 'fade',
-	// 		// autoplay: {
-	// 		// 	delay: 3000,
-	// 			// disableOnInteraction: false,
-	// 		// },
-			
-
-	// 		// Пагинация
-	// 		/*
-	// 		pagination: {
-	// 			el: '.swiper-pagination',
-	// 			clickable: true,
-	// 		},
-	// 		*/
-
-	// 		// Скроллбар
-			
-	// 		// scrollbar: {
-	// 		// 	el: '.swiper-scrollbar',
-	// 		// 	draggable: true,
-	// 		// },
-
-	// 		// Брейкпоинты
-	// 		/*
-	// 		breakpoints: {
-	// 			320: {
-	// 				slidesPerView: 1,
-	// 				spaceBetween: 0,
-	// 				autoHeight: true,
-	// 			},
-	// 			768: {
-	// 				slidesPerView: 2,
-	// 				spaceBetween: 20,
-	// 			},
-	// 			992: {
-	// 				slidesPerView: 3,
-	// 				spaceBetween: 20,
-	// 			},
-	// 			1268: {
-	// 				slidesPerView: 4,
-	// 				spaceBetween: 30,
-	// 			},
-	// 		},
-	// 		*/
-	// 		// События
-	// 		// on: {
-
-	// 		// }
-	// 	});
-	// }
-
-	// if (document.querySelector('.gallery-thumbs')) {
-	// 	var galleryThumbs = new Swiper('.gallery-thumbs', {
-	// 		modules: [Navigation, Controller],
-	// 		// spaceBetween: 10,
-	// 		centeredSlides: true,
-	// 		slidesPerView: 3,
-	// 		// touchRatio: 0.2,
-			
-	// 		slideToClickedSlide: true,
-	// 		// loop: true,
-	// 		loopedSlides: 3,
-	
-	// 		freeMode: true,
-	// 		watchSlidesProgress: true,
-	
-	// 		initialSlide: 1, // присуждаем активность слайда
-	// 		// normalizeSlideIndex: true,
-	// 		// slidesOffsetBefore: 1,
-	// 	});
-	// }
-
-	// console.log(galleryTop);
-	// console.log(galleryThumbs);
-
-	// if (document.querySelector(".swiper-container.gallery-top")[0]){
-	// 	//initialization parameters
-	// 	}
-	// galleryTop.controller.control = galleryThumbs;
-	// galleryThumbs.controller.control = galleryTop;
-
-	// galleryTop.params.control = galleryThumbs;
-	// galleryThumbs.params.control = galleryTop;
-
-	// galleryTop[0].params.control = galleryThumbs;
-	// galleryThumbs[1].params.control = galleryTop;
-
-		//.exterior__slider
-	// Проверяем, есть ли слайдер на стронице
-// Указываем скласс нужного слайдера
-		// Создаем слайдер
-	
-
+	// const exteriorNav = new Swiper('.exterior__nav', { // Указываем скласс нужного слайдера
+	// 	// Подключаем модули слайдера
 		
+	// 	// для конкретного случая
+	// 	modules: [Navigation, Controller],
+	// 	updateOnWindowResize: true,
+	// 	observer: true,
+	// 	observeParents: true,
+	// 	centeredSlides: true,
+	// 	slidesPerView: 4,
+	// 	freeMode: true,
+	// 	grabCursor: true,
+	// 	// initialSlide: 0,
+	// 	// watchOverflow: true,
+	// 	// slidesPerGroup: 4,
 
-
-		const exteriorNav = new Swiper('.exterior__nav', { // Указываем скласс нужного слайдера
-			// Подключаем модули слайдера
-			
-			// для конкретного случая
-			modules: [Navigation, Controller, EffectFade ],
-			// updateOnWindowResize: true,
-			// observer: true,
-			// observeParents: true,
-			// centeredSlides: true,
-			slidesPerView: 4,
-			spaceBetween: 40,
-			// freeMode: true,
-      // watchSlidesProgress: true,
-			// slideToClickedSlide: true,
-			// touchRatio: 0.2,
-			
-		});
-
-		const exteriorSlider = new Swiper('.exterior__slider', { // Указываем скласс нужного слайдера
-			// Подключаем модули слайдера
-			
-			// для конкретного случая
-			modules: [Navigation, Controller, EffectFade ],
-			updateOnWindowResize: true,
-			observer: true,
-			observeParents: true,
-			centeredSlides: true,
-			// slidesPerView: 1,
-			spaceBetween: 40,
-			speed: 1000,
-			effect: 'fade',
-			navigation: {
-				prevEl: '.exterior-button-prev',
-				nextEl: '.exterior-button-next',
-			},
-			thumbs: {
-				swiper: exteriorNav, 
-			},
-		});
+	// 	spaceBetween: 40,
+	// 	// loop: true,
+	// 	// slidesPerView: 'auto',
+	// 	// multipleActiveThumbs: true,
+	// 	// loop: true,
+	// 	// autoScrollOffset: 1,
+	// 	freeMode: true,
+	// 	// watchSlidesProgress: true,
+	// 	slideToClickedSlide: true,
+	// 	touchRatio: 0.2,
 		
-		exteriorSlider.controller.control = exteriorNav;
-		exteriorNav.controller.control = exteriorSlider;
+	// });
 
-	// if (document.querySelector('.exterior__slider')) { // Указываем скласс нужного слайдера
-	// 	// Создаем слайдер
-	
-	// new Swiper('.exterior__slider', { // Указываем скласс нужного слайдера
-	// 		// Подключаем модули слайдера
-			
-	// 		// для конкретного случая
-	// 		modules: [Navigation, Controller, EffectFade ],
-	// 		updateOnWindowResize: true,
-	// 		observer: true,
-	// 		observeParents: true,
-	// 		centeredSlides: true,
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 40,
-	// 		// autoHeight: true,
-	// 		speed: 1000,
-	// 		initialSlide: 1, // присуждаем активность слайда
-	// 		centeredSlides: true,
-	// 		grabCursor: true,
-	// 		effect: 'fade',
-	// 		// Кнопки "влево/вправо"
-	// 		navigation: {
-	// 			prevEl: '.exterior-button-prev',
-	// 			nextEl: '.exterior-button-next',
-	// 		},
-	// 		thumbs: {                     
-	// 			swiper: swiper__thumbnail,  
-  //   },
+	// const exteriorSlider = new Swiper('.exterior__slider', { // Указываем скласс нужного слайдера
+	// 	// Подключаем модули слайдера
 		
-	// 	});
-	// }
+	// 	// для конкретного случая
+	// 	modules: [Navigation, Controller, EffectFade],
+	// 	// updateOnWindowResize: true,
+	// 	observer: true,
+	// 	observeParents: true,
+	// 	// centeredSlides: true,
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 40,
+	// 	speed: 2000,
+	// 	// loop: true,
+	// 	// autoplay: true,
+	// 	effect: 'fade',
+	// 	fadeEffect: {
+	// 		crossFade: true,
+	// 	},
+	// 	navigation: {
+	// 		prevEl: '.exterior-button-prev',
+	// 		nextEl: '.exterior-button-next',
+	// 	},
+	// 	thumbs: {
+	// 		swiper: exteriorNav, 
+	// 	},
+	// });
 
+	// exteriorSlider.controller.control = exteriorNav;
+	// exteriorNav.controller.control = exteriorSlider;
 
 }
-// const swiper__thumbnail = new Swiper(".swiper__thumbnail", {
-// 	modules: [Navigation, Controller, EffectFade ],
-// 	slidesPerView: 4, 
-// 	spaceBetween: 40,
-// });
+
 
 
 
