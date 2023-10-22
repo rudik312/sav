@@ -8,7 +8,7 @@
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Controller} from 'swiper/modules';
+import { Navigation, Controller, EffectFade} from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -265,6 +265,7 @@ function initSliders() {
 	}
 
 
+
 	// //.cases-slide-inner__slider gallery-top
 	// // Проверяем, есть ли слайдер на стронице
 	// if (document.querySelector('.gallery-top')) { // Указываем скласс нужного слайдера
@@ -396,8 +397,98 @@ function initSliders() {
 	// galleryTop[0].params.control = galleryThumbs;
 	// galleryThumbs[1].params.control = galleryTop;
 
+		//.exterior__slider
+	// Проверяем, есть ли слайдер на стронице
+// Указываем скласс нужного слайдера
+		// Создаем слайдер
+	
+
+		
+
+
+		const exteriorNav = new Swiper('.exterior__nav', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			
+			// для конкретного случая
+			modules: [Navigation, Controller, EffectFade ],
+			// updateOnWindowResize: true,
+			// observer: true,
+			// observeParents: true,
+			// centeredSlides: true,
+			slidesPerView: 4,
+			spaceBetween: 40,
+			// freeMode: true,
+      // watchSlidesProgress: true,
+			// slideToClickedSlide: true,
+			// touchRatio: 0.2,
+			
+		});
+
+		const exteriorSlider = new Swiper('.exterior__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			
+			// для конкретного случая
+			modules: [Navigation, Controller, EffectFade ],
+			updateOnWindowResize: true,
+			observer: true,
+			observeParents: true,
+			centeredSlides: true,
+			// slidesPerView: 1,
+			spaceBetween: 40,
+			speed: 1000,
+			effect: 'fade',
+			navigation: {
+				prevEl: '.exterior-button-prev',
+				nextEl: '.exterior-button-next',
+			},
+			thumbs: {
+				swiper: exteriorNav, 
+			},
+		});
+		
+		exteriorSlider.controller.control = exteriorNav;
+		exteriorNav.controller.control = exteriorSlider;
+
+	// if (document.querySelector('.exterior__slider')) { // Указываем скласс нужного слайдера
+	// 	// Создаем слайдер
+	
+	// new Swiper('.exterior__slider', { // Указываем скласс нужного слайдера
+	// 		// Подключаем модули слайдера
+			
+	// 		// для конкретного случая
+	// 		modules: [Navigation, Controller, EffectFade ],
+	// 		updateOnWindowResize: true,
+	// 		observer: true,
+	// 		observeParents: true,
+	// 		centeredSlides: true,
+	// 		slidesPerView: 1,
+	// 		spaceBetween: 40,
+	// 		// autoHeight: true,
+	// 		speed: 1000,
+	// 		initialSlide: 1, // присуждаем активность слайда
+	// 		centeredSlides: true,
+	// 		grabCursor: true,
+	// 		effect: 'fade',
+	// 		// Кнопки "влево/вправо"
+	// 		navigation: {
+	// 			prevEl: '.exterior-button-prev',
+	// 			nextEl: '.exterior-button-next',
+	// 		},
+	// 		thumbs: {                     
+	// 			swiper: swiper__thumbnail,  
+  //   },
+		
+	// 	});
+	// }
+
 
 }
+// const swiper__thumbnail = new Swiper(".swiper__thumbnail", {
+// 	modules: [Navigation, Controller, EffectFade ],
+// 	slidesPerView: 4, 
+// 	spaceBetween: 40,
+// });
+
 
 
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
