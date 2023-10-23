@@ -1,3 +1,4 @@
+//.realty
 .realty {
   
   // .realty__items
@@ -51,6 +52,13 @@
     grid-column: 1 / 2;
     @media (max-width: em(760)){
       grid-column: span 2;
+    }
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        cursor: pointer;
+        color: #FFC95E;
+      }
     }
   }
   //.realty__item-name
@@ -198,3 +206,4 @@
     column-gap: 10px;
   }
 }
+//========================================================================================================================================================

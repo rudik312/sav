@@ -1,3 +1,4 @@
+//.projects
 //========================================================================================================================================================
 .projects {
   // .projects__container
@@ -240,8 +241,6 @@
 .irs--flat {
   height: 16px;
 }
-
-
 //========================================================================================================================================================
 
 //.filter-type
@@ -425,23 +424,27 @@
 }
 
 //========================================================================================================================================================
-//.realty-items
-.realty-items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 50px;
-  @media (max-width: em(1240)){
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: em(1180)){
+//.projects-realty
+.projects-realty {
+    //.realty-items
+  .realty-items {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: em(570)){
-    display: flex;
-    flex-direction: column;
-  }
-  .realty__item {
-    max-width: 100%;
+    row-gap: 50px;
+    @media (max-width: em(1240)){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: em(1180)){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(570)){
+      display: flex;
+      flex-direction: column;
+    }
+    .realty__item {
+      max-width: 100%;
+    }
   }
 }
 // .realty -----> check the file blocks/realty
+//========================================================================================================================================================
