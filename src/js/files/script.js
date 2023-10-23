@@ -209,11 +209,11 @@ window.onload = function() {
     slidesToShow: 4,
     slidesToScroll: 1,
     asNavFor: '.exterior__slider',
-    centerMode: false,
+    // centerMode: false,
     focusOnSelect: true,
     arrows:false, 
     speed: 1000,
-    // infinite: true,
+    // infinite: false,
     swipe: false,
 
     // centerMode: true,
