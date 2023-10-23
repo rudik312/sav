@@ -58,7 +58,7 @@
     }
     @media (max-width: em(480)){
       padding: 20px;
-      align-items: normal;
+      // align-items: normal;
       justify-content: flex-end;
     
     }
@@ -116,6 +116,9 @@
       row-gap: 20px;
     }
     @media (max-width: em(480)){
+      // display: block;
+      display: grid;
+      width: 100%;
       row-gap: 10px;
     }
   }
@@ -135,7 +138,9 @@
       }
     }
     @media (max-width: em(480)){
+      width: 100%;
       padding: 14px 20px;
+      
     }
   }
 
@@ -220,6 +225,9 @@
       display: flex;
       flex-direction: column;
       row-gap: 15px;
+      @media (max-width:$mobile){
+        row-gap: 10px;
+      }
     }
   }
   // .about__img
