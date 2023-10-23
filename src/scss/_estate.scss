@@ -143,7 +143,8 @@
   // .about__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    // grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 1.5fr;
     column-gap: 40px;
   }
   // .about__item
@@ -421,7 +422,8 @@
   // .setting__inner
   &__inner {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    // grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1.5fr;
     column-gap: 40px;
   }
   // .about__item
@@ -643,12 +645,79 @@
 }
 //========================================================================================================================================================
 
+//.company
+//========================================================================================================================================================
+.company {
+  // .company__container
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  // .company__inner
+  &__inner {
+    display: grid;
+    // grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 1fr 1.4fr;
+    column-gap: 40px;
+  }
+  // .company__item
+  &__item {
+    &:last-child{
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  // .company__img
+  &__img-ibg {
+    border-radius: 55px;
+    overflow: hidden;
+    padding-bottom: percent(381, 468);
+    img {
+      object-position: center;
+    }
+  }
+  // .company__item-title
+  &__item-title {
+    @extend %raleway-600;
+    font-size: rem(32);
+    line-height: math.div(45 , 32);
+    color: $black;
+    text-transform: uppercase;
+  }
+  // .company__item-content
+  &__item-content {
 
+  }
+  // .company__item-text
+  &__item-text {
+    @extend %mulish-500;
+    font-size: rem(18);
+    line-height: math.div(29 , 18);
+    color: $black;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  // .company__item-action
+  &__item-action {
+  }
+  // .company__item-link
+  &__item-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 80px;
+    @extend %mulish-800;
+    font-size: rem(18);
+    line-height: math.div(28 , 18);
+    color: #263239;
+
+  }
+}
 //========================================================================================================================================================
 
-//========================================================================================================================================================
-
-.location-realty {
+.estate-realty {
   // .location-realty__container
   &__container {
     padding-top: 50px;

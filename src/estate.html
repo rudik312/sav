@@ -41,7 +41,7 @@
 									</p>
 								</div>
 								<div class="estate__actions">
-									<a class="estate__actions-link btn">Обратный звонок</a>
+									<a class="estate__actions-link btn"data-popup="#popup-call-back">Обратный звонок</a>
 									<a class="estate__actions-link" data-popup="#popup">Получить презентацию</a>
 								</div>
 							</div>
@@ -406,17 +406,38 @@
 					</div>
 				</section>
 				<!-- end interior -->
+				<!-- start company -->
 				<section class="company">
 					<div class="company__container">
-						
+						<div class="company__inner">
+							<div class="company__item">
+								<div class="company__img-ibg">
+									<img src="@img/estate/developer.jpg" alt="about">
+								</div>
+							</div>
+							<div class="company__item">
+								<div class="company__item-title">
+									<h4>Застройщик проекта - компания DAMAC Properties</h4>
+								</div>
+								<div class="company__item-content">
+									<p class="company__item-text">
+										Крупнейший частный застройщик в странах Персидского залива Damac предлагает жилье премиум-класса в ОАЭ, Великобритании, Саудовской Аравии, Ливане, Омаре со всеми удобствами для любого человека, будь то одинокий человек, семья или пожилая пара без детей. Помимо этого застройщик возводит коммерческую недвижимость, развлекательные сооружения. Все здания имеют культовый дизайн и высокое качество отделки и постройки.
+									</p>
+								</div>
+								<div class="company__item-action">
+									<a class="company__item-link btn" href="#">Получить консультацию</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
+				<!-- end company -->
 				<!-- start location-realty -->
-				<!-- <section class="location-realty">
-					<div class="location-realty__container">
-						<div class="location-realty__inner">
-							<div class="location-realty__title">
-								<h3>Недвижимость в районе Downtown Dubai</h3>
+				<section class="estate-realty realty">
+					<div class="estate-realty__container">
+						<div class="estate-realty__inner">
+							<div class="estate-realty__title">
+								<h3>Вас может заинтересовать</h3>
 							</div>
 							<div class="realty">
 								<div class="realty__items">
@@ -755,15 +776,16 @@
 							</div>
 						</div>
 					</div>
-				</section> -->
+				</section>
 				<!-- end location-realty -->
 				<!-- start telegram -->
-				<!-- @@include('html/blocks/_telegram.htm', {}) -->
+				@@include('html/blocks/_telegram.htm', {})
 				<!-- end telegram -->
 			</main>
-			<!-- @@include('html/_footer.htm',{}) -->
+			@@include('html/_footer.htm',{})
 		</div>
 		@@include('html/_popup.htm',{})
+		@@include('html/_popup-call-back.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>
