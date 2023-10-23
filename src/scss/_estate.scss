@@ -153,7 +153,13 @@
     @media (max-width: em(1060)){
       display: flex;
       column-gap: 10px;
+      row-gap: 20px;
       flex-wrap: wrap;
+    }
+    @media (max-width: em(460)){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
     }
   }
   // .estate__item
@@ -165,8 +171,8 @@
     padding: 10px 15px;
     border-left: 1px solid #13465B;
     @media (max-width: em(1060)){
-      // padding-left: 10px;
-      // padding-right: 0;
+      padding-left: 10px;
+      padding-right: 0;
     }
   }
   //.estate__item-value
@@ -183,6 +189,10 @@
     font-size: rem(14);
     line-height: math.div(23 , 14);
     color: $text;
+    @media (max-width: em(480)){
+      font-size: rem(12);
+      line-height: math.div(20 , 12);
+    }
   }
 
 }
