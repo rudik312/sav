@@ -1,4 +1,4 @@
-
+//.estate
 //========================================================================================================================================================
 .estate {
   // .estate__container
@@ -264,7 +264,6 @@
   &__item-text {
   }
 }
-
 //========================================================================================================================================================
 
 //.exterior
@@ -417,7 +416,7 @@
   // .setting__container
   &__container {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   // .setting__inner
   &__inner {
@@ -488,177 +487,165 @@
     }
   }
 }
-
-
 //========================================================================================================================================================
 
+//.estate-transport
+//========================================================================================================================================================
+.estate-transport {
+  .transport__container {
+    padding-top: 40px;
+  }
+}
+// .transport -----> check the file blocks/transport
+//========================================================================================================================================================
 
-
-.transport {
-  // .transport__container
+//.interior
+//========================================================================================================================================================
+.interior {
+  // .interior__container
   &__container {
     padding-top: 50px;
     padding-bottom: 50px;
-    @media (max-width: em(768)){
-      padding-top: 30px;
-    }
   }
-  // .transport__inner
+  // .interior__inner
   &__inner {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
-    @media (max-width: em(768)){
-      row-gap: 40px;
-    }
   }
-  // .transport__title
+  // .interior__title
   &__title {
-    h3 {
-      @extend %raleway-500;
-      font-size: rem(48);
-      line-height: math.div(58 , 48);
-      color: $black;
-      @include adaptiveValue("font-size", 48, 24, 1380, 380, 1);
-      @include adaptiveValue("line-height", 58, 29, 1380, 380, 1);
-      @media (max-width: em(380)){
-        font-size: rem(20);
-      }
-    }
-  }
-  // .transport__items
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
-    column-gap: 40px;
-    @media (max-width: em(1240)){
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-    }
-    @media (max-width: em(1000)){
-      row-gap: 30px;
-      column-gap: 30px;
-    }
-    @media (max-width: em(620)){
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      align-items: center;
-    }
-  }
-  // .transport__item
-  &__item {
-    max-width: 367px;
-    width: 100%;
-    padding: 15px;
-    border-radius: 50px;
-    background-color: $white;
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    @media (max-width: em(1240)){
-      max-width: 507px;
-      // justify-self: center;
-    }
-    @media (max-width: em(680)){
-      padding: 10px;
-    }
-    @media (max-width: em(620)){
-      max-width: 480px;
-    }
-    &:nth-child(2){
-      .transport__item-img {
-        img {
-          width: 22px;
-          height: 48px;
-          @media (max-width: em(680)){
-            width: 16px;
-            height: 36px;
-          }
-        }
-      }
-    }
-    &:nth-child(3){
-      .transport__item-img {
-        img {
-          width: 25px;
-          height: 25px;
-        }
-      }
-    }
-    &:nth-child(4){
-      .transport__item-img {
-        img {
-          width: 40px;
-          height: 33px;
-          @media (max-width: em(680)){
-            width: 30px;
-            height: 26px;
-          }
-        }
-      }
-    }
-    &:nth-child(5){
-      .transport__item-img {
-        img {
-          width: 30px;
-          height: 35px;
-        }
-      }
-    }
-  }
-  // .transport__item-img
-  &__item-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: $yelow;
-    filter: drop-shadow(-1px -1px 12px rgba(0, 0, 0, 0.05)) drop-shadow(1px 1px 12px rgba(0, 0, 0, 0.05));
-    img {
-      width: 30px;
-      height: 30px;
-      @media (max-width: em(680)){
-        width: 22px;
-        height: 22px;
-      }
-    }
-    @media (max-width: em(680)){
-      width: 48px;
-      height: 48px;
-    } 
-  }
-  // .transport__item-info
-  &__item-info {
-    color: $black;
-    span {
-      @extend %raleway-400;
-      font-size: rem(16);
-      line-height: math.div(22 , 16);
-      text-transform: uppercase;
-      font-variant-numeric: lining-nums proportional-nums;
-      @include adaptiveValue("font-size", 16, 14, 1380, 380, 1);
-      @include adaptiveValue("line-height", 22, 20, 1380, 380, 1);
-    }
-  }
-  // .transport__item-title
-  &__item-title {
     @extend %raleway-600;
-    // font-size: rem(24);
-    // line-height: math.div(34 , 24);
+    font-size: rem(32);
+    line-height: math.div(45 , 32);
+    color: $black;
     text-transform: uppercase;
-    @include adaptiveValue("font-size", 24, 18, 1380, 768, 1);
-    @include adaptiveValue("line-height", 34, 28, 1380, 768, 1);
-    @media (max-width: em(660)){
-      font-size: rem(16);
-      line-height: math.div(20 , 16);
+  }
+  //.interior__slider-box
+  &__slider-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  //.interior__slider-nav
+  &__slider-nav {
+    height: 50px;
+  }
+  // .interior__wrapper
+  &__wrapper {
+
+  }
+  // .interior__slider
+  &__slider {
+    position: relative;
+    
+  }
+  // .interior__slide
+  &__slide {
+    overflow: hidden;
+    border-radius: 55px;
+    height: 600px;
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &.slick-slide[aria-hidden ="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
+    opacity: 1;
+    padding-top: 89px;
+    transform: scale(120%);
+    transition: all .2s ease;
+  }
+
+  // .interior__nav
+  &__nav {
+    min-width: 0;
+    // margin-top: 30px;
+    .slick-list.draggable {
+      height: 180px;
+    }
+    .slick-track {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+  // .interior__thumbs-slide
+  &__nav-slide {
+    
+    border-radius: 32px;
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+    width: 265px !important;
+    img {
+      // display: block;
+      width: 265px;
+      // width: 100%;
+      // max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 40px;
     }
   }
 }
+
+.interior__slider  {
+  .slick-prev.slick-arrow,
+  .slick-next.slick-arrow {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; // выравнивание по вертикали
+    transform: translateY(-50%);
+    // margin: -15px 0 0 0; // корректировка вертикального выравнивания
+    z-index: 2; // стрелки сверху картинок
+    font-size: 0; // убираем надпись на дефолтной стрелке
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+  }
+  .slick-prev.slick-arrow {
+    left: 54px;
+    background-image: url(../img/estate/arrow-left.svg);
+    background-repeat: no-repeat;
+    background-position: 45% 50%;
+    background-size: 11px 19px;
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        background-color: $yelow;
+      }
+    }
+  }
+  .slick-next.slick-arrow {
+    right: 54px;
+    background-image: url(../img/estate/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: 55% 50%;
+    background-size: 11px 19px;
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        background-color: $yelow;
+      }
+    }
+  }
+
+}
+//========================================================================================================================================================
+
+
+//========================================================================================================================================================
+
 //========================================================================================================================================================
 
 .location-realty {
@@ -693,4 +680,4 @@
 }
 
 
-// .realty -----> check the file common.scss
+// .realty -----> check the file blocks/realty
