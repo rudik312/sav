@@ -73,10 +73,13 @@ var secondarySlider = new Splide( '#secondary-slider', {
 	cover       : true,
   // flickPower: 600,
 	breakpoints : {
+    '1380': {
+      gap       : 20,
+    },
     '1000': {
       perPage    : 3,
       perMove   : 2,
-      gap       : 30,
+      
     },
 		// '600': {
 		// 	fixedWidth  : 66,

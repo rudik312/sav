@@ -452,6 +452,12 @@
       // border-radius: 22px;
       height: 65svh;
     }
+    @media (max-width:$tablet){
+      height: 50svh;
+      border-radius: 23px;
+    }
+    @media (max-width: em(920)){
+    }
   }
   //.exterior__nav
   &__nav {
@@ -477,6 +483,9 @@
       // height: 140px;
       width: 20svw;
       height: 12svw;
+    }
+    @media (max-width: em(1000)){
+      border-radius: 23px;
     }
   }
   // .exterior__slider
