@@ -5,46 +5,76 @@ import '@splidejs/splide/css';
 // import '@splidejs/splide/css/core';
 document.addEventListener( 'DOMContentLoaded', function() {
 
-  var splide = new Splide("#main-slider", {
-    // width: 1180,
-    // height: 600,
-    type       : 'fade',
-    pagination: false,
-    cover: true,
-    speed: 2000,
+  // var splide = new Splide("#main-slider", {
+  //   // width: 1180,
+  //   // height: 600,
+  //   type       : 'fade',
+  //   pagination: false,
+  //   cover: true,
+  //   speed: 2000,
+    
 
-  });
+  // });
 
-  var thumbnails = document.getElementsByClassName("thumbnail");
-  var current;
+  // var thumbnails = document.getElementsByClassName("thumbnail");
+  // var current;
 
-  for (var i = 0; i < thumbnails.length; i++) {
-    initThumbnail(thumbnails[i], i);
-  }
+  // for (var i = 0; i < thumbnails.length; i++) {
+  //   initThumbnail(thumbnails[i], i);
+  // }
 
-  function initThumbnail(thumbnail, index) {
-    thumbnail.addEventListener("click", function () {
-      splide.go(index);
-    });
-  }
+  // function initThumbnail(thumbnail, index) {
+  //   thumbnail.addEventListener("click", function () {
+  //     splide.go(index);
+  //   });
+  // }
 
-  splide.on("mounted move", function () {
-    var thumbnail = thumbnails[splide.index];
+  // splide.on("mounted move", function () {
+  //   var thumbnail = thumbnails[splide.index];
 
-    if (thumbnail) {
-      if (current) {
-        current.classList.remove("is-active");
-      }
+  //   if (thumbnail) {
+  //     if (current) {
+  //       current.classList.remove("is-active");
+  //     }
 
-      thumbnail.classList.add("is-active");
-      current = thumbnail;
-    }
-  });
+  //     thumbnail.classList.add("is-active");
+  //     current = thumbnail;
+  //   }
+  // });
 
-  splide.mount();
-  
+  // splide.mount();
+
+// Create and mount the thumbnails slider.
+
+// Create the main slider.
+var primarySlider = new Splide( '#primary-slider', {
+	type       : 'fade',
+	// heightRatio: 0.5,
+	pagination : false,
+	arrows     : true,
+	cover      : true,
+} );
+
+var secondarySlider = new Splide( '#secondary-slider', {
+	rewind      : true,
+	fixedWidth  : 265,
+	fixedHeight : 180,
+	isNavigation: true,
+	gap         : 40,
+	// focus       : 'center',
+	pagination  : false,
+	cover       : true,
+	breakpoints : {
+		'600': {
+			fixedWidth  : 66,
+			fixedHeight : 40,
+		}
+	}
+} ).mount();
 
 
+// Set the thumbnails slider as a sync target and then call mount.
+primarySlider.sync( secondarySlider ).mount();
 
 
 
@@ -176,36 +206,3 @@ document.addEventListener( 'DOMContentLoaded', function() {
 });
 
 
-//========================================================================================================================================================
-
-// var splides = document.querySelectorAll('.splide');
-// // 1. query slider elements: are there any splide elements?
-// if(splides.length){
-//     // 2. process all instances
-//     for(var i=0; i<splides.length; i++){
-//         var splideElement = splides[i];
-//         //3.1 if no options are defined by 'data-splide' attribute: take these default options
-//         var splideDefaultOptions = 
-//         {
-//             type   : 'slide',
-//             rewind: true,
-//             perPage: 1,
-//             autoplay:false,
-//             arrows:true,
-//             pagination:true,
-//             drag:true,
-//             keyboard:true,
-//             heightRatio: 0.5,
-//             cover: true,
-//         }
-//         /**
-//         * 3.2 if options are defined by 'data-splide' attribute: default options will we overridden
-//         * see documentation: https://splidejs.com/guides/options/#by-data-attribute
-//         **/
-        
-//         var splide = new Splide( splideElement, splideDefaultOptions ); 
-//         // 3. mount/initialize this slider
-//         splide.mount();
-//     }
-// }
-//========================================================================================================================================================
