@@ -53,22 +53,35 @@ var primarySlider = new Splide( '#primary-slider', {
 	pagination : false,
 	arrows     : true,
 	cover      : true,
+  speed      : 1500,
+  rewind      : true,
 } );
 
 var secondarySlider = new Splide( '#secondary-slider', {
 	rewind      : true,
-	fixedWidth  : 265,
-	fixedHeight : 180,
+	// fixedWidth  : 265,
+	// fixedHeight : 180,
+  perMove     : 2,
+  perPage     : 4,
 	isNavigation: true,
 	gap         : 40,
+  type        : 'loop',
+  speed       : 1000,
+  arrows      : false,
 	// focus       : 'center',
 	pagination  : false,
 	cover       : true,
+  // flickPower: 600,
 	breakpoints : {
-		'600': {
-			fixedWidth  : 66,
-			fixedHeight : 40,
-		}
+    '1000': {
+      perPage    : 3,
+      perMove   : 2,
+      gap       : 30,
+    },
+		// '600': {
+		// 	fixedWidth  : 66,
+		// 	fixedHeight : 40,
+		// }
 	}
 } ).mount();
 
