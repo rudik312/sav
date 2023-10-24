@@ -187,38 +187,82 @@ window.onload = function() {
             slidesToScroll: 2,
           }
         },
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     });
   });
 
   //Слайдер страницы estate
   //exterior
-  $('.exterior__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: true,
-    speed: 1000,
-    swipe: false,
-    asNavFor: '.exterior__nav'
-    });
-    $('.exterior__nav').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    asNavFor: '.exterior__slider',
-    // centerMode: false,
-    focusOnSelect: true,
-    arrows:false, 
-    speed: 1000,
-    // infinite: false,
-    swipe: false,
+  // $('.exterior__slider').slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: true,
+  //   fade: true,
+  //   speed: 1000,
+  //   swipe: false,
+  //   asNavFor: '.exterior__nav'
+  //   });
+  //   $('.exterior__nav').slick({
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   asNavFor: '.exterior__slider',
+  //   // centerMode: false,
+  //   focusOnSelect: true,
+  //   arrows:false, 
+  //   speed: 1000,
+  //   // infinite: false,
+  //   swipe: false,
 
-    // centerMode: true,
-    // centerPadding: '110px',
-    });
+  //   // centerMode: true,
+  //   // centerPadding: '10px',
+  //   responsive: [
+  //     {
+  //       // breakpoint: 1260,
+  //       // settings: {
+  //       //     mobileFirst: true,
+  //       //     infinite: true,
+  //       //     speed: 300,
+  //       //     slidesToShow: 1,
+  //       //     centerMode: false,
+  //       //     variableWidth: true,
+  //       //     focusOnSelect: true
+
+  //       // }
+  //     },
+  //     {
+  //       breakpoint: 1000,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         centerMode: true,
+  //         centerPadding: '25px',
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         centerMode: true,
+  //         centerPadding: '25px',
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 320,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       }
+  //     },
+  //   ]
+  //   });
 
   //Слайдер страницы estate
   //interior

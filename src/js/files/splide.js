@@ -1,9 +1,56 @@
-// import Splide from '@splidejs/splide';
+import Splide from '@splidejs/splide';
 
-// import '@splidejs/splide/css';
+import '@splidejs/splide/css';
 
 // import '@splidejs/splide/css/core';
 document.addEventListener( 'DOMContentLoaded', function() {
+
+  var splide = new Splide("#main-slider", {
+    // width: 1180,
+    // height: 600,
+    type       : 'fade',
+    pagination: false,
+    cover: true,
+    speed: 2000,
+
+  });
+
+  var thumbnails = document.getElementsByClassName("thumbnail");
+  var current;
+
+  for (var i = 0; i < thumbnails.length; i++) {
+    initThumbnail(thumbnails[i], i);
+  }
+
+  function initThumbnail(thumbnail, index) {
+    thumbnail.addEventListener("click", function () {
+      splide.go(index);
+    });
+  }
+
+  splide.on("mounted move", function () {
+    var thumbnail = thumbnails[splide.index];
+
+    if (thumbnail) {
+      if (current) {
+        current.classList.remove("is-active");
+      }
+
+      thumbnail.classList.add("is-active");
+      current = thumbnail;
+    }
+  });
+
+  splide.mount();
+  
+
+
+
+
+
+
+
+
 
 // var splides = document.querySelectorAll('.splide');
 // var thumbs = document.querySelectorAll('.thumbnail-carousel');
@@ -125,6 +172,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 // }
 // splideInit()
 // thumbInit()
+
 });
 
 
