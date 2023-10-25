@@ -55,6 +55,12 @@ var primarySlider = new Splide( '#primary-slider', {
 	cover      : true,
   speed      : 1500,
   rewind      : true, //перемотка
+  breakpoints: {
+    // '420': {
+    //   type   : 'loop',
+    //   padding: '10%',
+    // },
+  }
 } );
 
 var secondarySlider = new Splide( '#secondary-slider', {
@@ -83,9 +89,7 @@ var secondarySlider = new Splide( '#secondary-slider', {
     '768': {
       perPage    : 2,
     },
-    '420': {
 
-    },
 		// '600': {
 		// 	fixedWidth  : 66,
 		// 	fixedHeight : 40,

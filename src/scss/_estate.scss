@@ -571,6 +571,10 @@
       opacity: 1;
     }
   }
+  @media (max-width:$mobileSmall){
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .splide__arrow.splide__arrow--prev {
