@@ -459,6 +459,12 @@
     @media (max-width:$mobile){
       height: 380px;
     }
+    @media (max-width:$mobileSmall){
+      height: 320px;
+    }
+    @media (max-width: em(380)){
+      height: 300px;
+    }
   }
   //.exterior__nav
   &__nav {
