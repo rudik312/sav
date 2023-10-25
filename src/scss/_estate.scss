@@ -497,7 +497,7 @@
 //========================================================================================================================================================
 // .splide
 .splide {
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 
 .splide__arrow.splide__arrow--prev,
@@ -776,103 +776,103 @@
   &__slide {
     overflow: hidden;
     border-radius: 55px;
+    max-width: 100%;
     height: 600px;
     img {
-      display: block;
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
-
+    @media (max-width: em(1380)){
+      height: 440px;
+    }
+    @media (max-width:$tablet){
+      border-radius: 23px;
+    }
+    @media (max-width:$mobile){
+      height: 380px;
+    }
+    @media (max-width:$mobileSmall){
+      height: 320px;
+    }
+    @media (max-width: em(380)){
+      height: 300px;
+    }
   }
-
-  // &.slick-slide[aria-hidden ="true"]:not([tabindex="-1"])+.slick-cloned[aria-hidden="true"] {
-  //   opacity: 1;
-  //   padding-top: 89px;
-  //   transform: scale(120%);
-  //   transition: all .2s ease;
-  // }
-
   // .interior__nav
   &__nav {
-    min-width: 0;
-    // margin-top: 30px;
-    .slick-list.draggable {
-      height: 180px;
-    }
-    .slick-track {
-      display: flex;
-      align-items: flex-start;
+    @media (max-width: em(420)){
+      display: none !important;
     }
   }
   // .interior__thumbs-slide
   &__nav-slide {
-    
     border-radius: 32px;
-    overflow: hidden;
+    width: 265px;
     height: 180px;
-    width: 100%;
-    width: 265px !important;
+    overflow: hidden;
+    list-style: none;
+    cursor: pointer;
+    // opacity: 0.3;
     img {
-      // display: block;
-      width: 265px;
-      // width: 100%;
-      // max-width: 100%;
-      height: 180px;
       object-fit: cover;
+      width: 100%;
+      height: 100%;
     }
-    @media (any-hover: hover){
-      &:hover{
-        cursor: pointer;
-      }
+    @media (max-width: em(1380)){
+      width: 200px;
+      height: 140px;
     }
-    &:not(:last-child) {
-      margin-right: 40px;
+    @media (max-width: em(1000)){
+      border-radius: 23px;
     }
   }
 }
 
-.interior__slider  {
-  .slick-prev.slick-arrow,
-  .slick-next.slick-arrow {
-    border-radius: 50%;
-    position: absolute;
-    top: 50%; // выравнивание по вертикали
-    transform: translateY(-50%);
-    // margin: -15px 0 0 0; // корректировка вертикального выравнивания
-    z-index: 2; // стрелки сверху картинок
-    font-size: 0; // убираем надпись на дефолтной стрелке
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-  }
-  .slick-prev.slick-arrow {
-    left: 54px;
-    background-image: url(../img/estate/arrow-left.svg);
-    background-repeat: no-repeat;
-    background-position: 45% 50%;
-    background-size: 11px 19px;
-    @media (any-hover: hover){
-      transition: all 0.3s ease 0s;
-      &:hover{
-        background-color: $yelow;
-      }
-    }
-  }
-  .slick-next.slick-arrow {
-    right: 54px;
-    background-image: url(../img/estate/arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: 55% 50%;
-    background-size: 11px 19px;
-    @media (any-hover: hover){
-      transition: all 0.3s ease 0s;
-      &:hover{
-        background-color: $yelow;
-      }
-    }
-  }
 
-}
+
+// .interior__slider  {
+//   .slick-prev.slick-arrow,
+//   .slick-next.slick-arrow {
+//     border-radius: 50%;
+//     position: absolute;
+//     top: 50%; // выравнивание по вертикали
+//     transform: translateY(-50%);
+//     // margin: -15px 0 0 0; // корректировка вертикального выравнивания
+//     z-index: 2; // стрелки сверху картинок
+//     font-size: 0; // убираем надпись на дефолтной стрелке
+//     width: 50px;
+//     height: 50px;
+//     background-color: #fff;
+//   }
+//   .slick-prev.slick-arrow {
+//     left: 54px;
+//     background-image: url(../img/estate/arrow-left.svg);
+//     background-repeat: no-repeat;
+//     background-position: 45% 50%;
+//     background-size: 11px 19px;
+//     @media (any-hover: hover){
+//       transition: all 0.3s ease 0s;
+//       &:hover{
+//         background-color: $yelow;
+//       }
+//     }
+//   }
+//   .slick-next.slick-arrow {
+//     right: 54px;
+//     background-image: url(../img/estate/arrow-right.svg);
+//     background-repeat: no-repeat;
+//     background-position: 55% 50%;
+//     background-size: 11px 19px;
+//     @media (any-hover: hover){
+//       transition: all 0.3s ease 0s;
+//       &:hover{
+//         background-color: $yelow;
+//       }
+//     }
+//   }
+
+// }
 //========================================================================================================================================================
 
 //.company
