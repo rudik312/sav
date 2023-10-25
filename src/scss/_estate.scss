@@ -443,9 +443,9 @@
   &__slide {
     border-radius: 55px;
     max-width: 100%;
-    height: 65vh;
+    min-height: 600px;
     @media (max-width: em(1380)){
-      // height: 440px;
+
     }
     @media (max-width:$tablet){
       border-radius: 23px;
@@ -468,7 +468,7 @@
     img {
       object-fit: cover;
       max-width: 100%;
-      height: 100%;
+      height: auto;
     }
     @media (max-width: em(1380)){
       width: 200px;
