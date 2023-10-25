@@ -717,6 +717,11 @@
       padding-bottom: 35px;
     }
   }
+  .transport__items {
+    @media (max-width:$mobileSmall){
+      row-gap: 10px;
+    }
+  }
 }
 // .transport -----> check the file blocks/transport
 //========================================================================================================================================================
@@ -734,14 +739,19 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px;
+    @media (max-width: em(1380)){
+      row-gap: 20px;
+    }
   }
   // .interior__title
   &__title {
     @extend %raleway-600;
-    font-size: rem(32);
-    line-height: math.div(45 , 32);
+    // font-size: rem(32);
+    // line-height: math.div(45 , 32);
     color: $black;
     text-transform: uppercase;
+    @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
+    @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
   }
   //.interior__slider-box
   &__slider-box {
