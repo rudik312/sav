@@ -469,7 +469,7 @@
   //.exterior__nav
   &__nav {
     @media (max-width: em(420)){
-      display: none;
+      display: none !important;
     }
   }
   //.exterior__nav-slide
