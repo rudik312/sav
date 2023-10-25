@@ -468,7 +468,9 @@
   }
   //.exterior__nav
   &__nav {
-
+    @media (max-width: em(420)){
+      display: none;
+    }
   }
   //.exterior__nav-slide
   &__nav-slide {

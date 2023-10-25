@@ -83,6 +83,9 @@ var secondarySlider = new Splide( '#secondary-slider', {
     '768': {
       perPage    : 2,
     },
+    '420': {
+
+    },
 		// '600': {
 		// 	fixedWidth  : 66,
 		// 	fixedHeight : 40,
