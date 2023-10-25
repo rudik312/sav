@@ -456,10 +456,9 @@
     @media (max-width:$tablet){
       border-radius: 23px;
     }
-    // .splide__slide {
-
-    // }
-
+    @media (max-width:$mobile){
+      height: 380px;
+    }
   }
   //.exterior__nav
   &__nav {
