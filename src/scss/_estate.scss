@@ -450,7 +450,7 @@
     height: 600px;
     @media (max-width: em(1380)){
       // border-radius: 22px;
-      height: 65vh;
+      height: 440px;
     }
     @media (max-width:$tablet){
       // height: 50vh;
@@ -483,10 +483,10 @@
       height: 100%;
     }
     @media (max-width: em(1380)){
-      // width: 200px;
-      // height: 140px;
-      width: 20vh;
-      height: 20vh;
+      width: 200px;
+      height: 140px;
+      // width: 20vh;
+      // height: 20vh;
     }
     @media (max-width: em(1000)){
       border-radius: 23px;
