@@ -405,7 +405,7 @@
     padding-bottom: 50px;
     @media (max-width: em(1080)){
       padding-top: 35px;
-      padding-bottom: 35px;
+      padding-bottom: 40px;
     }
   }
   // .exterior__inner
@@ -587,6 +587,9 @@
       padding-top: 35px;
       padding-bottom: 35px;
     }
+    @media (max-width:$mobileSmall){
+      padding-bottom: 20px;
+    }
   }
   // .setting__inner
   &__inner {
@@ -708,6 +711,11 @@
 .estate-transport {
   .transport__container {
     padding-top: 40px;
+    padding-bottom: 50px;
+    @media (max-width:$mobileSmall){
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
   }
 }
 // .transport -----> check the file blocks/transport
