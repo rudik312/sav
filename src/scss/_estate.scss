@@ -450,12 +450,16 @@
       height: 100%;
       object-fit: cover;
     }
+    @media (max-width: em(1380)){
+      height: 440px;
+    }
     @media (max-width:$tablet){
       border-radius: 23px;
     }
-    .splide__slide {
-      // border-radius: 55px;
-    }
+    // .splide__slide {
+
+    // }
+
   }
   //.exterior__nav
   &__nav {
