@@ -441,16 +441,20 @@
   }
   //.exterior__slide
   &__slide {
+    overflow: hidden;
     border-radius: 55px;
     max-width: 100%;
     height: 600px;
-    @media (max-width: em(1380)){
-
+    img {
+      width: 100%;
+      height: 100%;
     }
     @media (max-width:$tablet){
       border-radius: 23px;
     }
-    
+    .splide__slide {
+      border-radius: 55px;
+    }
   }
   //.exterior__nav
   &__nav {
@@ -467,7 +471,7 @@
     // opacity: 0.3;
     img {
       object-fit: cover;
-      max-width: 100%;
+      width: 100%;
       height: 100%;
     }
     @media (max-width: em(1380)){
