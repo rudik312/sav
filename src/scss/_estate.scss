@@ -113,7 +113,6 @@
       row-gap: 20px;
     }
     @media (max-width: em(480)){
-      // display: block;
       display: grid;
       width: 100%;
       row-gap: 10px;
@@ -213,28 +212,49 @@
   // .about__inner
   &__inner {
     display: grid;
-    // grid-template-columns: repeat(2,1fr);
     grid-template-columns: 1fr 1.5fr;
-    // column-gap: 40px;
     @include adaptiveValue("column-gap", 40, 20, 1380, 1080, 1);
     @media (max-width:$tablet){
       display: flex;
       flex-direction: column;
       row-gap: 30px;
     }
-    @media (max-width:$mobile){
-      row-gap: 20px;
+    @media (max-width:$tablet){
+      row-gap: 0;
     }
   }
   // .about__item
   &__item {
+    &:first-child{
+      position: relative;
+      display: grid;
+      @media (max-width:$tablet){
+        &::before{
+          content:'';
+          position: absolute;
+          // background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
+          background: linear-gradient(357deg, #F5F7FA 11.22%, rgba(245, 247, 250, 0.00) 59.14%);
+          width: 120%;
+          height: 105%;
+          right: 0;
+          left: -5px;
+          bottom: -5px;
+          filter: blur(2px);
+          -moz-transform: scale(1, 1);
+          -o-transform: scale(1, 1);
+          -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+          z-index: 1;
+        }
+      }
+    }
     &:last-child{
       display: flex;
       flex-direction: column;
       row-gap: 15px;
-      @media (max-width:$mobile){
-        row-gap: 10px;
-      }
+      // @media (max-width:$mobile){
+      //   row-gap: 10px;
+      // }
     }
   }
   // .about__img
@@ -259,12 +279,11 @@
   // .about__item-title
   &__item-title {
     @extend %raleway-600;
-    // font-size: rem(32);
-    // line-height: math.div(45 , 32);
     color: $black;
     text-transform: uppercase;
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
     @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
+    z-index: 2;
   }
   // .about__item-content
   &__item-content {
@@ -273,8 +292,6 @@
   // .about__item-text
   &__item-text {
     @extend %mulish-500;
-    // font-size: rem(18);
-    // line-height: math.div(29 , 18);
     @include adaptiveValue("font-size", 18, 14, 1380, 380, 1);
     @include adaptiveValue("line-height", 29, 22, 1380, 380, 1);
     color: $black;
@@ -327,8 +344,6 @@
   //.feature__title
   &__title {
     @extend %raleway-600;
-    // font-size: rem(32);
-    // line-height: math.div(45 , 32);
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
     @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
     color: $black;
@@ -390,9 +405,6 @@
       line-height: math.div(20 , 14);
     }
   }
-  // .feature__item-text
-  &__item-text {
-  }
 }
 //========================================================================================================================================================
 
@@ -420,8 +432,6 @@
   // .exterior__title
   &__title {
     @extend %raleway-600;
-    // font-size: rem(32);
-    // line-height: math.div(45 , 32);
     color: $black;
     text-transform: uppercase;
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
@@ -595,8 +605,6 @@
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    // grid-template-columns: repeat(2, 1fr);
-    // column-gap: 40px;
     @include adaptiveValue("column-gap", 40, 20, 1380, 1080, 1);
     @media (max-width:$tablet){
       display: flex;
@@ -652,8 +660,6 @@
   // .setting__item-text
   &__item-text {
     @extend %mulish-500;
-    // font-size: rem(18);
-    // line-height: math.div(29 , 18);
     color: $black;
     @include adaptiveValue("font-size", 18, 14, 1380, 380, 1);
     @include adaptiveValue("line-height", 29, 22, 1380, 380, 1);
@@ -744,8 +750,6 @@
   // .interior__title
   &__title {
     @extend %raleway-600;
-    // font-size: rem(32);
-    // line-height: math.div(45 , 32);
     color: $black;
     text-transform: uppercase;
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
@@ -890,8 +894,6 @@
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
-    // grid-template-columns: repeat(2,1fr);
-    // column-gap: 40px;
     @include adaptiveValue("column-gap", 40, 20, 1380, 1080, 1);
     @media (max-width:$tablet){
       display: flex;
@@ -947,8 +949,8 @@
   // .company__item-text
   &__item-text {
     @extend %mulish-500;
-    font-size: rem(18);
-    line-height: math.div(29 , 18);
+    @include adaptiveValue("font-size", 18, 14, 1380, 380, 1);
+    @include adaptiveValue("line-height", 29, 22, 1380, 380, 1);
     color: $black;
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -1006,8 +1008,6 @@
   &__title {
     h3 {
       @extend %raleway-500;
-      // font-size: rem(48);
-      // line-height: math.div(58 , 48);
       color: $black;
       @include adaptiveValue("font-size", 48, 24, 1380, 380, 1);
       @include adaptiveValue("line-height", 58, 29, 1380, 380, 1);
@@ -1017,6 +1017,4 @@
     }
   }
 }
-
-
 // .realty -----> check the file blocks/realty
