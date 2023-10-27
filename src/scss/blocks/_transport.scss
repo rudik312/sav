@@ -166,3 +166,108 @@
   }
 }
 //========================================================================================================================================================
+//.transport-marina
+.transport-marina {
+  .transport__item {
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+// .transport-palm
+.transport-palm {
+  .transport__item {
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+//.transport-meydan
+.transport-meydan {
+  .transport__item {
+    &:nth-child(2){
+      .transport__item-img {
+        img {
+          width: 34px;
+          height: 39px;
+        }
+      }
+    }
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+//.transport-harbour
+.transport-harbour {
+  .transport__item {
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+//.transport-business
+.transport-business {
+  .transport__item {
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+//.transport-hills
+.transport-hills {
+  .transport__item {
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
+
+//.transport-jumeirah
+.transport-jumeirah {
+  .transport__item {
+    &:nth-child(5){
+      .transport__item-img {
+        img {
+          width: 18px;
+          height: 49px;
+        }
+      }
+    }
+  }
+}
