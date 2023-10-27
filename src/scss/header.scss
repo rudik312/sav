@@ -102,13 +102,21 @@
 		@media (max-width:$mobileSmall){
 			border: none;
 			padding: 0;
-			img {
+		}
+	}
+
+	&__social-link {
+		img {
+			width: 24px;
+			height: 24px;
+			@media (max-width:$mobileSmall){
 				width: 20px;
 				height: 20px;
 			}
 		}
 	}
-	// .header__social-link
+
+	// .header__social-link + .header__social-link
 	&__social-link + .header__social-link{
 		padding-left: 10px;
 	}
