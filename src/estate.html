@@ -289,8 +289,8 @@
 									</p>
 								</div>
 								<div class="setting__item-action">
-									<a class="setting__item-link btn">Гид по району</a>
-									<a class="setting__item-link">Получить консультацию</a>
+									<button class="setting__item-link btn" type="button" data-popup="#popup-guide">Гид по району</button>
+									<button class="setting__item-link" type="button" data-popup="#popup-get-consultation">Получить консультацию</button>
 								</div>
 							</div>
 						</div>
@@ -453,7 +453,7 @@
 									</p>
 								</div>
 								<div class="company__item-action">
-									<a class="company__item-link btn" href="#">Получить консультацию</a>
+									<button class="company__item-link btn" type="button" data-popup="#popup-get-consultation">Получить консультацию</button>
 								</div>
 							</div>
 						</div>
@@ -813,6 +813,8 @@
 		</div>
 		@@include('html/_popup.htm',{})
 		@@include('html/_popup-call-back.htm',{})
+		@@include('html/_popup-guide.htm',{})
+		@@include('html/_popup-get-consultation.htm',{})
 		@@include('html/_js.htm',{})
 	</body>
 </html>

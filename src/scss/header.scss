@@ -73,6 +73,7 @@
 	}
 	// .header__phone
 	&__phone {
+		justify-self: end;
 		@extend %mulish-700;
 		font-size: rem(20);
 		line-height: math.div(25 , 20);
@@ -200,9 +201,9 @@
 		}
 	}
 	// .menu__contact
-	// &__contact {
+	&__contact {
 
-	// }
+	}
 	// .menu__phone
 	&__phone {
 		@extend %mulish-700;

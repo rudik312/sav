@@ -43,6 +43,16 @@
     font-size: rem(20);
     line-height: 120%;
     color: #000;
+    @media (any-hover: hover){
+      transition: all 0.3s ease 0s;
+      &:hover{
+        color: #FFC95E;
+      }
+    }
+  }
+  //.info-item__link
+  &__link {
+    cursor: pointer;
   }
   // .info-item__text
   &__text {

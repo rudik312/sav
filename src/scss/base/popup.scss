@@ -257,12 +257,16 @@ body::after {
 
 	// .popup-content__btn
 	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		padding: 20px 40px;
 		width: 100%;
 		max-width: 360px;
 		@extend %mulish-800;
     font-size: rem(14) !important;
     line-height: 120%;
+		text-transform: uppercase;
     color: #263239;
 		border-radius: 56px !important;
 		@media (max-width: em(1180)){

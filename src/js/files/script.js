@@ -193,11 +193,4 @@ window.onload = function() {
   },
   });
 
-  //Кнопка projects__filter-btn
-  // $('.projects__filter-btn').on('click', function() {
-  //   $('.projects__filters').slideToggle();
-  // });
-
-
-
 }
