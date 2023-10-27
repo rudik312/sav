@@ -7,6 +7,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 var splidePrimary = document.getElementById("primary-slider");
 var splideTertiary = document.getElementById("tertiary-slider");
+var splideCases = document.getElementById("cases-slider");
 
 if (splidePrimary) {
       // Create the exterior slider.
@@ -120,6 +121,63 @@ if (splideTertiary) {
     // Set the thumbnails slider as a sync target and then call mount.
     tertiarySlider.sync( quaternarySlider ).mount();
   }
+
+if (splideCases) {
+      // Create the interior slider.
+      var CasesSlider = new Splide( '#cases-slider', {
+        type       : 'fade',
+        // heightRatio: 0.5,
+        pagination : false,
+        arrows     : false,
+        cover      : true,
+        speed      : 1500,
+        rewind      : true, //перемотка
+        breakpoints: {
+          // '420': {
+          //   type   : 'loop',
+          //   padding: '10%',
+          // },
+        }
+      } );
+    
+      var CasesNav = new Splide( '#cases-nav', {
+        rewind      : true, //перемотка
+        // fixedWidth  : 265,
+        // fixedHeight : 180,
+        perMove     : 2,
+        perPage     : 4,
+        isNavigation: true,
+        gap         : 20,
+        type        : 'loop',
+        speed       : 1500,
+        arrows      : false,
+        // focus       : 'center',
+        pagination  : false,
+        cover       : true,
+        // flickPower: 600,
+        breakpoints : {
+          '1380': {
+            gap       : 20,
+          },
+          '1000': {
+            perPage    : 3,
+            perMove    : 2,
+          },
+          '768': {
+            perPage    : 2,
+          },
+    
+          // '600': {
+          // 	fixedWidth  : 66,
+          // 	fixedHeight : 40,
+          // }
+        }
+      } ).mount();
+    
+      // Set the thumbnails slider as a sync target and then call mount.
+      CasesSlider.sync( CasesNav ).mount();
+}
+
 
 });
 
