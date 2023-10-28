@@ -159,9 +159,10 @@ if (splideCases) {
           '1380': {
             gap       : 20,
           },
-          '1000': {
+          '950': {
             perPage    : 3,
             perMove    : 2,
+            gap       : 10,
           },
           '768': {
             perPage    : 2,

@@ -236,7 +236,7 @@ import "./files/chart.js";
 import "./libs/jquery.min.js"
 
 // Подключаем библиотеку slick
-import "./files/slick.min.js"
+// import "./files/slick.min.js"
 
 // Подключаем библиотеку rangeSlider
 import "./files/ion.rangeSlider.js"
