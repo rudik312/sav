@@ -10,7 +10,7 @@
 			<div class="popup-content__body quize__body">
 				<form class="popup-content__form popup-form" data-popup-message="#popup-send" data-dev action="#">
 
-					<div class="quize__block active quize_block">
+					<div class="quize__block quize_block">
 						<div class="quize__block-question">
 							<p>Примерный бюджет покупки</p>
 						</div>
@@ -45,11 +45,90 @@
 							</div>
 						</div>
 					</div>
-					<div class="quize__block quize_block"></div>
-					<div class="quize__block quize_block"></div>
+					<div class="quize__block quize_block">
+						<div class="quize__block-question">
+							<p>Готовность проекта</p>
+						</div>
+						<div class="quize__block-items">
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Построен и готов к проживанию
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Сдача в течение 6 месяцев
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Сдача в течение 1 года
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Старт продаж
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="quize__block quize_block">
+						<div class="quize__block-question">
+							<p>На какой мессенджер отправить материалы?</p>
+						</div>
+						<div class="quize__block-items">
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									WhatsApp
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Telegram
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Viber
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									Botim
+									<span class="quize__block-checkbox"></span>
+								</label>
+							</div>
+						</div>
+					</div>
 
-					<div class="popup-form__wrapper quize__block quize_block">
+					<div class="popup-form__wrapper active quize__block  quize_block">
 
+						<div class="popup-content__info">
+							<div class="popup-content__heading">
+								<h2 class="popup-content__title">Мы нашли 8 проектов по вашим критериям</h2>
+								<span class="popup-content__subtitle">Напишите правильный номер телефона, на него будет выслана информация</span>
+							</div>
+							<div class="popup-content__bg">
+								<div class="popup-content__img">
+									<img src="@img/popup/popup-main.png" alt="popup-img">
+								</div>
+							</div>
+						</div>
 						<div class="popup-content__wrapper">
 							<div class="popup-content__item">
 								<input class="popup-content__input" id="name" type="text" name="name" autocomplete="off" data-required data-error placeholder="Имя">
@@ -60,18 +139,15 @@
 							<div class="popup-content__item">
 								<input class="popup-content__input" id="email" type="text" name="email" autocomplete="off" data-required data-error placeholder="Email">
 							</div>
+							<button type="submit" class="popup-content__btn btn">Получить подборку</button>
+							<div class="popup-form__politics">
+								<p>Нажимая на кнопку вы соглашаетесь с условиями 
+									<a class="popup-form__politics-link" href="#">обработки данных</a> и 
+									<a class="popup-form__politics-link" href="#">политикой конфиденциальности</a>
+								</p>
+							</div>
 						</div>
 
-
-
-						<button type="submit" class="popup-content__btn btn">Получить подборку</button>
-						
-						<div class="popup-form__politics">
-							<p>Нажимая на кнопку вы соглашаетесь с условиями 
-								<a class="popup-form__politics-link" href="#">обработки данных</a> и 
-								<a class="popup-form__politics-link" href="#">политикой конфиденциальности</a>
-							</p>
-						</div>
 					</div>
 					<div class="quize__block-inner">
 						<div class="quize__block-box">
