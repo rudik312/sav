@@ -12,7 +12,7 @@
         let progress = 0;
         let count = 0;
         let progressPercent = 100 / (quizAll.length - 1);
-        console.log(progressPercent)
+        // console.log(progressPercent)
 
         initProgress();
         removeBtn();
@@ -23,7 +23,7 @@
             currentQ.textContent++;
             count++
             progress += Number(progressPercent.toFixed(3));
-            console.log(progress)
+            // console.log(progress)
             initQuiz();
             initProgress();
             removeBtn();
@@ -34,7 +34,7 @@
             count--
             currentQ.textContent--;
             progress -= Number(progressPercent.toFixed(3));
-            console.log(progress)
+            // console.log(progress)
             initQuiz();
             initProgress();
             removeBtn();

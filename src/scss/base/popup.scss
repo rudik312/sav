@@ -580,7 +580,7 @@ body::after {
 	}
 	//.quize__block-control
 	&__block-control {
-		display: flex;
+		display: inline-flex;
 		flex-shrink: 0;
 		column-gap: 15px;
 	}
