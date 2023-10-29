@@ -7,7 +7,7 @@
 				</div>
 				<button class="popup-content__close" data-close type="button"></button>
 			</div>
-			<div class="popup-content__body">
+			<div class="popup-content__body quize__body">
 				<form class="popup-content__form popup-form" data-popup-message="#popup-send" data-dev action="#">
 
 					<div class="quize__block active quize_block">
@@ -19,32 +19,29 @@
 								<label>
 									<input class="quize__block-input input_frm" type="radio" name="budget">
 									до 600 000$
+									<span class="quize__block-checkbox"></span>
 								</label>
 							</div>
 							<div class="quize__block-item">
 								<label>
 									<input class="quize__block-input input_frm" type="radio" name="budget">
 									от 600 000$ до 1 000 000$
+									<span class="quize__block-checkbox"></span>
 								</label>
 							</div>
 							<div class="quize__block-item">
 								<label>
 									<input class="quize__block-input input_frm" type="radio" name="budget">
 									от 1 000 000$ до 3 000 000$
+									<span class="quize__block-checkbox"></span>
 								</label>
 							</div>
 							<div class="quize__block-item">
 								<label>
 									<input class="quize__block-input input_frm" type="radio" name="budget">
 									от 3 000 000$
+									<span class="quize__block-checkbox"></span>
 								</label>
-							</div>
-						</div>
-						<div class="quize__block-inner">
-							<div class="quize__block-box">
-								<div class="quize__block-cont contQ">
-									
-								</div>
 							</div>
 						</div>
 					</div>
@@ -76,7 +73,25 @@
 							</p>
 						</div>
 					</div>
-
+					<div class="quize__block-inner">
+						<div class="quize__block-box">
+							<div class="quize__block-cont">
+								<h2>Вопрос<span class="contQ">
+									<span class="currentQ">1</span> из <span class="allQ">0</span>
+									</span>
+								</h2>
+							</div>
+						</div>
+						<div class="quize__block-control quiz_blockControl">
+							<button type="button" class="btnPrev">
+								<img src="@img/popup/arrow-left.svg" alt="arrow-left">
+							</button>
+							<button type="button" class="btnNext btn">
+								<p>Далее</p>
+								<img src="@img/popup/arrow-right.svg" alt="arrow-right">
+							</button>
+						</div>
+					</div>
 				</form>
 				
 			</div>
