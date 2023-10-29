@@ -60,7 +60,8 @@
                 PrevBtn.style.display = 'inline-flex'
             }
             if (count === quizAll.length - 1) {
-                nextBtn.style.display = 'none'
+                navQuize.style.display = 'none'
+                
             } else if (count !== quizAll.length) {
                 nextBtn.style.display = 'inline-flex'
             }
