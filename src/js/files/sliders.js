@@ -264,64 +264,6 @@ function initSliders() {
 		});
 	}
 
-	// const exteriorNav = new Swiper('.exterior__nav', { // Указываем скласс нужного слайдера
-	// 	// Подключаем модули слайдера
-		
-	// 	// для конкретного случая
-	// 	modules: [Navigation, Controller],
-	// 	updateOnWindowResize: true,
-	// 	observer: true,
-	// 	observeParents: true,
-	// 	centeredSlides: true,
-	// 	slidesPerView: 4,
-	// 	freeMode: true,
-	// 	grabCursor: true,
-	// 	// initialSlide: 0,
-	// 	// watchOverflow: true,
-	// 	// slidesPerGroup: 4,
-
-	// 	spaceBetween: 40,
-	// 	// loop: true,
-	// 	// slidesPerView: 'auto',
-	// 	// multipleActiveThumbs: true,
-	// 	// loop: true,
-	// 	// autoScrollOffset: 1,
-	// 	freeMode: true,
-	// 	// watchSlidesProgress: true,
-	// 	slideToClickedSlide: true,
-	// 	touchRatio: 0.2,
-		
-	// });
-
-	// const exteriorSlider = new Swiper('.exterior__slider', { // Указываем скласс нужного слайдера
-	// 	// Подключаем модули слайдера
-		
-	// 	// для конкретного случая
-	// 	modules: [Navigation, Controller, EffectFade],
-	// 	// updateOnWindowResize: true,
-	// 	observer: true,
-	// 	observeParents: true,
-	// 	// centeredSlides: true,
-	// 	slidesPerView: 1,
-	// 	spaceBetween: 40,
-	// 	speed: 2000,
-	// 	// loop: true,
-	// 	// autoplay: true,
-	// 	effect: 'fade',
-	// 	fadeEffect: {
-	// 		crossFade: true,
-	// 	},
-	// 	navigation: {
-	// 		prevEl: '.exterior-button-prev',
-	// 		nextEl: '.exterior-button-next',
-	// 	},
-	// 	thumbs: {
-	// 		swiper: exteriorNav, 
-	// 	},
-	// });
-
-	// exteriorSlider.controller.control = exteriorNav;
-	// exteriorNav.controller.control = exteriorSlider;
 
 }
 

@@ -1,20 +1,58 @@
-<div id="popup-guide" aria-hidden="false" class="popup">
+<div id="popup-quize" aria-hidden="false" class="popup popup-show">
 	<div class="popup__wrapper">
-		<div class="popup__content popup-content">
+		<div class="popup__content popup-content quize">
 			<div class="popup-content__top">
-				<div class="popup-content__title">
-					<span>гид по району</span>
+				<div class="popup-content__title quize__title">
+					<span>подбор недвижимости</span>
 				</div>
 				<button class="popup-content__close" data-close type="button"></button>
 			</div>
 			<div class="popup-content__body">
-				<div class="popup-content__bg">
-					<div class="popup-content__img-ibg">
-						<img src="@img/popup/popup-main.png" alt="popup-img">
+				<form class="popup-content__form popup-form" data-popup-message="#popup-send" data-dev action="#">
+
+					<div class="quize__block active quize_block">
+						<div class="quize__block-question">
+							<p>Примерный бюджет покупки</p>
+						</div>
+						<div class="quize__block-items">
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									до 600 000$
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									от 600 000$ до 1 000 000$
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									от 1 000 000$ до 3 000 000$
+								</label>
+							</div>
+							<div class="quize__block-item">
+								<label>
+									<input class="quize__block-input input_frm" type="radio" name="budget">
+									от 3 000 000$
+								</label>
+							</div>
+						</div>
+						<div class="quize__block-inner">
+							<div class="quize__block-box">
+								<div class="quize__block-cont contQ">
+									
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="popup-form__wrapper">
-					<form class="popup-content__form" data-popup-message="#popup-send" data-dev action="#">
+					<div class="quize__block quize_block"></div>
+					<div class="quize__block quize_block"></div>
+
+					<div class="popup-form__wrapper quize__block quize_block">
+
 						<div class="popup-content__wrapper">
 							<div class="popup-content__item">
 								<input class="popup-content__input" id="name" type="text" name="name" autocomplete="off" data-required data-error placeholder="Имя">
@@ -22,16 +60,25 @@
 							<div class="popup-content__item">
 								<input class="popup-content__input" id="phone" type="tel" name="phone" autocomplete="off" data-error data-required placeholder="+7(888) 888 88 88">
 							</div>
+							<div class="popup-content__item">
+								<input class="popup-content__input" id="email" type="text" name="email" autocomplete="off" data-required data-error placeholder="Email">
+							</div>
 						</div>
-						<button type="submit" class="popup-content__btn btn">связаться с гидом</button>
-					</form>
-					<div class="popup-form__politics">
-						<p>Нажимая на кнопку вы соглашаетесь с условиями 
-							<a class="popup-form__politics-link" href="#">обработки данных</a> и 
-							<a class="popup-form__politics-link" href="#">политикой конфиденциальности</a>
-						</p>
+
+
+
+						<button type="submit" class="popup-content__btn btn">Получить подборку</button>
+						
+						<div class="popup-form__politics">
+							<p>Нажимая на кнопку вы соглашаетесь с условиями 
+								<a class="popup-form__politics-link" href="#">обработки данных</a> и 
+								<a class="popup-form__politics-link" href="#">политикой конфиденциальности</a>
+							</p>
+						</div>
 					</div>
-				</div>
+
+				</form>
+				
 			</div>
 		</div>
 	</div>
