@@ -467,7 +467,13 @@ body::after {
 			color: #13465B;
 		}
 
+		.popup-content__btn {
+			max-width: 100%;
+		}
 
+		.popup-form__politics {
+			margin: 0 auto;
+		}
 	}
 	//.popup-content__top
 	.popup-content__top {
@@ -490,10 +496,8 @@ body::after {
 	//.quize__block.active 
 	&__block {
 		&.active {
-			// display: block;
-			display: flex;
-			flex-direction: column;
-			row-gap: 20px;
+			display: block;
+			// row-gap: 20px;
 			&.popup-form__wrapper {
 				padding-top: 30px;
 				display: grid;
@@ -511,6 +515,7 @@ body::after {
 	}
 	//.quize__block-items
 	&__block-items {
+		padding-top: 20px;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 40px;
@@ -576,13 +581,14 @@ body::after {
 	//.quize__block-control
 	&__block-control {
 		display: flex;
+		flex-shrink: 0;
 		column-gap: 15px;
 	}
 }
 
 .btnPrev {
-	width: 56px;
-	height: 56px;
+	width: 50px;
+	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -595,6 +601,7 @@ body::after {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	flex-shrink: 0;
 	column-gap: 10px;
 	padding: 10px 20px 10px 40px;
 	border-radius: 56px !important;
@@ -606,7 +613,30 @@ body::after {
 }
 
 .popup-content__form {
-	.quize__block-inner {
-		display: none;
-	}
+
 }
+
+.progress_bar {
+	visibility: hidden;
+	position: absolute;
+	bottom: 110px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #c1c1c1;
+}
+
+.progress {
+	height: 100%;
+	background: red;
+	width: 0;
+	transition: .3s ease-in-out;
+}
+
+// .quiz_block {
+// 	display:none;
+// }
+
+// .quiz_block.active {
+// 	display: block;
+// }
