@@ -56,8 +56,15 @@
         function removeBtn() {
             if (count === 0) {
                 PrevBtn.style.display = 'inline-flex'
+                PrevBtn.style.opacity = '0.5'
+                PrevBtn.disabled = true
+                PrevBtn.style.cursor = 'default'
             } else if (count !== 0) {
                 PrevBtn.style.display = 'inline-flex'
+                PrevBtn.style.backgroundColor = '#F5F7FA'
+                PrevBtn.style.opacity = '1'
+                PrevBtn.disabled = false
+                PrevBtn.style.cursor = 'pointer'
             }
             if (count === quizAll.length - 1) {
                 navQuize.style.display = 'none'

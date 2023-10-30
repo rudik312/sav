@@ -487,6 +487,10 @@ body::after {
 			font-size: rem(16);
 			line-height: math.div(26 , 16);
 			color: #13465B;
+			@media (max-width: em(480)){
+				font-size: rem(14);
+				line-height: math.div(22 , 14);
+			}
 		}
 		//..popup-content__btn
 		.popup-content__btn {
@@ -597,6 +601,10 @@ body::after {
 			padding: 13px 20px 13px 53px;
 			font-size: rem(14);
 			line-height: math.div(22 , 14);
+		}
+		@media (max-width: em(360)){
+			padding: 13px 20px 13px 45px;
+			font-size: rem(12);
 		}
 	}
 	//.quize__block-input
