@@ -55,7 +55,7 @@
 
         function removeBtn() {
             if (count === 0) {
-                PrevBtn.style.display = 'none'
+                PrevBtn.style.display = 'inline-flex'
             } else if (count !== 0) {
                 PrevBtn.style.display = 'inline-flex'
             }
