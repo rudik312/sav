@@ -10,7 +10,7 @@
 				<button class="popup-content__close" data-close type="button"></button>
 			</div>
 			<div class="popup-content__body quize__body">
-				<form class="popup-content__form popup-form quiz_form" data-popup-message="#popup-send" data-dev action="#" autocomplete="off">
+				<form class="popup-content__form popup-form quiz_form" method="POST" data-popup-message="#popup-send" data-dev action="#" autocomplete="off">
 					<div class="progress_bar">
 						<div class="progress"></div>
 					</div>
@@ -120,7 +120,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="popup-form__wrapper quize__block  quiz_block">
+						<div class="popup-form__wrapper quize__block quiz_block">
 	
 							<div class="popup-content__info">
 								<div class="popup-content__heading">
@@ -141,7 +141,7 @@
 									<input class="popup-content__input" id="phone" type="tel" name="phone" autocomplete="off" data-error data-required placeholder="+7(888) 888 88 88">
 								</div>
 								<div class="popup-content__item">
-									<input class="popup-content__input" id="email" type="text" name="email" autocomplete="off" data-required data-error placeholder="Email">
+									<input class="popup-content__input" id="email" type="text" name="email" autocomplete="off" data-required="email" data-error placeholder="Email">
 								</div>
 								<button type="submit" class="popup-content__btn btn">Получить подборку</button>
 								<div class="popup-form__politics">
