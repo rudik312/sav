@@ -641,12 +641,22 @@ body::after {
 			left: 10px;
 		}
 	}
-
+	//.quize__block-inner
 	&__block-inner {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media (max-width: em(420)){
+			flex-direction: column;
+			row-gap: 20px;
+			align-items: inherit;
+		}
 	}
+	//.quize__block-box
+	.quize__block-box {
+
+	}
+
 	//.quize__block-cont
 	&__block-cont {
 		@extend %mulish-500;
@@ -659,9 +669,11 @@ body::after {
 	}
 	//.quize__block-control
 	&__block-control {
-		display: inline-flex;
-		flex-shrink: 0;
+		display: flex;
 		column-gap: 15px;
+		@media (max-width: em(420)){
+			justify-content: space-between;
+		}
 	}
 }
 

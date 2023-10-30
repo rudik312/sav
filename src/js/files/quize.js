@@ -55,12 +55,12 @@
 
         function removeBtn() {
             if (count === 0) {
-                PrevBtn.style.display = 'inline-flex'
+                PrevBtn.style.display = 'flex'
                 PrevBtn.style.opacity = '0.5'
                 PrevBtn.disabled = true
                 PrevBtn.style.cursor = 'default'
             } else if (count !== 0) {
-                PrevBtn.style.display = 'inline-flex'
+                PrevBtn.style.display = 'flex'
                 PrevBtn.style.backgroundColor = '#F5F7FA'
                 PrevBtn.style.opacity = '1'
                 PrevBtn.disabled = false
@@ -70,7 +70,7 @@
                 navQuize.style.display = 'none'
                 
             } else if (count !== quizAll.length) {
-                nextBtn.style.display = 'inline-flex'
+                nextBtn.style.display = 'flex'
             }
         }
     }
