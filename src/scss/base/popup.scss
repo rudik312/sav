@@ -527,6 +527,10 @@ body::after {
 		font-size: rem(20);
 		line-height: math.div(28 , 20);
 		color: #13465B;
+		@media (max-width: em(480)){
+			font-size: rem(14) !important;
+			line-height: math.div(20 , 14);
+		}
 	}
 
 	//.quize__block
@@ -561,6 +565,9 @@ body::after {
 			font-size: rem(24);
 			line-height: math.div(34 , 24);
 		}
+		@media (max-width: em(480)){
+			max-width: 280px;
+		}
 	}
 	//.quize__block-items
 	&__block-items {
@@ -586,6 +593,11 @@ body::after {
 		font-size: rem(16);
 		line-height: math.div(26 , 16);
 		color: #13465B;
+		@media (max-width: em(480)){
+			padding: 13px 20px 13px 53px;
+			font-size: rem(14);
+			line-height: math.div(22 , 14);
+		}
 	}
 	//.quize__block-input
 	&__block-input {
@@ -616,6 +628,10 @@ body::after {
 		background-color: #fff;
 		left: 20px;
 		top: 17px;
+		@media (max-width: em(480)){
+			top: 10px;
+			left: 10px;
+		}
 	}
 
 	&__block-inner {
