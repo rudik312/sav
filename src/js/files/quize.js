@@ -14,7 +14,7 @@
 		//мои блоки
 		let navQuize = quiz_form.querySelector('.quize__block-inner');
 		let btnSend = quiz_form.querySelector('.popup-content__btn');
-		let inputs = document.querySelectorAll('.popup-content__input');
+		let labelQ = document.querySelector('.quize__block-box');
 
 		let progress = 0;
 		let count = 0;
@@ -52,7 +52,7 @@
 				element.classList.remove('active')
 				if (i === count) {
 					element.classList.add('active')
-					console.log(count);
+					// console.log(count);
 				}
 			})
 		}
@@ -67,6 +67,7 @@
 				PrevBtn.style.opacity = '0.5'
 				PrevBtn.disabled = true
 				PrevBtn.style.cursor = 'default'
+				
 			} else if (count !== 0) {
 				PrevBtn.style.display = 'flex'
 				PrevBtn.style.backgroundColor = '#F5F7FA'
@@ -75,37 +76,29 @@
 				PrevBtn.style.cursor = 'pointer'
 			}
 			if (count === quizAll.length - 1) {
-				navQuize.style.display = 'none'
-				
+				// navQuize.style.display = 'none'
+				// question.style.display = 'none'
+				nextBtn.style.opacity = '0.5'
+				nextBtn.disabled = true
+				nextBtn.style.cursor = 'default'
+				labelQ.style.display = 'none'
+				navQuize.style.justifyContent ='flex-end'
+				quiz_form.style.rowGap = '0'
 			} else if (count !== quizAll.length) {
 				nextBtn.style.display = 'flex'
+				nextBtn.disabled = false
+				nextBtn.style.opacity = '1'
+				nextBtn.style.cursor = 'pointer'
+				console.log(count);
+				labelQ.style.display = 'block'
+				navQuize.style.justifyContent = 'space-between'
+				quiz_form.style.rowGap = '160px'
 			}
 		}
 
-
-		// let sendMessage = function() {
-		// 	quizAll.forEach((element, i) => {
-		// 		element.classList.remove('active');
-		// 		if (i === count - 1) {
-		// 			element.classList.add('active');
-		// 			navQuize.style.display = 'flex';
-		// 			count = 0;
-		// 			currentQ.textContent = '1';
-		// 			console.log(count);
-
-		// 			removeBtn();
-		// 		}
-		// 	});
-		// }
-
-		// btnSend.addEventListener('click', sendMessage);
-
-
-
-
 		function sendMessage() {
 
-			btnSend.addEventListener('click', function() {
+			btnSend.addEventListener('click', ()=> {
 
 				quizAll.forEach((element, i) => {
 					element.classList.remove('active');
@@ -114,7 +107,7 @@
 						navQuize.style.display = 'flex';
 						count = 0;
 						currentQ.textContent = '1';
-						console.log(count); // вывод 3
+						// console.log(count); // вывод 3
 						removeBtn();
 						// initQuiz();
 					}
@@ -124,16 +117,11 @@
 			
 		}
 
-
-		
 		function handleFormSubmit(event) {
 			// Просим форму не отправлять данные самостоятельно
 			event.preventDefault();
 			// serializeForm(applicantForm)
-
-			console.log('Отправка!');
-
-			
+			// console.log('Отправка!');
 			initQuiz();
 			// sendMessage();
 
