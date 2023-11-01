@@ -83,6 +83,7 @@
 				nextBtn.style.cursor = 'default'
 				labelQ.style.display = 'none'
 				navQuize.style.justifyContent ='flex-end'
+				navQuize.style.paddingTop ='20px'
 				quiz_form.style.rowGap = '0'
 			} else if (count !== quizAll.length) {
 				nextBtn.style.display = 'flex'
@@ -92,6 +93,7 @@
 				console.log(count);
 				labelQ.style.display = 'block'
 				navQuize.style.justifyContent = 'space-between'
+				navQuize.style.paddingTop ='0'
 				quiz_form.style.rowGap = '160px'
 			}
 		}

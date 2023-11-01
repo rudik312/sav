@@ -640,6 +640,9 @@ body::after {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media (max-width: em(1180)){
+			// padding-top: 20px;
+		}
 		@media (max-width: em(420)){
 			flex-direction: column;
 			row-gap: 20px;
