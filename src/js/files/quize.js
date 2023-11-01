@@ -1,4 +1,4 @@
-import { flsModules } from "./modules.js";
+// import { flsModules } from "./modules.js";
 
 
 
@@ -10,8 +10,12 @@ import { flsModules } from "./modules.js";
 		let quizAll = quiz_form.querySelectorAll('.quiz_block');
 		let currentQ = quiz_form.querySelector('.currentQ');
 		let progressQ = quiz_form.querySelector('.progress');
+
+		//мои блоки
 		let navQuize = quiz_form.querySelector('.quize__block-inner');
 		let btnSend = quiz_form.querySelector('.popup-content__btn');
+		let inputs = document.querySelectorAll('.popup-content__input');
+
 		let progress = 0;
 		let count = 0;
 		let progressPercent = 100 / (quizAll.length - 1);
@@ -78,24 +82,110 @@ import { flsModules } from "./modules.js";
 			}
 		}
 
+
+		// let sendMessage = function() {
+		// 	quizAll.forEach((element, i) => {
+		// 		element.classList.remove('active');
+		// 		if (i === count - 1) {
+		// 			element.classList.add('active');
+		// 			navQuize.style.display = 'flex';
+		// 			count = 0;
+		// 			currentQ.textContent = '1';
+		// 			console.log(count);
+
+		// 			removeBtn();
+		// 		}
+		// 	});
+		// }
+
+		// btnSend.addEventListener('click', sendMessage);
+
+
+
+
 		function sendMessage() {
+
 			btnSend.addEventListener('click', function() {
+
 				quizAll.forEach((element, i) => {
-					element.classList.remove('active')
+					element.classList.remove('active');
 					if (i === count - 1) {
-						element.classList.add('active')
-						navQuize.style.display = 'flex'
-						count = 0
-						currentQ.textContent = '1'
-						console.log(count);
+						element.classList.add('active');
+						navQuize.style.display = 'flex';
+						count = 0;
+						currentQ.textContent = '1';
+						console.log(count); // вывод 3
+						removeBtn();
+						// initQuiz();
 					}
 				});
 
 			});
+			
 		}
-		sendMessage();
+
+
+		
+		function handleFormSubmit(event) {
+			// Просим форму не отправлять данные самостоятельно
+			event.preventDefault();
+			// serializeForm(applicantForm)
+
+			console.log('Отправка!');
+
+			
+			initQuiz();
+			// sendMessage();
+
+		}
+		
+		const applicantForm = document.getElementById('form-quiz');
+
+		applicantForm.addEventListener('submit', handleFormSubmit);
+
+
+
+		// function checkValidity(event) {
+		// 	const formNode = event.target.form
+		// 	const isValid = formNode.checkValidity()
+		
+		// 	formNode.querySelector('.popup-content__btn').disabled = !isValid
+		// }
+		
+		// applicantForm.addEventListener('.quize__block-input', checkValidity)
+		
+
+
+		// function serializeForm(formNode) {
+		// 	const { elements } = formNode
+	
+		// 	const data = new FormData()
+		
+		// 	Array.from(elements)
+		// 		.filter((item) => !!item.name)
+		// 		.forEach((element) => {
+		// 			const { name, type } = element
+		// 			const value = type === 'checkbox' ? element.checked : element.value
+		// 			// console.log({ name, value })
+		// 			data.append(name, value)
+		// 		})
+		// 		console.log(Array.from(data.entries()))
+
+		// 	return data
+		// }
+
+		// end if (quiz_form)
 	}
+
 	// QUIZ THE END
 
 
-	// flsModules.popup.open('#popup-quize')
+
+
+	// for (let i = 0; i < inputs.length; i++) {
+	// 	const item = inputs[i];
+	// 	if (item.classList.contains('_form-error')) {
+	// 		console.log(item);
+	// 	}
+	// }
+

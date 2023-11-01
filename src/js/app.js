@@ -238,6 +238,8 @@ import "./libs/jquery.min.js"
 // Подключаем библиотеку slick
 // import "./files/slick.min.js"
 
+import "./files/just-validate3.3.3.min.js"
+
 // Подключаем библиотеку rangeSlider
 import "./files/ion.rangeSlider.js"
 
