@@ -535,18 +535,17 @@ body::after {
 	}
 
 	.popup-content__quize-title {
-		text-transform: uppercase;
-		text-align: left;
-		@extend %raleway-600;
-		font-size: rem(20);
-		line-height: math.div(28 , 20);
-		color: #13465B;
-		@media (max-width: em(1180)){
-			font-size: rem(20) !important;
-		}
-		@media (max-width: em(480)){
-			font-size: rem(14) !important;
-			line-height: math.div(20 , 14);
+		span {
+			text-transform: uppercase;
+			text-align: left;
+			@extend %raleway-600;
+			font-size: rem(20);
+			line-height: math.div(28 , 20);
+			color: #13465B;
+			@media (max-width: em(480)){
+				font-size: rem(14);
+				line-height: math.div(20 , 14);
+			}
 		}
 	}
 
