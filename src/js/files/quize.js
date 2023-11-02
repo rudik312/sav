@@ -81,16 +81,12 @@
 				nextBtn.disabled = true
 				nextBtn.style.cursor = 'default'
 				labelQ.style.display = 'none'
-				navQuize.style.justifyContent ='flex-end'
 			} else if (count !== quizAll.length) {
 				nextBtn.style.display = 'flex'
 				nextBtn.disabled = false
 				nextBtn.style.opacity = '1'
 				nextBtn.style.cursor = 'pointer'
-				console.log(count);
 				labelQ.style.display = 'block'
-				navQuize.style.justifyContent = 'space-between'
-				navQuize.style.paddingTop ='0'
 			}
 		}
 
