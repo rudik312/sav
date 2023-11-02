@@ -15,6 +15,7 @@
 		let navQuize = quiz_form.querySelector('.quize__block-inner');
 		let btnSend = quiz_form.querySelector('.popup-content__btn');
 		let labelQ = document.querySelector('.quize__block-box');
+		let radios = document.querySelectorAll('input[type="radio"]');
 
 		let progress = 0;
 		let count = 0;
@@ -76,15 +77,13 @@
 				PrevBtn.style.cursor = 'pointer'
 			}
 			if (count === quizAll.length - 1) {
-				// navQuize.style.display = 'none'
-				// question.style.display = 'none'
 				nextBtn.style.opacity = '0.5'
 				nextBtn.disabled = true
 				nextBtn.style.cursor = 'default'
 				labelQ.style.display = 'none'
 				navQuize.style.justifyContent ='flex-end'
 				navQuize.style.paddingTop ='20px'
-				quiz_form.style.rowGap = '0'
+				// quiz_form.style.rowGap = '0'
 			} else if (count !== quizAll.length) {
 				nextBtn.style.display = 'flex'
 				nextBtn.disabled = false
@@ -94,7 +93,7 @@
 				labelQ.style.display = 'block'
 				navQuize.style.justifyContent = 'space-between'
 				navQuize.style.paddingTop ='0'
-				quiz_form.style.rowGap = '160px'
+				// quiz_form.style.rowGap = '160px'
 			}
 		}
 
@@ -155,14 +154,18 @@
 		// 		.filter((item) => !!item.name)
 		// 		.forEach((element) => {
 		// 			const { name, type } = element
-		// 			const value = type === 'checkbox' ? element.checked : element.value
+		// 			const value = type === 'radio' ? element.checked : element.value
 		// 			// console.log({ name, value })
 		// 			data.append(name, value)
 		// 		})
+				
+
 		// 		console.log(Array.from(data.entries()))
 
 		// 	return data
 		// }
+
+
 
 		// end if (quiz_form)
 	}
@@ -170,7 +173,11 @@
 	// QUIZ THE END
 
 
-
+	// for (let radio of radios) {
+	// 	if (radio.checked) {
+	// 		console.log(radio.value);
+	// 	}
+	// }
 
 	// for (let i = 0; i < inputs.length; i++) {
 	// 	const item = inputs[i];
