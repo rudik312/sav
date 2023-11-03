@@ -116,8 +116,14 @@
       background-color: #fff;
     }
   }
-  // .projects__content
-  &__content {
+  //.projects__filters-wrapper
+  &__filters-wrapper {
+
+  }
+
+  // .projects__filters-active
+  &__filters-active {
+    display: block;
   }
 }
 //.filter
@@ -139,6 +145,18 @@
   }
   // .filter__price-title
   &__price-title {
+  }
+  //.filter__show
+  &__show {
+    margin-top: 15px;
+  }
+
+  &__show-btn {
+    @extend %mulish-500;
+    font-size: rem(14);
+    line-height: 120%;
+    text-decoration: underline;
+    color: #13465B;
   }
   //.filter__actions
   &__actions {
