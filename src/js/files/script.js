@@ -196,36 +196,56 @@ window.onload = function() {
 
   // Кнопка показать еще (page projects)
 
-
-
-
-
-
-
+  function showLocation() {
 
   let boxLoc = document.getElementsByClassName('filter-location__label');
-  let btn = document.getElementById('show-location');
-  
+  let btnLoc = document.getElementById('show-location');
+    
   for (let i = 7; i < boxLoc.length; i++) {
     boxLoc[i].style.display = "none";
   }
 
-  let items = 7;
-  btn.addEventListener("click", function() {
-      items += 7;
-      if (items <= boxLoc.length){
-        for (let i = 0; i < items; i++) {
+  let itemsLoc;
+  btnLoc.addEventListener("click", function() {
+    itemsLoc = boxLoc.length;
+      if (itemsLoc <= boxLoc.length){
+        for (let i = 0; i < itemsLoc; i++) {
           boxLoc[i].style.display = "flex";
         }
       }
-      if (items >= boxLoc.length) {
-        btn.style.display = 'none'
+      if (itemsLoc >= boxLoc.length) {
+        btnLoc.style.display = 'none'
       }
-  });
+
+    });
+  }
+
+  function showDevelopers() {
+
+    let boxDev = document.getElementsByClassName('filter-developer__label');
+    let btnDev = document.getElementById('show-developer');
+      
+    for (let i = 7; i < boxDev.length; i++) {
+      boxDev[i].style.display = "none";
+    }
   
+    let itemsDev;
+    btnDev.addEventListener("click", function() {
+      itemsDev = boxDev.length;
+        if (itemsDev <= boxDev.length){
+          for (let i = 0; i < itemsDev; i++) {
+            boxDev[i].style.display = "flex";
+          }
+        }
+        if (itemsDev >= boxDev.length) {
+          btnDev.style.display = 'none'
+        }
 
+      });
+    }
 
-
-
+  showLocation();
+  showDevelopers();
+  
 
 }
