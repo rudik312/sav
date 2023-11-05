@@ -10,9 +10,7 @@ body::after {
 	transition: opacity 0.8s ease 0s;
 	pointer-events: none;
 	z-index: 149;
-	@media (min-width:em(1240)){
-		display: none;
-	}
+
 }
 .popup-show body::after {
 	opacity: 1;
@@ -191,6 +189,9 @@ body::after {
 			.filter__actions-btn {
 				font-size: rem(16);
 				padding: 8px 80px;
+				@media (max-width: em(1240)){
+					padding: 12px 40px;
+				}
 				@media (max-width: em(768)){
 					padding: 8px 40px;
 					font-size: rem(14);

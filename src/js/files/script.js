@@ -1,5 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile } from "./functions.js";
+import { isMobile, showMore } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -192,6 +192,40 @@ window.onload = function() {
       $('.filter-price__to').text(data.to_pretty);
   },
   });
+
+
+  // Кнопка показать еще (page projects)
+
+
+
+
+
+
+
+
+  let boxLoc = document.getElementsByClassName('filter-location__label');
+  let btn = document.getElementById('show-location');
+  
+  for (let i = 7; i < boxLoc.length; i++) {
+    boxLoc[i].style.display = "none";
+  }
+
+  let items = 7;
+  btn.addEventListener("click", function() {
+      items += 7;
+      if (items <= boxLoc.length){
+        for (let i = 0; i < items; i++) {
+          boxLoc[i].style.display = "flex";
+        }
+      }
+      if (items >= boxLoc.length) {
+        btn.style.display = 'none'
+      }
+  });
+  
+
+
+
 
 
 }
