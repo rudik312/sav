@@ -166,7 +166,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавная навигация по странице
 // Документация: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функционал добавления классов к хедеру при прокрутке
 // Документация: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
@@ -238,8 +238,8 @@ import "./libs/jquery.min.js"
 // Подключаем библиотеку rangeSlider
 import "./files/ion.rangeSlider.js"
 
-//Подключаем квиз-опрос
-import "./files/quize.js";
+// //Подключаем квиз-опрос
+// import "./files/quize.js";
 
 import "./files/script.js";
 //============================================================================================================================================================================================================================================

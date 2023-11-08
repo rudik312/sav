@@ -1,4 +1,4 @@
-// import { flsModules } from "./modules.js";
+
 
 
 
@@ -20,7 +20,7 @@
 		let progress = 0;
 		let count = 0;
 		let progressPercent = 100 / (quizAll.length - 1);
-		// console.log(progressPercent)
+
 		
 		initProgress();
 		removeBtn();
@@ -31,7 +31,7 @@
 			currentQ.textContent++;
 			count++
 			progress += Number(progressPercent.toFixed(3));
-			// console.log(progress)
+
 			initQuiz();
 			initProgress();
 			removeBtn();
@@ -42,7 +42,7 @@
 			count--
 			currentQ.textContent--;
 			progress -= Number(progressPercent.toFixed(3));
-			console.log(progress)
+
 			initQuiz();
 			initProgress();
 			removeBtn();
@@ -53,7 +53,7 @@
 				element.classList.remove('active')
 				if (i === count) {
 					element.classList.add('active')
-					// console.log(count);
+
 				}
 			})
 		}
@@ -101,9 +101,9 @@
 						navQuize.style.display = 'flex';
 						count = 0;
 						currentQ.textContent = '1';
-						// console.log(count); // вывод 3
+
 						removeBtn();
-						// initQuiz();
+
 					}
 				});
 
@@ -127,55 +127,9 @@
 
 
 
-		// function checkValidity(event) {
-		// 	const formNode = event.target.form
-		// 	const isValid = formNode.checkValidity()
-		
-		// 	formNode.querySelector('.popup-content__btn').disabled = !isValid
-		// }
-		
-		// applicantForm.addEventListener('.quize__block-input', checkValidity)
-		
-
-
-		// function serializeForm(formNode) {
-		// 	const { elements } = formNode
-	
-		// 	const data = new FormData()
-		
-		// 	Array.from(elements)
-		// 		.filter((item) => !!item.name)
-		// 		.forEach((element) => {
-		// 			const { name, type } = element
-		// 			const value = type === 'radio' ? element.checked : element.value
-		// 			// console.log({ name, value })
-		// 			data.append(name, value)
-		// 		})
-				
-
-		// 		console.log(Array.from(data.entries()))
-
-		// 	return data
-		// }
-
-
-
-		// end if (quiz_form)
 	}
 
 	// QUIZ THE END
 
 
-	// for (let radio of radios) {
-	// 	if (radio.checked) {
-	// 		console.log(radio.value);
-	// 	}
-	// }
-
-	// for (let i = 0; i < inputs.length; i++) {
-	// 	const item = inputs[i];
-	// 	if (item.classList.contains('_form-error')) {
-	// 		console.log(item);
-	// 	}
-	// }
 

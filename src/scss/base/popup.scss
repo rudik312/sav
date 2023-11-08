@@ -426,7 +426,10 @@ body::after {
 //.popup-quize
 //========================================================================================================================================================
 .quize {
-
+	// min-height: 541px;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between;
 	&.popup-content {
 		@media (max-width: em(1180)){
 			border-radius: 40px;
@@ -436,7 +439,6 @@ body::after {
 	//.quize__body
 	&__body {
 		display: flex;
-
 		//.popup-content__body
 		&.popup-content__body {
 			@media (max-width: em(1180)){
@@ -548,6 +550,12 @@ body::after {
 	&__block {
 		&.active {
 			display: block;
+
+			// display: flex;
+			// flex-direction: column;
+			// justify-content: space-between;
+			// row-gap: 10px;
+	
 			&.popup-form__wrapper {
 				padding-top: 30px;
 				display: grid;
