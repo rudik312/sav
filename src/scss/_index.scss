@@ -3137,7 +3137,6 @@
   &__title-box {
     display: flex;
     flex-direction: column;
-    // position: relative;
     @media (max-width: em(968)){
       max-width: 382px;
     }
@@ -3152,9 +3151,6 @@
     }
     @media (max-width: em(715)){
       max-width: 326px;
-    }
-    @media (max-width: em(700)){
-      // max-width: 317px;
     }
     @media (max-width: em(690)){
       max-width: 320px;
@@ -3176,7 +3172,6 @@
     }
     @media (max-width: em(690)){
       font-size: rem(20);
-      // @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
     }
     @media (max-width: em(380)){
       font-size: rem(16);
@@ -3240,26 +3235,16 @@
     }
     @media (max-width: em(968)){
       padding: 2px 15px;
-      // bottom: 47px;
       @include adaptiveValue("bottom", 55, 50, 968, 768, 1);
-      // left: 47px;
-      // left: 170px;
       @include adaptiveValue("left", 200, 170, 968, 768, 1);
     }
     @media (max-width: em(768)){
-      // padding: 2px 15px;
       bottom: 53px;
       left: 170px;
     }
     @media (max-width: em(735)){
       bottom: 55px;
       left: 170px;
-    }
-    @media (max-width: em(725)){
-      // bottom: 40px;
-      // left: 150px;
-      // @include adaptiveValue("bottom", 40, 35, 725, 660, 1);
-      // @include adaptiveValue("left", 160, 140, 725, 660, 1);
     }
     @media (max-width: em(690)){
       bottom: 35px;
@@ -3450,9 +3435,7 @@
     width: 100%;
     cursor: default;
     text-align: left;
-    // border: 1px solid #eee;
     padding: 12px 40px 12px 0;
-    // border-radius: rem(5);
     position: relative;
     @extend %raleway-600;
     font-size: rem(24);
@@ -3507,7 +3490,7 @@
   }
   // .faq-inner__spollers-body
   &__spollers-body {
-    // padding-right: 60px;
+
   }
 }
 .spollers {
@@ -3694,9 +3677,6 @@
     }
     @media (max-width: em(950)){
       max-width: 296px;
-      // display: flex;
-      // flex-direction: column;
-      // row-gap: 15px;
     }
   }
   
@@ -4060,51 +4040,6 @@
 
 }
 
-//test
-//========================================================================================================================================================
-
-
-//========================================================================================================================================================
-
-//del
-.cases-slide__box {
-  // display: grid;
-  // grid-template-columns: 400px 1fr;
-  // column-gap: 70px;
-  // grid-template-rows: 1fr auto;
-  // .cases-slide__item {
-  //   &:first-child{
-
-  //   }
-  //   &:last-child{
-  //     padding-top: 30px;
-  //     width: 445px;
-  //     height: 381px;
-  //     padding-top: 30px;
-  //     padding-right: 26px;
-  //     @media (max-width: em(950)){
-  //       padding-top: 0;
-  //       max-width: 100%;
-  //       height: 100%;
-  //       padding: 0;
-  //     }
-  //   }
-  // }
-  // @media (max-width: em(950)){
-  //   display: block;
-  // }
-}
-//del
-.cases-slide__splide {
-  // width: 416px;
-  // padding-top: 30px;
-  // grid-row: span 2;
-  // @media (max-width: em(950)){
-  //   margin-bottom: 15px;
-  //   padding-top: 20px;
-  //   width: 256px;
-  // }
-}
 //.district
 //========================================================================================================================================================
 .district {
@@ -4219,10 +4154,6 @@
     justify-items: center;
     grid-template-rows: 1.4fr 1fr;
     border-radius: 55px;
-    // display: flex !important;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: space-between;
     &::before{
       content:'';
       position: absolute;
@@ -4283,27 +4214,6 @@
   }
 }
 
-
-
-// .district__slider.swiper {
-//   overflow: visible !important;
-// }
-
-// .district__slide.swiper-slide-next {
-//   // opacity: 0.25 !important;
-  
-// }
-// .district__slide.swiper-slide-prev {
-//   // opacity: 0.25 !important;
-// }
-
-
-// .district__slide.swiper-slide-prev {
-//   visibility: hidden;
-// }
-
-
-
 .district__slide.swiper-slide.swiper-slide-duplicate-prev {
   visibility: hidden !important;
 }
@@ -4320,137 +4230,3 @@
 
 //.telegram
 //========================================================================================================================================================
-// .telegram {
-//   // .telegram__container
-//   &__container {
-    
-//   }
-//   // .telegram__inner
-//   &__inner {
-//     padding-top: 50px;
-//     padding-bottom: 35px;
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     column-gap: 40px;
-//   }
-//   // .telegram__item
-//   &__item {
-//     &:last-child{
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: flex-start;
-//       row-gap: 30px;
-//     }
-//   }
-//   // .telegram__bg
-//   &__bg {
-//     img {
-//       width: 571px;
-//       height: 580px;
-//     }
-//     // display: flex;
-//     // flex-direction: column;
-//     // justify-content: center;
-//   }
-
-//   &__content {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     row-gap: 20px;
-//   }
-//   // .telegram__title-box
-//   &__title-box {
-//     h3 {
-//       @extend %raleway-600;
-//       font-size: rem(56);
-//       line-height: math.div(78 , 56);
-//       text-transform: uppercase;
-//       color: $black;
-//     }
-//     span {
-//       @extend %raleway-400;
-//       font-size: rem(32);
-//       line-height: math.div(45 , 32);
-//       text-transform: uppercase;
-//       color: $black;
-//     }
-//   }
-//   // .telegram__subtitle
-//   &__subtitle {
-//     @extend %mulish-500;
-//     font-size: rem(18);
-//     line-height: math.div(29 , 18);
-//     color: $text;
-//   }
-//   // .telegram__btn
-//   &__btn {
-//     padding: 16px 40px;
-//     border-radius: 0px 35px 35px 35px;
-//     background: linear-gradient(137deg, #00AFE1 8.1%, #009BD3 94.96%);
-//   }
-//   // .telegram__btn-link
-//   &__btn-link {
-//     display: flex;
-//     align-items: center;
-//     column-gap: 10px;
-//     img {
-//       width: 45px;
-//       height: 45px;
-//     }
-//   }
-//   // .telegram__btn-text
-//   &__btn-text {
-//     @extend %mulish-800;
-//     font-size: rem(18);
-//     line-height: 120%;
-//     color: $white;
-//   }
-// }
-// .telegram-container {
-//   // .telegram-container__fluid
-//   &__fluid {
-//     margin-top: 70px;
-//     margin-bottom: 70px;
-//     border-radius: 80px;
-//     background-color: $white;
-//   }
-// }
-//========================================================================================================================================================
-
-
-// .splide {
-//   visibility: inherit !important;
-//   width: 500px;
-//   height: 500px;
-//   background-color: #009BD3;
-// }
-// .splide__slide {
-//   height: 100px;
-//   margin-right: 10px !important;
-//   background-color: #07C926;
-// }
-
-// .thumbnails {
-//   display: flex;
-//   margin: 1rem auto 0;
-//   padding: 0;
-//   justify-content: center;
-// }
-
-// .thumbnail {
-//   display: flex !important;
-//   background-color: #00AFE1;
-//   width: 100%;
-//   height: 70px;
-//   overflow: hidden;
-//   list-style: none;
-//   margin: 0 0.2rem;
-//   cursor: pointer;
-// }
-
-// .thumbnail img {
-//   width: 100%;
-//   height: auto;
-// }

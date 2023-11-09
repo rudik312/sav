@@ -203,11 +203,6 @@
     font-size: rem(14);
     line-height: 120%;
   }
-
-  span {
-
-  }
-
 }
 
 .irs--flat .irs-line {
@@ -225,6 +220,11 @@
   border-radius: 50%;
   border: 3px solid #FFC95E;
   background-color: #fff;
+  @media (max-width: em(1240)){
+    width: 26px;
+    height: 26px;
+    top: -5px;
+  }
 }
 
 .irs--flat .irs-handle>i:first-child {
