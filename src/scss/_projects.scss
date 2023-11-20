@@ -47,8 +47,8 @@
     column-gap: 20px;
     row-gap: 20px;
   }
-  // .projects__item
-  &__item {
+  // .projects__btn
+  &__btn {
     padding: 6px 16px 6px 6px;
     display: flex;
     align-items: center;
@@ -307,49 +307,49 @@
 }
 
 //.filter-bedroom
-.filter-bedroom {
-  // .filter-type__form
-  &__form {
-  }
-  // .filter-type__label
-  &__label {
-    display: flex;
-    align-items: center;
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
-  // .filter-type__box
-  &__box {
-  }
-  // .filter-type__input
-  &__input {
-    @extend %checkbox-hidden;
-    &:checked + .filter-bedroom__checkbox {
-      background-image: url(../img/projects/check-on.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-  // .filter-type__checkbox
-  &__checkbox {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    margin-left: 0px;
-    margin-top: -10px;
-    border-radius: 2px;
-    border: 2px solid #FFC95E;
-  }
-  // .filter-type__text
-  &__text {
-    margin-left: 30px;
-    @extend %mulish-500;
-    font-size: rem(16);
-    line-height: 120%;
-    color: $text;
-  }
-}
+// .filter-bedroom {
+//   // .filter-type__form
+//   &__form {
+//   }
+//   // .filter-type__label
+//   &__label {
+//     display: flex;
+//     align-items: center;
+//     &:not(:last-child) {
+//       margin-bottom: 15px;
+//     }
+//   }
+//   // .filter-type__box
+//   &__box {
+//   }
+//   // .filter-type__input
+//   &__input {
+//     @extend %checkbox-hidden;
+//     &:checked + .filter-bedroom__checkbox {
+//       background-image: url(../img/projects/check-on.svg);
+//       background-repeat: no-repeat;
+//       background-position: center;
+//     }
+//   }
+//   // .filter-type__checkbox
+//   &__checkbox {
+//     width: 20px;
+//     height: 20px;
+//     position: absolute;
+//     margin-left: 0px;
+//     margin-top: -10px;
+//     border-radius: 2px;
+//     border: 2px solid #FFC95E;
+//   }
+//   // .filter-type__text
+//   &__text {
+//     margin-left: 30px;
+//     @extend %mulish-500;
+//     font-size: rem(16);
+//     line-height: 120%;
+//     color: $text;
+//   }
+// }
 
 //.filter-location
 .filter-location {
