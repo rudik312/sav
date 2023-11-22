@@ -23,7 +23,7 @@ if (document.getElementById("myChart") !== null) {
 
         let myChart = new Chart(ctx, {
             maintainAspectRatio: false,
-            responsive: true,
+            responsive: false,
             type: 'bar',
             data: {
                 labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
@@ -82,7 +82,7 @@ if (document.getElementById("myChart") !== null) {
                     deferred: {
                       xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
                       yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-                      delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+                      delay: 200      // delay of 500 ms after the canvas is considered inside the viewport
                     }
                 }],
                 
@@ -139,8 +139,8 @@ if (document.getElementById("myChart") !== null) {
                 },
             },
             animation: {
-              duration: 3000,
-              delay: 1000,
+              duration: 1500,
+              delay: 500,
               
             }
           }
