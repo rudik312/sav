@@ -23,7 +23,7 @@ if (document.getElementById("myChart") !== null) {
 
         let myChart = new Chart(ctx, {
             maintainAspectRatio: false,
-            responsive: false,
+            responsive: true,
             type: 'bar',
             data: {
                 labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
