@@ -134,7 +134,7 @@ if (document.getElementById("myChart") !== null) {
               },
               layout: {
                 padding: {
-                  bottom: 14,
+                  // bottom: 10,
                   left: 0,
                 },
             },
