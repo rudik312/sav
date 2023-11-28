@@ -1555,6 +1555,7 @@
     display: grid;
     grid-template-columns: 1fr 2.3fr;
     column-gap: 20px;
+    min-height: 428px;
     @media (max-width: em(1090)){
       grid-template-columns: 0.8fr 1.7fr;
       column-gap: 10px;
