@@ -1555,7 +1555,7 @@
     display: grid;
     grid-template-columns: 1fr 2.3fr;
     column-gap: 20px;
-    min-height: 428px;
+    // min-height: 428px;
     @media (max-width: em(1090)){
       grid-template-columns: 0.8fr 1.7fr;
       column-gap: 10px;
@@ -1570,7 +1570,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 2.8px;
+    row-gap: 3px;
   }
   // .risk-statistics__list-item
   &__list-item {
@@ -1595,7 +1595,7 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465B;
-    height: 428px;
+    height: 431px;
     canvas {
       // width: 100%;
       // height: 100%;
