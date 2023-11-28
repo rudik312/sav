@@ -1595,11 +1595,11 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465B;
-    max-height: 423px;
+    height: 420px;
     // min-height: 100%;
     canvas {
       // width: 100%;
-      height: 100%;
+      // height: 100%;
       // display: block;  
     }
   }
