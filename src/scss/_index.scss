@@ -1569,7 +1569,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    row-gap: 2px;
+    row-gap: 2.5px;
   }
   // .risk-statistics__list-item
   &__list-item {
@@ -1594,7 +1594,7 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465B;
-    height: 407px;
+    // height: 407px;
     canvas {
       // width: 100%;
       // height: 100%;
