@@ -21,7 +21,7 @@ if (document.getElementById("myChart") !== null) {
 
         let ctx = document.getElementById('myChart').getContext('2d');
         ctx.canvas.width = 300;
-        ctx.canvas.height = 420;
+        ctx.canvas.height = 423;
         let myChart = new Chart(ctx, {
             maintainAspectRatio: false,
             responsive: false,
