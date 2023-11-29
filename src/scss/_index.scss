@@ -1616,10 +1616,14 @@
   &__legend {
     padding-top: 30px;
     display: flex;
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     column-gap: 20px;
     align-items: center;
+    @media (max-width:$mobileSmall){
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+    }
   }
 
   //risk-statistics__legend-item
@@ -1636,6 +1640,9 @@
         }
         .risk-statistics__legend-text {
           max-width: 153px;
+          @media (max-width:$mobileSmall){
+            max-width: 100%;
+          }
         }
       }
       &:nth-child(2) {
@@ -1647,6 +1654,9 @@
         }
         .risk-statistics__legend-text {
           max-width: 96px;
+          @media (max-width:$mobileSmall){
+            max-width: 100%;
+          }
         }
       }
       &:nth-child(3) {
@@ -1658,8 +1668,16 @@
         }
         .risk-statistics__legend-text {
           max-width: 108px;
+          @media (max-width:$mobileSmall){
+            max-width: 100%;
+          }
         }
       }
+    @media (max-width:$mobileSmall){
+      flex-direction: row;
+      align-items: center;
+      column-gap: 10px;
+    }
   }
   
   //risk-statistics__legend-color
