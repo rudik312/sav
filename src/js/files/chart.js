@@ -18,7 +18,6 @@ if (document.getElementById("myChart") !== null) {
         // canvas.height = window.innerHeight / 2.5;  
         // var ctx = canvas.getContext('2d');
 
-
         let ctx = document.getElementById('myChart').getContext('2d');
         ctx.canvas.width = 300;
         ctx.canvas.height = 420;
