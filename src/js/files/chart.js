@@ -21,7 +21,7 @@ if (document.getElementById("myChart") !== null) {
 
         let ctx = document.getElementById('myChart').getContext('2d');
         ctx.canvas.width = 300;
-        ctx.canvas.height = 424;
+        ctx.canvas.height = 420;
         let myChart = new Chart(ctx, {
             maintainAspectRatio: false,
             responsive: false,
@@ -86,11 +86,6 @@ if (document.getElementById("myChart") !== null) {
                       delay: 200      // delay of 500 ms after the canvas is considered inside the viewport
                     }
                 }],
-              legend: {
-                labels: {
-                  boxWidth: 20,
-                }
-              }
             },
             plugins: [ChartDataLabels, ChartDeferred],
             maintainAspectRatio: false,
