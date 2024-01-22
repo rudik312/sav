@@ -1501,10 +1501,8 @@
 
   // .risk__item-wrapper
   &__item-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // max-width: 510px;
+
+    max-width: 510px;
     padding: 40px;
     border-radius: 64px;
     background: #FFF;
@@ -1512,22 +1510,8 @@
       padding: 30px;
       border-radius: 40px;
     }
-    @media (max-width: em(1090)){
-      width: 480px;
-    }
-
-    // @media (max-width:$tablet){
-    //   display: none;
-    // }
-
     @media (max-width: em(520)){
       padding: 20px;
-    }
-    @media (max-width: em(480)){
-      // zoom: 80%;
-    }
-    @media (max-width: em(380)){
-      // zoom: 70%;
     }
   }
 
@@ -1542,11 +1526,18 @@
     display: none;
     @media (max-width:$tablet){
       display: block;
+
     }
   }
   //.risk__img
   &__img {
-
+    max-width: 100%;
+    display: block;
+    img {
+      min-height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 .risk-statistics {
@@ -1616,7 +1607,7 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465B;
-    height: 417px;
+    height: 437px;
     canvas {
 
     }
@@ -1724,7 +1715,7 @@
     align-items: center;
     row-gap: 20px;
   }
-  // .risk-item__title
+  // .best__title-box
   &__title {
     display: flex;
     flex-direction: column;
@@ -1750,7 +1741,6 @@
         @include adaptiveValue("font-size", 20, 16, 768, 690, 1);
       }
       @media (max-width: em(690)){
-        // width: 439px;
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
         line-height: math.div(28 , 16);
       }
@@ -1773,6 +1763,18 @@
         font-size: rem(40);
         line-height: math.div(56 , 40);
         -webkit-box-ordinal-group: 1 !important;
+      }
+      @media (max-width: em(950)){
+        @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
+        @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
+      }
+      @media (max-width: em(768)){
+        @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
+        @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
+      }
+      @media (max-width: em(690)){
+        @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
+        @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
     }
     @media (max-width: em(960)){
