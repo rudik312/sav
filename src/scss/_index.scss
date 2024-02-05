@@ -1,66 +1,58 @@
 //.main
 //========================================================================================================================================================
 .main {
-  background-color: #F5F7FA;
-  // .main__container
-  &__container {
-    
-  }
+  background-color: #f5f7fa;
   // .main__inner
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 153px;
     @include adaptiveValue("column-gap", 153, 120, 1520, 1280, 1);
-    @media (max-width: em(1280)){
-      // column-gap: 65px;
+    @media (max-width: em(1280)) {
       @include adaptiveValue("column-gap", 120, 45, 1280, 1160, 1);
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       grid-template-columns: 1fr;
       grid-template-rows: 2fr auto;
     }
   }
   // .main__item
   &__item {
-    &:first-child{
+    &:first-child {
       display: flex;
       flex-direction: column;
       row-gap: 30px;
       padding-top: 144px;
-      @media (max-width: em(1520)){
+      @media (max-width: em(1520)) {
         @include adaptiveValue("row-gap", 30, 60, 1520, 1380, 1);
         @include adaptiveValue("padding-top", 144, 112, 1520, 1380, 1);
       }
-      @media (max-width: em(980)){
+      @media (max-width: em(980)) {
         display: grid;
         row-gap: 60px;
       }
-      @media (max-width: em(760)){
+      @media (max-width: em(760)) {
         row-gap: 20px;
       }
-      @media (max-width: em(610)){
+      @media (max-width: em(610)) {
         padding-top: 70px;
       }
     }
-    &:last-child{
+    &:last-child {
       padding-top: 25px;
-      @media (max-width: em(1520)){
-        // padding-top: 140px;
+      @media (max-width: em(1520)) {
         @include adaptiveValue("padding-top", 25, 140, 1520, 1180, 1);
       }
-      @media (max-width: em(980)){
+      @media (max-width: em(980)) {
         display: none;
       }
     }
-    
   }
   // .main__wrapper
   &__wrapper {
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       max-width: 580px;
     }
-    @media (max-width: em(610)){
+    @media (max-width: em(610)) {
       max-width: 384px;
     }
   }
@@ -70,20 +62,20 @@
     h1 {
       @extend %raleway-500;
       font-size: rem(80);
-      line-height: math.div(96 , 80);
+      line-height: math.div(96, 80);
       color: $black;
-      @media (max-width: em(1520)){
+      @media (max-width: em(1520)) {
         @include adaptiveValue("font-size", 80, 64, 1520, 1380, 1);
       }
-      @media (max-width: em(610)){
+      @media (max-width: em(610)) {
         font-size: rem(40);
-        line-height: math.div(28 , 20);
+        line-height: math.div(28, 20);
       }
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         font-size: rem(32);
         line-height: 140%;
       }
-      @media (max-width: em(350)){
+      @media (max-width: em(350)) {
         font-size: rem(28);
       }
     }
@@ -95,39 +87,29 @@
     bottom: 18px;
     display: inline-flex;
     padding: 20px 100px;
-    @media (max-width: em(1520)){
+    @media (max-width: em(1520)) {
       @include adaptiveValue("font-size", 20, 18, 1520, 1380, 1);
       line-height: 120%;
     }
-    @media (max-width: em(1460)){
+    @media (max-width: em(1460)) {
       padding: 15px 80px;
     }
-    @media (max-width: em(610)){
+    @media (max-width: em(610)) {
       padding: 10px 35px;
       font-size: rem(16);
       right: 25px;
       bottom: 10px;
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       right: 50px;
       bottom: 5px;
     }
-    @media (max-width: em(370)){
+    @media (max-width: em(370)) {
       right: 10px;
     }
-    @media (max-width: em(350)){
+    @media (max-width: em(350)) {
       bottom: 0;
     }
-  }
-
-  //.main__wrapp
-  &__wrapp {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-  }
-
-  // .main__box
-  &__box {
   }
   // .main__subtitle
   &__subtitle {
@@ -135,18 +117,15 @@
     font-size: rem(18);
     line-height: normal;
     color: $text;
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       font-size: rem(14);
     }
-    @media (max-width: em(760)){
+    @media (max-width: em(760)) {
       font-size: rem(16);
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       font-size: rem(14);
     }
-  }
-  // .main__bg
-  &__bg {
   }
 }
 .main-wrapper {
@@ -156,19 +135,19 @@
     span {
       @extend %raleway-300;
       font-size: rem(40);
-      line-height: math.div(48 , 40);
+      line-height: math.div(48, 40);
       color: $black;
-      @media (max-width: em(1520)){
+      @media (max-width: em(1520)) {
         @include adaptiveValue("font-size", 40, 32, 1520, 1380, 1);
         @include adaptiveValue("line-height", 48, 38, 1520, 1380, 1);
       }
-      @media (max-width: em(610)){
+      @media (max-width: em(610)) {
         font-size: rem(20);
-        line-height: math.div(28 , 20);
+        line-height: math.div(28, 20);
       }
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         font-size: rem(16);
-        line-height: math.div(23 , 16);
+        line-height: math.div(23, 16);
       }
     }
   }
@@ -180,32 +159,32 @@
     img {
       width: 237px;
       height: 149px;
-      @media (max-width: em(1520)){
+      @media (max-width: em(1520)) {
         @include adaptiveValue("width", 237, 174, 1520, 1380, 1);
         @include adaptiveValue("height", 149, 109, 1520, 1380, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         width: 117px;
         height: 74px;
       }
     }
-    @media (max-width: em(1520)){
+    @media (max-width: em(1520)) {
       @include adaptiveValue("right", -160, -125, 1520, 1380, 1);
     }
-    @media (max-width: em(760)){
+    @media (max-width: em(760)) {
       right: -70px;
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       right: 0;
     }
-    @media (max-width: em(610)){
+    @media (max-width: em(610)) {
       right: -30px;
       bottom: 10px;
     }
-    @media (max-width: em(470)){
+    @media (max-width: em(470)) {
       right: 0;
     }
-    @media (max-width: em(350)){
+    @media (max-width: em(350)) {
       display: none;
     }
   }
@@ -218,127 +197,111 @@
     position: absolute;
     right: 0;
     img {
-      // width: 766px;
-      // height: 308px;
-      @media (max-width: em(1520)){
+      @media (max-width: em(1520)) {
         @include adaptiveValue("width", 766, 579, 1520, 1000, 1);
         @include adaptiveValue("height", 308, 232, 1520, 1000, 1);
       }
-      @media (max-width: em(980)){
+      @media (max-width: em(980)) {
         width: 430px;
         height: 173px;
       }
-      @media (max-width: em(590)){
+      @media (max-width: em(590)) {
         width: 322px;
         height: 140px;
-      }   
-      @media (max-width: em(420)){
+      }
+      @media (max-width: em(420)) {
         width: 284px;
         height: 123px;
-      } 
+      }
     }
-    @media (max-width: em(1520)){
+    @media (max-width: em(1520)) {
       right: -55px;
     }
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       right: 20px;
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       max-width: 430px;
       left: 30px;
       top: 30px;
     }
-    @media (max-width: em(830)){
+    @media (max-width: em(830)) {
       left: 30px;
       top: 40px;
     }
-    @media (max-width: em(760)){
+    @media (max-width: em(760)) {
       left: -90px;
       top: 60px;
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       left: -160px;
       top: 150px;
     }
-    @media (max-width: em(580)){
+    @media (max-width: em(580)) {
       top: 180px;
     }
-    @media (max-width: em(470)){
+    @media (max-width: em(470)) {
       top: 120px;
     }
   }
   // .main-box__subtitle
   &__subtitle {
     position: absolute;
-    // top: 27px;
     max-width: 327px;
-    @media (max-width: em(590)){
+    @media (max-width: em(590)) {
       max-width: 211px;
     }
   }
-  @media (max-width: em(980)){
+  @media (max-width: em(980)) {
     min-height: 270px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
   }
-  @media (max-width: em(690)){
+  @media (max-width: em(690)) {
     min-height: 380px;
   }
-  @media (max-width: em(470)){
+  @media (max-width: em(470)) {
     min-height: 300px;
   }
 }
 .main-bg {
   position: relative;
-  // .main-bg__img
-  // width: 100%;
-  // display: block; 1180
   &__img {
     display: flex;
     justify-content: flex-end;
     img {
-      @media (max-width: em(1520)){
-        // width: 490px;
-        // height: 652px;
+      @media (max-width: em(1520)) {
         @include adaptiveValue("width", 570, 490, 1520, 1180, 1);
         @include adaptiveValue("height", 803, 652, 1520, 1180, 1);
       }
-      // height: auto;
-      // width: 100%;
-      // object-fit: cover;
-      @media (max-width: em(1180)){
-        // max-width: 100%;
-        // width: 396px;
-        // height: 532px;
+      @media (max-width: em(1180)) {
         @include adaptiveValue("width", 490, 396, 1180, 1000, 1);
         @include adaptiveValue("height", 652, 532, 1180, 1000, 1);
       }
-      @media (max-width: em(980)){
-        // position: absolute;
+      @media (max-width: em(980)) {
         width: 338px;
         height: 440px;
-        // bottom: -40px;
       }
-      @media (max-width: em(470)){
+      @media (max-width: em(470)) {
         width: 263px;
         height: 368px;
       }
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       position: absolute;
       right: 0;
       top: -100px;
     }
-    @media (max-width: em(830)){
+    @media (max-width: em(830)) {
       top: -30px;
       right: -40px;
     }
-    @media (max-width: em(580)){
+    @media (max-width: em(580)) {
       top: -5px;
       right: -50px;
     }
-    @media (max-width: em(470)){
+    @media (max-width: em(470)) {
       top: 0;
     }
   }
@@ -351,43 +314,41 @@
     bottom: 174px;
     max-width: 163px;
     text-align: right;
-    @media (max-width: em(1480)){
+    @media (max-width: em(1480)) {
       left: -80px;
       bottom: 100px;
     }
-    @media (max-width: em(1240)){
+    @media (max-width: em(1240)) {
       left: -50px;
     }
-    @media (max-width: em(1130)){
+    @media (max-width: em(1130)) {
       left: -90px;
     }
-    @media (max-width: em(1120)){
+    @media (max-width: em(1120)) {
       bottom: 85px;
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       top: -40px;
       left: -20px;
     }
-    @media (max-width: em(830)){
+    @media (max-width: em(830)) {
       top: 0;
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       top: 80px;
       left: -175px;
     }
-    @media (max-width: em(580)){
+    @media (max-width: em(580)) {
       top: 100px;
       left: -210px;
     }
-    @media (max-width: em(470)){
+    @media (max-width: em(470)) {
       top: 100px;
       left: -160px;
     }
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       top: 80px;
-    left: -180px;
-
-
+      left: -180px;
     }
   }
   // .main-bg__founder-status
@@ -400,11 +361,10 @@
   &__founder-name {
     @extend %mulish-500;
     font-size: rem(16);
-    line-height: math.div(32 , 16);
+    line-height: math.div(32, 16);
   }
-  @media (max-width: em(980)){
-    // display: grid;
-    grid-column: 2 / 3; // !important
+  @media (max-width: em(980)) {
+    grid-column: 2 / 3;
   }
 }
 //========================================================================================================================================================
@@ -415,8 +375,8 @@
 .selection-container {
   &__fluid {
     margin-bottom: 70px;
-    background: #E3E9F3;
-    @media (max-width: em(768)){
+    background: #e3e9f3;
+    @media (max-width: em(768)) {
       @include adaptiveValue("margin-bottom", 70, 40, 768, 480, 1);
     }
   }
@@ -424,81 +384,63 @@
 
 .selection {
   position: relative;
-  // &__container-fluid {
-    
-  // }
-  // .selection__container
-  &__container {
-    // display: flex;
-    // flex-direction: column;
-    // @media (max-width: em(520)){
-    //   margin: 0;
-    // }
-  }
   // .selection__inner
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    // column-gap: 40px;
     @include adaptiveValue("column-gap", 40, 20, 1360, 1280, 1);
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       column-gap: 0;
     }
-    @media (max-width: em(480)){
+    @media (max-width: em(480)) {
       display: flex;
-
     }
   }
   // .selection__bg
   &__bg {
     padding-top: 30px;
     position: relative;
-    // max-width: 100%;
-    // display: block;
     width: 644px;
     height: 718px;
     img {
       position: absolute;
-      // width: 100%;
-      // height: auto;
       height: 100%;
       top: 60px;
       right: 20px;
 
       width: 100%;
       object-fit: cover;
-      @media (max-width: em(960)){
+      @media (max-width: em(960)) {
         top: 30px;
       }
-      @media (max-width: em(720)){
+      @media (max-width: em(720)) {
         height: auto;
       }
-      @media (max-width: em(500)){
+      @media (max-width: em(500)) {
         right: 40px;
         top: 180px;
       }
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         right: 60px;
       }
     }
 
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       zoom: 70%;
     }
-    @media (max-width: em(820)){
+    @media (max-width: em(820)) {
       zoom: 45%;
     }
-    @media (max-width: em(500)){
+    @media (max-width: em(500)) {
       zoom: 30%;
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       zoom: 25%;
     }
-    @media (max-width: em(350)){
+    @media (max-width: em(350)) {
       display: none;
     }
   }
-
 
   // .selection__content
   &__content {
@@ -509,18 +451,17 @@
     row-gap: 24px;
     padding-top: 120px;
     padding-bottom: 70px;
-    @media (max-width: em(1280)){
+    @media (max-width: em(1280)) {
       padding-top: 60px;
       justify-content: center;
     }
-    @media (max-width: em(980)){
-      // justify-content: flex-start;
+    @media (max-width: em(980)) {
     }
-    @media (max-width: em(620)){
+    @media (max-width: em(620)) {
       padding-top: 30px;
       padding-bottom: 64px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       max-width: 170px;
       padding-top: 25px;
       row-gap: 20px;
@@ -534,42 +475,42 @@
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       color: $black;
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 48, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 67, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 48, 40, 1000, 980, 1);
         @include adaptiveValue("line-height", 67, 56, 1000, 980, 1);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 40, 32, 768, 630, 1);
         @include adaptiveValue("line-height", 56, 38, 768, 630, 1);
       }
-      @media (max-width: em(520)){
+      @media (max-width: em(520)) {
         font-size: rem(24);
-        line-height: math.div(28 , 24);
+        line-height: math.div(28, 24);
       }
     }
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 980, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 980, 1);
       }
     }
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       padding-top: 40px;
       padding-left: 20px;
       padding-right: 20px;
@@ -582,19 +523,19 @@
     max-width: 371px;
     @extend %mulish-500;
     font-size: rem(18);
-    line-height: math.div(29 , 18);
-    @media (max-width: em(1080)){
+    line-height: math.div(29, 18);
+    @media (max-width: em(1080)) {
       @include adaptiveValue("font-size", 18, 16, 1080, 920, 1);
       @include adaptiveValue("line-height", 29, 26, 1080, 920, 1);
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       max-width: 350px;
     }
-    @media (max-width: em(880)){
+    @media (max-width: em(880)) {
       @include adaptiveValue("font-size", 16, 14, 880, 768, 1);
       @include adaptiveValue("line-height", 26, 22, 880, 768, 1);
     }
-    @media (max-width: em(560)){
+    @media (max-width: em(560)) {
       max-width: 300px;
     }
   }
@@ -603,8 +544,8 @@
     color: $text;
     @extend %mulish-400;
     font-size: rem(14);
-    line-height: math.div(18 , 14);
-    @media (max-width: em(880)){
+    line-height: math.div(18, 14);
+    @media (max-width: em(880)) {
       @include adaptiveValue("font-size", 14, 12, 880, 768, 1);
       @include adaptiveValue("line-height", 22, 15, 880, 768, 1);
     }
@@ -613,8 +554,8 @@
   &__item {
     position: relative;
     padding-left: 24px;
-    &::after{
-      content:'';
+    &::after {
+      content: "";
       position: absolute;
       width: 16px;
       height: 16px;
@@ -622,15 +563,15 @@
       border-radius: 50%;
       background: rgba(7, 201, 38, 0.3);
     }
-    &::before{
-      content:'';
+    &::before {
+      content: "";
       position: absolute;
       width: 8px;
-      height: 8px;  
+      height: 8px;
       left: 4px;
       top: 4px;
       border-radius: 50%;
-      background: #07C926;
+      background: #07c926;
     }
   }
 
@@ -638,16 +579,13 @@
   &__btn {
     @extend %btn;
     padding: 20px 100px;
-    @media (max-width: em(1380)){
+    @media (max-width: em(1380)) {
       padding: 15px 80px;
     }
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       padding: 8px 55px;
       font-size: rem(14);
     }
-    // @media (max-width: em(480)){
-    //   padding: 8px 55px;
-    // }
   }
 }
 //========================================================================================================================================================
@@ -655,14 +593,12 @@
 //.collection
 //========================================================================================================================================================
 .collection {
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
   // .collection__container
   &__container {
     padding-top: 70px;
     padding-bottom: 70px;
-    // display: flex;
-    // flex-direction: column;
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       @include adaptiveValue("padding-top", 70, 40, 768, 480, 1);
       @include adaptiveValue("padding-bottom", 70, 40, 768, 480, 1);
     }
@@ -674,37 +610,37 @@
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       color: $black;
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 48, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 67, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 48, 40, 1000, 980, 1);
         @include adaptiveValue("line-height", 67, 56, 1000, 980, 1);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 40, 32, 768, 630, 1);
         @include adaptiveValue("line-height", 56, 38, 768, 630, 1);
       }
-      @media (max-width: em(520)){
+      @media (max-width: em(520)) {
         font-size: rem(24);
-        line-height: math.div(28 , 24);
+        line-height: math.div(28, 24);
       }
     }
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 980, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 980, 1);
       }
@@ -713,13 +649,11 @@
   // .collection__subtitle
   &__subtitle {
     font-size: rem(18);
-    line-height: math.div(29 , 18);
+    line-height: math.div(29, 18);
     color: $text;
     @extend %mulish-500;
 
-
-
-    @media (max-width: em(480)){
+    @media (max-width: em(480)) {
       @include adaptiveValue("font-size", 18, 14, 480, 420, 1);
       @include adaptiveValue("line-height", 29, 22, 480, 420, 1);
     }
@@ -727,16 +661,16 @@
 
   &__subtitle-text {
     font-size: rem(18);
-    line-height: math.div(29 , 18);
+    line-height: math.div(29, 18);
     color: $text;
     @extend %mulish-500;
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       max-width: 333px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       display: none;
     }
   }
@@ -746,31 +680,24 @@
     flex-direction: column;
     row-gap: 40px;
     padding-top: 40px;
-    @media (max-width: em(1280)){
+    @media (max-width: em(1280)) {
       @include adaptiveValue("row-gap", 40, 20, 1280, 1180, 1);
     }
-    // @media (max-width: em(920)){
-    //   row-gap: 30px;
-    // }
-    // @media (max-width: em(480)){
-    //   @include adaptiveValue("padding-top", 40, 20, 480, 420, 1);
-    // }
-
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding-top: 20px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 30px;
     }
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       padding-top: 30px;
       display: flex;
       row-gap: 20px;
     }
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       row-gap: 30px;
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       padding-top: 20px;
     }
   }
@@ -779,73 +706,59 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
-    @media (max-width: em(1280)){
+    @media (max-width: em(1280)) {
       @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
     }
-    @media (max-width: em(1000)){
-      // display: flex;
-      // flex-direction: column;
-      // row-gap: 30px;
+    @media (max-width: em(1000)) {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
       row-gap: 30px;
       & .collection__item {
-        &:first-child{
+        &:first-child {
           grid-row: 3 / 4;
         }
         &:nth-child(2) {
           grid-row: 2 / 3;
           h5 {
             white-space: nowrap;
-            @media (max-width: em(480)){
+            @media (max-width: em(480)) {
               white-space: wrap;
             }
           }
         }
       }
     }
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       grid-template-rows: repeat(2, 1fr);
       row-gap: 20px;
       & .collection__item {
-        &:first-child{
+        &:first-child {
           grid-row: 1 / 2;
         }
       }
     }
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       row-gap: 30px;
     }
   }
-  // .collection__item-box
-  // &__item-box {
-
-  // }
   // .collection__item
   &__item {
     position: relative;
     max-width: 570px;
-
-    @media (max-width: em(1000)){
-      // max-width: 100%;
-    }
-    
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       max-width: 465px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 16px;
     }
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       max-width: 100%;
     }
-
-    @media (max-width: em(421)){
+    @media (max-width: em(421)) {
       grid-template-columns: 1.2fr 1.5fr;
     }
-
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 16px;
@@ -854,71 +767,59 @@
   // .collection__item-ibg
   &__item-ibg {
     padding-bottom: percent(366, 570);
-    &::before{
-      content:'';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
+      background: linear-gradient(
+        180deg,
+        rgba(7, 36, 48, 0) 26.66%,
+        rgba(7, 36, 48, 0.6) 74.73%
+      );
       border-radius: 40px;
-      // @media (max-width: em(920)){
-      //   background: linear-gradient(180deg, rgba(7, 36, 48, 0.5) 26.66%, rgba(7, 36, 48, 0.6) 74.73%);
-      // }
-      
-      // @media (max-width: em(380)){
-        // border-radius: 20px;
-        // background: linear-gradient(180deg, rgba(7, 36, 48, 0) 26.66%, rgba(7, 36, 48, 0.1) 74.73%);
-      // }
     }
-    @media (max-width: em(1000)){
-      &::before{
-        content:'';
+    @media (max-width: em(1000)) {
+      &::before {
+        content: "";
         display: none;
       }
     }
     img {
       border-radius: 40px;
       object-position: top;
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         border-radius: 20px;
         transform: matrix(-1, 0, 0, 1, 0, 0);
       }
-      @media (max-width: em(868)){
+      @media (max-width: em(868)) {
         object-position: center;
       }
-
-      @media (max-width: em(380)){
-        
+      @media (max-width: em(380)) {
       }
     }
-
-    // @media (max-width: em(920)){
-    //   padding-bottom: percent(366, 766);
-    // }
-
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding-bottom: percent(200, 150);
     }
 
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       padding-bottom: percent(200, 282);
     }
 
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       padding-bottom: percent(152, 210);
     }
 
-    @media (max-width: em(430)){
+    @media (max-width: em(430)) {
       padding-bottom: percent(152, 118);
     }
 
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       padding-bottom: percent(152, 118);
     }
-
   }
   // .collection__item-content
   &__item-content {
@@ -931,23 +832,20 @@
     left: 25px;
     z-index: 2;
 
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       position: static;
-      // justify-content: flex-end;
-      // justify-content: center;
-
       display: grid;
       align-content: center;
       row-gap: 10px;
     }
 
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       position: static;
       flex-shrink: 0;
     }
@@ -956,30 +854,21 @@
   &__item-title {
     @extend %raleway-600;
     font-size: rem(28);
-    line-height: math.div(39 , 28);
+    line-height: math.div(39, 28);
     color: $white;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       font-size: rem(24);
-      line-height: math.div(33 , 24);
+      line-height: math.div(33, 24);
       max-width: 100%;
       color: $text;
       text-shadow: none;
-      // max-width: 220px;
-    
     }
 
-    @media (max-width: em(660)){
+    @media (max-width: em(660)) {
       font-size: rem(18);
-      line-height: math.div(25 , 18);
+      line-height: math.div(25, 18);
     }
-
-    // @media (max-width: em(380)){
-    //   @include adaptiveValue("font-size", 20, 18, 380, 360, 1);
-    //   @include adaptiveValue("line-height", 31, 25, 380, 360, 1);
-    //   text-shadow: none;
-    //   color: $text;
-    // }
   }
   // .collection__item-info
   &__item-info {
@@ -989,29 +878,14 @@
     @extend %mulish-500;
     color: $text;
     font-size: rem(14);
-    line-height: math.div(22 , 14);
-    @media (max-width: em(960)){
+    line-height: math.div(22, 14);
+    @media (max-width: em(960)) {
       align-items: flex-start;
-      // flex-direction: column;
       gap: 10px;
     }
-
-    @media (max-width: em(520)){
-      // flex-direction: column;
-    }
-
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       font-size: rem(12);
-      line-height: math.div(19 , 12);
-    }
-
-
-    @media (max-width: em(420)){
-      // @include adaptiveValue("font-size", 14, 12, 420, 380, 1);
-      // @include adaptiveValue("line-height", 22, 19, 420, 380, 1);
-    }
-    @media (max-width: em(380)){
-      
+      line-height: math.div(19, 12);
     }
   }
   // .collection__case
@@ -1025,32 +899,19 @@
     img {
       width: 20px;
       height: 20px;
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         width: 24px;
         height: 24px;
       }
-      @media (max-width: em(550)){
+      @media (max-width: em(550)) {
         width: 16px;
         height: 16px;
       }
     }
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding: 0;
     }
-
-    @media (max-width: em(380)){
-      // padding: 0;
-      // background-color: $white;
-    }
   }
-  // .collection__case-icon
-  // &__case-icon {
-    
-  // }
-  // .collection__case-info
-  // &__case-info {
-
-  // }
   // .collection__cost
   &__cost {
     display: flex;
@@ -1062,35 +923,17 @@
     img {
       width: 20px;
       height: 20px;
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         width: 24px;
         height: 24px;
       }
-      @media (max-width: em(550)){
+      @media (max-width: em(550)) {
         width: 16px;
         height: 16px;
       }
     }
-
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding: 0;
-    }
-
-    @media (max-width: em(380)){
-      // padding: 0;
-      // background-color: $white;
-      // white-space: nowrap;
-    }
-  }
-  // .collection__cost-icon
-  // &__cost-icon {
-  // }
-  // .collection__cost-info
-  &__cost-info {
-    
-    @media (max-width: em(380)){
-      // font-size: rem(11);
-      // line-height: math.div(19 , 11);
     }
   }
   // .collection__btn
@@ -1105,116 +948,84 @@
     padding: 10px 109px;
     @extend %btn;
 
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding: 12px 80px;
       font-size: rem(16);
       line-height: 120%;
     }
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       padding: 8px 50px;
       font-size: rem(14);
     }
-
-    // @media (max-width: em(960)){
-    //   padding: 10px 40px;
-    // }
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       padding: 8px 52px;
       border-radius: 18px;
     }
   }
-
 
   // .collection__bottom
   &__bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
-    @media (max-width: em(1280)){
+    @media (max-width: em(1280)) {
       @include adaptiveValue("column-gap", 40, 20, 1280, 1180, 1);
     }
-    @media (max-width: em(1000)){
-      // display: flex;
-      // flex-direction: column;
-      // row-gap: 30px;
+    @media (max-width: em(1000)) {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
       row-gap: 30px;
     }
-    @media (max-width: em(868)){
+    @media (max-width: em(868)) {
       row-gap: 20px;
     }
-
-    @media (max-width: em(550)){
+    @media (max-width: em(550)) {
       row-gap: 30px;
-    }
-    // .collection__item
-    .collection__item {
-      // max-width: 366px;
-      @media (max-width: em(920)){
-        // max-width: 100%;
-      }
-    
-
     }
     //.collection__item-ibg
     .collection__item-ibg {
       width: 100%;
       height: 100%;
       padding-bottom: percent(486, 366);
-
-      // @media (max-width: em(920)){
-      //   padding-bottom: percent(366, 766);
-      // }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         padding-bottom: percent(200, 150);
       }
-
-      @media (max-width: em(868)){
+      @media (max-width: em(868)) {
         padding-bottom: percent(200, 282);
       }
-
-      @media (max-width: em(550)){
+      @media (max-width: em(550)) {
         padding-bottom: percent(152, 210);
       }
-
-      @media (max-width: em(430)){
+      @media (max-width: em(430)) {
         padding-bottom: percent(152, 118);
       }
-
-      @media (max-width: em(380)){
+      @media (max-width: em(380)) {
         padding-bottom: percent(152, 118);
       }
-
     }
-    // .collection__item-title {
 
-    // }
     //.collection__btn-link
     .collection__btn-link {
       padding: 10px 40px;
       border-radius: 22px;
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         padding: 12px 80px;
       }
-      @media (max-width: em(550)){
+      @media (max-width: em(550)) {
         padding: 8px 50px;
       }
-      @media (max-width: em(380)){
+      @media (max-width: em(380)) {
         padding: 8px 52px;
         border-radius: 18px;
       }
     }
     //.collection__item-info
     .collection__item-info {
-      @media (max-width: em(1120)){
+      @media (max-width: em(1120)) {
         flex-direction: column;
       }
-      @media (max-width: em(920)){
-        // flex-direction: row;
-      }
-      @media (max-width: em(520)){
+      @media (max-width: em(520)) {
         flex-direction: column;
       }
     }
@@ -1222,67 +1033,59 @@
 }
 //========================================================================================================================================================
 
-
 //.reason
 //========================================================================================================================================================
 //.reason-container__fluid
 .reason {
-  &__container-fluid{
+  &__container-fluid {
     background-color: $bgBlock;
     min-height: 800px;
-    // padding-top: 55px;
-    // padding-bottom: 55px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center -5%;
     margin-top: 70px;
     margin-bottom: 70px;
-    // @include adaptiveValue("background-size", 100%, 120%);
-    @media (max-width: em(1380)){
+    @media (max-width: em(1380)) {
       background-size: 120%;
-      // background-position: top;
     }
-    @media (max-width: em(1260)){
+    @media (max-width: em(1260)) {
       background-size: 140%;
       background-position: top;
-      
     }
-    @media (max-width: em(1190)){
+    @media (max-width: em(1190)) {
       background-size: 150%;
       background-position: center top -10%;
     }
-    @media (max-width: em(1060)){
+    @media (max-width: em(1060)) {
       background-size: 170%;
     }
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       padding-top: 30px;
       padding-bottom: 30px;
-      // background-position: left -105%;
       background-size: 100%;
       background-position: 82% 140%;
     }
-    @media (max-width: em(870)){
+    @media (max-width: em(870)) {
       background-position: left -55%;
       background-size: 190%;
     }
-    @media (max-width: em(820)){
-      // background-position: left -175%;
+    @media (max-width: em(820)) {
       background-size: 130%;
       background-position: 12% 160%;
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       @include adaptiveValue("margin-top", 70, 40, 768, 480, 1);
       @include adaptiveValue("margin-bottom", 70, 35, 768, 480, 1);
     }
-    @media (max-width: em(710)){
+    @media (max-width: em(710)) {
       background-size: 170%;
       background-position: 0% 210%;
     }
-    @media (max-width: em(590)){
+    @media (max-width: em(590)) {
       background-size: 180%;
       background-position: 0% 130%;
     }
-    @media (max-width: em(360)){
+    @media (max-width: em(360)) {
       background-size: 170%;
       background-position: 0% 120%;
     }
@@ -1290,41 +1093,29 @@
 }
 
 .reason {
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
   // .reason__container
-  // &__container {
-  //   // max-width: 100%;
-  // }
   &__container {
     padding-top: 55px;
-    // padding-left: 45px;
   }
   // .reason__inner
   &__inner {
-    // padding-top: 60px;
-    // padding-left: 60px;
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     column-gap: 140px;
-    @media (max-width: em(1360)){
+    @media (max-width: em(1360)) {
       @include adaptiveValue("column-gap", 140, 100, 1360, 1260, 1);
     }
-    // @media (max-width: em(1180)){
-    //   grid-template-columns: repeat(2, 1fr);
-    //   column-gap: 90px;
-    // }
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       display: flex;
       flex-direction: column;
     }
   }
   // .reason__item
   &__item {
-    &:first-child{
-      // max-width: 570px;
+    &:first-child {
       display: flex;
       flex-direction: column;
-
     }
   }
   // .reason__title
@@ -1333,70 +1124,59 @@
     flex-direction: column;
     max-width: 570px;
     padding-bottom: 25px;
-    @media (max-width: em(1280)){
+    @media (max-width: em(1280)) {
       max-width: 530px;
     }
-    @media (max-width: em(1190)){
+    @media (max-width: em(1190)) {
       max-width: 510px;
     }
-    @media (max-width: em(1150)){
+    @media (max-width: em(1150)) {
       max-width: 490px;
     }
-    @media (max-width: em(1110)){
+    @media (max-width: em(1110)) {
       max-width: 100%;
     }
-    // @media (max-width: em(1040)){
-    //   max-width: 420px;
-    // }
-    // @media (max-width: em(960)){
-    //   max-width: 100%;
-    // }
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       color: $black;
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
-      // @media (max-width: em(520)){
-      //   font-size: rem(24);
-      //   line-height: math.div(28 , 24);
-      // }
     }
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
-
   }
   // .reason__subtitle
   &__subtitle {
@@ -1413,9 +1193,9 @@
     background-color: $white;
     border-radius: 50%;
     img {
-      @media (max-width: em(370)){
+      @media (max-width: em(370)) {
         font-size: rem(12);
-        line-height: math.div(19 , 12);
+        line-height: math.div(19, 12);
         width: 48px;
         height: 48px;
       }
@@ -1425,13 +1205,13 @@
   &__subtitle-text {
     @extend %mulish-500;
     font-size: rem(14);
-    line-height: math.div(22 , 14);
+    line-height: math.div(22, 14);
     color: $text;
     max-width: 276px;
-    @media (max-width: em(370)){
+    @media (max-width: em(370)) {
       max-width: 250px;
     }
-    @media (max-width: em(355)){
+    @media (max-width: em(355)) {
       max-width: 180px;
     }
   }
@@ -1440,13 +1220,13 @@
     padding-top: 28px;
     @extend %mulish-500;
     font-size: rem(16);
-    line-height: math.div(26 , 16);
-    @media (max-width: em(960)){
+    line-height: math.div(26, 16);
+    @media (max-width: em(960)) {
       padding-top: 30px;
     }
-    @media (max-width: em(710)){
+    @media (max-width: em(710)) {
       font-size: rem(14);
-      line-height: math.div(22 , 14);
+      line-height: math.div(22, 14);
     }
   }
   // .reason__list-item
@@ -1456,10 +1236,10 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       max-width: 100%;
     }
-    @media (max-width: em(830)){
+    @media (max-width: em(830)) {
       max-width: 90%;
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -1473,7 +1253,7 @@
 //.risk
 //========================================================================================================================================================
 .risk {
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
   // .risk__container
   &__container {
     padding-top: 70px;
@@ -1483,11 +1263,11 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 100px;
     @include adaptiveValue("column-gap", 100, 30, 1360, 1080, 1);
-    @media (max-width: em(1180)){
+    @media (max-width: em(1190)) {
+      // column-gap: 30px;
     }
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1501,32 +1281,30 @@
 
   // .risk__item-wrapper
   &__item-wrapper {
-
     max-width: 510px;
     padding: 40px;
     border-radius: 64px;
-    background: #FFF;
-    @media (max-width: em(1190)){
+    background: #fff;
+    @media (max-width: em(1190)) {
       padding: 30px;
       border-radius: 40px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       padding: 20px;
     }
   }
 
   // .risk__statistics
   &__statistics {
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       display: none;
     }
   }
   //.risk__bg
   &__bg {
     display: none;
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       display: block;
-
     }
   }
   //.risk__img
@@ -1543,7 +1321,7 @@
 .risk-statistics {
   // .risk-statistics__title-box
   &__title-box {
-    display: flex;  
+    display: flex;
     flex-direction: column;
     row-gap: 4px;
   }
@@ -1568,7 +1346,7 @@
     grid-template-columns: 1fr 2.3fr;
     column-gap: 20px;
     // min-height: 428px;
-    @media (max-width: em(1090)){
+    @media (max-width: em(1090)) {
       grid-template-columns: 0.8fr 1.7fr;
       column-gap: 10px;
     }
@@ -1576,7 +1354,6 @@
   // .risk-statistics__map-city
   &__map-city {
     max-width: 130px;
-
   }
   // .risk-statistics__list
   &__list {
@@ -1600,27 +1377,27 @@
   }
   //risk-statistics__list-city
   &__list-city {
-    
     display: inline-flex;
   }
   //risk-statistics__diagram
   &__diagram {
     display: flex;
-    border-left: 1px solid #13465B;
+    border-left: 1px solid #13465b;
     height: 437px;
-    canvas {
-
+    @media (max-width: em(1190)){
+      height: 422px;
     }
-    
   }
 
   //risk-statistics__analitic
   &__analitic {
     position: absolute;
-    @media (max-width: em(1090)){
+    @media (max-width: em(1190)){
+      height: 427px !important;
+    }
+    @media (max-width: em(1090)) {
       width: 280px !important;
     }
-    
   }
   //risk-statistics__legend
   &__legend {
@@ -1629,7 +1406,7 @@
     align-items: center;
     column-gap: 20px;
     align-items: center;
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
       flex-direction: column;
       align-items: flex-start;
       row-gap: 10px;
@@ -1641,61 +1418,56 @@
     display: flex;
     flex-direction: column;
     row-gap: 9px;
-      &:nth-child(1) {
-        .risk-statistics__legend-color {
-          width: 15px;
-          height: 15px;
-          border-radius: 4px;
-          background-color: #07C926;
-        }
-        .risk-statistics__legend-text {
-          max-width: 153px;
-          @media (max-width:$mobileSmall){
-            max-width: 100%;
-          }
+    &:nth-child(1) {
+      .risk-statistics__legend-color {
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: #07c926;
+      }
+      .risk-statistics__legend-text {
+        max-width: 153px;
+        @media (max-width: $mobileSmall) {
+          max-width: 100%;
         }
       }
-      &:nth-child(2) {
-        .risk-statistics__legend-color {
-          width: 15px;
-          height: 15px;
-          border-radius: 4px;
-          background-color: #FFC95E;
-        }
-        .risk-statistics__legend-text {
-          max-width: 96px;
-          @media (max-width:$mobileSmall){
-            max-width: 100%;
-          }
+    }
+    &:nth-child(2) {
+      .risk-statistics__legend-color {
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: #ffc95e;
+      }
+      .risk-statistics__legend-text {
+        max-width: 96px;
+        @media (max-width: $mobileSmall) {
+          max-width: 100%;
         }
       }
-      &:nth-child(3) {
-        .risk-statistics__legend-color {
-          width: 15px;
-          height: 15px;
-          border-radius: 4px;
-          background-color: #EF3636;
-        }
-        .risk-statistics__legend-text {
-          max-width: 108px;
-          @media (max-width:$mobileSmall){
-            max-width: 100%;
-          }
+    }
+    &:nth-child(3) {
+      .risk-statistics__legend-color {
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: #ef3636;
+      }
+      .risk-statistics__legend-text {
+        max-width: 108px;
+        @media (max-width: $mobileSmall) {
+          max-width: 100%;
         }
       }
-    @media (max-width:$mobileSmall){
+    }
+    @media (max-width: $mobileSmall) {
       flex-direction: row;
       align-items: center;
       column-gap: 10px;
     }
   }
-  
-  //risk-statistics__legend-color
-  &__legend-color {
-
-  }
   //risk-statistics__legend-text
-  &__legend-text {  
+  &__legend-text {
     @extend %mulish-500;
     font-size: rem(10);
     line-height: 120%;
@@ -1704,13 +1476,12 @@
 }
 
 .risk-item {
-  // padding-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   row-gap: 30px;
-  @media (max-width: em(960)){
+  @media (max-width: em(960)) {
     max-width: 100%;
     align-items: center;
     row-gap: 20px;
@@ -1723,61 +1494,61 @@
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
       }
-      @media (max-width: em(960)){
+      @media (max-width: em(960)) {
         font-size: rem(20);
-        line-height: math.div(28 , 20);
+        line-height: math.div(28, 20);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 20, 16, 768, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
-        line-height: math.div(28 , 16);
+        line-height: math.div(28, 16);
       }
     }
     h3 {
       max-width: 570px;
       @extend %raleway-600;
       font-size: rem(40);
-      line-height: math.div(56 , 40);
+      line-height: math.div(56, 40);
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 40, 36, 1380, 1000, 1);
         @include adaptiveValue("line-height", 56, 50, 1380, 1000, 1);
       }
-      @media (max-width: em(1320)){
+      @media (max-width: em(1320)) {
         max-width: 510px;
       }
-      @media (max-width: em(960)){
+      @media (max-width: em(960)) {
         max-width: 100% !important;
         font-size: rem(40);
-        line-height: math.div(56 , 40);
+        line-height: math.div(56, 40);
         -webkit-box-ordinal-group: 1 !important;
       }
-      @media (max-width: em(950)){
+      @media (max-width: em(950)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
     }
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       order: -1;
     }
   }
@@ -1786,17 +1557,13 @@
     max-width: 468px;
     @extend %mulish-500;
     font-size: rem(18);
-    line-height: math.div(29 , 18);
+    line-height: math.div(29, 18);
     color: $text;
-    @media (max-width: em(960)){
+    @media (max-width: em(960)) {
       font-size: rem(16);
-      line-height: math.div(26 , 16);
+      line-height: math.div(26, 16);
       max-width: 604px;
     }
-  }
-  // .risk-item__box-btn
-  &__box-btn {
-
   }
   //risk-item__btn
   &__btn {
@@ -1810,18 +1577,18 @@
     font-size: rem(16);
     line-height: 120%;
     color: #263239;
-    @media (max-width: em(1280)){
+    @media (max-width: em(1280)) {
       padding: 20px 40px;
     }
-    @media (max-width: em(1190)){
+    @media (max-width: em(1190)) {
       padding: 20px 25px;
     }
-    @media (max-width: em(1060)){
+    @media (max-width: em(1060)) {
       font-size: rem(14);
     }
-    @media (max-width: em(960)){
-      padding: 20px 40px;
-    }
+    // @media (max-width: em(960)){
+    //   padding: 20px 40px;
+    // }
   }
 }
 //========================================================================================================================================================
@@ -1829,24 +1596,23 @@
 //.best
 //========================================================================================================================================================
 .best {
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
   // .best__container
   &__container {
     display: flex;
     flex-direction: column;
-    // row-gap: 40px;
     padding-top: 70px;
     padding-bottom: 70px;
     @include adaptiveValue("row-gap", 40, 20, 1380, 1000, 1);
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       padding-top: 60px;
       padding-bottom: 60px;
     }
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
       padding-top: 50px;
       padding-bottom: 50px;
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       padding-top: 45px;
       padding-bottom: 45px;
     }
@@ -1856,7 +1622,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       display: flex;
       flex-direction: column;
       row-gap: 10px;
@@ -1867,26 +1633,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // padding: 0;
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
@@ -1894,18 +1659,18 @@
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
@@ -1914,15 +1679,14 @@
   &__content-text {
     padding: 18px 0;
     @extend %mulish-500;
-    // font-size: rem(18);
-    line-height: math.div(29 , 18);
+    line-height: math.div(29, 18);
     color: $text;
     @include adaptiveValue("font-size", 18, 16, 1360, 1180, 1);
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       padding: 0;
     }
-    @media (max-width:$mobileSmall){
-      @include adaptiveValue("font-size", 16, 14, 480, 420, 1); 
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
     }
   }
   // .best__inner
@@ -1931,7 +1695,7 @@
     flex-direction: column;
     row-gap: 40px;
     @include adaptiveValue("row-gap", 40, 30, 1360, 1180, 1);
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
       row-gap: 20px;
     }
   }
@@ -1939,42 +1703,41 @@
   &__top {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // column-gap: 40px;
     @include adaptiveValue("column-gap", 40, 30, 1360, 1180, 1);
     .best-item {
-      @media (max-width: em(1180)){
+      @media (max-width: em(1180)) {
         min-height: 545px;
       }
-      @media (max-width:$mobile){
+      @media (max-width: $mobile) {
         min-height: 468px;
       }
-      @media (max-width:$mobileSmall){
+      @media (max-width: $mobileSmall) {
         min-height: 375px;
       }
     }
     .best-item__action {
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         display: block;
       }
     }
     .best-item__btn {
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         display: block;
       }
     }
     .best-item__btn-link {
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         display: block;
         padding: 10px 60px;
         width: 100%;
       }
     }
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       display: flex;
       flex-direction: column;
       row-gap: 30px;
     }
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
       row-gap: 20px;
     }
   }
@@ -1982,38 +1745,37 @@
   &__center {
     display: grid;
     grid-template-columns: 1fr;
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       .best-item__action {
-        @media (max-width:$tablet){
+        @media (max-width: $tablet) {
           display: block;
         }
       }
       .best-item__btn {
-        @media (max-width:$tablet){
+        @media (max-width: $tablet) {
           display: block;
-
         }
       }
       .best-item__btn-link {
-        @media (max-width:$tablet){
+        @media (max-width: $tablet) {
           display: block;
           padding: 10px 60px;
         }
-        @media (max-width:$mobile){
+        @media (max-width: $mobile) {
           width: 100%;
         }
       }
     }
     .best-item {
-      @media (max-width:$mobile){
+      @media (max-width: $mobile) {
         min-height: 468px;
       }
-      @media (max-width:$mobileSmall){
+      @media (max-width: $mobileSmall) {
         min-height: 375px;
       }
     }
   }
-  
+
   // .best__bottom
   &__bottom {
     display: grid;
@@ -2021,9 +1783,9 @@
     @include adaptiveValue("column-gap", 40, 30, 1360, 1180, 1);
     .best-item {
       min-height: 625px;
-      @media (max-width: em(1180)){
+      @media (max-width: em(1180)) {
         min-height: 545px;
-        &:last-child{
+        &:last-child {
           display: none;
         }
       }
@@ -2031,39 +1793,35 @@
     .best-item__action-text {
       display: none;
     }
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       grid-template-columns: repeat(2, 1fr);
     }
     .best-item__action {
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         display: block;
       }
     }
     .best-item__btn {
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         display: block;
       }
     }
     .best-item__btn-link {
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         width: 100%;
         display: block;
         padding: 10px 60px;
       }
     }
-    @media (max-width:$mobile){
+    @media (max-width: $mobile) {
       display: none;
     }
-  }
-  // .best__item
-  &__item {
-
   }
   // .best__action
   &__action {
     display: flex;
     justify-content: center;
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       display: none;
     }
   }
@@ -2071,14 +1829,14 @@
   &__action-link {
     padding: 10px 80px;
     border-radius: 22px;
-    background: #FFF;
+    background: #fff;
     @extend %mulish-800;
     font-size: rem(18);
     line-height: 120%;
     color: #263239;
-    @media (any-hover: hover){
+    @media (any-hover: hover) {
       transition: background-color 0.3s ease 0s;
-      &:hover{
+      &:hover {
         background-color: $yelow;
       }
     }
@@ -2102,11 +1860,11 @@
     img {
       width: 210px;
       height: 80px;
-      @media (max-width:$tablet){
+      @media (max-width: $tablet) {
         width: 174px;
         height: 68px;
       }
-      @media (max-width:$mobileSmall){
+      @media (max-width: $mobileSmall) {
         width: 120px;
         height: 47px;
       }
@@ -2123,16 +1881,12 @@
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     @extend %raleway-600;
     font-size: rem(32);
-    line-height: math.div(45 , 32);
+    line-height: math.div(45, 32);
     color: $white;
-    @media (max-width:$mobileSmall){
+    @media (max-width: $mobileSmall) {
       font-size: rem(24);
-      line-height: math.div(34 , 24);
+      line-height: math.div(34, 24);
     }
-  }
-  // .best-item__wrapper
-  &__wrapper {
-    // display: flex;
   }
   // .best-item__info
   &__info {
@@ -2140,7 +1894,7 @@
     flex-wrap: wrap;
     column-gap: 15px;
     row-gap: 15px;
-    @media (max-width: em(360)){
+    @media (max-width: em(360)) {
       display: none;
     }
   }
@@ -2152,7 +1906,7 @@
     justify-content: center;
     column-gap: 10px;
     border-radius: 19px;
-    border: 1px solid #E3E9F3;
+    border: 1px solid #e3e9f3;
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(5px);
     img {
@@ -2164,7 +1918,7 @@
   &__unit-text {
     @extend %mulish-500;
     font-size: rem(12);
-    line-height: math.div(19 , 12);
+    line-height: math.div(19, 12);
     color: $white;
   }
   // .best-item__action
@@ -2187,11 +1941,11 @@
     @extend %mulish-800;
     font-size: rem(14);
     line-height: normal;
-    @media (max-width:$tablet){
+    @media (max-width: $tablet) {
       font-size: rem(20);
     }
-    @media (max-width:$mobileSmall){
-      font-size: rem(14); 
+    @media (max-width: $mobileSmall) {
+      font-size: rem(14);
     }
   }
   // .best-item__action-text
@@ -2201,13 +1955,13 @@
     justify-content: center;
     @extend %mulish-500;
     font-size: rem(14);
-    line-height: math.div(22 , 14);
+    line-height: math.div(22, 14);
     color: $white;
-    @media (max-width: em(1210)){
+    @media (max-width: em(1210)) {
       display: none;
     }
   }
-  @media (max-width:$mobileSmall){
+  @media (max-width: $mobileSmall) {
     border-radius: 40px;
   }
 }
@@ -2225,15 +1979,15 @@
     padding-top: 42px;
     padding-bottom: 257px;
     margin-bottom: 70px;
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       border-radius: 40px;
     }
-    @media (max-width: em(968)){
+    @media (max-width: em(968)) {
       margin-bottom: 30px;
       background-position: 20% 100%;
       background-size: auto;
     }
-    @media (max-width: em(640)){
+    @media (max-width: em(640)) {
       background-position: 12% 100% !important;
       background-size: 220% !important;
     }
@@ -2241,21 +1995,20 @@
 }
 //.payment(top)
 .payment {
-
   // .payment__container
   &__container {
-    &:first-child{
+    &:first-child {
       padding-top: 70px;
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         padding-top: 50px;
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         padding-top: 60px;
       }
-      @media (max-width: em(480)){
+      @media (max-width: em(480)) {
         padding-top: 50px;
       }
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         padding-top: 35px;
       }
     }
@@ -2267,17 +2020,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 420px;
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       padding-bottom: 28px;
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       display: flex;
       padding-bottom: 140px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       padding-bottom: 90px;
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       padding-bottom: 60px;
     }
   }
@@ -2292,43 +2045,42 @@
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
     }
     p {
       @extend %mulish-500;
-      // font-size: rem(18);
-      line-height: math.div(29 , 18);
+      line-height: math.div(29, 18);
       color: $text;
       @include adaptiveValue("font-size", 18, 16, 1360, 1180, 1);
-      @media (max-width:$mobile){
+      @media (max-width: $mobile) {
         padding: 0;
       }
-      @media (max-width:$mobileSmall){
-        @include adaptiveValue("font-size", 16, 14, 480, 420, 1); 
+      @media (max-width: $mobileSmall) {
+        @include adaptiveValue("font-size", 16, 14, 480, 420, 1);
       }
     }
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding-top: 0;
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       position: static;
       max-width: 100%;
     }
@@ -2346,37 +2098,41 @@
     border-radius: 50%;
     bottom: -85px;
     right: 40%;
-    background-image: linear-gradient(51deg, #FFC95E 25.29%, #FFC95E 39.14%, #FD9 49.02%, #FFC95E 56.66%);
+    background-image: linear-gradient(
+      51deg,
+      #ffc95e 25.29%,
+      #ffc95e 39.14%,
+      #fd9 49.02%,
+      #ffc95e 56.66%
+    );
     @extend %mulish-500;
     color: $black;
     text-transform: uppercase;
     @include adaptiveValue("width", 231, 175, 1380, 1160, 1);
     @include adaptiveValue("height", 231, 175, 1380, 1160, 1);
     span {
-      // font-size: rem(100);
       line-height: 120%;
       @include adaptiveValue("font-size", 100, 64, 1380, 1160, 1);
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 64, 42, 768, 660, 1);
       }
     }
     p {
-      // font-size: rem(24);
-      line-height: math.div(38 , 24);
+      line-height: math.div(38, 24);
       @include adaptiveValue("font-size", 24, 20, 1380, 1160, 1);
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 20, 12, 768, 660, 1);
       }
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       left: 0;
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       @include adaptiveValue("width", 175, 120, 768, 660, 1);
       @include adaptiveValue("height", 175, 120, 768, 660, 1);
       @include adaptiveValue("bottom", -85, -50, 768, 660, 1);
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       width: 100px;
       height: 100px;
     }
@@ -2386,55 +2142,50 @@
     display: grid;
     justify-items: end;
     img {
-      // width: 298px;
-      // height: 186px;
       @include adaptiveValue("width", 298, 193, 1380, 1160, 1);
       @include adaptiveValue("height", 186, 120, 1380, 1160, 1);
-      @media (max-width: em(980)){
+      @media (max-width: em(980)) {
         width: 250px;
         height: 157px;
       }
-      @media (max-width: em(660)){
+      @media (max-width: em(660)) {
         width: 184px;
         height: 115px;
-      }  
-      @media (max-width: em(360)){
+      }
+      @media (max-width: em(360)) {
         width: 160px;
         height: 95px;
-      } 
+      }
     }
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       align-items: center;
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       position: absolute;
-      // right: 20%;
       right: 143px;
       bottom: -50px;
     }
-    @media (max-width: em(660)){
+    @media (max-width: em(660)) {
       right: 0;
       bottom: -40px;
     }
   }
   //payment__wrapper
   &__wrapper {
-    // padding-bottom: 217px;
     @include adaptiveValue("padding-bottom", 217, 84, 1380, 1160, 1);
   }
   //.payment__context
   &__context {
-    // position: relative;
     display: flex;
     align-items: center;
     padding-bottom: 110px;
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       padding-top: 60px;
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       padding-bottom: 60px;
     }
-    @media (max-width: em(580)){
+    @media (max-width: em(580)) {
       padding-top: 45px;
       padding-bottom: 40px;
     }
@@ -2448,8 +2199,8 @@
     @extend %mulish-600;
     font-size: rem(12);
     line-height: 120%;
-    &::after{
-      content:'';
+    &::after {
+      content: "";
       position: absolute;
       width: 16px;
       height: 16px;
@@ -2458,15 +2209,15 @@
       border-radius: 50%;
       background: rgba(7, 201, 38, 0.3);
     }
-    &::before{
-      content:'';
+    &::before {
+      content: "";
       position: absolute;
       width: 8px;
-      height: 8px;  
+      height: 8px;
       left: 14px;
       top: 16px;
       border-radius: 50%;
-      background: #07C926;
+      background: #07c926;
     }
   }
 
@@ -2477,74 +2228,67 @@
     column-gap: 88px;
     @include adaptiveValue("column-gap", 88, 55, 1380, 1160, 1);
     justify-items: center;
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       grid-template-columns: repeat(4, 1fr);
       column-gap: 160px;
       @include adaptiveValue("column-gap", 160, 60, 980, 768, 1);
       row-gap: 50px;
     }
-    // @media (max-width: em(580)){
-    //   padding-top: 55px;
-    // }
-    @media (max-width: em(475)){
+    @media (max-width: em(475)) {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
       column-gap: 64px;
       row-gap: 37px;
     }
-    @media (max-width: em(350)){
+    @media (max-width: em(350)) {
       zoom: 95%;
     }
   }
   //.payment__item-box
   &__item-box {
-    // z-index: 0;
     position: relative;
     &:not(:last-child) {
-      &::after{
+      &::after {
         display: flex;
         white-space: nowrap;
-        content:'6 месяцев';
+        content: "6 месяцев";
         position: absolute;
         top: -33px;
         right: -80px;
         padding: 2px 4px;
         border-radius: 16px;
-        background-color: #13465B;
+        background-color: #13465b;
         @extend %mulish-500;
         font-size: rem(12);
-        line-height: math.div(19 , 12);
-        color: #FFF;
-        @media (max-width: em(1180)){
+        line-height: math.div(19, 12);
+        color: #fff;
+        @media (max-width: em(1180)) {
           top: -30px;
           right: -70px;
         }
-        @media (max-width: em(1060)){
+        @media (max-width: em(1060)) {
           top: -26px;
           right: -65px;
         }
-        @media (max-width: em(980)){
-          // right: -124px;
+        @media (max-width: em(980)) {
           top: 45%;
           transform: translateY(-45%);
           @include adaptiveValue("right", -134, -90, 980, 760, 1);
         }
-        @media (max-width: em(740)){
-          content: '6 мес.';
-          // right: -85px;
+        @media (max-width: em(740)) {
+          content: "6 мес.";
           @include adaptiveValue("right", -80, -65, 740, 620, 1);
         }
-        @media (max-width: em(520)){
+        @media (max-width: em(520)) {
           right: -50px;
         }
-        @media (max-width: em(475)){
-          // right: -70px;
+        @media (max-width: em(475)) {
           @include adaptiveValue("right", -70, -55, 475, 360, 1);
         }
       }
 
-      &::before{
-        content:'';
+      &::before {
+        content: "";
         position: absolute;
         background-image: url(../img/payment/line.svg);
         background-position: center;
@@ -2553,62 +2297,59 @@
         height: 77px;
         left: 39px;
         top: -30px;
-        @media (max-width: em(1180)){
+        @media (max-width: em(1180)) {
           left: 30px;
           top: -25px;
         }
-        @media (max-width: em(1060)){
+        @media (max-width: em(1060)) {
           left: 25px;
           top: -20px;
         }
-        @media (max-width: em(980)){
+        @media (max-width: em(980)) {
           background-image: none;
           width: 251px;
           height: 2px;
-          background-color: #13465B;
+          background-color: #13465b;
           top: 48%;
           transform: translateY(-50%);
         }
-        @media (max-width: em(790)){
+        @media (max-width: em(790)) {
           width: 220px;
         }
-        @media (max-width: em(740)){
+        @media (max-width: em(740)) {
           width: 170px;
         }
-        @media (max-width: em(520)){
+        @media (max-width: em(520)) {
           width: 150px;
         }
       }
-
       //вертикальная палка у 3
       &:nth-child(3) {
-        @media (max-width: em(475)){
-          &::before{
+        @media (max-width: em(475)) {
+          &::before {
             top: 80px;
             left: -42px;
             transform: rotate(90deg);
           }
-          &::after{
+          &::after {
             top: 79px;
             right: 9px;
           }
         }
       }
-
       //вертикальная палка у 4
       &:nth-child(4) {
-        @media (max-width: em(980)){
-          &::before{
+        @media (max-width: em(980)) {
+          &::before {
             width: 100px;
             top: 68px;
             transform: rotate(90deg);
             left: -14px;
-            @media (max-width: em(580)){
+            @media (max-width: em(580)) {
               left: -16px;
             }
-            @media (max-width: em(475)){
+            @media (max-width: em(475)) {
               top: 28px;
-              // transform: translateY(-50%);
               left: -120px;
               transform: rotate(0deg);
               width: 120px;
@@ -2619,110 +2360,97 @@
 
       //смещаем палку у 5
       &:nth-child(5) {
-        @media (max-width: em(980)){
-          &::after{
+        @media (max-width: em(980)) {
+          &::after {
             display: flex;
             white-space: nowrap;
-            content:'6 месяцев';
+            content: "6 месяцев";
             position: absolute;
             top: -30px;
             right: 0;
             padding: 2px 4px;
             border-radius: 16px;
-            background-color: #13465B;
-            // @extend %mulish-500;
-            font-family: 'Mulish', sans-serif;
+            background-color: #13465b;
+            font-family: "Mulish", sans-serif;
             font-weight: 500;
             font-size: rem(12);
-            line-height: math.div(19 , 12);
-            color: #FFF;
-            @media (max-width: em(740)){
-              content: '6 мес.';
+            line-height: math.div(19, 12);
+            color: #fff;
+            @media (max-width: em(740)) {
+              content: "6 мес.";
               right: 12px;
-              // @include adaptiveValue("right", 12, 8, 740, 580, 1);
             }
-            @media (max-width: em(580)){
+            @media (max-width: em(580)) {
               right: 8px !important;
             }
-            @media (max-width: em(475)){
+            @media (max-width: em(475)) {
               top: 45%;
-              // transform: translateY(-45%);
               right: -70px !important;
-              // @include adaptiveValue("right", -70, -55, 475, 360, 1);
             }
-            @media (max-width: em(390)){
+            @media (max-width: em(390)) {
               right: -55px !important;
             }
           }
 
-          &::before{
+          &::before {
             width: 110px !important;
             left: -60px !important;
           }
         }
       }
-      
+
       //смещаем палку у 6
       &:nth-child(6) {
-        @media (max-width: em(980)){
-          &::before{
+        @media (max-width: em(980)) {
+          &::before {
             width: 220px;
             left: -85px;
-            @media (max-width: em(520)){
-              // width: 190px;
-            }
-            @media (max-width: em(475)){
+            @media (max-width: em(475)) {
               width: 98px;
               top: 31px;
               left: 10px;
-              // transform: rotate(90deg);
             }
           }
         }
       }
-
       //смещаем палку у 7
       &:nth-child(7) {
-        @media (max-width: em(980)){
-          &::before{
+        @media (max-width: em(980)) {
+          &::before {
             width: 220px;
             left: -85px;
-            @media (max-width: em(520)){
-              // width: 190px;
+            @media (max-width: em(520)) {
             }
-            @media (max-width: em(475)){
+            @media (max-width: em(475)) {
               top: 10px;
               width: 100px;
               left: -20px;
               transform: rotate(90deg);
-              // transform: translateY(-50%);
             }
           }
-          &::after{
-            @media (max-width: em(475)){
+          &::after {
+            @media (max-width: em(475)) {
               top: -23px;
               right: 12px;
             }
           }
         }
       }
-
     }
-
     //добавляем палку последнему
-    @media (max-width: em(980)){
-      &::before{
-        content:'';
+    @media (max-width: em(980)) {
+      &::before {
+        content: "";
         position: absolute;
         width: 190px;
         height: 2px;
-        background-color: #13465B;
+        background-color: #13465b;
         top: 48%;
         transform: translateY(-50%);
-        @media (max-width: em(740)){
+        @media (max-width: em(740)) {
           width: 110px;
         }
-        @media (max-width: em(475)){
+        @media (max-width: em(475)) {
           width: 130px;
           left: -104px;
           @include adaptiveValue("left", -104, -66, 475, 360, 1);
@@ -2733,12 +2461,12 @@
     &:first-child,
     &:last-child {
       .payment__item {
-        background-color: #13465B;
+        background-color: #13465b;
       }
     }
 
     //первый
-    &:first-child{
+    &:first-child {
       .payment__item {
         &::after,
         &::before {
@@ -2748,26 +2476,26 @@
     }
 
     //последний стрелка
-    &:last-child{
+    &:last-child {
       .payment__item {
-        &::after{
+        &::after {
           left: 66px;
           transform: rotate(-45deg);
-          @media (max-width: em(580)){
+          @media (max-width: em(580)) {
             left: 60px;
           }
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             top: 32px;
             left: -10px;
-          } 
+          }
         }
-        &::before{
+        &::before {
           left: 66px;
           transform: rotate(45deg);
-          @media (max-width: em(580)){
+          @media (max-width: em(580)) {
             left: 60px;
           }
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             top: 25px;
             left: -10px;
           }
@@ -2775,20 +2503,15 @@
       }
     }
 
-    //третий стрелка
-    &:nth-child(3) {
-      .payment__item  {}
-    }
-
     //четвертый стрелка
     &:nth-child(4) {
-      .payment__item  {
-        @media (max-width: em(475)){
-          &::before{
+      .payment__item {
+        @media (max-width: em(475)) {
+          &::before {
             top: -5px;
             left: 30px;
           }
-          &::after{
+          &::after {
             top: -5px;
             left: 24px;
           }
@@ -2799,22 +2522,22 @@
     //пятый стрелка
     &:nth-child(5) {
       .payment__item {
-        &::after{
+        &::after {
           top: -5px;
           left: 49%;
           transform: translateX(-50%);
           transform: rotate(-45deg);
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             top: 24px;
             left: 61px;
           }
         }
-        &::before{
+        &::before {
           top: -5px;
           left: 40%;
           transform: translateX(-40%);
           transform: rotate(45deg);
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             top: 30px;
             left: 61px;
           }
@@ -2825,17 +2548,17 @@
     //шестой стрелка
     &:nth-child(6) {
       .payment__item {
-        &::after{
+        &::after {
           left: 66px;
           transform: rotate(-45deg);
-          @media (max-width: em(580)){
+          @media (max-width: em(580)) {
             left: 60px;
           }
         }
-        &::before{
+        &::before {
           left: 66px;
           transform: rotate(45deg);
-          @media (max-width: em(580)){
+          @media (max-width: em(580)) {
             left: 60px;
             top: 32px;
           }
@@ -2845,24 +2568,24 @@
     //седьмой стрелка
     &:nth-child(7) {
       .payment__item {
-        &::after{
+        &::after {
           left: 66px;
           transform: rotate(-45deg);
-          @media (max-width: em(580)){
+          @media (max-width: em(580)) {
             left: 60px;
           }
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             top: -5px;
             left: 27px;
           }
         }
-        &::before{
+        &::before {
           left: 66px;
           transform: rotate(45deg);
-          @media (max-width: em(580)){
+          @media (max-width: em(580)) {
             left: 60px;
           }
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             top: -5px;
             left: 21px;
           }
@@ -2871,19 +2594,19 @@
     }
 
     //расположение в сетке
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       &:nth-child(4) {
-        &::after{
+        &::after {
           display: none;
         }
       }
       &:nth-child(5) {
         grid-row: 2;
         grid-column: 4 / 5;
-        &::after{
+        &::after {
           display: none;
         }
-        @media (max-width: em(475)){
+        @media (max-width: em(475)) {
           grid-row: 2;
           grid-column: 2 / 3;
         }
@@ -2891,7 +2614,7 @@
       &:nth-child(6) {
         grid-row: 2;
         grid-column: 3 / 4;
-        @media (max-width: em(475)){
+        @media (max-width: em(475)) {
           grid-row: 2;
           grid-column: 1 / 2;
         }
@@ -2899,7 +2622,7 @@
       &:nth-child(7) {
         grid-row: 2;
         grid-column: 2 / 3;
-        @media (max-width: em(475)){
+        @media (max-width: em(475)) {
           grid-row: 3;
           grid-column: 1 / 2;
         }
@@ -2908,50 +2631,43 @@
       &:nth-child(8) {
         grid-row: 2;
         grid-column: 1 / 2;
-        &::after{
+        &::after {
           display: flex;
           white-space: nowrap;
-          content:'6 месяцев';
+          content: "6 месяцев";
           position: absolute;
           padding: 2px 4px;
           border-radius: 16px;
-          background-color: #13465B;
-          // @extend %mulish-500;
-          font-family: 'Mulish', sans-serif;
+          background-color: #13465b;
+          font-family: "Mulish", sans-serif;
           font-weight: 500;
           font-size: rem(12);
-          line-height: math.div(19 , 12);
-          color: #FFF;
-          // right: -124px;
+          line-height: math.div(19, 12);
+          color: #fff;
           @include adaptiveValue("right", -134, -90, 980, 760, 1);
           top: 45%;
           transform: translateY(-45%);
-          @media (max-width: em(740)){
-            content: '6 мес.';
-            // right: -80px;
+          @media (max-width: em(740)) {
+            content: "6 мес.";
             @include adaptiveValue("right", -80, -65, 740, 620, 1);
           }
-          @media (max-width: em(520)){
+          @media (max-width: em(520)) {
             right: -55px;
           }
-          @media (max-width: em(475)){
+          @media (max-width: em(475)) {
             right: 96px !important;
             top: 28px;
-            // @include adaptiveValue("right", 96, 80, 475, 360, 1);
           }
-          @media (max-width: em(420)){
+          @media (max-width: em(420)) {
             right: 80px !important;
           }
         }
-        @media (max-width: em(475)){
+        @media (max-width: em(475)) {
           grid-row: 3;
           grid-column: 2 / 3;
-
         }
       }
     }
-
-
   }
   //.payment__item
   &__item {
@@ -2963,47 +2679,42 @@
     width: 70px;
     height: 70px;
     border-radius: 60px;
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     background-color: $yelow;
-    @media (max-width: em(980)){
-      
-      &::after{
-        content:'';
+    @media (max-width: em(980)) {
+      &::after {
+        content: "";
         position: absolute;
         width: 10px;
         height: 2px;
-        background-color: #13465B;
+        background-color: #13465b;
         bottom: 55%;
         transform: translate(-45%);
         left: -12%;
         transform: rotate(45deg);
       }
 
-      &::before{
-        content:'';
+      &::before {
+        content: "";
         position: absolute;
         width: 10px;
         height: 2px;
-        background-color: #13465B;
+        background-color: #13465b;
         bottom: 46%;
         transform: translateY(-47%);
         left: -12%;
         transform: rotate(-45deg);
       }
-
-
     }
-    @media (max-width: em(580)){
+    @media (max-width: em(580)) {
       width: 64px;
       height: 64px;
-    } 
-
+    }
   }
   //payment__item-num
   &__item-num {
     @extend %mulish-500;
     font-size: rem(12);
-    // line-height: math.div(19 , 12);
     color: $white;
   }
 
@@ -3013,7 +2724,7 @@
     font-size: rem(20);
     line-height: 120%;
     color: $white;
-    @media (max-width: em(580)){
+    @media (max-width: em(580)) {
       font-size: rem(18);
     }
   }
@@ -3023,31 +2734,21 @@
     top: -28px;
     left: 39px;
   }
-
 }
 
 //.payment(bottom)
 .payment {
   // .payment__inner
   &__inner {
-    // display: grid;
-    // grid-template-columns: 1fr 1.5fr;
     display: flex;
     column-gap: 203px;
     justify-content: space-between;
     @include adaptiveValue("column-gap", 203, 171, 1380, 1260, 1);
-    @media (max-width: em(968)){
-      // flex-direction: column;
-    }
   }
   // .payment__form
   &__form {
     max-width: 406px;
     width: 100%;
-  }
-  // .payment__content
-  &__content {
-
   }
 }
 //.payment-form
@@ -3061,10 +2762,10 @@
     padding: 43px 22px;
     background-color: $white;
     border-radius: 46px;
-    @media (max-width: em(968)){
+    @media (max-width: em(968)) {
       max-width: 604px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       padding: 30px 20px;
     }
   }
@@ -3073,15 +2774,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-  }
-  // .payment-form__item
-  &__item { 
-      &:last-child{
-        .payment-form__input {
-          // padding-left: 68px;
-        }
-      } 
-    
   }
   // .payment-form__input
   &__input {
@@ -3094,10 +2786,10 @@
     background-color: $grey;
     @extend %mulish-500;
     font-size: rem(16);
-    line-height: math.div(26 , 16);
+    line-height: math.div(26, 16);
     color: $text;
-    @media (max-width: em(520)){
-      padding: 15px 87px 15px 20px
+    @media (max-width: em(520)) {
+      padding: 15px 87px 15px 20px;
     }
   }
   // .payment-form__action
@@ -3116,13 +2808,13 @@
     font-size: rem(14);
     line-height: 120%;
     color: #263239;
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       padding: 15px 50px;
     }
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       padding: 15px 30px;
     }
-    @media (max-width: em(340)){
+    @media (max-width: em(340)) {
       font-size: rem(12);
     }
   }
@@ -3132,12 +2824,7 @@
     text-align: center;
     @extend %mulish-500;
     font-size: rem(12);
-    line-height: math.div(15 , 12);
-  }
-  // .payment-form__politics-link
-  &__politics-link {
-    // @extend %mulish-800;
-    // color: rgb(71, 162, 248);
+    line-height: math.div(15, 12);
   }
   //.payment-form__adaptive
   &__adaptive {
@@ -3145,20 +2832,18 @@
     &__container {
       display: flex;
       justify-content: center;
-      @media (max-width: em(968)){
+      @media (max-width: em(968)) {
         padding-top: 30px;
         padding-bottom: 60px;
       }
-      @media (max-width: em(480)){
+      @media (max-width: em(480)) {
         padding-bottom: 50px;
       }
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         padding-bottom: 30px;
       }
     }
   }
-
-  //
 }
 
 //.payment-form__input_form-error
@@ -3178,22 +2863,22 @@
   &__title-box {
     display: flex;
     flex-direction: column;
-    @media (max-width: em(968)){
+    @media (max-width: em(968)) {
       max-width: 382px;
     }
-    @media (max-width: em(890)){
+    @media (max-width: em(890)) {
       max-width: 345px;
     }
-    @media (max-width: em(735)){
+    @media (max-width: em(735)) {
       max-width: 340px;
     }
-    @media (max-width: em(725)){
+    @media (max-width: em(725)) {
       max-width: 335px;
     }
-    @media (max-width: em(715)){
+    @media (max-width: em(715)) {
       max-width: 326px;
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       max-width: 320px;
     }
   }
@@ -3201,22 +2886,22 @@
   &__subtitle {
     @extend %raleway-400;
     font-size: rem(32);
-    line-height: math.div(45 , 32);
+    line-height: math.div(45, 32);
     text-transform: uppercase;
-    @media (max-width: em(1380)){
+    @media (max-width: em(1380)) {
       @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
       @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
     }
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
       @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       font-size: rem(20);
     }
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       font-size: rem(16);
-      line-height: math.div(22 , 16);
+      line-height: math.div(22, 16);
     }
   }
   // .payment-content__title
@@ -3224,29 +2909,23 @@
     position: relative;
     @extend %raleway-600;
     font-size: rem(56);
-    line-height: math.div(78 , 56);
+    line-height: math.div(78, 56);
     text-transform: uppercase;
-    @media (max-width: em(1380)){
+    @media (max-width: em(1380)) {
       @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
       @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
     }
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
       @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
     }
-    @media (max-width: em(768)){
-      // @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
-      // @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
-    }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       font-size: rem(32);
-      line-height: math.div(38 , 32);
-      // @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
-      // @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
+      line-height: math.div(38, 32);
     }
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       font-size: rem(24);
-      line-height: math.div(34 , 24);
+      line-height: math.div(34, 24);
     }
   }
   // .payment-content__title-info
@@ -3263,35 +2942,35 @@
     border-radius: 25px;
     @extend %mulish-500;
     font-size: rem(14);
-    line-height: math.div(20 , 14);
+    line-height: math.div(20, 14);
     text-transform: uppercase;
     color: $white;
-    @media (max-width: em(1080)){
+    @media (max-width: em(1080)) {
       bottom: 8px;
       left: 37%;
     }
-    @media (max-width: em(1015)){
+    @media (max-width: em(1015)) {
       bottom: 60px;
       left: 52%;
     }
-    @media (max-width: em(968)){
+    @media (max-width: em(968)) {
       padding: 2px 15px;
       @include adaptiveValue("bottom", 55, 50, 968, 768, 1);
       @include adaptiveValue("left", 200, 170, 968, 768, 1);
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       bottom: 53px;
       left: 170px;
     }
-    @media (max-width: em(735)){
+    @media (max-width: em(735)) {
       bottom: 55px;
       left: 170px;
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       bottom: 35px;
       left: 150px;
     }
-    @media (max-width: em(380)){
+    @media (max-width: em(380)) {
       display: none;
     }
   }
@@ -3301,7 +2980,7 @@
     display: grid;
     row-gap: 20px;
     padding-left: 15px;
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       row-gap: 15px;
     }
   }
@@ -3310,26 +2989,25 @@
     padding-left: 12px;
     @extend %mulish-500;
     font-size: rem(16);
-    line-height: math.div(26 , 16);
+    line-height: math.div(26, 16);
     color: $text;
-    &::after{
+    &::after {
       top: 6px;
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         top: 3px;
       }
     }
-    &::before{
+    &::before {
       top: 10px;
-      @media (max-width: em(420)){
+      @media (max-width: em(420)) {
         top: 7px;
       }
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       font-size: rem(14);
-      line-height: math.div(22 , 14);
+      line-height: math.div(22, 14);
     }
   }
-
 }
 //========================================================================================================================================================
 
@@ -3340,19 +3018,19 @@
   &__container {
     padding-top: 70px;
     padding-bottom: 70px;
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding-top: 40px;
       padding-bottom: 50px;
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       padding-top: 60px;
       padding-bottom: 60px;
     }
-    @media (max-width: em(480)){
+    @media (max-width: em(480)) {
       padding-top: 50px;
       padding-bottom: 50px;
     }
-    @media (max-width: em(420)){
+    @media (max-width: em(420)) {
       padding-top: 30px;
       padding-bottom: 40px;
     }
@@ -3375,40 +3053,40 @@
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
         font-size: rem(40);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
         font-size: rem(40);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
@@ -3419,40 +3097,37 @@
     img {
       width: 428px;
       height: 126px;
-      @media (max-width: em(1180)){
+      @media (max-width: em(1180)) {
         width: 288px;
         height: 85px;
-      } 
+      }
     }
-    @media (max-width: em(690)){
+    @media (max-width: em(690)) {
       display: none;
     }
-  }
-  // .faq__inner
-  &__inner {
   }
 }
 .faq-inner {
   padding: 48px 64px;
   background-color: $white;
   border-radius: 48px;
-  @media (max-width: em(1000)){
+  @media (max-width: em(1000)) {
     padding: 20px 40px;
   }
-  @media (max-width: em(850)){
+  @media (max-width: em(850)) {
     padding: 20px;
   }
-  @media (max-width: em(520)){
+  @media (max-width: em(520)) {
     padding: 30px;
   }
   // .faq-inner__spollers
   &__spollers {
     display: grid;
     gap: 32px;
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       gap: 20px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       border-radius: 48px;
       gap: 10px;
     }
@@ -3461,14 +3136,14 @@
   &__spollers-item {
     position: relative;
     font-size: rem(20);
-    &::after{
-      content:'';
+    &::after {
+      content: "";
       position: absolute;
       width: 100%;
       height: 1px;
       bottom: -12px;
       left: 0;
-      background-color: #F5F7FA;
+      background-color: #f5f7fa;
     }
   }
   // .faq-inner__spollers-title
@@ -3481,7 +3156,7 @@
     @extend %raleway-600;
     font-size: rem(24);
     line-height: 120%;
-    color: #131A29;
+    color: #131a29;
     ._spoller-init & {
       cursor: pointer;
       &::before,
@@ -3494,7 +3169,7 @@
         height: 2px;
         width: 14px;
         transition: transform 0.5s ease 0s;
-        @media (max-width: em(520)){
+        @media (max-width: em(520)) {
           width: 7px;
         }
       }
@@ -3513,36 +3188,24 @@
         }
       }
     }
-    @media (max-width: em(1180)){
+    @media (max-width: em(1180)) {
       font-size: rem(20);
     }
-    @media (max-width: em(980)){
+    @media (max-width: em(980)) {
       padding: 12px 60px 12px 0;
       font-size: rem(18);
-      line-height: math.div(26 , 18);
+      line-height: math.div(26, 18);
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       font-size: rem(16);
-      line-height: math.div(22 , 16);
+      line-height: math.div(22, 16);
     }
-    @media (max-width: em(490)){
+    @media (max-width: em(490)) {
       padding: 12px 40px 12px 0;
     }
   }
-  // .faq-inner__spollers-body
-  &__spollers-body {
-
-  }
 }
-.spollers {
-  // .spollers__item
-  &__item {
 
-  }
-  // .spollers__title
-  &__title {
-  }
-}
 .spollers-body {
   padding-top: 12px;
   padding-bottom: 16px;
@@ -3559,7 +3222,7 @@
   // .spollers-body__list
   &__list {
     padding-left: 25px;
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       padding-left: 15px;
     }
   }
@@ -3567,11 +3230,11 @@
   &__list-title {
     @extend %mulish-800;
     font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: #131A29;
-    @media (max-width: em(520)){
+    line-height: math.div(26, 16);
+    color: #131a29;
+    @media (max-width: em(520)) {
       font-size: rem(14);
-      line-height: math.div(24 , 14);
+      line-height: math.div(24, 14);
     }
   }
 
@@ -3580,26 +3243,26 @@
     list-style: disc;
     @extend %mulish-400;
     font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: #131A29;
+    line-height: math.div(26, 16);
+    color: #131a29;
     &:not(:last-child) {
       margin-bottom: 10px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       font-size: rem(14);
-      line-height: math.div(24 , 14);
+      line-height: math.div(24, 14);
     }
   }
   //spollers-body__text
   &__text {
     @extend %mulish-500;
     font-size: rem(16);
-    line-height: math.div(26 , 16);
-    color: #131A29;
+    line-height: math.div(26, 16);
+    color: #131a29;
     &:not(:last-child) {
       margin-bottom: 15px;
     }
-    @media (max-width: em(520)){
+    @media (max-width: em(520)) {
       font-size: rem(14);
     }
   }
@@ -3614,10 +3277,8 @@
     padding-top: 70px;
     padding-bottom: 70px;
   }
-
   &__wrapper {
     padding-top: 30px;
-
   }
   // .cases__title-inner
   &__title-inner {
@@ -3629,42 +3290,42 @@
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       text-transform: uppercase;
       color: $black;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
         font-size: rem(40);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
         font-size: rem(40);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
@@ -3677,22 +3338,12 @@
     justify-content: flex-end;
     column-gap: 30px;
     margin-right: 0 !important;
-    @media (max-width: em(560)){
+    @media (max-width: em(560)) {
       display: flex;
       justify-content: center;
       column-gap: 70px;
       padding-top: 25px !important;
     }
-  }
-  // .cases__inner
-  &__inner {
-  }
-  // .cases__slider
-  &__slider {
-  }
-  // .cases__wrapper
-  &__wrapper {
-
   }
   // .cases__slide
   &__slide {
@@ -3701,7 +3352,7 @@
     background-size: cover;
     background-position: center;
     width: 920px !important;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       background-image: none !important;
       width: auto !important;
     }
@@ -3710,17 +3361,16 @@
 .cases-slide {
   // .cases-slide__wrapper
   &__wrapper {
-
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       padding: 20px;
       border-radius: 40px;
-      background-color: #E3E9F3;
+      background-color: #e3e9f3;
     }
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       max-width: 296px;
     }
   }
-  
+
   //.cases-slide__box
   &__box {
     display: grid;
@@ -3728,16 +3378,13 @@
     column-gap: 70px;
     grid-template-rows: 1fr auto;
     .cases-slide__item {
-      &:first-child{
-        
-      }
-      &:last-child{
+      &:last-child {
         padding-top: 30px;
         width: 445px;
         height: 381px;
         padding-top: 30px;
         padding-right: 26px;
-        @media (max-width: em(950)){
+        @media (max-width: em(950)) {
           padding-top: 0;
           max-width: 100%;
           height: 100%;
@@ -3745,21 +3392,21 @@
         }
       }
     }
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       display: block;
     }
   }
 
   //.cases-slide__item
-  &__item {
+  // &__item {
 
-  }
+  // }
   //.cases-slide__splide
   &__splide {
     width: 416px;
     padding-top: 30px;
     grid-row: span 2;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       margin-bottom: 15px;
       padding-top: 20px;
       width: 256px;
@@ -3778,7 +3425,7 @@
     flex-direction: column;
     row-gap: 30px;
     align-items: flex-start;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       padding: 0;
     }
   }
@@ -3790,7 +3437,7 @@
     column-gap: 10px;
     border-radius: 76px;
     background: $white;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       padding: 5px 10px 5px 5px;
     }
   }
@@ -3804,7 +3451,7 @@
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       width: 30px;
       height: 30px;
     }
@@ -3814,13 +3461,13 @@
     @extend %raleway-600;
     font-size: rem(18);
     line-height: 120%;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       font-size: rem(14);
     }
   }
   // .cases-slide__info
   &__info {
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       width: 100%;
     }
   }
@@ -3838,18 +3485,16 @@
     font-size: rem(16);
     line-height: 120%;
     width: 100%;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       display: flex;
       justify-content: space-between;
       font-size: rem(14);
-      &:last-child{
+      &:last-child {
         .cases-slide__list-text {
-          
           max-width: 159px;
         }
       }
     }
-
   }
   // .cases-slide__list-text
   &__list-text {
@@ -3858,7 +3503,7 @@
     span {
       font-size: rem(12);
       display: block;
-      @media (max-width: em(950)){
+      @media (max-width: em(950)) {
         display: none;
       }
     }
@@ -3876,7 +3521,7 @@
     display: inline-flex;
     padding-left: 25px;
     padding-top: 15px;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       display: block;
       padding: 0;
       z-index: 10;
@@ -3890,7 +3535,7 @@
     font-size: rem(20);
     line-height: 120%;
     color: #263239;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       width: 100%;
       padding: 16px 10px;
       border-radius: 35px;
@@ -3907,7 +3552,7 @@
   &__slider {
     border-radius: 30px;
     margin-bottom: 15px;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       width: 256px;
     }
   }
@@ -3923,19 +3568,23 @@
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center !important;
-    &::before{
-      content:'';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(7, 36, 48, 0.00) 26.66%, rgba(7, 36, 48, 0.60) 74.73%);
+      background: linear-gradient(
+        180deg,
+        rgba(7, 36, 48, 0) 26.66%,
+        rgba(7, 36, 48, 0.6) 74.73%
+      );
       border-radius: 30px;
       z-index: -1;
     }
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       padding: 20px;
     }
   }
@@ -3946,7 +3595,7 @@
     justify-content: flex-start;
     column-gap: 10px;
     row-gap: 5px;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       flex-direction: column;
       align-items: flex-start;
       row-gap: 5px;
@@ -3957,9 +3606,9 @@
   &__list-item {
     @extend %mulish-500;
     font-size: rem(12);
-    line-height: math.div(19 , 12);
+    line-height: math.div(19, 12);
     color: $white;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       display: flex;
       column-gap: 10px;
     }
@@ -3969,7 +3618,7 @@
   &__slide-content {
     display: grid;
     justify-items: center;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -3981,42 +3630,39 @@
   &__slide-title {
     @extend %raleway-600;
     font-size: rem(24);
-    line-height: math.div(34 , 24);
+    line-height: math.div(34, 24);
     color: $white;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       align-self: end;
     }
-    }
+  }
   //.cases-slide-inner
   &__slide-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 36px;
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       row-gap: 5px;
       .cases-slide-inner__list {
-        &:last-child{
+        &:last-child {
           .cases-slide-inner__list-item {
-            &:first-child{
+            &:first-child {
               display: none;
             }
           }
         }
       }
-
     }
   }
-
 }
 
 .cases-thumbs {
   // .cases-thumbs__wrapper
   &__wrapper {
-
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       height: 75px;
       margin: 0 auto;
     }
@@ -4035,23 +3681,27 @@
     border-radius: 20px;
     cursor: pointer;
     &:not(:last-child) {
-      @media (max-width: em(950)){
+      @media (max-width: em(950)) {
         margin-right: 6px;
       }
     }
-    &::before{
-      content:'';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(7, 36, 48, 0.00) 26.66%, rgba(7, 36, 48, 0.60) 74.73%);
+      background: linear-gradient(
+        180deg,
+        rgba(7, 36, 48, 0) 26.66%,
+        rgba(7, 36, 48, 0.6) 74.73%
+      );
       border-radius: 20px;
       z-index: 0;
     }
-    @media (max-width: em(950)){
+    @media (max-width: em(950)) {
       width: 123px !important;
     }
   }
@@ -4061,7 +3711,7 @@
     p {
       @extend %raleway-600;
       font-size: rem(12);
-      line-height: math.div(17 , 12);
+      line-height: math.div(17, 12);
       color: $white !important;
     }
   }
@@ -4073,12 +3723,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #1C274C;
+    border: 2px solid #1c274c;
     width: 54px;
     height: 54px;
     border-radius: 50%;
   }
-
 }
 
 //.district
@@ -4103,23 +3752,23 @@
     h3 {
       @extend %raleway-600;
       font-size: rem(56);
-      line-height: math.div(78 , 56);
+      line-height: math.div(78, 56);
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 56, 40, 1380, 1000, 1);
         @include adaptiveValue("line-height", 78, 56, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 40, 36, 1000, 768, 1);
         @include adaptiveValue("line-height", 56, 50, 1000, 768, 1);
         font-size: rem(40);
       }
-      @media (max-width: em(768)){
+      @media (max-width: em(768)) {
         @include adaptiveValue("font-size", 36, 32, 768, 690, 1);
         @include adaptiveValue("line-height", 50, 38, 768, 690, 1);
         font-size: rem(40);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 32, 24, 690, 480, 1);
         @include adaptiveValue("line-height", 38, 33, 690, 480, 1);
       }
@@ -4127,21 +3776,20 @@
     span {
       @extend %raleway-400;
       font-size: rem(32);
-      line-height: math.div(45 , 32);
+      line-height: math.div(45, 32);
       text-transform: uppercase;
-      @media (max-width: em(1380)){
+      @media (max-width: em(1380)) {
         @include adaptiveValue("font-size", 32, 24, 1380, 1000, 1);
         @include adaptiveValue("line-height", 45, 33, 1380, 1000, 1);
       }
-      @media (max-width: em(1000)){
+      @media (max-width: em(1000)) {
         @include adaptiveValue("font-size", 24, 20, 1000, 690, 1);
         @include adaptiveValue("line-height", 33, 28, 1000, 690, 1);
       }
-      @media (max-width: em(690)){
+      @media (max-width: em(690)) {
         @include adaptiveValue("font-size", 20, 16, 690, 480, 1);
       }
     }
-    
   }
   // .district__action
   &__action {
@@ -4153,35 +3801,28 @@
   &__action-link {
     padding: 10px 80px;
     border-radius: 22px;
-    background: #FFF;
+    background: #fff;
     @extend %mulish-800;
     font-size: rem(18);
     line-height: 120%;
     color: #263239;
-    @media (any-hover: hover){
+    @media (any-hover: hover) {
       transition: background-color 0.3s ease 0s;
-      &:hover{
+      &:hover {
         background-color: $yelow;
       }
     }
-    @media (max-width: em(768)){
+    @media (max-width: em(768)) {
       padding: 10px 60px;
     }
-    @media (max-width: em(460)){
+    @media (max-width: em(460)) {
       padding: 10px 30px;
       font-size: rem(14);
     }
   }
-  // .district__inner
-  &__inner {
-  }
   // .district__slider
   &__slider {
     height: 492px;
-  }
-  // .district__wrapper
-  &__wrapper {
-
   }
   // .district__slide
   &__slide {
@@ -4195,26 +3836,30 @@
     justify-items: center;
     grid-template-rows: 1.4fr 1fr;
     border-radius: 55px;
-    &::before{
-      content:'';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(7, 36, 48, 0.00) 26.66%, rgba(7, 36, 48, 0.60) 74.73%);
+      background: linear-gradient(
+        180deg,
+        rgba(7, 36, 48, 0) 26.66%,
+        rgba(7, 36, 48, 0.6) 74.73%
+      );
       border-radius: 30px;
       z-index: -1;
       border-radius: 55px;
     }
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       max-width: 260px;
     }
   }
   // .district__slide-img
-  &__slide-img {
-  }
+  // &__slide-img {
+  // }
   // .district__slide-text
   &__slide-text {
     max-width: 335px;
@@ -4223,17 +3868,17 @@
     text-align: center;
     @extend %raleway-600;
     font-size: rem(40);
-    line-height: math.div(56 , 40);
+    line-height: math.div(56, 40);
     color: $white;
     text-transform: uppercase;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       font-size: rem(24);
-      line-height: math.div(34 , 24);
+      line-height: math.div(34, 24);
     }
   }
 
-   // .district__slide-action
+  // .district__slide-action
   &__slide-action {
     display: grid;
     align-items: end;
@@ -4243,13 +3888,20 @@
     display: inline-flex;
     padding: 10px 80px;
     border-radius: 22px;
-    background: linear-gradient(100deg, #FFC95E -41.54%, #FFC95E -22.64%, #FD9 -9.16%, #FFC95E 1.25%);
-    box-shadow: 0px 4px 4px 0px rgba(255, 204, 102, 0.30), 6px 2px 18px 0px #FFE4AE inset;
+    background: linear-gradient(
+      100deg,
+      #ffc95e -41.54%,
+      #ffc95e -22.64%,
+      #fd9 -9.16%,
+      #ffc95e 1.25%
+    );
+    box-shadow: 0px 4px 4px 0px rgba(255, 204, 102, 0.3),
+      6px 2px 18px 0px #ffe4ae inset;
     color: #263239;
     @extend %mulish-800;
     font-size: rem(14);
     line-height: 120%;
-    @media (max-width: em(1000)){
+    @media (max-width: em(1000)) {
       padding: 10px 40px;
     }
   }
@@ -4265,9 +3917,6 @@
   visibility: hidden !important;
 }
 //========================================================================================================================================================
-
-
-
 
 //.telegram
 //========================================================================================================================================================

@@ -1,8 +1,8 @@
 .telegram {
   // .telegram__container
-  &__container {
+  // &__container {
     
-  }
+  // }
   // .telegram__inner
   &__inner {
     padding-top: 50px;
@@ -54,9 +54,6 @@
         height: 282px;
       }
     }
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
     @media (max-width: em(1000)){
       padding-bottom: percent(425, 418);
     }
@@ -126,7 +123,6 @@
   // .telegram__subtitle
   &__subtitle {
     @extend %mulish-500;
-    // font-size: rem(18);
     line-height: math.div(29 , 18);
     color: $text;
     @include adaptiveValue("font-size", 18, 16, 1360, 1000, 1);

@@ -144,7 +144,6 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    // column-gap: 40px;
     @include adaptiveValue("column-gap", 40, 10, 1260, 1080, 1);
     @media (max-width: em(1060)){
       display: flex;
@@ -228,7 +227,6 @@
         &::before{
           content:'';
           position: absolute;
-          // background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
           background: linear-gradient(357deg, #F5F7FA 11.22%, rgba(245, 247, 250, 0.00) 59.14%);
           width: 120%;
           height: 105%;
@@ -248,9 +246,6 @@
       display: flex;
       flex-direction: column;
       row-gap: 15px;
-      // @media (max-width:$mobile){
-      //   row-gap: 10px;
-      // }
     }
   }
   // .about__img
@@ -281,10 +276,6 @@
     @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
     z-index: 2;
   }
-  // .about__item-content
-  &__item-content {
-
-  }
   // .about__item-text
   &__item-text {
     @extend %mulish-500;
@@ -297,9 +288,6 @@
         margin-bottom: 15px;
       }
     }
-  }
-  // .about__item-action
-  &__item-action {
   }
   // .about__item-link
   &__item-link {
@@ -433,17 +421,6 @@
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
     @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
   }
-  //.exterior__slider-box
-  &__slider-box {
-  }
-  //.exterior__slider-nav
-  &__slider-nav {
-
-  }
-  //.exterior__slider
-  &__slider {
-
-  }
   //.exterior__slide
   &__slide {
     overflow: hidden;
@@ -485,7 +462,6 @@
     overflow: hidden;
     list-style: none;
     cursor: pointer;
-    // opacity: 0.3;
     img {
       object-fit: cover;
       width: 100%;
@@ -502,9 +478,6 @@
 }
 //========================================================================================================================================================
 // .splide
-.splide {
-
-}
 
 .splide__arrow.splide__arrow--prev,
 .splide__arrow.splide__arrow--next {
@@ -615,7 +588,6 @@
         &::before{
           content:'';
           position: absolute;
-          // background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
           background: linear-gradient(357deg, #F5F7FA 11.22%, rgba(245, 247, 250, 0.00) 59.14%);
           width: 120%;
           height: 105%;
@@ -666,10 +638,6 @@
     text-transform: uppercase;
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
     @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
-  }
-  // .setting__item-content
-  &__item-content {
-
   }
   // .setting__item-text
   &__item-text {
@@ -779,14 +747,9 @@
   &__slider-nav {
     height: 50px;
   }
-  // .interior__wrapper
-  &__wrapper {
-
-  }
   // .interior__slider
   &__slider {
     position: relative;
-    
   }
   // .interior__slide
   &__slide {
@@ -845,48 +808,6 @@
   }
 }
 
-// .interior__slider  {
-//   .slick-prev.slick-arrow,
-//   .slick-next.slick-arrow {
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 50%; // выравнивание по вертикали
-//     transform: translateY(-50%);
-//     // margin: -15px 0 0 0; // корректировка вертикального выравнивания
-//     z-index: 2; // стрелки сверху картинок
-//     font-size: 0; // убираем надпись на дефолтной стрелке
-//     width: 50px;
-//     height: 50px;
-//     background-color: #fff;
-//   }
-//   .slick-prev.slick-arrow {
-//     left: 54px;
-//     background-image: url(../img/estate/arrow-left.svg);
-//     background-repeat: no-repeat;
-//     background-position: 45% 50%;
-//     background-size: 11px 19px;
-//     @media (any-hover: hover){
-//       transition: all 0.3s ease 0s;
-//       &:hover{
-//         background-color: $yelow;
-//       }
-//     }
-//   }
-//   .slick-next.slick-arrow {
-//     right: 54px;
-//     background-image: url(../img/estate/arrow-right.svg);
-//     background-repeat: no-repeat;
-//     background-position: 55% 50%;
-//     background-size: 11px 19px;
-//     @media (any-hover: hover){
-//       transition: all 0.3s ease 0s;
-//       &:hover{
-//         background-color: $yelow;
-//       }
-//     }
-//   }
-
-// }
 //========================================================================================================================================================
 
 //.company
@@ -922,7 +843,6 @@
         &::before{
           content:'';
           position: absolute;
-          // background: linear-gradient(94deg, #F5F6FD 53.1%, rgba(245, 246, 253, 0.00) 75.25%);
           background: linear-gradient(357deg, #F5F7FA 11.22%, rgba(245, 247, 250, 0.00) 59.14%);
           width: 120%;
           height: 105%;
@@ -973,10 +893,6 @@
     text-transform: uppercase;
     @include adaptiveValue("font-size", 32, 24, 1380, 380, 1);
     @include adaptiveValue("line-height", 45, 34, 1380, 380, 1);
-  }
-  // .company__item-content
-  &__item-content {
-
   }
   // .company__item-text
   &__item-text {

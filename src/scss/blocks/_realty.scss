@@ -1,11 +1,9 @@
 //.realty
 .realty {
-  
   // .realty__items
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // gap: 40px;
     @include adaptiveValue("gap", 40, 30, 1380, 1180, 1);
     @media (max-width: em(1180)){
       grid-template-columns: repeat(2, 1fr);
@@ -62,9 +60,9 @@
     }
   }
   //.realty__item-name
-  &__item-name {
+  // &__item-name {
 
-  }
+  // }
   // .realty__price
   &__price {
     display: flex;
@@ -77,7 +75,6 @@
     grid-column: 2 / 3;
     @media (max-width: em(760)){
       grid-row: 6;
-      // grid-column: 1 / 2;
       grid-column: span 2;
       justify-self: start;
     }

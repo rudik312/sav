@@ -112,12 +112,6 @@
       line-height: math.div(22 , 14);
     }
   }
-  // .footer__item-phone
-  &__item-phone {
-  }
-  // .footer__item-emeil
-  &__item-emeil {
-  }
   // .footer__item-adress
   &__item-adress {
     address {
@@ -205,32 +199,14 @@
     flex-direction: column;
     row-gap: 8px;
   }
-  // .footer-menu__list-item
-  &__list-item {
-  }
-  // .footer-menu__link
-  &__link {
-  }
 }
 
 .footer-menu {
-  // .footer-menu__box
-  &__box {
-  }
-  // .footer-menu__social
-  &__social {
-    
-  }
   // .footer-menu__social-list 
   &__social-list {
     display: flex;
     column-gap: 20px;
   }
-  // .footer-menu__social-list-item 
-  &__social-item {
-
-  }
-
   // .footer-menu__social-link
   &__social-link {
     display: flex;
@@ -245,8 +221,6 @@
       }
     }
   }
-
-
 }
 
 .footer-item {

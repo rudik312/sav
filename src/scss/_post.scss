@@ -135,8 +135,6 @@
   &__title {
     h3 {
       @extend %raleway-500;
-      // font-size: rem(48);
-      // line-height: math.div(58 , 48);
       color: $black;
       @include adaptiveValue("font-size", 48, 24, 1380, 380, 1);
       @include adaptiveValue("line-height", 58, 29, 1380, 380, 1);
