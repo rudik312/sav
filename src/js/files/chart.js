@@ -20,8 +20,8 @@ if (document.getElementById("myChart") !== null) {
 
         let ctx = document.getElementById('myChart').getContext('2d');
         ctx.canvas.width = 300;
-        // ctx.canvas.height = 440;
-        ctx.canvas.height = window.innerHeight / 2.7;  
+        ctx.canvas.height = 427;
+        // ctx.canvas.height = window.innerHeight / 2.7;  
         
         let myChart = new Chart(ctx, {
             maintainAspectRatio: false,
