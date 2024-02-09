@@ -1347,7 +1347,6 @@
     display: grid;
     grid-template-columns: 1fr 2.3fr;
     column-gap: 20px;
-    // min-height: 428px;
     @media (max-width: em(1090)) {
       grid-template-columns: 0.8fr 1.7fr;
       column-gap: 10px;
@@ -1362,7 +1361,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 2.6px;
-    // row-gap: 3px;
   }
   // .risk-statistics__list-item
   &__list-item {
@@ -1386,19 +1384,12 @@
   &__diagram {
     display: flex;
     border-left: 1px solid #13465b;
-    // height: 437px;
     height: 418px;
-    @media (max-width: em(1190)){
-      // height: 422px;
-    }
   }
 
   //risk-statistics__analitic
   &__analitic {
     position: absolute;
-    @media (max-width: em(1190)){
-      // height: 427px !important;
-    }
     @media (max-width: em(1090)) {
       width: 280px !important;
     }
@@ -2398,7 +2389,7 @@
 
           &::before {
             width: 110px !important;
-            left: -60px !important;
+            left: -80px !important;
           }
         }
       }
